@@ -147,4 +147,4 @@ The [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/p
 
 That route is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark status, legal clearance, or universal lift.
 
-The next stronger public step is not another stronger claim. It is a public redacted board that keeps source-use boundary, condition board, baseline/checklist/wrong-anchor/conditioned arms, public-safe screenshots or links, judge protocol, scorer transcript, failure record, and claim boundary separate. The private board spec/template exists, but the public redacted board is still pending.
+The [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) is now public as a public redacted board v0 / incomplete evidence board. It keeps source-use boundary, condition board, aggregate scoring, failure record, and claim boundary separate, but it remains promotion-blocked because true wrong-anchor control, public-safe per-arm screenshots, full scorer transcript, and per-arm build logs are still missing.
