@@ -5,7 +5,7 @@
 
 I build proof-bounded AI operating systems.
 
-Current flagship: **Metaforge**, a Meta + MFH + Orchestra OS for governed
+Current public operating-system surface: **Metaforge**, a Meta + MFH + Orchestra OS for governed
 agent work. The point is not another chat wrapper. The point is a system where
 memory, source ledgers, dissent, evidence gates, and claim boundaries decide
 what an agent is allowed to say is done.
@@ -54,6 +54,8 @@ The active Mimesis work is being rebuilt in a private/local research workbench. 
 Mimesis is the hypothesis that AI work improves when it imitates real artifacts, codebases, standards, papers, and tests instead of asking models to roleplay experts.
 
 The newest private workbench gate adds visual judgment evidence and expert gates: rule-heavy visual conditioning lost in an owner condition-blind read, while the useful direction moved toward matched anchors, obvious-slop linting, and margin-gated subjective evaluation. This is not proof of visual quality improvement.
+
+The newest plugin README gate adds an Evidence Card Contract before any local case can become marketing copy: source artifact, baseline output, conditioned output, wrong-anchor or checklist control, gate/scorer, failure cases, and claim boundary must be visible first. This is a proof-surface discipline, not external validation.
 
 The public-safe snapshot of that lane is the [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/): a redacted failure artifact that records banned claims, weak evidence, and the next external-panel gate.
 
