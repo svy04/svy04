@@ -36,6 +36,7 @@ REQUIRED_BADGE_URLS = [
 
 REQUIRED_MARKERS = [
     "I build proof-bounded AI operating systems.",
+    "Current public operating-system surface",
     "source first",
     "artifacts before personas",
     "gates before claims",
@@ -45,6 +46,14 @@ REQUIRED_MARKERS = [
     "not externally validated",
     "private/local research workbench",
     "visual judgment evidence and expert gates",
+    "Evidence Card Contract",
+    "source artifact",
+    "baseline output",
+    "conditioned output",
+    "wrong-anchor or checklist control",
+    "gate/scorer",
+    "failure cases",
+    "proof-surface discipline",
     "Mimesis Visual Failure Packet",
     "Private Workbench Verification Snapshot",
     "Mimesis Verification Relocation Packet",
@@ -79,6 +88,10 @@ REQUIRED_MARKERS = [
     "I do not claim Metaforge is production-ready",
     "I do not claim NoiseProof is production-ready",
     "I do not claim Mimesis Engineering is an industry standard",
+]
+
+PROHIBITED_MARKERS = [
+    "Current flagship:",
 ]
 
 
@@ -116,6 +129,10 @@ def validate_readme_text(text):
     for marker in REQUIRED_MARKERS:
         if marker not in text:
             issues.append(f"missing required marker: {marker}")
+
+    for marker in PROHIBITED_MARKERS:
+        if marker in text:
+            issues.append(f"prohibited profile marker: {marker}")
 
     for link in REQUIRED_LINKS:
         if link not in text:
