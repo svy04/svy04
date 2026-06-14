@@ -117,6 +117,21 @@ https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-
 
 That route is a redacted method-boundary artifact. It records that source artifacts can help identify load-bearing structure, but validation does not transfer to new Mimesis outputs. Downstream outputs still need extract-loss, domain-shift, conditioning, wrong-anchor, and target gates.
 
+The current public-safe Mimesis external OSS attribution route is:
+
+Mimesis external OSS attribution route:
+
+```text
+https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/
+```
+
+That route is a source-level executable attribution artifact. It records two
+local repro cards: `P-EXT-03` for Go `time.Parse` timezone range guarding and
+`P-EXT-06` for Eisel-Lemire / nearest-even float parsing. It keeps source
+anchor, objective oracle, defect control, wrong-anchor control, command result,
+and forbidden claims together. It is not downstream lift, not maintainer endorsement,
+not legal clearance, not production readiness, and not external validation.
+
 The current public-safe Mimesis downstream reinjection route is:
 
 ```text
@@ -174,6 +189,7 @@ https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026
 https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/
 https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/
+https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/
