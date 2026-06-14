@@ -65,6 +65,14 @@ It can show ceiling, null, or negative effects when the task is already well spe
 
 That is more interesting than hype. It means the method has to carry receipts: provenance, wrong-anchor controls, ablations, non-LLM checks, and explicit banned claims.
 
+The current public Mimesis ecosystem is intentionally small:
+
+- [mimesis-engineering](https://github.com/svy04/mimesis-engineering) — framework and validator surface.
+- [mimesis-canvas](https://github.com/svy04/mimesis-canvas) — worksheet surface.
+- [mimesis-casebook](https://github.com/svy04/mimesis-casebook) — case surface.
+
+Those repos make the method inspectable as public files. They do not prove external adoption, benchmarked productivity, visual quality improvement, customer outcomes, or production readiness.
+
 ## Current Public Proof Repos
 
 - [metaforge](https://github.com/svy04/metaforge) — governed agent operating system experiments.
