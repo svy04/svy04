@@ -31,6 +31,7 @@ Metaforge-first profile framing
 Mimesis public repo support-surface framing
 OpenClaude runtime-substrate boundary
 local path disclosure
+non-public or non-current repo links
 unbounded Mimesis claims
 unbounded production-readiness claims
 unbounded external-validation claims
@@ -173,6 +174,11 @@ https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026
 ```
 
 That route is a CI-checked routing and claim-boundary artifact for this GitHub profile. It does not prove product completion, external validation, adoption, or public status for private workbench repos.
+
+The profile README validator also blocks non-public or non-current repo links
+from becoming marketing routes. Private/local workbench code should be routed
+through public proof artifacts and explicit claim boundaries instead of direct
+private repository links.
 
 ## Current Required Public Links
 

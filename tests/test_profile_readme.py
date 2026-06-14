@@ -161,6 +161,44 @@ class ProfileReadmeTests(unittest.TestCase):
             any("prohibited profile marker" in issue for issue in issues)
         )
 
+    def test_validation_catches_private_or_not_current_repo_links(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+        private_link_readme = (
+            readme
+            + "\n- [mimesis-plugin](https://github.com/svy04/mimesis-plugin) — latest proof surface.\n"
+            + "- [old profile checkout](https://github.com/svy04/openclaude) — main product.\n"
+        )
+
+        issues = validate_readme_text(private_link_readme)
+
+        self.assertTrue(
+            any("non-public or non-current repo link" in issue for issue in issues)
+        )
+
+    def test_validation_catches_contradictory_positive_claim_drift(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+        drifted_readme = readme + "\n".join(
+            [
+                "",
+                "Mimesis Engineering is an industry standard for AI output improvement.",
+                "Board v1 is ready for promotion.",
+                "Metaforge now has external validation from reviewers.",
+                "OpenClaude is the main thesis and flagship product.",
+                "Mimesis Engineering is proven, not just a promising method.",
+            ]
+        )
+
+        issues = validate_readme_text(drifted_readme)
+
+        expected_labels = [
+            "unbounded Mimesis claim",
+            "board-v1 readiness claim",
+            "unbounded external-validation claim",
+            "OpenClaude-as-main claim",
+        ]
+        for label in expected_labels:
+            self.assertTrue(any(label in issue for issue in issues), label)
+
     def test_validation_catches_local_path_disclosure(self):
         readme = Path("README.md").read_text(encoding="utf-8")
         disclosed_path = (
@@ -206,6 +244,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("profile proof route", proof_doc)
         self.assertIn("Metaforge-first profile framing", proof_doc)
         self.assertIn("local path disclosure", proof_doc)
+        self.assertIn("non-public or non-current repo links", proof_doc)
         self.assertIn(
             "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
             proof_doc,
@@ -379,6 +418,22 @@ class ProfileReadmeTests(unittest.TestCase):
         def fake_fetcher(url):
             if url == "https://github.com/svy04":
                 return 200, "Mimesis v.next Workbench"
+            if url in {surface_url for _, surface_url in PUBLIC_SURFACES}:
+                return 200, readme
+            if url in ROUTE_URLS:
+                return 200, "ok"
+            return 404, ""
+
+        issues = validate_render_parity("README.md", fake_fetcher)
+
+        self.assertTrue(any("forbidden render marker" in issue for issue in issues))
+
+    def test_render_parity_validator_catches_positive_claim_drift(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+
+        def fake_fetcher(url):
+            if url == "https://github.com/svy04":
+                return 200, "OpenClaude is the main thesis and flagship product."
             if url in {surface_url for _, surface_url in PUBLIC_SURFACES}:
                 return 200, readme
             if url in ROUTE_URLS:

@@ -153,6 +153,16 @@ PROHIBITED_MARKERS = [
     "board v1 ready",
 ]
 
+ALLOWED_GITHUB_REPOS = [
+    "metaforge",
+    "noiseproof-agent",
+    "mimesis-engineering",
+    "mimesis-canvas",
+    "mimesis-casebook",
+    "svy04",
+    "leaderboard-data",
+]
+
 WINDOWS_USER_PATH_PATTERN = "C:" + r"[\\/]+Users[\\/]+"
 POSIX_ADMIN_PATH_PATTERN = "/" + "Users" + "/" + "admin"
 KOREAN_PRIVATE_PATH_PATTERN = "\ub0b4 \uc21c\uc218 \uc7ac\ubbf8"
@@ -190,12 +200,40 @@ def extract_markdown_links(text):
 
 def _line_allows_dangerous_claim(line):
     lowered = line.lower()
-    return (
-        "do not claim" in lowered
-        or "not " in lowered
-        or "does not" in lowered
-        or "boundary" in lowered
+    if "not just" in lowered:
+        return False
+    safe_phrases = [
+        "do not claim",
+        "does not prove",
+        "does not universally improve",
+        "it is not",
+        "this is not",
+        "not proof",
+        "not production readiness, external validation",
+        "not production-ready",
+        "not product-complete",
+        "not externally validated",
+        "not external validation",
+        "not the main thesis",
+        "not an industry standard",
+        "board v1 is not ready",
+        "not stronger proof",
+    ]
+    return any(phrase in lowered for phrase in safe_phrases)
+
+
+def find_non_current_repo_links(text):
+    repo_pattern = re.compile(
+        r"(?:https?://)?github\.com/svy04/([A-Za-z0-9_.-]+)",
+        flags=re.IGNORECASE,
     )
+    allowed = {repo.lower() for repo in ALLOWED_GITHUB_REPOS}
+    findings = []
+    for match in repo_pattern.finditer(text):
+        repo = match.group(1).rstrip(").,;:")
+        if repo.lower() not in allowed:
+            findings.append(match.group(0).rstrip(").,;:"))
+    return findings
 
 
 def validate_readme_text(text):
@@ -208,6 +246,10 @@ def validate_readme_text(text):
     for marker in PROHIBITED_MARKERS:
         if marker in text:
             issues.append(f"prohibited profile marker: {marker}")
+
+    for link in find_non_current_repo_links(text):
+        if link in text:
+            issues.append(f"non-public or non-current repo link: {link}")
 
     for link in REQUIRED_LINKS:
         if link not in text:
@@ -222,9 +264,11 @@ def validate_readme_text(text):
             issues.append(f"missing required badge URL: {badge_url}")
 
     dangerous_patterns = [
-        ("unbounded Mimesis claim", r"\bMimesis(?: Engineering)?\b.*\b(proven|universally improves)\b"),
+        ("unbounded Mimesis claim", r"\bMimesis(?: Engineering)?\b.*\b(proven|universally improves|industry standard|statistically proven)\b"),
         ("unbounded product-readiness claim", r"\b(is|are) production-ready\b"),
-        ("unbounded external-validation claim", r"\b(is|are) externally validated\b"),
+        ("unbounded external-validation claim", r"\b(external validation|externally validated)\b"),
+        ("board-v1 readiness claim", r"\bboard\s+v?1\b.*\b(ready|promotion|promotable|complete|completed)\b"),
+        ("OpenClaude-as-main claim", r"\bOpenClaude\b.*\b(main thesis|main product|flagship product)\b"),
     ]
 
     for line in text.splitlines():

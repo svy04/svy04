@@ -50,6 +50,11 @@ FORBIDDEN_RENDER_MARKERS = [
     "Mimesis v.next Workbench",
     "Mimesis Engineering v0",
     "public v0 artifact-level imitation method",
+    "OpenClaude is the main thesis",
+    "flagship product",
+    "Board v1 is ready",
+    "industry standard for AI output improvement",
+    "external validation from reviewers",
 ]
 
 
