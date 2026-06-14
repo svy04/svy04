@@ -125,7 +125,7 @@ Mimesis Minecraft public board v0 route:
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/
 ```
 
-That route is a public redacted board v0 / incomplete evidence board. It exposes source-use boundary, condition board, aggregate scoring, failure record, and claim boundary, but it remains promotion-blocked. Current Promotion Blockers: true wrong-anchor control, public-safe per-arm screenshots, full scorer transcript, and per-arm build logs are still missing. This is a visibility upgrade, not stronger proof.
+That route is a public redacted board v0 / incomplete evidence board. It exposes source-use boundary, condition board, aggregate scoring, failure record, and claim boundary, but it remains promotion-blocked. Current Promotion Blockers: true wrong-anchor control, public-safe per-arm screenshots or links, fuller judge protocol, full scorer transcript, and per-arm build logs are still missing. The latest private plugin gate adds a board v1 collection plan and `verify_minecraft_board_v1_gate.py`; that is a blocker contract, not stronger proof, and board v1 is not ready. This is a visibility upgrade, not stronger proof.
 
 The current public-safe Human-made Feeling Bench route is:
 

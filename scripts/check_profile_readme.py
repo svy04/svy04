@@ -105,6 +105,10 @@ REQUIRED_MARKERS = [
     "full scorer transcript",
     "failure record",
     "per-arm build logs remain missing",
+    "board v1 collection plan",
+    "verify_minecraft_board_v1_gate.py",
+    "blocker contract, not stronger proof",
+    "board v1 is not ready",
     "GitHub Profile README Proof Surface",
     "render parity proof packet",
     "CI-checked routing and claim-boundary surface",
@@ -127,6 +131,7 @@ PROHIBITED_MARKERS = [
     "Mimesis v.next Workbench",
     "Mimesis Engineering v0",
     "public v0 artifact-level imitation method",
+    "board v1 ready",
 ]
 
 WINDOWS_USER_PATH_PATTERN = "C:" + r"[\\/]+Users[\\/]+"

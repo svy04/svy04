@@ -52,6 +52,7 @@ These are the local artifact families currently shaping the public position:
 | Method notes | Design-level method extracted from shell failures, load-bearing middle decisions, and non-LLM ship gates. | Thought-method layer, not full method proof. |
 | Experiment records | Ceiling/null/negative regimes, wrong-anchor downside, comparison, replication, holdout, and negative-control evidence. | Local workbench evidence; publish only after redaction and case shaping. |
 | High-integration evidence cards | Source artifact, baseline output, conditioned output, checklist control, gate/scorer, small local blind judging, failure cases, and claim boundary. | Redacted summary only; not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark status, legal clearance, or universal lift. |
+| Board readiness gates | Board v1 collection plan, required evidence atoms, stop conditions, and `verify_minecraft_board_v1_gate.py` promotion guard. | Blocker contract only; board v1 is not ready and this does not add external validation or stronger proof. |
 | Source queue | Products, standards, OSS repos, patents, papers, and evaluation systems to extract from. | Candidate queue only; not all items are implemented modules. |
 | Visual specimens | Rendered website/app specimens and screenshot-style inspection surfaces. | Visual specimen evidence, not customer or production proof. |
 
@@ -147,4 +148,6 @@ The [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/p
 
 That route is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark status, legal clearance, or universal lift.
 
-The [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) is now public as a public redacted board v0 / incomplete evidence board. It keeps source-use boundary, condition board, aggregate scoring, failure record, and claim boundary separate, but it remains promotion-blocked because true wrong-anchor control, public-safe per-arm screenshots, full scorer transcript, and per-arm build logs are still missing.
+The [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) is now public as a public redacted board v0 / incomplete evidence board. It keeps source-use boundary, condition board, aggregate scoring, failure record, and claim boundary separate, but it remains promotion-blocked because true wrong-anchor control, public-safe per-arm screenshots or links, fuller judge protocol, full scorer transcript, and per-arm build logs are still missing.
+
+The latest private plugin gate adds a board v1 collection plan and `verify_minecraft_board_v1_gate.py`. This is a blocker contract, not stronger proof: it lists evidence atoms, required wrong-anchor control, scoring transcript fields, public-safe artifact requirements, and stop conditions before any board v1 claim can be made. Board v1 is not ready.
