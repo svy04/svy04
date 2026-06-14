@@ -86,6 +86,7 @@ Other public repository visible today but not used as a current proof surface:
 
 ## Current Public Proof Routes
 
+- [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/) — CI-checked routing and claim-boundary surface for this profile README. It does not prove product completion, external validation, adoption, or public status for private workbench repos.
 - [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/) — public-safe failure packet for a local visual Mimesis loop. It records a banned-claim boundary; it does not prove visual quality improvement or external validation.
 
 ## Profile Verification

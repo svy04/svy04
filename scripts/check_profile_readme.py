@@ -16,6 +16,7 @@ REQUIRED_LINKS = [
     "https://github.com/svy04/mimesis-casebook",
     "https://github.com/svy04/svy04",
     "https://github.com/svy04/svy04/actions/workflows/profile-readme.yml",
+    "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
     "https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/",
 ]
 
@@ -41,6 +42,8 @@ REQUIRED_MARKERS = [
     "private/local research workbench",
     "visual judgment evidence and expert gates",
     "Mimesis Visual Failure Packet",
+    "GitHub Profile README Proof Surface",
+    "CI-checked routing and claim-boundary surface",
     "redacted failure artifact",
     "banned-claim boundary",
     "framework and validator surface",

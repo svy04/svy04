@@ -74,6 +74,14 @@ https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15
 
 That route is a redacted failure artifact. It supports the narrow claim that the profile carries a banned-claim boundary, weak-evidence notes, and next external-panel gate. It does not prove visual quality improvement, external validation, customer validation, production readiness, or public status for the private Digital Factory workbench.
 
+The current public-safe profile proof route is:
+
+```text
+https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/
+```
+
+That route is a CI-checked routing and claim-boundary artifact for this GitHub profile. It does not prove product completion, external validation, adoption, or public status for private workbench repos.
+
 ## Current Required Public Links
 
 ```text
@@ -85,6 +93,7 @@ https://github.com/svy04/mimesis-engineering
 https://github.com/svy04/mimesis-canvas
 https://github.com/svy04/mimesis-casebook
 https://github.com/svy04/svy04
+https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/
 https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/
 ```
 
