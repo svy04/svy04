@@ -121,9 +121,9 @@ Mimesis suppresses hallucination/fabrication in general.
 
 ## Next Public Step
 
-The next useful public artifact is not a bigger claim.
+The newest useful public artifact is not a bigger claim.
 
-It is a redacted case packet that turns one Digital Factory local loop into a publishable before/after case with:
+It is the [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/): a redacted failure packet that turns one Digital Factory visual loop into a public-safe boundary with:
 
 - source set
 - weak artifact
@@ -133,4 +133,6 @@ It is a redacted case packet that turns one Digital Factory local loop into a pu
 - failure boundary
 - banned claims
 
-For the visual workbench lane, the next public-safe artifact should present `HUMAN-VERDICT-003`, `visual_lint.py`, and `margin_gated_panel.py` as a failure-bounded inspection packet: what failed, what gate now exists, and what remains unproven.
+For the visual workbench lane, that route may present `HUMAN-VERDICT-003`, `visual_lint.py`, and `margin_gated_panel.py` only as failure-bounded inspection inputs: what failed, what gate now exists, and what remains unproven.
+
+The next stronger public step is not another stronger claim. It is an external blind panel or redacted condition board that keeps owner verdict, external verdict, and banned claims separate.

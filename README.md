@@ -20,7 +20,7 @@ logs before polish
 |---|---|---|
 | [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra OS for governed agent execution. Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). | Public active repo; not production, compliance, or external-validation proof. |
 | [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Evidence-first data-agent portfolio for messy market intelligence. Start with the [current proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). | Not a trading bot, not financial advice, not product-complete, not externally validated. |
-| [Mimesis Engineering](https://github.com/svy04/mimesis-engineering) | Public v0 method artifact for artifact-level imitation in AI-native work. | Experimental method artifact; not an industry standard or proven universal framework. |
+| [Mimesis Engineering](https://github.com/svy04/mimesis-engineering) | Public v0 method artifact plus the latest [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/). | Experimental method artifact and redacted failure artifact; not visual quality improvement proof, external validation, or an industry standard. |
 
 ## What I Am Trying To Prove
 
@@ -51,6 +51,8 @@ The Digital Factory workbench is a private/local research workbench rebuilding M
 
 The newest private workbench gate adds visual judgment evidence and expert gates: rule-heavy visual conditioning lost in an owner condition-blind read, while the useful direction moved toward matched anchors, obvious-slop linting, and margin-gated subjective evaluation. This is not proof of visual quality improvement.
 
+The public-safe snapshot of that lane is the [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/): a redacted failure artifact that records banned claims, weak evidence, and the next external-panel gate.
+
 The honest current claim is narrow:
 
 ```text
@@ -73,6 +75,10 @@ That is more interesting than hype. It means the method has to carry receipts: p
 Other public repository visible today but not used as a current proof surface:
 
 - [leaderboard-data](https://github.com/svy04/leaderboard-data) — data storage for a Rust server leaderboard; not part of the Metaforge, NoiseProof, or Mimesis proof surface.
+
+## Current Public Proof Routes
+
+- [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/) — public-safe failure packet for a local visual Mimesis loop. It records a banned-claim boundary; it does not prove visual quality improvement or external validation.
 
 ## Profile Verification
 
