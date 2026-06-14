@@ -51,6 +51,7 @@ These are the local artifact families currently shaping the public position:
 | Operating map | What should be redacted, converted into proof routes, or kept private next. | Planning surface, not proof that the work is shipped or adopted. |
 | Method notes | Design-level method extracted from shell failures, load-bearing middle decisions, and non-LLM ship gates. | Thought-method layer, not full method proof. |
 | Experiment records | Ceiling/null/negative regimes, wrong-anchor downside, comparison, replication, holdout, and negative-control evidence. | Local workbench evidence; publish only after redaction and case shaping. |
+| High-integration evidence cards | Source artifact, baseline output, conditioned output, checklist control, gate/scorer, small local blind judging, failure cases, and claim boundary. | Redacted summary only; not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark status, legal clearance, or universal lift. |
 | Source queue | Products, standards, OSS repos, patents, papers, and evaluation systems to extract from. | Candidate queue only; not all items are implemented modules. |
 | Visual specimens | Rendered website/app specimens and screenshot-style inspection surfaces. | Visual specimen evidence, not customer or production proof. |
 
@@ -113,11 +114,11 @@ Mimesis universally improves AI output.
 Mimesis suppresses hallucination/fabrication in general.
 ```
 
-## Next Public Step
+## Current Public Steps
 
-The newest useful public artifact is not a bigger claim.
+The useful public artifacts are not bigger claims.
 
-It is the [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/): a redacted failure packet that turns one private visual workbench loop into a public-safe boundary with:
+The [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/) turns one private visual workbench loop into a public-safe boundary with:
 
 - source set
 - weak artifact
@@ -129,4 +130,19 @@ It is the [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifact
 
 For the visual workbench lane, that route may present redacted verdict, lint, and margin-gate evidence only as failure-bounded inspection inputs: what failed, what gate now exists, and what remains unproven.
 
-The next stronger public step is not another stronger claim. It is an external blind panel or redacted condition board that keeps owner verdict, external verdict, and banned claims separate.
+The [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/) turns one private/local high-integration case into a public-safe redacted local evidence card with:
+
+- source artifact
+- baseline output
+- conditioned output
+- checklist control
+- gate/scorer
+- blind 3-judge panel
+- n=2 per cell
+- failure cases
+- claim boundary
+- no true wrong-anchor weakness
+
+That route is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark status, legal clearance, or universal lift.
+
+The next stronger public step is not another stronger claim. It is an external blind panel or redacted condition board that keeps owner verdict, external verdict, wrong-anchor control, and banned claims separate.
