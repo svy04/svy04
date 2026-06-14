@@ -20,7 +20,7 @@ logs before polish
 |---|---|---|
 | [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra OS for governed agent execution. Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). | Public active repo; not production, compliance, or external-validation proof. |
 | [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Evidence-first data-agent portfolio for messy market intelligence. Start with the [current proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). | Not a trading bot, not financial advice, not product-complete, not externally validated. |
-| [Mimesis Engineering](https://github.com/svy04/mimesis-engineering) | Public v0 method artifact plus the latest [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/). | Experimental method artifact and redacted failure artifact; not visual quality improvement proof, external validation, or an industry standard. |
+| [Mimesis Engineering](https://github.com/svy04/mimesis-engineering) | Public v0 method artifact plus redacted proof-boundary routes, including the [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/). | Experimental method artifact and redacted local-workbench artifacts; not visual quality improvement proof, external validation, or an industry standard. |
 
 ## What I Am Trying To Prove
 
@@ -52,6 +52,11 @@ The Digital Factory workbench is a private/local research workbench rebuilding M
 The newest private workbench gate adds visual judgment evidence and expert gates: rule-heavy visual conditioning lost in an owner condition-blind read, while the useful direction moved toward matched anchors, obvious-slop linting, and margin-gated subjective evaluation. This is not proof of visual quality improvement.
 
 The public-safe snapshot of that lane is the [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/): a redacted failure artifact that records banned claims, weak evidence, and the next external-panel gate.
+
+Two newer public-safe route snapshots keep the same boundary:
+
+- [Digital Factory Workbench Verification Snapshot](https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/) — a redacted local hygiene artifact for the private/local workbench. It does not prove public status, adoption, production readiness, external validation, universal lift, or visual quality improvement.
+- [Mimesis Verification Relocation Packet](https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/) — a redacted method-boundary artifact. It records that strong source artifacts can help identify load-bearing structure, but validation does not transfer to new Mimesis outputs.
 
 The honest current claim is narrow:
 
@@ -88,6 +93,8 @@ Other public repository visible today but not used as a current proof surface:
 
 - [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/) — CI-checked routing and claim-boundary surface for this profile README. It does not prove product completion, external validation, adoption, or public status for private workbench repos.
 - [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/) — public-safe failure packet for a local visual Mimesis loop. It records a banned-claim boundary; it does not prove visual quality improvement or external validation.
+- [Digital Factory Workbench Verification Snapshot](https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/) — public-safe local hygiene artifact for the private/local Digital Factory workbench. It does not prove public status, external validation, adoption, production readiness, universal lift, or visual quality improvement.
+- [Mimesis Verification Relocation Packet](https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/) — public-safe method-boundary artifact for source-first Mimesis reuse. It records that source artifacts can guide structure, but validation does not transfer; downstream outputs still need extract-loss, domain-shift, wrong-anchor, conditioning, and target gates.
 
 ## Profile Verification
 
