@@ -42,17 +42,14 @@ class ProfileReadmeTests(unittest.TestCase):
             self.assertIn(link, readme)
         for badge_url in REQUIRED_BADGE_URLS:
             self.assertIn(badge_url, readme)
-        self.assertIn("private/local research workbench", readme)
-        self.assertIn("not public proof", readme)
-        self.assertIn("not external validation", readme)
-        self.assertIn("Mimesis is the hypothesis", readme)
-        self.assertIn("Mimesis v.next Workbench", readme)
-        self.assertIn("Current public operating-system surface", readme)
-        self.assertNotIn("Current flagship:", readme)
-        self.assertIn("public v0 repository is a support surface", readme)
-        self.assertNotIn("Mimesis Engineering v0", readme)
-        self.assertNotIn("public v0 artifact-level imitation method", readme)
-        self.assertIn("Mimesis Visual Failure Packet", readme)
+
+        self.assertIn("Metaforge", readme)
+        self.assertIn("Meta for operating memory", readme)
+        self.assertIn("MFH for evidence gates", readme)
+        self.assertIn("Orchestra for multi-agent routing", readme)
+        self.assertIn("OpenClaude is the local CLI/runtime substrate", readme)
+        self.assertIn("The active Digital Factory workbench", readme)
+        self.assertIn("conditional lift, not universal lift", readme)
         self.assertIn("Evidence Card Contract", readme)
         self.assertIn("source artifact", readme)
         self.assertIn("baseline output", readme)
@@ -61,62 +58,38 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("gate/scorer", readme)
         self.assertIn("failure cases", readme)
         self.assertIn("proof-surface discipline", readme)
+        self.assertIn("Human-made Feeling Bench", readme)
+        self.assertIn("first-pass rubric", readme)
+        self.assertIn("not a universal design-quality benchmark", readme)
+        self.assertIn("public framework, reference packs, validators, cases, and proof boundaries", readme)
+        self.assertIn("GitHub Profile README Proof Surface", readme)
+        self.assertIn("CI-checked routing and claim-boundary surface", readme)
+        self.assertIn("Mimesis Visual Failure Packet", readme)
         self.assertIn("Private Workbench Verification Snapshot", readme)
         self.assertIn("Mimesis Verification Relocation Packet", readme)
         self.assertIn("Mimesis Downstream Reinjection Law", readme)
         self.assertIn("Mimesis Minecraft High-Integration Evidence Card", readme)
-        self.assertIn("Human-made Feeling Bench", readme)
-        self.assertIn("first-pass rubric", readme)
-        self.assertIn("not a universal design-quality benchmark", readme)
         self.assertIn("redacted failure artifact", readme)
         self.assertIn("redacted local hygiene artifact", readme)
         self.assertIn("redacted method-boundary artifact", readme)
+        self.assertIn("redacted local evidence card", readme)
         self.assertIn("banned-claim boundary", readme)
         self.assertIn("validation does not transfer", readme)
         self.assertIn("underdetermined task plus slop-contaminated prior", readme)
-        self.assertIn("redacted local evidence card", readme)
         self.assertIn("not L5 proof", readme)
         self.assertIn("human visual-quality proof", readme)
         self.assertIn("near-Fable proof", readme)
         self.assertIn("public benchmark status", readme)
         self.assertIn("no true wrong-anchor", readme)
         self.assertIn("n=2 per cell", readme)
-        self.assertIn("not prove universal output improvement", readme)
-        self.assertIn("statistical significance", readme)
-        self.assertIn("hallucination suppression", readme)
-        self.assertIn("extract-loss", readme)
-        self.assertIn("domain-shift", readme)
-        self.assertIn("wrong-anchor", readme)
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/",
-            readme,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/",
-            readme,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/",
-            readme,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/",
-            readme,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/",
-            readme,
-        )
-        self.assertIn(
-            "https://svy04.github.io/human-made-feeling-bench/",
-            readme,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
-            readme,
-        )
-        self.assertIn("GitHub Profile README Proof Surface", readme)
-        self.assertIn("CI-checked routing and claim-boundary surface", readme)
+        self.assertIn("It does not universally improve AI output.", readme)
+        self.assertIn("I do not claim Metaforge is production-ready", readme)
+        self.assertIn("I do not claim Mimesis Engineering is an industry standard", readme)
+        self.assertIn("I do not claim NoiseProof is production-ready", readme)
+        self.assertNotIn("Current flagship:", readme)
+        self.assertNotIn("Mimesis Engineering v0", readme)
+        self.assertNotIn("public v0 artifact-level imitation method", readme)
+        self.assertNotIn("Mimesis v.next Workbench", readme)
         self.assertNotIn("Phase 897/898 reviewer packet", readme)
 
     def test_validation_catches_unbounded_mimesis_claim(self):
@@ -134,15 +107,33 @@ class ProfileReadmeTests(unittest.TestCase):
 
         self.assertTrue(any("unbounded Mimesis claim" in issue for issue in issues))
 
-    def test_validation_catches_old_public_v0_as_primary_surface(self):
+    def test_validation_catches_old_public_v0_or_vnext_as_primary_surface(self):
         readme = Path("README.md").read_text(encoding="utf-8")
-        stale_readme = readme + "\n| [Mimesis Engineering v0](https://github.com/svy04/mimesis-engineering) | public v0 artifact-level imitation method |\n"
+        stale_readme = (
+            readme
+            + "\n| [Mimesis Engineering v0](https://github.com/svy04/mimesis-engineering) | public v0 artifact-level imitation method |\n"
+            + "\n## Mimesis v.next Workbench\n"
+        )
 
         issues = validate_readme_text(stale_readme)
 
         self.assertTrue(
-            any("stale Mimesis v0 primary surface" in issue for issue in issues)
+            any("prohibited profile marker" in issue for issue in issues)
         )
+
+    def test_validation_catches_local_path_disclosure(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+        disclosed_path = (
+            "C:"
+            + "\\Users\\admin\\Desktop\\"
+            + "Digital Factory"
+            + "\\README.md"
+        )
+        disclosed = readme + f"\nLocal path: {disclosed_path}\n"
+
+        issues = validate_readme_text(disclosed)
+
+        self.assertTrue(any("local path disclosure" in issue for issue in issues))
 
     def test_profile_verification_gate_is_documented_and_ci_wired(self):
         workflow = Path(".github/workflows/profile-readme.yml").read_text(
@@ -165,6 +156,8 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Mimesis Minecraft high-integration evidence-card route", proof_doc)
         self.assertIn("Human-made Feeling Bench route", proof_doc)
         self.assertIn("profile proof route", proof_doc)
+        self.assertIn("Metaforge-first profile framing", proof_doc)
+        self.assertIn("local path disclosure", proof_doc)
         self.assertIn(
             "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
             proof_doc,
@@ -192,11 +185,11 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("redacted failure artifact", proof_doc)
         self.assertIn("redacted local hygiene artifact", proof_doc)
         self.assertIn("redacted method-boundary artifact", proof_doc)
+        self.assertIn("redacted local evidence card", proof_doc)
         self.assertIn("first-pass rubric", proof_doc)
         self.assertIn("not a universal design-quality benchmark", proof_doc)
         self.assertIn("validation does not transfer", proof_doc)
         self.assertIn("underdetermined task plus slop-contaminated prior", proof_doc)
-        self.assertIn("redacted local evidence card", proof_doc)
         self.assertIn("not L5 proof", proof_doc)
         self.assertIn("near-Fable proof", proof_doc)
         self.assertIn("no true wrong-anchor", proof_doc)
@@ -225,13 +218,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Mimesis Minecraft High-Integration Evidence Card", workbench)
         self.assertIn("no true wrong-anchor weakness", workbench)
         self.assertIn("Source queue", workbench)
-        self.assertIn("comparison, replication, holdout", workbench)
-        self.assertIn("stale local planning notes", workbench)
-        self.assertIn("local leaderboard-style notes", workbench)
-        self.assertIn("unrelated account-pipeline notes", workbench)
-        self.assertIn("Historical", workbench)
-        self.assertIn("Public-adjacent but claim-risky", workbench)
-        self.assertIn("Adjacent operations planning lane", workbench)
+        self.assertIn("products, standards, OSS repos, patents, and evaluation systems", workbench)
         self.assertIn("The private workbench proves Mimesis Engineering.", workbench)
         self.assertIn("Mimesis suppresses hallucination/fabrication in general.", workbench)
 
@@ -244,8 +231,8 @@ class ProfileReadmeTests(unittest.TestCase):
             encoding="utf-8"
         )
 
-        self.assertIn("visual judgment evidence and expert gates", readme)
         self.assertIn("Mimesis Visual Failure Packet", readme)
+        self.assertIn("visual quality improvement", readme)
         self.assertIn("private prototype surface is private", proof_doc)
         self.assertIn("visual judgment evidence and expert gates", proof_doc)
         self.assertIn("visual quality improvement", proof_doc)

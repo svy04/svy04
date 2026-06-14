@@ -55,6 +55,8 @@ These are the local artifact families currently shaping the public position:
 | Source queue | Products, standards, OSS repos, patents, papers, and evaluation systems to extract from. | Candidate queue only; not all items are implemented modules. |
 | Visual specimens | Rendered website/app specimens and screenshot-style inspection surfaces. | Visual specimen evidence, not customer or production proof. |
 
+The source queue is intentionally broad: products, standards, OSS repos, patents, and evaluation systems are allowed inputs only after they are reduced into bounded source packets.
+
 ## What Counts As Current
 
 Current:
