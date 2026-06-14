@@ -117,6 +117,8 @@ https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evide
 
 That route is a redacted local evidence card for one private/local Minecraft visual task. It records source artifact, baseline output, conditioned output, checklist control, gate/scorer, blind 3-judge panel, n=2 per cell, failure cases, and claim boundary. It is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark proof, legal clearance, or universal Mimesis lift. It also keeps the `no true wrong-anchor` weakness visible.
 
+The current Promotion Blockers narrow the next proof artifact to a public redacted board with source-use boundary, condition board, baseline/checklist/wrong-anchor/conditioned arms, public-safe screenshots or links, judge protocol, scorer transcript, failure record, and claim boundary. The private board spec/template exists, but the public redacted board is still pending. This is a next-artifact contract, not stronger proof.
+
 The current public-safe Human-made Feeling Bench route is:
 
 ```text
