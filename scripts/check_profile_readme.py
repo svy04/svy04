@@ -16,6 +16,11 @@ REQUIRED_LINKS = [
     "https://github.com/svy04/svy04/actions/workflows/profile-readme.yml",
 ]
 
+REQUIRED_INTERNAL_LINKS = [
+    "docs/profile-proof-surface.md",
+    "docs/digital-factory-workbench.md",
+]
+
 REQUIRED_BADGE_URLS = [
     "https://github.com/svy04/svy04/actions/workflows/profile-readme.yml/badge.svg?branch=main",
     "https://img.shields.io/badge/claim%20boundary-documented-555",
@@ -79,6 +84,10 @@ def validate_readme_text(text):
     for link in REQUIRED_LINKS:
         if link not in text:
             issues.append(f"missing required link: {link}")
+
+    for link in REQUIRED_INTERNAL_LINKS:
+        if link not in text:
+            issues.append(f"missing required internal link: {link}")
 
     for badge_url in REQUIRED_BADGE_URLS:
         if badge_url not in text:

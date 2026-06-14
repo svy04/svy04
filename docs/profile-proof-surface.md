@@ -19,6 +19,7 @@ checks:
 ```text
 required public repo links
 required proof packet links
+local/private evidence map link
 required claim-boundary phrases
 unbounded Mimesis claims
 unbounded production-readiness claims
@@ -48,6 +49,14 @@ Claim boundary documented
 ```
 
 These are workflow status badges and claim-boundary navigation aids only. They do not prove the projects are externally validated, production-ready, secure, hosted, complete, or accepted by any company.
+
+The README also links:
+
+```text
+docs/digital-factory-workbench.md
+```
+
+That file is a local/private evidence map for the Digital Factory workbench. It is not a public repository link, public proof, external validation, adoption evidence, or production-readiness proof.
 
 ## Current Required Public Links
 

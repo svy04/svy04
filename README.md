@@ -47,7 +47,7 @@ Current proof starts from the Phase 897 current proof packet and current reviewe
 
 ### Mimesis Engineering v.next
 
-The Digital Factory workbench is a private/local research workbench rebuilding Mimesis Engineering from experiments, ablations, source scouting, and failure records. It is not public proof and not external validation.
+The Digital Factory workbench is a private/local research workbench rebuilding Mimesis Engineering from experiments, ablations, source scouting, and failure records. It is not public proof and not external validation. The current bounded evidence map is tracked in [docs/digital-factory-workbench.md](docs/digital-factory-workbench.md).
 
 The honest current claim is narrow:
 
