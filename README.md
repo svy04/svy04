@@ -56,10 +56,11 @@ The newest private workbench gate adds visual judgment evidence and expert gates
 
 The public-safe snapshot of that lane is the [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/): a redacted failure artifact that records banned claims, weak evidence, and the next external-panel gate.
 
-Two newer public-safe route snapshots keep the same boundary:
+Three newer public-safe route snapshots keep the same boundary:
 
 - [Private Workbench Verification Snapshot](https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/) — a redacted local hygiene artifact for the private/local Mimesis workbench. It does not prove public status, adoption, production readiness, external validation, universal lift, or visual quality improvement.
 - [Mimesis Verification Relocation Packet](https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/) — a redacted method-boundary artifact. It records that strong source artifacts can help identify load-bearing structure, but validation does not transfer to new Mimesis outputs.
+- [Mimesis Downstream Reinjection Law](https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/) — a public-safe local synthetic evidence artifact. It records a narrow signal for downstream reinjection only in the `underdetermined task plus slop-contaminated prior` regime; it does not prove universal output improvement, external validation, statistical significance, customer outcomes, or hallucination suppression.
 
 The honest current claim is narrow:
 
@@ -101,6 +102,7 @@ Other public repository visible today but not used as a current proof surface:
 - [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/) — public-safe failure packet for a local visual Mimesis loop. It records a banned-claim boundary; it does not prove visual quality improvement or external validation.
 - [Private Workbench Verification Snapshot](https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/) — public-safe local hygiene artifact for the private/local Mimesis workbench. It does not prove public status, external validation, adoption, production readiness, universal lift, or visual quality improvement.
 - [Mimesis Verification Relocation Packet](https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/) — public-safe method-boundary artifact for source-first Mimesis reuse. It records that source artifacts can guide structure, but validation does not transfer; downstream outputs still need extract-loss, domain-shift, wrong-anchor, conditioning, and target gates.
+- [Mimesis Downstream Reinjection Law](https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/) — public-safe local synthetic evidence artifact for a narrow downstream reinjection signal. It does not prove universal output improvement, external validation, statistical significance, customer outcomes, or hallucination suppression.
 
 ## Profile Verification
 
