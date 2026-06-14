@@ -9,6 +9,8 @@ The center is **Metaforge**: **Meta for operating memory**, **MFH for evidence g
 
 OpenClaude is the local CLI/runtime substrate. It connects Claude, Codex, OAuth, local tools, and terminal execution into the operating path. It matters, but it is not the main thesis.
 
+한국어로 줄이면: 나는 “AI가 똑똑해 보이는 말”이 아니라 **증거를 남기고, 경계를 통과하고, 틀린 주장을 멈추는 운영체제**를 만들고 있다. Metaforge는 그 OS이고, Mimesis Engineering은 이미 검증된 원본에서 구조를 흡수하는 방법이며, OpenClaude는 그 실행 경로를 받치는 로컬 런타임이다.
+
 ```text
 source first
 artifacts before personas
@@ -18,11 +20,19 @@ logs before polish
 orchestration before output
 ```
 
+## Latest Verified State
+
+Metaforge public hygiene is now current on `main`: the public `AGENTS.md` was reduced from a private session-memory dump into concise repository guidance, the Korean README route is live, and the public remote surface audit reports no local-path or token-shaped blockers on scanned public refs.
+
+The strongest current public claim is still bounded: **Metaforge is a Meta/MFH/Orchestra operating surface with local evidence gates**, not production readiness, external validation, hosted deployment, or autonomous reliability proof.
+
+For Mimesis Engineering, the public-safe evidence route is the profile/blog proof surface. The active workbench remains private/local, and the Minecraft board v1 path is still blocked until public-safe artifacts, wrong-anchor lineage, scorer records, and route-linked review evidence exist.
+
 ## Start Here
 
 | Surface | What to inspect | Boundary |
 |---|---|---|
-| [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra OS for governed agent work. Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). | Main public OS repo; not production-ready, compliance-ready, or externally validated. |
+| [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra OS for governed agent work, now with public AGENTS hygiene, Korean README routing, public readiness checks, and remote-surface privacy gates. Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). | Main public OS repo; not production-ready, compliance-ready, autonomously reliable, hosted, or externally validated. |
 | [Mimesis Engineering](https://github.com/svy04/mimesis-engineering) | Public framework, reference packs, validators, cases, and proof boundaries for artifact-level imitation. | Public support surface, not the latest private/local canon and not external validation. |
 | [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Evidence-first data-agent portfolio for messy market intelligence. Start with the [current proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). | Not a trading bot, not financial advice, not product-complete, not externally validated. |
 | [External OSS Attribution](https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/) | Two executed local repro cards for `P-EXT-03` Go `time.Parse` and `P-EXT-06` Eisel-Lemire / float parsing source attribution. | Source-level structure evidence only; not downstream lift, not maintainer endorsement, not legal clearance, and not external validation. |
@@ -33,7 +43,7 @@ orchestration before output
 
 ### Metaforge
 
-Metaforge is the public operating-system surface: a governed execution layer for agents, source ledgers, memory, dissent, review gates, promotion paths, and claim boundaries.
+Metaforge is the public operating-system surface: a governed execution layer for agents, source ledgers, memory, dissent, review gates, promotion paths, public hygiene checks, and claim boundaries.
 
 The current idea is not "another AI CLI." The idea is an operating system where the agent is allowed to move only as far as evidence, routing, memory, and gates can carry it.
 
