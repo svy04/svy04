@@ -98,6 +98,14 @@ https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-
 
 That route is a local synthetic evidence artifact. It records a narrow downstream reinjection signal only in the `underdetermined task plus slop-contaminated prior` regime. It does not prove universal output improvement, external validation, statistical significance, customer outcomes, or hallucination suppression.
 
+The current public-safe Mimesis Minecraft high-integration evidence-card route is:
+
+```text
+https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/
+```
+
+That route is a redacted local evidence card for one private/local Minecraft visual task. It records source artifact, baseline output, conditioned output, checklist control, gate/scorer, blind 3-judge panel, n=2 per cell, failure cases, and claim boundary. It is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark proof, legal clearance, or universal Mimesis lift. It also keeps the `no true wrong-anchor` weakness visible.
+
 The current public-safe Human-made Feeling Bench route is:
 
 ```text
@@ -130,6 +138,7 @@ https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15
 https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/
+https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/
 https://svy04.github.io/human-made-feeling-bench/
 ```
 

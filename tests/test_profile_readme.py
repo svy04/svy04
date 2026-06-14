@@ -64,6 +64,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Private Workbench Verification Snapshot", readme)
         self.assertIn("Mimesis Verification Relocation Packet", readme)
         self.assertIn("Mimesis Downstream Reinjection Law", readme)
+        self.assertIn("Mimesis Minecraft High-Integration Evidence Card", readme)
         self.assertIn("Human-made Feeling Bench", readme)
         self.assertIn("first-pass rubric", readme)
         self.assertIn("not a universal design-quality benchmark", readme)
@@ -73,6 +74,13 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("banned-claim boundary", readme)
         self.assertIn("validation does not transfer", readme)
         self.assertIn("underdetermined task plus slop-contaminated prior", readme)
+        self.assertIn("redacted local evidence card", readme)
+        self.assertIn("not L5 proof", readme)
+        self.assertIn("human visual-quality proof", readme)
+        self.assertIn("near-Fable proof", readme)
+        self.assertIn("public benchmark status", readme)
+        self.assertIn("no true wrong-anchor", readme)
+        self.assertIn("n=2 per cell", readme)
         self.assertIn("not prove universal output improvement", readme)
         self.assertIn("statistical significance", readme)
         self.assertIn("hallucination suppression", readme)
@@ -93,6 +101,10 @@ class ProfileReadmeTests(unittest.TestCase):
         )
         self.assertIn(
             "https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/",
+            readme,
+        )
+        self.assertIn(
+            "https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/",
             readme,
         )
         self.assertIn(
@@ -150,6 +162,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("private workbench route", proof_doc)
         self.assertIn("Mimesis verification-relocation route", proof_doc)
         self.assertIn("Mimesis downstream reinjection route", proof_doc)
+        self.assertIn("Mimesis Minecraft high-integration evidence-card route", proof_doc)
         self.assertIn("Human-made Feeling Bench route", proof_doc)
         self.assertIn("profile proof route", proof_doc)
         self.assertIn(
@@ -169,6 +182,10 @@ class ProfileReadmeTests(unittest.TestCase):
             proof_doc,
         )
         self.assertIn(
+            "https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/",
+            proof_doc,
+        )
+        self.assertIn(
             "https://svy04.github.io/human-made-feeling-bench/",
             proof_doc,
         )
@@ -179,6 +196,10 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("not a universal design-quality benchmark", proof_doc)
         self.assertIn("validation does not transfer", proof_doc)
         self.assertIn("underdetermined task plus slop-contaminated prior", proof_doc)
+        self.assertIn("redacted local evidence card", proof_doc)
+        self.assertIn("not L5 proof", proof_doc)
+        self.assertIn("near-Fable proof", proof_doc)
+        self.assertIn("no true wrong-anchor", proof_doc)
         self.assertIn("not prove universal output improvement", proof_doc)
         self.assertIn("not external validation", proof_doc)
         self.assertIn("not production readiness", proof_doc)
@@ -200,6 +221,9 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Claim guardrail notes", workbench)
         self.assertIn("Visual failure records", workbench)
         self.assertIn("Experiment records", workbench)
+        self.assertIn("High-integration evidence cards", workbench)
+        self.assertIn("Mimesis Minecraft High-Integration Evidence Card", workbench)
+        self.assertIn("no true wrong-anchor weakness", workbench)
         self.assertIn("Source queue", workbench)
         self.assertIn("comparison, replication, holdout", workbench)
         self.assertIn("stale local planning notes", workbench)
