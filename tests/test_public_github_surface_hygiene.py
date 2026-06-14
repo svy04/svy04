@@ -1,0 +1,70 @@
+import tempfile
+import unittest
+from pathlib import Path
+
+from scripts import check_public_github_surface_hygiene as hygiene
+
+
+class PublicGitHubSurfaceHygieneTests(unittest.TestCase):
+    def test_scan_repo_tree_catches_local_paths_and_secret_shaped_placeholders(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            bad_path = "C:" + "\\Users\\admin\\Desktop\\private\\README.md"
+            placeholder = "OPENAI_API_KEY=" + "sk-" + "example-placeholder"
+            (root / "README.md").write_text(
+                f"Bad path: {bad_path}\n{placeholder}\n",
+                encoding="utf-8",
+            )
+
+            findings = hygiene.scan_repo_tree("demo", root)
+
+        labels = {finding.label for finding in findings}
+        self.assertIn("windows-user-path", labels)
+        self.assertIn("openai-key-assignment", labels)
+        self.assertTrue(all(finding.repo == "demo" for finding in findings))
+
+    def test_scan_repo_tree_ignores_binary_files_and_git_metadata(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / ".git").mkdir()
+            (root / ".git" / "config").write_text(
+                "C:" + "\\Users\\admin\\Desktop\\hidden\n",
+                encoding="utf-8",
+            )
+            (root / "image.png").write_bytes(b"\x89PNG\r\n\x1a\n")
+            (root / "README.md").write_text("clean public text\n", encoding="utf-8")
+
+            findings = hygiene.scan_repo_tree("demo", root)
+
+        self.assertEqual(findings, [])
+
+    def test_scan_repo_tree_allows_generic_windows_path_examples(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "windows-paths.md").write_text(
+                "Example: C:" + "\\Users\\example\\workspace\\file.txt\n",
+                encoding="utf-8",
+            )
+
+            findings = hygiene.scan_repo_tree("demo", root)
+
+        self.assertEqual(findings, [])
+
+    def test_format_finding_redacts_secret_like_excerpt(self):
+        finding = hygiene.Finding(
+            repo="demo",
+            path="README.md",
+            line=7,
+            label="openai-key-assignment",
+            excerpt="OPENAI_API_KEY=" + "sk-" + "example-placeholder",
+        )
+
+        rendered = hygiene.format_finding(finding)
+
+        self.assertIn("demo:README.md:7 [openai-key-assignment]", rendered)
+        self.assertIn("OPENAI_API_KEY=<redacted>", rendered)
+        self.assertNotIn("example-placeholder", rendered)
+
+
+if __name__ == "__main__":
+    unittest.main()

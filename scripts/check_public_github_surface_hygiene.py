@@ -1,0 +1,283 @@
+import argparse
+import json
+import os
+import re
+import subprocess
+import sys
+import tempfile
+from dataclasses import dataclass
+from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
+
+
+DEFAULT_OWNER = "svy04"
+GITHUB_API_ROOT = "https://api.github.com"
+MAX_FILE_BYTES = 1_000_000
+MAX_EXCERPT_CHARS = 220
+
+SKIPPED_DIRS = {
+    ".git",
+    ".hg",
+    ".svn",
+    ".venv",
+    "__pycache__",
+    "node_modules",
+    "dist",
+    "build",
+    ".next",
+    ".cache",
+}
+
+PATTERN_SPECS = [
+    ("windows-user-path", re.compile("C:" + r"[\\/]+Users[\\/]+" + "ad" + "min", re.IGNORECASE)),
+    ("posix-admin-path", re.compile("/" + "Users" + "/" + "ad" + "min", re.IGNORECASE)),
+    ("korean-private-workspace", re.compile("\ub0b4 \uc21c\uc218 \uc7ac\ubbf8")),
+    ("digital-factory-path", re.compile("Digital Factory" + r"[\\/]", re.IGNORECASE)),
+    ("anthropic-placeholder", re.compile("sk-ant-" + "your-key-here", re.IGNORECASE)),
+    ("generic-sk-placeholder", re.compile("sk-" + "your-key-here", re.IGNORECASE)),
+    ("github-placeholder", re.compile("ghp_" + "your-token-here", re.IGNORECASE)),
+    ("master-key-placeholder", re.compile("sk-" + "my-master-key", re.IGNORECASE)),
+    (
+        "openai-key-assignment",
+        re.compile(r"\bOPENAI_API_KEY\s*=\s*" + "sk-" + r"[A-Za-z0-9_\-]*"),
+    ),
+    (
+        "anthropic-key-assignment",
+        re.compile(r"\bANTHROPIC_API_KEY\s*=\s*" + "sk-" + r"[A-Za-z0-9_\-]*"),
+    ),
+    (
+        "github-token-assignment",
+        re.compile(r"\bGITHUB_TOKEN\s*=\s*" + "ghp_" + r"[A-Za-z0-9_]*"),
+    ),
+    ("github-pat-token", re.compile("github" + "_pat_" + r"[A-Za-z0-9_]+")),
+    ("github-classic-token", re.compile("gh" + r"[pousr]_[A-Za-z0-9_]{20,}")),
+    ("generic-openai-style-key", re.compile(r"(?<![\w-])" + "sk-" + r"[A-Za-z0-9]{20,}(?![\w-])")),
+    ("google-api-key", re.compile("AIza" + r"[A-Za-z0-9_\-]{20,}")),
+]
+
+SECRET_REDACTIONS = [
+    (re.compile(r"\bOPENAI_API_KEY\s*=\s*" + "sk-" + r"[A-Za-z0-9_\-]*"), "OPENAI_API_KEY=<redacted>"),
+    (re.compile(r"\bANTHROPIC_API_KEY\s*=\s*" + "sk-" + r"[A-Za-z0-9_\-]*"), "ANTHROPIC_API_KEY=<redacted>"),
+    (re.compile(r"\bGITHUB_TOKEN\s*=\s*" + "ghp_" + r"[A-Za-z0-9_]*"), "GITHUB_TOKEN=<redacted>"),
+    (re.compile("github" + "_pat_" + r"[A-Za-z0-9_]+"), "github_pat_<redacted>"),
+    (re.compile("gh" + r"[pousr]_[A-Za-z0-9_]{12,}"), "gh*_ <redacted>"),
+    (re.compile("sk-" + r"[A-Za-z0-9][A-Za-z0-9_\-]{4,}"), "sk-<redacted>"),
+    (re.compile("AIza" + r"[A-Za-z0-9_\-]{12,}"), "AIza<redacted>"),
+]
+
+
+@dataclass(frozen=True)
+class Finding:
+    repo: str
+    path: str
+    line: int
+    label: str
+    excerpt: str
+
+
+@dataclass(frozen=True)
+class ScanSummary:
+    repos: int
+    files: int
+    findings: list[Finding]
+
+
+def should_skip_path(path: Path) -> bool:
+    return any(part in SKIPPED_DIRS for part in path.parts)
+
+
+def is_probably_text_file(path: Path) -> bool:
+    try:
+        chunk = path.read_bytes()[:4096]
+    except OSError:
+        return False
+    return b"\x00" not in chunk
+
+
+def read_text_if_safe(path: Path) -> str | None:
+    try:
+        if path.stat().st_size > MAX_FILE_BYTES:
+            return None
+        if not is_probably_text_file(path):
+            return None
+        return path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError):
+        return None
+
+
+def scan_repo_tree(repo: str, root: Path) -> list[Finding]:
+    findings = []
+    for path in sorted(root.rglob("*")):
+        if not path.is_file() or should_skip_path(path.relative_to(root)):
+            continue
+
+        text = read_text_if_safe(path)
+        if text is None:
+            continue
+
+        relpath = path.relative_to(root).as_posix()
+        for line_number, line in enumerate(text.splitlines(), start=1):
+            for label, pattern in PATTERN_SPECS:
+                if pattern.search(line):
+                    findings.append(
+                        Finding(
+                            repo=repo,
+                            path=relpath,
+                            line=line_number,
+                            label=label,
+                            excerpt=line.strip()[:MAX_EXCERPT_CHARS],
+                        )
+                    )
+    return findings
+
+
+def sanitize_excerpt(excerpt: str) -> str:
+    sanitized = excerpt
+    for pattern, replacement in SECRET_REDACTIONS:
+        sanitized = pattern.sub(replacement, sanitized)
+    return sanitized
+
+
+def format_finding(finding: Finding) -> str:
+    excerpt = sanitize_excerpt(finding.excerpt)
+    return f"ERROR: {finding.repo}:{finding.path}:{finding.line} [{finding.label}] {excerpt}"
+
+
+def github_api_get_json(url: str, token: str | None = None, timeout: int = 30):
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "svy04-public-surface-hygiene/1.0",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    request = Request(url, headers=headers)
+    try:
+        with urlopen(request, timeout=timeout) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"GitHub API request failed: HTTP {exc.code} {detail}") from exc
+    except URLError as exc:
+        raise RuntimeError(f"GitHub API request failed: {exc.reason}") from exc
+
+
+def list_public_repositories(owner: str, token: str | None = None) -> list[dict]:
+    repos = []
+    page = 1
+    while True:
+        url = (
+            f"{GITHUB_API_ROOT}/users/{owner}/repos"
+            f"?type=owner&per_page=100&page={page}&sort=full_name"
+        )
+        page_repos = github_api_get_json(url, token=token)
+        if not page_repos:
+            break
+        repos.extend(
+            repo
+            for repo in page_repos
+            if not repo.get("archived") and not repo.get("disabled")
+        )
+        page += 1
+    return repos
+
+
+def clone_repository(repo: dict, destination: Path, timeout_seconds: int) -> Path:
+    name = repo["name"]
+    repo_dir = destination / name
+    command = [
+        "git",
+        "-c",
+        "core.longpaths=true",
+        "clone",
+        "--quiet",
+        "--depth",
+        "1",
+        "--single-branch",
+        "--branch",
+        repo["default_branch"],
+        repo["clone_url"],
+        str(repo_dir),
+    ]
+    subprocess.run(command, check=True, timeout=timeout_seconds)
+    return repo_dir
+
+
+def scan_public_default_branches(
+    owner: str,
+    selected_repos: set[str] | None = None,
+    token: str | None = None,
+    timeout_seconds: int = 120,
+) -> ScanSummary:
+    repos = list_public_repositories(owner, token=token)
+    if selected_repos is not None:
+        repos = [repo for repo in repos if repo["name"] in selected_repos]
+
+    findings = []
+    file_count = 0
+    with tempfile.TemporaryDirectory(prefix="public-surface-hygiene-") as tmpdir:
+        root = Path(tmpdir)
+        for repo in repos:
+            repo_root = clone_repository(repo, root, timeout_seconds=timeout_seconds)
+            repo_findings = scan_repo_tree(repo["name"], repo_root)
+            findings.extend(repo_findings)
+            file_count += sum(
+                1
+                for path in repo_root.rglob("*")
+                if path.is_file() and not should_skip_path(path.relative_to(repo_root))
+            )
+    return ScanSummary(repos=len(repos), files=file_count, findings=findings)
+
+
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(
+        description="Scan public GitHub default branches for local path leaks and secret-shaped placeholders."
+    )
+    parser.add_argument("--owner", default=DEFAULT_OWNER)
+    parser.add_argument(
+        "--repo",
+        action="append",
+        dest="repos",
+        help="Restrict scan to a public repository name. May be repeated.",
+    )
+    parser.add_argument(
+        "--clone-timeout-seconds",
+        type=int,
+        default=120,
+        help="Timeout for each shallow clone.",
+    )
+    return parser.parse_args(argv)
+
+
+def main(argv=None) -> int:
+    args = parse_args(argv)
+    selected_repos = set(args.repos) if args.repos else None
+    token = os.environ.get("GITHUB_TOKEN")
+
+    try:
+        summary = scan_public_default_branches(
+            owner=args.owner,
+            selected_repos=selected_repos,
+            token=token,
+            timeout_seconds=args.clone_timeout_seconds,
+        )
+    except (RuntimeError, subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
+        print(f"ERROR: public GitHub surface hygiene scan failed: {exc}", file=sys.stderr)
+        return 2
+
+    if summary.findings:
+        for finding in summary.findings:
+            print(format_finding(finding), file=sys.stderr)
+        return 1
+
+    print(
+        "Public GitHub surface hygiene checks passed. "
+        f"scanned_repos={summary.repos} scanned_files={summary.files}"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
