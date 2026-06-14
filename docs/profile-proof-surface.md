@@ -61,7 +61,7 @@ That file is a private/local evidence map for the Mimesis v.next workbench. It i
 The current private Mimesis workbench reference is bounded this way:
 
 ```text
-mimesis-plugin is private.
+The private prototype surface is private.
 The profile may mention visual judgment evidence and expert gates only as private/local workbench evidence.
 It must not present that work as public proof, external validation, or proof of visual quality improvement.
 ```
