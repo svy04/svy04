@@ -28,7 +28,7 @@ orchestration before output
 |---|---|---|
 | [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra OS for governed agent execution. Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md) and [model/system card](https://github.com/svy04/metaforge/blob/main/docs/MODEL_SYSTEM_CARD.md). | Public active repo; not production, compliance, or external-validation proof. |
 | [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Evidence-first data-agent portfolio for messy market intelligence. Start with the [current proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). | Not a trading bot, not financial advice, not product-complete, not externally validated. |
-| [Mimesis Engineering v0](https://github.com/svy04/mimesis-engineering) | Public v0 method artifact plus redacted proof-boundary routes, including the [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/). | Experimental method artifact and redacted local-workbench artifacts; not visual quality improvement proof, external validation, an industry standard, universal framework, or the latest private workbench canon. |
+| [Mimesis v.next Workbench](docs/private-mimesis-workbench.md) | Private/local Mimesis Engineering rebuild with source packets, ablations, failure records, and redacted proof routes. Start with the [Private Workbench Verification Snapshot](https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/), [Verification Relocation Packet](https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/), and [Downstream Reinjection Law](https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/). | Current canon is private/local and proof-bounded; public v0 repository is a support surface, not the latest canon or external validation. |
 
 ## Current Work
 
@@ -46,7 +46,7 @@ It is designed to show how a small system can ingest messy documents, keep parse
 
 Current proof starts from the current proof packet and reviewer route, not from a broad product-complete claim.
 
-### Mimesis Engineering v.next
+### Mimesis v.next Workbench
 
 The active Mimesis work is being rebuilt in a private/local research workbench. It is not public proof and not external validation. The current bounded evidence map is tracked in [docs/private-mimesis-workbench.md](docs/private-mimesis-workbench.md).
 
@@ -85,12 +85,17 @@ That is more interesting than hype. It means the method has to carry receipts: p
 
 - [metaforge](https://github.com/svy04/metaforge) — governed agent operating system experiments.
 - [noiseproof-agent](https://github.com/svy04/noiseproof-agent) — evidence-first RAG/agent portfolio system.
-- [mimesis-engineering](https://github.com/svy04/mimesis-engineering) — public v0 artifact-level imitation method, framework and validator surface.
-- [mimesis-canvas](https://github.com/svy04/mimesis-canvas) — worksheet surface.
-- [mimesis-casebook](https://github.com/svy04/mimesis-casebook) — case surface.
 - [svy04](https://github.com/svy04/svy04) — this profile, kept as a live claim boundary.
 
-The Mimesis repos make the method inspectable as public files. They do not prove external adoption, benchmarked productivity, visual quality improvement, customer outcomes, or production readiness.
+Current Mimesis canon lives in the private/local workbench and redacted proof routes, not in the older public repos.
+
+Current public Mimesis support surfaces:
+
+- [mimesis-engineering](https://github.com/svy04/mimesis-engineering) — public v0 repository is a support surface for framework and validator surface language, not the latest private/local canon.
+- [mimesis-canvas](https://github.com/svy04/mimesis-canvas) — worksheet surface.
+- [mimesis-casebook](https://github.com/svy04/mimesis-casebook) — case surface.
+
+The Mimesis support repos make earlier method files inspectable as public files. They do not prove external adoption, benchmarked productivity, visual quality improvement, customer outcomes, production readiness, or the current private/local v.next canon.
 
 Other public repository visible today but not used as a current proof surface:
 

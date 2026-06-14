@@ -46,6 +46,10 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("not public proof", readme)
         self.assertIn("not external validation", readme)
         self.assertIn("Mimesis is the hypothesis", readme)
+        self.assertIn("Mimesis v.next Workbench", readme)
+        self.assertIn("public v0 repository is a support surface", readme)
+        self.assertNotIn("Mimesis Engineering v0", readme)
+        self.assertNotIn("public v0 artifact-level imitation method", readme)
         self.assertIn("Mimesis Visual Failure Packet", readme)
         self.assertIn("Private Workbench Verification Snapshot", readme)
         self.assertIn("Mimesis Verification Relocation Packet", readme)
@@ -100,6 +104,16 @@ class ProfileReadmeTests(unittest.TestCase):
         issues = validate_readme_text(text)
 
         self.assertTrue(any("unbounded Mimesis claim" in issue for issue in issues))
+
+    def test_validation_catches_old_public_v0_as_primary_surface(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+        stale_readme = readme + "\n| [Mimesis Engineering v0](https://github.com/svy04/mimesis-engineering) | public v0 artifact-level imitation method |\n"
+
+        issues = validate_readme_text(stale_readme)
+
+        self.assertTrue(
+            any("stale Mimesis v0 primary surface" in issue for issue in issues)
+        )
 
     def test_profile_verification_gate_is_documented_and_ci_wired(self):
         workflow = Path(".github/workflows/profile-readme.yml").read_text(
@@ -198,8 +212,8 @@ class ProfileReadmeTests(unittest.TestCase):
     def test_validation_catches_missing_private_workbench_evidence_link(self):
         readme = Path("README.md").read_text(encoding="utf-8")
         readme_without_workbench = readme.replace(
-            "[docs/private-mimesis-workbench.md](docs/private-mimesis-workbench.md)",
-            "private workbench evidence map",
+            "docs/private-mimesis-workbench.md",
+            "docs/missing-private-mimesis-workbench.md",
         )
 
         issues = validate_readme_text(readme_without_workbench)

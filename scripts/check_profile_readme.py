@@ -69,6 +69,8 @@ REQUIRED_MARKERS = [
     "not public proof",
     "not external validation",
     "Mimesis is the hypothesis",
+    "Mimesis v.next Workbench",
+    "public v0 repository is a support surface",
     "It does not universally improve AI output.",
     "I do not claim Metaforge is production-ready",
     "I do not claim NoiseProof is production-ready",
@@ -130,6 +132,8 @@ def validate_readme_text(text):
     ]
 
     for line in text.splitlines():
+        if "Mimesis Engineering v0" in line or "public v0 artifact-level imitation method" in line:
+            issues.append(f"stale Mimesis v0 primary surface: {line.strip()}")
         for label, pattern in dangerous_patterns:
             if re.search(pattern, line, flags=re.IGNORECASE) and not _line_allows_dangerous_claim(line):
                 issues.append(f"{label}: {line.strip()}")
