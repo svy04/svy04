@@ -36,6 +36,8 @@ REQUIRED_MARKERS = [
     "not product-complete",
     "not externally validated",
     "private/local research workbench",
+    "visual judgment evidence and expert gates",
+    "not proof of visual quality improvement",
     "not public proof",
     "not external validation",
     "Mimesis is the hypothesis",

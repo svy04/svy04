@@ -49,6 +49,8 @@ Current proof starts from the Phase 897 current proof packet and current reviewe
 
 The Digital Factory workbench is a private/local research workbench rebuilding Mimesis Engineering from experiments, ablations, source scouting, and failure records. It is not public proof and not external validation. The current bounded evidence map is tracked in [docs/digital-factory-workbench.md](docs/digital-factory-workbench.md).
 
+The newest private workbench gate adds visual judgment evidence and expert gates: rule-heavy visual conditioning lost in an owner condition-blind read, while the useful direction moved toward matched anchors, obvious-slop linting, and margin-gated subjective evaluation. This is not proof of visual quality improvement.
+
 The honest current claim is narrow:
 
 ```text

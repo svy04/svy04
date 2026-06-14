@@ -46,9 +46,12 @@ These are the local artifact families currently shaping the public position:
 | --- | --- | --- |
 | `mimesis-source-packet/` | Canonical v.next source packet, definition, pipeline, validation framing, roadmap, and asset triage. | Local canon input only; not public proof by itself. |
 | `mimesis-source-packet/00-OVERVIEW.md` | States that the older public v0.1 direction was exploratory and that the source packet is the v.next single source of truth. | Use to avoid treating the old repo as the final method. |
-| `mimesis-plugin/` | Prototype plugin shape, expert modules, cases, retina loop, and provenance-oriented validation tools. | Prototype evidence only; not published adoption proof. |
+| `mimesis-plugin/` | Prototype plugin shape, expert modules, cases, retina loop, and provenance-oriented validation tools. Latest local reference: `mimesis-plugin@adc3636`, which adds visual judgment evidence and expert gates. | Private/local prototype evidence only; not published adoption proof. |
 | `mimesis-plugin/CLAIMS.md` | Current public-claim guardrail for the plugin surface. | Treat as the safety boundary before reusing stronger plugin README language. |
 | `mimesis-plugin/README.md` | Public-method draft language around "standards, not roles" and receipt-first positioning. | Some language may overfit prototype claims; keep profile copy narrower. |
+| `mimesis-plugin/experts/design-craft/visual_lint.py` | Runnable obvious-slop detector adapted from design-craft priors; flags visual anti-patterns and passes a clean sample. | Slop blocking only; not proof that a design is good. |
+| `mimesis-plugin/experts/subjective-quality-evaluator/margin_gated_panel.py` | Runnable margin gate that abstains on cross-family near-ties and ranks only large-margin recorded votes. | Verified on recorded local votes, not a full live judge pipeline or human-validation proof. |
+| `mimesis-plugin/cases/004-real-world-visual/HUMAN-VERDICT-003.md` | Owner condition-blind visual judgment: rule-heavy visual module underperformed, example anchors did better, and one retina pass lost to its seed. | n=1 owner signal; not external validation and not proof of visual quality improvement. |
 | `MIMESIS-DEPLOYMENT-MAP.md` | Current operating/deployment map for what should be made public next. | Planning surface, not proof that the work is shipped or adopted. |
 | `MIMESIS-METHOD.md` | Design-level method extracted from shell failures, load-bearing middle decisions, and non-LLM ship gates. | Thought-method layer, not full method proof. |
 | `UNIFYING-LAW.md` | Current self-refined law: conditioning helps where the base output is below the expert region, and can be null or harmful when no headroom exists. | Use as a claim boundary, not as universal law. |
@@ -74,6 +77,7 @@ Outdated or demoted:
 - treating the old public v0 repo as the whole canon
 - presenting local workbench records as public proof
 - using visual polish without screenshot/pixel/runtime inspection
+- treating visual_lint.py or margin_gated_panel.py as visual-quality oracles
 - treating `mimesis-source-packet/NEXT-ACTIONS.md` as current install or license state
 - reusing `mimesis-plugin/bench/LEADERBOARD.md` before reconciling fabrication-suppression wording with `mimesis-plugin/CLAIMS.md`
 - reusing `ACCOUNT-PIPELINE-REPORT.md` as Mimesis Engineering proof; it belongs to a separate account-pipeline lane
@@ -128,3 +132,5 @@ It is a redacted case packet that turns one Digital Factory local loop into a pu
 - non-LLM check where possible
 - failure boundary
 - banned claims
+
+For the visual workbench lane, the next public-safe artifact should present `HUMAN-VERDICT-003`, `visual_lint.py`, and `margin_gated_panel.py` as a failure-bounded inspection packet: what failed, what gate now exists, and what remains unproven.

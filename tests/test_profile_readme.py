@@ -109,6 +109,23 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Digital Factory proves Mimesis Engineering.", workbench)
         self.assertIn("Mimesis suppresses hallucination/fabrication in general.", workbench)
 
+    def test_visual_judgment_gate_is_profile_bounded(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+        proof_doc = Path("docs/profile-proof-surface.md").read_text(
+            encoding="utf-8"
+        )
+        workbench = Path("docs/digital-factory-workbench.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("visual judgment evidence and expert gates", readme)
+        self.assertIn("mimesis-plugin is private", proof_doc)
+        self.assertIn("visual judgment evidence and expert gates", proof_doc)
+        self.assertIn("mimesis-plugin@adc3636", workbench)
+        self.assertIn("visual_lint.py", workbench)
+        self.assertIn("margin_gated_panel.py", workbench)
+        self.assertIn("not proof of visual quality improvement", workbench)
+
     def test_validation_catches_missing_digital_factory_evidence_link(self):
         readme = Path("README.md").read_text(encoding="utf-8")
         readme_without_workbench = readme.replace(

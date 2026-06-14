@@ -58,6 +58,14 @@ docs/digital-factory-workbench.md
 
 That file is a local/private evidence map for the Digital Factory workbench. It is not a public repository link, public proof, external validation, adoption evidence, or production-readiness proof.
 
+The current private Mimesis workbench reference is bounded this way:
+
+```text
+mimesis-plugin is private.
+The profile may mention visual judgment evidence and expert gates only as private/local workbench evidence.
+It must not present that work as public proof, external validation, or proof of visual quality improvement.
+```
+
 ## Current Required Public Links
 
 ```text
