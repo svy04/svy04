@@ -125,8 +125,8 @@ class ProfileReadmeTests(unittest.TestCase):
         readme = Path("README.md").read_text(encoding="utf-8")
         disclosed_path = (
             "C:"
-            + "\\Users\\admin\\Desktop\\"
-            + "Digital Factory"
+            + "\\Users\\owner\\"
+            + "Private"
             + "\\README.md"
         )
         disclosed = readme + f"\nLocal path: {disclosed_path}\n"
