@@ -147,4 +147,4 @@ The [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/p
 
 That route is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark status, legal clearance, or universal lift.
 
-The next stronger public step is not another stronger claim. It is an external blind panel or redacted condition board that keeps owner verdict, external verdict, wrong-anchor control, and banned claims separate.
+The next stronger public step is not another stronger claim. It is a public redacted board that keeps source-use boundary, condition board, baseline/checklist/wrong-anchor/conditioned arms, public-safe screenshots or links, judge protocol, scorer transcript, failure record, and claim boundary separate. The private board spec/template exists, but the public redacted board is still pending.
