@@ -1,74 +1,76 @@
 # 오영웅 · @svy04
 
-I build proof-bounded AI operating systems: systems that use agents, memory,
-source ledgers, and review gates without pretending that fluent output is proof.
+I build proof-bounded AI operating systems.
 
-The short version:
+Current flagship: **Metaforge**, a Meta + MFH + Orchestra OS for governed
+agent execution. It treats agents as workers inside memory, source ledgers,
+review gates, and claim boundaries.
+
+OpenClaude is useful here, but it is not the thesis. It is the runtime route:
+the layer that connects Claude, Codex, OAuth, CLI tooling, and local execution
+to the Metaforge operating system.
 
 ```text
-standards, not roles
-structure, not persona
-proof, not vibes
+source first
+gates before claims
+orchestration before output
 ```
-
-## Current Focus
-
-| Surface | What it is | Current boundary |
-|---|---|---|
-| [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra operating layer for governed-code execution, source ledgers, decision records, agent routing, and public proof packs. | Public active repo, not a production guarantee, compliance claim, or external validation. |
-| [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Inspectable RAG/data-agent portfolio system for messy market intelligence, with ingestion, profiling, parsing boundaries, retrieval/evidence/report surfaces, run logs, and proof-gated review paths. | Not a trading bot, not financial advice, not product-complete, not externally validated. |
-| [Mimesis Engineering](https://svy04.github.io/mimesis-engineering/) | Artifact-level imitation for AI-native work: give AI real expert products, OSS, papers, patents, standards, layouts, tests, and acceptance criteria instead of expert-sounding roles. | Public working method, not an industry standard or universal improvement claim. |
-| [svy04.github.io](https://svy04.github.io/) | Public thinking and proof surface for Mimesis, claim boundaries, proof artifacts, and NoiseProof route notes. | Proof surface only; not the main product runtime. |
-| Digital Factory Mimesis work | Current local source packet/plugin experiments for Mimesis v.next. | Being consolidated before public release; older public Mimesis repos are v0 drafts. |
 
 ## Start Here
 
-1. [Metaforge](https://github.com/svy04/metaforge) — operating layer for governed agent work.
-2. [Metaforge proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md) — strongest current public copy, evidence cards, and non-claims.
-3. [NoiseProof Agent README](https://github.com/svy04/noiseproof-agent) — the most inspectable current engineering artifact.
-4. [NoiseProof portfolio index](https://github.com/svy04/noiseproof-agent/blob/main/docs/application/portfolio-index.md) — reviewer path and proof boundaries.
-5. [Proof & Claim Boundaries](https://svy04.github.io/proof/) — what I claim, what I do not claim, and why.
-6. [Mimesis Engineering](https://svy04.github.io/mimesis-engineering/) — method hub.
+1. [Metaforge](https://github.com/svy04/metaforge) — Meta/MFH/Orchestra OS for governed agent work.
+2. [Metaforge proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md) — current public evidence cards and non-claims.
+3. [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) — inspectable data-agent portfolio system for messy market intelligence.
+4. [NoiseProof portfolio index](https://github.com/svy04/noiseproof-agent/blob/main/docs/application/portfolio-index.md) — reviewer path, run logs, and proof boundaries.
+5. [Mimesis Engineering](https://svy04.github.io/mimesis-engineering/) — the method: imitate expert artifacts, standards, OSS, papers, and tests instead of expert personas.
+6. [Proof & Claim Boundaries](https://svy04.github.io/proof/) — what I claim, what I do not claim, and why.
+
+## Current Systems
+
+| Surface | What it proves | Boundary |
+|---|---|---|
+| [Metaforge](https://github.com/svy04/metaforge) | Meta as operator memory/constitution, MFH as governed-code gate, Orchestra OS as multi-agent planning/review/promotion loop. | Public active repo, not production readiness, compliance readiness, or external validation. |
+| [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Noisy data can be ingested, profiled, retrieved, reviewed, and reported with visible proof gates. | Not a trading bot, not financial advice, not product-complete, not externally validated. |
+| [Mimesis Engineering](https://github.com/svy04/mimesis-engineering) | AI work improves when it copies load-bearing structures from real artifacts and primary sources. | Public v0 method artifact; current canon is being rebuilt from newer source-packet/plugin work. |
+| Private Mimesis v.next work | Source packet and plugin experiments for the next method release. | Private consolidation work; not used as public proof until released. |
 
 ## What I Am Trying To Prove
 
-- A useful AI system starts by blocking unsupported answers, not by sounding fluent.
-- A portfolio artifact is stronger when logs, failures, gates, stale reports, and boundaries are visible.
-- Mimesis is stronger when it imitates expert **artifacts and standards**, not expert personas.
+- Useful AI systems should block unsupported answers before they generate fluent ones.
+- Strong agent work needs memory, gates, logs, dissent, and rollback paths.
+- Mimesis is stronger when it imitates artifacts and standards, not roles or vibes.
 - Public claims should move only when the evidence surface moves.
 
 ## Public Repos
 
-- [metaforge](https://github.com/svy04/metaforge) — Meta/MFH/Orchestra OS for governed-code execution.
+- [metaforge](https://github.com/svy04/metaforge) — Meta/MFH/Orchestra OS with evidence gates and Claude/Codex-ready OpenClaude runtime routes.
 - [noiseproof-agent](https://github.com/svy04/noiseproof-agent) — public data-agent portfolio system for noisy market intelligence.
-- [mimesis-engineering](https://github.com/svy04/mimesis-engineering) — public v0 method artifact; current canon is being rebuilt from the newer source packet/plugin work before release.
+- [mimesis-engineering](https://github.com/svy04/mimesis-engineering) — public v0 method artifact.
 - [svy04](https://github.com/svy04/svy04) — this profile, kept as a live claim boundary.
 
 ## Working Loop
 
 ```text
-find the best solved examples
+find the strongest solved examples
 -> read primary sources and proven implementations
 -> extract the load-bearing structure
 -> adapt it locally
--> run agents in parallel when useful
+-> run parallel agents when useful
 -> verify with evidence gates
--> record the boundary
+-> record the claim boundary
 -> improve, expand, shrink, or stop
 ```
 
 ## Claim Boundary
 
-I do not claim NoiseProof is production-ready, hosted, externally validated, or accepted by any company.
+I do not claim Metaforge is production-ready, compliance-ready, SLSA/NIST-ready,
+or externally validated.
 
-I do not claim Metaforge is production-ready, compliance-ready, SLSA/NIST-ready, or externally validated.
+I do not claim NoiseProof is production-ready, hosted, externally validated, or
+accepted by any company.
 
-I do not claim Mimesis Engineering is an industry standard, statistically proven method, or universal replacement for normal engineering judgment.
+I do not claim Mimesis Engineering is an industry standard, statistically proven
+method, or universal replacement for engineering judgment.
 
-Strong claims must point to one of these:
-
-1. local runtime evidence,
-2. public repository state,
-3. primary sources,
-4. reproducible tests,
-5. explicit claim-boundary notes.
+Strong claims must point to local runtime evidence, public repository state,
+primary sources, reproducible tests, or explicit claim-boundary notes.
