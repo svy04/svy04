@@ -40,6 +40,15 @@ python scripts/check_profile_readme.py
 python scripts/check_profile_readme.py --check-links
 ```
 
+The README also shows workflow status badges for:
+
+```text
+Profile README workflow status
+Claim boundary documented
+```
+
+These are workflow status badges and claim-boundary navigation aids only. They do not prove the projects are externally validated, production-ready, secure, hosted, complete, or accepted by any company.
+
 ## Current Required Public Links
 
 ```text

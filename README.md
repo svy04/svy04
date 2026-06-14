@@ -1,5 +1,8 @@
 # 오영웅 · @svy04
 
+[![Profile README](https://github.com/svy04/svy04/actions/workflows/profile-readme.yml/badge.svg?branch=main)](https://github.com/svy04/svy04/actions/workflows/profile-readme.yml)
+[![Claim boundary](https://img.shields.io/badge/claim%20boundary-documented-555)](docs/profile-proof-surface.md)
+
 I build proof-bounded AI operating systems.
 
 My current work is about making AI output inspectable before it becomes persuasive:

@@ -2,6 +2,7 @@ import unittest
 from pathlib import Path
 
 from scripts.check_profile_readme import (
+    REQUIRED_BADGE_URLS,
     REQUIRED_LINKS,
     extract_markdown_links,
     validate_readme_text,
@@ -12,7 +13,8 @@ class ProfileReadmeTests(unittest.TestCase):
     def test_extracts_markdown_links(self):
         text = (
             "[Metaforge](https://github.com/svy04/metaforge) and "
-            "[NoiseProof](https://github.com/svy04/noiseproof-agent)"
+            "[NoiseProof](https://github.com/svy04/noiseproof-agent) and "
+            "[![Profile README](https://github.com/svy04/svy04/actions/workflows/profile-readme.yml/badge.svg)](https://github.com/svy04/svy04/actions/workflows/profile-readme.yml)"
         )
 
         self.assertEqual(
@@ -20,6 +22,8 @@ class ProfileReadmeTests(unittest.TestCase):
             [
                 "https://github.com/svy04/metaforge",
                 "https://github.com/svy04/noiseproof-agent",
+                "https://github.com/svy04/svy04/actions/workflows/profile-readme.yml/badge.svg",
+                "https://github.com/svy04/svy04/actions/workflows/profile-readme.yml",
             ],
         )
 
@@ -31,6 +35,8 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertEqual(issues, [])
         for link in REQUIRED_LINKS:
             self.assertIn(link, readme)
+        for badge_url in REQUIRED_BADGE_URLS:
+            self.assertIn(badge_url, readme)
         self.assertIn("private/local research workbench", readme)
         self.assertIn("not public proof", readme)
         self.assertIn("not external validation", readme)
@@ -63,6 +69,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("python -m unittest discover -s tests -v", workflow)
         self.assertIn("python scripts/check_profile_readme.py --check-links", workflow)
         self.assertIn("Profile README Proof Surface", proof_doc)
+        self.assertIn("workflow status badges", proof_doc)
         self.assertIn("not external validation", proof_doc)
         self.assertIn("not production readiness", proof_doc)
         self.assertIn("docs/profile-proof-surface.md", readme)

@@ -13,6 +13,12 @@ REQUIRED_LINKS = [
     "https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md",
     "https://github.com/svy04/mimesis-engineering",
     "https://github.com/svy04/svy04",
+    "https://github.com/svy04/svy04/actions/workflows/profile-readme.yml",
+]
+
+REQUIRED_BADGE_URLS = [
+    "https://github.com/svy04/svy04/actions/workflows/profile-readme.yml/badge.svg?branch=main",
+    "https://img.shields.io/badge/claim%20boundary-documented-555",
 ]
 
 REQUIRED_MARKERS = [
@@ -36,7 +42,21 @@ REQUIRED_MARKERS = [
 
 
 def extract_markdown_links(text):
-    return re.findall(r"\[[^\]]+\]\((https?://[^)]+)\)", text)
+    link_entries = []
+    consumed_spans = []
+    for match in re.finditer(r"\[!\[[^\]]+\]\((https?://[^)]+)\)\]\((https?://[^)]+)\)", text):
+        image_url, target_url = match.groups()
+        link_entries.append((match.start(), 0, image_url))
+        link_entries.append((match.start(), 1, target_url))
+        consumed_spans.append(match.span())
+    for match in re.finditer(r"(!?)\[[^\]]+\]\((https?://[^)]+)\)", text):
+        if any(start <= match.start() < end for start, end in consumed_spans):
+            continue
+        is_image = bool(match.group(1))
+        url = match.group(2)
+        if not is_image:
+            link_entries.append((match.start(), 0, url))
+    return [url for _, _, url in sorted(link_entries)]
 
 
 def _line_allows_dangerous_claim(line):
@@ -59,6 +79,10 @@ def validate_readme_text(text):
     for link in REQUIRED_LINKS:
         if link not in text:
             issues.append(f"missing required link: {link}")
+
+    for badge_url in REQUIRED_BADGE_URLS:
+        if badge_url not in text:
+            issues.append(f"missing required badge URL: {badge_url}")
 
     dangerous_patterns = [
         ("unbounded Mimesis claim", r"\bMimesis(?: Engineering)?\b.*\b(proven|universally improves)\b"),
@@ -106,7 +130,7 @@ def main(argv=None):
     issues = validate_readme_text(text)
 
     if args.check_links:
-        for url in sorted(set(extract_markdown_links(text))):
+        for url in sorted(set(extract_markdown_links(text)) - set(REQUIRED_BADGE_URLS)):
             issue = check_url(url)
             if issue:
                 issues.append(issue)
