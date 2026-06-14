@@ -21,6 +21,7 @@ REQUIRED_LINKS = [
     "https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/",
+    "https://svy04.github.io/human-made-feeling-bench/",
 ]
 
 REQUIRED_INTERNAL_LINKS = [
@@ -48,8 +49,11 @@ REQUIRED_MARKERS = [
     "Private Workbench Verification Snapshot",
     "Mimesis Verification Relocation Packet",
     "Mimesis Downstream Reinjection Law",
+    "Human-made Feeling Bench",
     "GitHub Profile README Proof Surface",
     "CI-checked routing and claim-boundary surface",
+    "first-pass rubric",
+    "not a universal design-quality benchmark",
     "redacted failure artifact",
     "redacted local hygiene artifact",
     "redacted method-boundary artifact",

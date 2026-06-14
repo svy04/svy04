@@ -98,6 +98,14 @@ https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-
 
 That route is a local synthetic evidence artifact. It records a narrow downstream reinjection signal only in the `underdetermined task plus slop-contaminated prior` regime. It does not prove universal output improvement, external validation, statistical significance, customer outcomes, or hallucination suppression.
 
+The current public-safe Human-made Feeling Bench route is:
+
+```text
+https://svy04.github.io/human-made-feeling-bench/
+```
+
+That Human-made Feeling Bench route is a first-pass rubric for checking trace of judgment, source fidelity, interaction clarity, accessibility, failure evidence, provenance, and claim boundaries in AI-generated artifacts. It is not a universal design-quality benchmark, external validation, visual taste proof, conversion proof, customer outcome proof, or a replacement for human review.
+
 The current public-safe profile proof route is:
 
 ```text
@@ -122,6 +130,7 @@ https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15
 https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/
+https://svy04.github.io/human-made-feeling-bench/
 ```
 
 The `mimesis-canvas` and `mimesis-casebook` links are supporting public
