@@ -147,7 +147,7 @@ The current public-safe Mimesis Minecraft high-integration evidence-card route i
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/
 ```
 
-That route is a redacted local evidence card for one private/local Minecraft visual task. It records source artifact, baseline output, conditioned output, checklist control, gate/scorer, blind 3-judge panel, n=2 per cell, failure cases, and claim boundary. It is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark proof, legal clearance, or universal Mimesis lift. It also keeps the `no true wrong-anchor` weakness visible.
+That route is a redacted local evidence card for one private/local Minecraft visual task. It records source artifact, baseline output, conditioned output, checklist control, gate/scorer, blind 3-judge panel, n=2 per cell, failure cases, and claim boundary. It is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark proof, legal clearance, or universal Mimesis lift. It also keeps the local wrong-anchor execution/render sidecar boundary visible as not route-linked board-v1 proof.
 
 The current public-safe Mimesis Minecraft public board v0 route is:
 
@@ -157,7 +157,7 @@ Mimesis Minecraft public board v0 route:
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/
 ```
 
-That route is a public redacted board v0 / incomplete evidence board. It exposes source-use boundary, condition board, aggregate scoring, failure record, and claim boundary, but it remains promotion-blocked. Current Promotion Blockers: true wrong-anchor control, public-safe per-arm screenshots or links, fuller judge protocol, full scorer transcript, and per-arm build logs are still missing. The latest private plugin gate adds a board v1 collection plan and `verify_minecraft_board_v1_gate.py`; that is a blocker contract, not stronger proof, and board v1 is not ready. This is a visibility upgrade, not stronger proof.
+That route is a public redacted board v0 / incomplete evidence board. It exposes source-use boundary, condition board, aggregate scoring, failure record, and claim boundary, but it remains promotion-blocked. Current Promotion Blockers: route-linked wrong-anchor scoring evidence, public-safe per-arm screenshots or links, fuller judge protocol, full scorer transcript, and per-arm build logs are still missing. The latest private plugin gate adds a board v1 collection plan, `verify_minecraft_board_v1_gate.py`, and a local wrong-anchor execution/render sidecar; that is a blocker contract, not stronger proof, and the sidecar is only a receipt. board v1 is not ready. This is a visibility upgrade, not stronger proof.
 
 The current public-safe Human-made Feeling Bench route is:
 
