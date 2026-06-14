@@ -53,6 +53,12 @@ class ProfileReadmeTests(unittest.TestCase):
             "https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/",
             readme,
         )
+        self.assertIn(
+            "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
+            readme,
+        )
+        self.assertIn("GitHub Profile README Proof Surface", readme)
+        self.assertIn("CI-checked routing and claim-boundary surface", readme)
         self.assertNotIn("Phase 897/898 reviewer packet", readme)
 
     def test_validation_catches_unbounded_mimesis_claim(self):
@@ -85,6 +91,11 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("digital-factory-workbench.md", proof_doc)
         self.assertIn("local/private evidence map", proof_doc)
         self.assertIn("Mimesis visual route", proof_doc)
+        self.assertIn("profile proof route", proof_doc)
+        self.assertIn(
+            "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
+            proof_doc,
+        )
         self.assertIn("redacted failure artifact", proof_doc)
         self.assertIn("not external validation", proof_doc)
         self.assertIn("not production readiness", proof_doc)
