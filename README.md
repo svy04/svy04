@@ -1,36 +1,83 @@
-# 오영웅 · @svy04
+# 오영웅 · svy04
 
-AI가 만든 결과의 품질을 개선하고, 검증 가능한 판단으로 바꾸는 사람입니다.
+Building **Metaforge**: a Meta/MFH/Orchestra operating system for governed-code execution.
 
-저는 LLM에게 전문가인 척하라고 시키는 대신, 전문가가 실제로 만든 제품, 논문, 블로그, 책, 그래픽, 레이아웃, 문체, 사용자 흐름, 감각을 분해해 AI 작업의 기준으로 삼는 방법론을 정리하고 있습니다.
+I work on **Mimesis Engineering**: importing proven structures from products, open source, papers, patents, standards, and my own best artifacts into AI-native work, then keeping only what survives evidence gates.
 
-이 작업을 **Mimesis Engineering**이라고 부릅니다.
+The short version:
 
-## Current Work
+```text
+standards, not roles
+structure, not persona
+proof, not vibes
+```
 
-- [Mimesis Engineering](https://svy04.github.io/mimesis-engineering/) — artifact-level imitation for AI-native work.
-- [Mimesis Audit](https://svy04.github.io/mimesis-audit/) — AI projects reviewed against external standards, failure modes, and claim boundaries.
-- [Proof & Claim Boundaries](https://svy04.github.io/proof/) — strong claims stay attached to evidence and limits.
-- [Operator OS](https://svy04.github.io/operator-os/) — AI execution with human approval and validation gates.
-- [Alpha Court](https://alphacourt.me) — prediction and judgment infrastructure as a proving ground.
+## Current Focus
 
-## Start Here
+| Surface | What it is | Status |
+| --- | --- | --- |
+| [Metaforge](https://github.com/svy04/metaforge) | Meta memory + MFH evidence gates + Orchestra agent routing on an OpenClaude runtime | public repo, active |
+| [Mimesis Engineering](https://github.com/svy04/mimesis-engineering) | Artifact-level imitation for AI-native work | public method surface |
+| [Noiseproof Agent](https://github.com/svy04/noiseproof-agent) | Noise-resilient data agent for messy market intelligence | public repo, active |
+| Digital Factory | Local Mimesis lab: method notes, source packets, plugin experiments, visual and claim-boundary tests | local/internal workbench |
 
-1. [Mimesis Engineering](https://svy04.github.io/mimesis-engineering/)
-2. [Mimesis Prompt Pack](https://svy04.github.io/posts/024-mimesis-prompts/)
-3. [Artifact-level Mimesis](https://svy04.github.io/posts/artifact-level-mimesis/)
-4. [QuantFlow -> Alpha Court Case Study](https://svy04.github.io/posts/025-mimesis-case-study/)
-5. [Proof & Claim Boundaries](https://svy04.github.io/proof/)
+## What I Am Building
 
-## Repositories
+**Metaforge** is the operating layer.
 
-- [mimesis-engineering](https://github.com/svy04/mimesis-engineering)
-- [mimesis-canvas](https://github.com/svy04/mimesis-canvas)
-- [mimesis-casebook](https://github.com/svy04/mimesis-casebook)
-- [svy04.github.io](https://github.com/svy04/svy04.github.io)
+- **Meta** keeps memory, source ledgers, decisions, and operator boundaries.
+- **Orchestra** routes work through planner, skeptic, implementer, reviewer, shadow execution, and human gate roles.
+- **MFH** blocks false closure with evidence, claim boundaries, source reconciliation, and rollback notes.
+- **OpenClaude runtime** supplies the local CLI, tools, MCP, provider routes, and Claude/Codex OAuth-backed execution surfaces.
 
-## Claim Boundary
+**Mimesis Engineering** is the improvement engine.
 
-Mimesis Engineering is a public working frame, not an industry standard.
+Instead of telling a model to act like an expert, I feed it the expert's actual load-bearing structure:
 
-I use this profile as a live surface for methods, prompts, case notes, and proof boundaries. Stronger claims move only when the evidence surface improves.
+- decision criteria
+- failure detectors
+- acceptance gates
+- source artifacts
+- provenance
+- tests and non-LLM oracles
+
+Then I ask: did the borrowed structure survive contact with evidence?
+
+## Public Repos
+
+- [metaforge](https://github.com/svy04/metaforge) — Meta/MFH/Orchestra OS for governed-code execution.
+- [noiseproof-agent](https://github.com/svy04/noiseproof-agent) — data-agent work for noisy market intelligence.
+- [mimesis-engineering](https://github.com/svy04/mimesis-engineering) — public method surface for artifact-level imitation.
+- [svy04](https://github.com/svy04/svy04) — this profile, kept as a live claim boundary.
+
+## Working Claim Boundary
+
+Mimesis Engineering is a working method, not an industry standard.
+
+Metaforge is an active operating-system project, not a production guarantee.
+
+I do not claim external validation, compliance, SLSA/NIST readiness, production readiness, or universal model improvement unless the repo contains current evidence for that specific claim.
+
+Strong claims must point to one of these:
+
+1. local runtime evidence,
+2. public repository state,
+3. primary sources,
+4. reproducible tests,
+5. explicit claim-boundary notes.
+
+## Direction
+
+I am moving toward one loop:
+
+```text
+find the best solved examples
+-> extract their structure
+-> adapt the structure locally
+-> run agents in parallel
+-> verify with evidence gates
+-> record the decision
+-> improve, expand, shrink, or stop
+```
+
+That is the work.
