@@ -51,6 +51,7 @@ These are the local artifact families currently shaping the public position:
 | Operating map | What should be redacted, converted into proof routes, or kept private next. | Planning surface, not proof that the work is shipped or adopted. |
 | Method notes | Design-level method extracted from shell failures, load-bearing middle decisions, and non-LLM ship gates. | Thought-method layer, not full method proof. |
 | Experiment records | Ceiling/null/negative regimes, wrong-anchor downside, comparison, replication, holdout, and negative-control evidence. | Local workbench evidence; publish only after redaction and case shaping. |
+| External OSS attribution repro cards | Source-level executable attribution for `P-EXT-03` Go `time.Parse` and `P-EXT-06` Eisel-Lemire / float parsing, including source anchor, objective oracle, defect control, wrong-anchor control, and command result. | Redacted summary only; not downstream lift, not maintainer endorsement, not legal clearance, not production readiness, and not external validation. |
 | High-integration evidence cards | Source artifact, baseline output, conditioned output, checklist control, gate/scorer, small local blind judging, failure cases, and claim boundary. | Redacted summary only; not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark status, legal clearance, or universal lift. |
 | Board readiness gates | Board v1 collection plan, required evidence atoms, stop conditions, and `verify_minecraft_board_v1_gate.py` promotion guard. | Blocker contract only; board v1 is not ready and this does not add external validation or stronger proof. |
 | Source queue | Products, standards, OSS repos, patents, papers, and evaluation systems to extract from. | Candidate queue only; not all items are implemented modules. |
@@ -147,6 +148,21 @@ The [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/p
 - no true wrong-anchor weakness
 
 That route is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark status, legal clearance, or universal lift.
+
+The [External OSS Attribution: Two Executed Repro Cards](https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/) turns two source-level Mimesis attribution records into a public-safe executable attribution packet:
+
+- `P-EXT-03` Go `time.Parse` timezone range guard
+- `P-EXT-06` Eisel-Lemire / nearest-even float parsing guard
+- source anchor
+- objective oracle
+- defect control
+- wrong-anchor control
+- command result
+- forbidden claims
+
+That route is source-level executable attribution. It is not downstream lift,
+not maintainer endorsement, not legal clearance, not production readiness, and
+not external validation.
 
 The [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) is now public as a public redacted board v0 / incomplete evidence board. It keeps source-use boundary, condition board, aggregate scoring, failure record, and claim boundary separate, but it remains promotion-blocked because true wrong-anchor control, public-safe per-arm screenshots or links, fuller judge protocol, full scorer transcript, and per-arm build logs are still missing.
 

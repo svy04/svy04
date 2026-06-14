@@ -76,6 +76,18 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Mimesis Visual Failure Packet", readme)
         self.assertIn("Private Workbench Verification Snapshot", readme)
         self.assertIn("Mimesis Verification Relocation Packet", readme)
+        self.assertIn("External OSS Attribution: Two Executed Repro Cards", readme)
+        self.assertIn("P-EXT-03", readme)
+        self.assertIn("P-EXT-06", readme)
+        self.assertIn("Go `time.Parse`", readme)
+        self.assertIn("Eisel-Lemire", readme)
+        self.assertIn("source anchor", readme)
+        self.assertIn("objective oracle", readme)
+        self.assertIn("defect control", readme)
+        self.assertIn("command result", readme)
+        self.assertIn("not downstream lift", readme)
+        self.assertIn("not maintainer endorsement", readme)
+        self.assertIn("not legal clearance", readme)
         self.assertIn("Mimesis Downstream Reinjection Law", readme)
         self.assertIn("Mimesis Minecraft High-Integration Evidence Card", readme)
         self.assertIn("Mimesis Minecraft Public Redacted Board v0", readme)
@@ -186,6 +198,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Mimesis visual route", proof_doc)
         self.assertIn("private workbench route", proof_doc)
         self.assertIn("Mimesis verification-relocation route", proof_doc)
+        self.assertIn("Mimesis external OSS attribution route", proof_doc)
         self.assertIn("Mimesis downstream reinjection route", proof_doc)
         self.assertIn("Mimesis Minecraft high-integration evidence-card route", proof_doc)
         self.assertIn("Mimesis Minecraft public board v0 route", proof_doc)
@@ -203,6 +216,10 @@ class ProfileReadmeTests(unittest.TestCase):
         )
         self.assertIn(
             "https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/",
+            proof_doc,
+        )
+        self.assertIn(
+            "https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/",
             proof_doc,
         )
         self.assertIn(
@@ -228,6 +245,10 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("first-pass rubric", proof_doc)
         self.assertIn("not a universal design-quality benchmark", proof_doc)
         self.assertIn("validation does not transfer", proof_doc)
+        self.assertIn("source-level executable attribution", proof_doc)
+        self.assertIn("not downstream lift", proof_doc)
+        self.assertIn("not maintainer endorsement", proof_doc)
+        self.assertIn("not legal clearance", proof_doc)
         self.assertIn("underdetermined task plus slop-contaminated prior", proof_doc)
         self.assertIn("not L5 proof", proof_doc)
         self.assertIn("near-Fable proof", proof_doc)
@@ -273,6 +294,13 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Visual failure records", workbench)
         self.assertIn("Experiment records", workbench)
         self.assertIn("High-integration evidence cards", workbench)
+        self.assertIn("External OSS attribution repro cards", workbench)
+        self.assertIn("P-EXT-03", workbench)
+        self.assertIn("P-EXT-06", workbench)
+        self.assertIn("source-level executable attribution", workbench)
+        self.assertIn("not downstream lift", workbench)
+        self.assertIn("not maintainer endorsement", workbench)
+        self.assertIn("not legal clearance", workbench)
         self.assertIn("Mimesis Minecraft High-Integration Evidence Card", workbench)
         self.assertIn("Mimesis Minecraft Public Redacted Board v0", workbench)
         self.assertIn("no true wrong-anchor weakness", workbench)

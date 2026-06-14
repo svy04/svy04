@@ -21,6 +21,7 @@ ROUTE_URLS = [
     "https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/",
+    "https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/",
     "https://svy04.github.io/human-made-feeling-bench/",
