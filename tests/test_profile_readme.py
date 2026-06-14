@@ -2,6 +2,11 @@ import unittest
 from pathlib import Path
 
 from scripts import check_profile_readme as profile_check
+from scripts.check_profile_render_parity import (
+    PUBLIC_SURFACES,
+    ROUTE_URLS,
+    validate_render_parity,
+)
 from scripts.check_profile_readme import (
     REQUIRED_BADGE_URLS,
     REQUIRED_LINKS,
@@ -38,6 +43,7 @@ class ProfileReadmeTests(unittest.TestCase):
             self.assertIn(link, readme)
         required_internal_links = getattr(profile_check, "REQUIRED_INTERNAL_LINKS", [])
         self.assertIn("docs/private-mimesis-workbench.md", required_internal_links)
+        self.assertIn("docs/profile-render-parity-proof-packet.md", required_internal_links)
         for link in required_internal_links:
             self.assertIn(link, readme)
         for badge_url in REQUIRED_BADGE_URLS:
@@ -63,6 +69,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("not a universal design-quality benchmark", readme)
         self.assertIn("public framework, reference packs, validators, cases, and proof boundaries", readme)
         self.assertIn("GitHub Profile README Proof Surface", readme)
+        self.assertIn("render parity proof packet", readme)
         self.assertIn("CI-checked routing and claim-boundary surface", readme)
         self.assertIn("Mimesis Visual Failure Packet", readme)
         self.assertIn("Private Workbench Verification Snapshot", readme)
@@ -197,6 +204,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("not external validation", proof_doc)
         self.assertIn("not production readiness", proof_doc)
         self.assertIn("docs/profile-proof-surface.md", readme)
+        self.assertIn("docs/profile-render-parity-proof-packet.md", readme)
 
     def test_private_mimesis_workbench_surface_is_bounded(self):
         readme = Path("README.md").read_text(encoding="utf-8")
@@ -253,6 +261,40 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertTrue(
             any("docs/private-mimesis-workbench.md" in issue for issue in issues)
         )
+
+    def test_render_parity_validator_checks_public_surfaces_and_routes(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+        fetched_urls = []
+
+        def fake_fetcher(url):
+            fetched_urls.append(url)
+            if url in {surface_url for _, surface_url in PUBLIC_SURFACES}:
+                return 200, readme
+            if url in ROUTE_URLS:
+                return 200, "ok"
+            return 404, ""
+
+        self.assertEqual(validate_render_parity("README.md", fake_fetcher), [])
+        for _, url in PUBLIC_SURFACES:
+            self.assertIn(url, fetched_urls)
+        for url in ROUTE_URLS:
+            self.assertIn(url, fetched_urls)
+
+    def test_render_parity_validator_catches_stale_rendered_surface(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+
+        def fake_fetcher(url):
+            if url == "https://github.com/svy04":
+                return 200, "Mimesis v.next Workbench"
+            if url in {surface_url for _, surface_url in PUBLIC_SURFACES}:
+                return 200, readme
+            if url in ROUTE_URLS:
+                return 200, "ok"
+            return 404, ""
+
+        issues = validate_render_parity("README.md", fake_fetcher)
+
+        self.assertTrue(any("forbidden render marker" in issue for issue in issues))
 
 
 if __name__ == "__main__":

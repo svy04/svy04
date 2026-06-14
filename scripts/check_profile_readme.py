@@ -28,6 +28,7 @@ REQUIRED_LINKS = [
 
 REQUIRED_INTERNAL_LINKS = [
     "docs/profile-proof-surface.md",
+    "docs/profile-render-parity-proof-packet.md",
     "docs/private-mimesis-workbench.md",
 ]
 
@@ -89,6 +90,7 @@ REQUIRED_MARKERS = [
     "no true wrong-anchor",
     "n=2 per cell",
     "GitHub Profile README Proof Surface",
+    "render parity proof packet",
     "CI-checked routing and claim-boundary surface",
     "statistical significance",
     "hallucination suppression",

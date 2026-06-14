@@ -123,7 +123,7 @@ find the strongest solved examples
 
 ## Profile Verification
 
-This profile README has its own [proof surface](docs/profile-proof-surface.md).
+This profile README has its own [proof surface](docs/profile-proof-surface.md) and [render parity proof packet](docs/profile-render-parity-proof-packet.md).
 
 The local profile gate checks required public routes, workflow status badges, claim-boundary phrases, local-path disclosure, Mimesis support-surface framing, OpenClaude runtime-substrate boundary, and stale marketing markers.
 

@@ -27,3 +27,6 @@ jobs:
 
       - name: Check profile README live links
         run: python scripts/check_profile_readme.py --check-links
+
+      - name: Check profile rendered parity
+        run: python scripts/check_profile_render_parity.py
