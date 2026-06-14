@@ -124,11 +124,13 @@ find the strongest solved examples
 
 ## Profile Verification
 
-This profile README has its own [proof surface](docs/profile-proof-surface.md) and [render parity proof packet](docs/profile-render-parity-proof-packet.md).
+This profile README has its own [proof surface](docs/profile-proof-surface.md), [render parity proof packet](docs/profile-render-parity-proof-packet.md), and [public GitHub surface hygiene proof packet](docs/public-github-surface-hygiene-proof-packet.md).
 
 The local profile gate checks required public routes, workflow status badges, claim-boundary phrases, local-path disclosure, Mimesis support-surface framing, OpenClaude runtime-substrate boundary, and stale marketing markers.
 
-It does not prove external validation, production readiness, hosted deployment, product completeness, customer adoption, or universal method performance.
+The Public GitHub Surface Hygiene Proof Packet gate lists public `@svy04` repositories, shallow-clones public default branches, and scans for local path disclosure plus scanner-unfriendly placeholders.
+
+It does not prove external validation, production readiness, hosted deployment, product completeness, customer adoption, universal method performance, historical Git cleanliness, private-repo cleanliness, GitHub secret-scanning status, or that public repositories contain no secrets.
 
 ## Claim Boundary
 

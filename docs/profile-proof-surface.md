@@ -37,6 +37,16 @@ unbounded external-validation claims
 optional live HTTP checks for markdown links
 ```
 
+The public-surface script:
+
+```text
+scripts/check_public_github_surface_hygiene.py
+```
+
+supports the Public GitHub Surface Hygiene Proof Packet. It lists public
+`@svy04` repositories through the GitHub REST API, shallow-clones public default branches,
+and scans text files for local path disclosure plus scanner-unfriendly placeholders.
+
 The GitHub Actions workflow:
 
 ```text
@@ -49,6 +59,7 @@ runs:
 python -m unittest discover -s tests -v
 python scripts/check_profile_readme.py
 python scripts/check_profile_readme.py --check-links
+python scripts/check_public_github_surface_hygiene.py
 ```
 
 The README also shows workflow status badges for:
@@ -59,6 +70,11 @@ Claim boundary documented
 ```
 
 These are workflow status badges and claim-boundary navigation aids only. They do not prove the projects are externally validated, production-ready, secure, hosted, complete, or accepted by any company.
+
+The Public GitHub Surface Hygiene Proof Packet is a current public-surface
+hygiene signal. It is not proof that public repositories contain no secrets,
+not historical Git scanning, not private repository scanning, not GitHub
+secret-scanning alert access, and not a security or compliance certificate.
 
 The README also links:
 

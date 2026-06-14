@@ -30,3 +30,6 @@ jobs:
 
       - name: Check profile rendered parity
         run: python scripts/check_profile_render_parity.py
+
+      - name: Check public GitHub surface hygiene
+        run: python scripts/check_public_github_surface_hygiene.py

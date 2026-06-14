@@ -31,6 +31,7 @@ REQUIRED_INTERNAL_LINKS = [
     "docs/profile-proof-surface.md",
     "docs/profile-render-parity-proof-packet.md",
     "docs/private-mimesis-workbench.md",
+    "docs/public-github-surface-hygiene-proof-packet.md",
 ]
 
 REQUIRED_BADGE_URLS = [
@@ -107,6 +108,11 @@ REQUIRED_MARKERS = [
     "per-arm build logs remain missing",
     "GitHub Profile README Proof Surface",
     "render parity proof packet",
+    "public GitHub surface hygiene proof packet",
+    "Public GitHub Surface Hygiene Proof Packet",
+    "public default branches",
+    "scanner-unfriendly placeholders",
+    "that public repositories contain no secrets",
     "CI-checked routing and claim-boundary surface",
     "statistical significance",
     "hallucination suppression",
