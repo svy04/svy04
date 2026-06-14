@@ -49,11 +49,16 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Mimesis Visual Failure Packet", readme)
         self.assertIn("Private Workbench Verification Snapshot", readme)
         self.assertIn("Mimesis Verification Relocation Packet", readme)
+        self.assertIn("Mimesis Downstream Reinjection Law", readme)
         self.assertIn("redacted failure artifact", readme)
         self.assertIn("redacted local hygiene artifact", readme)
         self.assertIn("redacted method-boundary artifact", readme)
         self.assertIn("banned-claim boundary", readme)
         self.assertIn("validation does not transfer", readme)
+        self.assertIn("underdetermined task plus slop-contaminated prior", readme)
+        self.assertIn("not prove universal output improvement", readme)
+        self.assertIn("statistical significance", readme)
+        self.assertIn("hallucination suppression", readme)
         self.assertIn("extract-loss", readme)
         self.assertIn("domain-shift", readme)
         self.assertIn("wrong-anchor", readme)
@@ -67,6 +72,10 @@ class ProfileReadmeTests(unittest.TestCase):
         )
         self.assertIn(
             "https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/",
+            readme,
+        )
+        self.assertIn(
+            "https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/",
             readme,
         )
         self.assertIn(
@@ -109,6 +118,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Mimesis visual route", proof_doc)
         self.assertIn("private workbench route", proof_doc)
         self.assertIn("Mimesis verification-relocation route", proof_doc)
+        self.assertIn("Mimesis downstream reinjection route", proof_doc)
         self.assertIn("profile proof route", proof_doc)
         self.assertIn(
             "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
@@ -122,10 +132,16 @@ class ProfileReadmeTests(unittest.TestCase):
             "https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/",
             proof_doc,
         )
+        self.assertIn(
+            "https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/",
+            proof_doc,
+        )
         self.assertIn("redacted failure artifact", proof_doc)
         self.assertIn("redacted local hygiene artifact", proof_doc)
         self.assertIn("redacted method-boundary artifact", proof_doc)
         self.assertIn("validation does not transfer", proof_doc)
+        self.assertIn("underdetermined task plus slop-contaminated prior", proof_doc)
+        self.assertIn("not prove universal output improvement", proof_doc)
         self.assertIn("not external validation", proof_doc)
         self.assertIn("not production readiness", proof_doc)
         self.assertIn("docs/profile-proof-surface.md", readme)

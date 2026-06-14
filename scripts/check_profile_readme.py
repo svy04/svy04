@@ -20,6 +20,7 @@ REQUIRED_LINKS = [
     "https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/",
+    "https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/",
 ]
 
 REQUIRED_INTERNAL_LINKS = [
@@ -46,6 +47,7 @@ REQUIRED_MARKERS = [
     "Mimesis Visual Failure Packet",
     "Private Workbench Verification Snapshot",
     "Mimesis Verification Relocation Packet",
+    "Mimesis Downstream Reinjection Law",
     "GitHub Profile README Proof Surface",
     "CI-checked routing and claim-boundary surface",
     "redacted failure artifact",
@@ -53,6 +55,10 @@ REQUIRED_MARKERS = [
     "redacted method-boundary artifact",
     "banned-claim boundary",
     "validation does not transfer",
+    "underdetermined task plus slop-contaminated prior",
+    "not prove universal output improvement",
+    "statistical significance",
+    "hallucination suppression",
     "extract-loss",
     "domain-shift",
     "wrong-anchor",

@@ -80,7 +80,7 @@ The current public-safe private workbench route is:
 https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
 ```
 
-That route is a redacted local hygiene artifact for the private/local workbench. It records the README, canon, verifier, and local `npm test` boundary. It does not prove public status, adoption, production readiness, external validation, universal lift, or visual quality improvement.
+That route is a redacted local hygiene artifact for the private/local workbench. It records the README, canon, verifier, and root npm boundary. It does not prove public status, adoption, production readiness, external validation, universal lift, or visual quality improvement.
 
 The current public-safe Mimesis verification-relocation route is:
 
@@ -89,6 +89,14 @@ https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-
 ```
 
 That route is a redacted method-boundary artifact. It records that source artifacts can help identify load-bearing structure, but validation does not transfer to new Mimesis outputs. Downstream outputs still need extract-loss, domain-shift, conditioning, wrong-anchor, and target gates.
+
+The current public-safe Mimesis downstream reinjection route is:
+
+```text
+https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/
+```
+
+That route is a local synthetic evidence artifact. It records a narrow downstream reinjection signal only in the `underdetermined task plus slop-contaminated prior` regime. It does not prove universal output improvement, external validation, statistical significance, customer outcomes, or hallucination suppression.
 
 The current public-safe profile proof route is:
 
@@ -113,6 +121,7 @@ https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026
 https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/
 https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/
+https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/
 ```
 
 The `mimesis-canvas` and `mimesis-casebook` links are supporting public
