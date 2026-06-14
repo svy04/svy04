@@ -74,6 +74,22 @@ https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15
 
 That route is a redacted failure artifact. It supports the narrow claim that the profile carries a banned-claim boundary, weak-evidence notes, and next external-panel gate. It does not prove visual quality improvement, external validation, customer validation, production readiness, or public status for the private Digital Factory workbench.
 
+The current public-safe Digital Factory workbench route is:
+
+```text
+https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
+```
+
+That route is a redacted local hygiene artifact for the private/local workbench. It records the README, canon, verifier, and local `npm test` boundary. It does not prove public status, adoption, production readiness, external validation, universal lift, or visual quality improvement.
+
+The current public-safe Mimesis verification-relocation route is:
+
+```text
+https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/
+```
+
+That route is a redacted method-boundary artifact. It records that source artifacts can help identify load-bearing structure, but validation does not transfer to new Mimesis outputs. Downstream outputs still need extract-loss, domain-shift, conditioning, wrong-anchor, and target gates.
+
 The current public-safe profile proof route is:
 
 ```text
@@ -95,6 +111,8 @@ https://github.com/svy04/mimesis-casebook
 https://github.com/svy04/svy04
 https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/
 https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/
+https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
+https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/
 ```
 
 The `mimesis-canvas` and `mimesis-casebook` links are supporting public
