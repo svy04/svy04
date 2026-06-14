@@ -66,6 +66,14 @@ The profile may mention visual judgment evidence and expert gates only as privat
 It must not present that work as public proof, external validation, or proof of visual quality improvement.
 ```
 
+The current public-safe Mimesis visual route is:
+
+```text
+https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/
+```
+
+That route is a redacted failure artifact. It supports the narrow claim that the profile carries a banned-claim boundary, weak-evidence notes, and next external-panel gate. It does not prove visual quality improvement, external validation, customer validation, production readiness, or public status for the private Digital Factory workbench.
+
 ## Current Required Public Links
 
 ```text
@@ -75,6 +83,7 @@ https://github.com/svy04/noiseproof-agent
 https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md
 https://github.com/svy04/mimesis-engineering
 https://github.com/svy04/svy04
+https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/
 ```
 
 ## Boundary

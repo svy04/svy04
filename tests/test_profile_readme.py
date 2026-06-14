@@ -46,6 +46,13 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("not public proof", readme)
         self.assertIn("not external validation", readme)
         self.assertIn("Mimesis is the hypothesis", readme)
+        self.assertIn("Mimesis Visual Failure Packet", readme)
+        self.assertIn("redacted failure artifact", readme)
+        self.assertIn("banned-claim boundary", readme)
+        self.assertIn(
+            "https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/",
+            readme,
+        )
         self.assertNotIn("Phase 897/898 reviewer packet", readme)
 
     def test_validation_catches_unbounded_mimesis_claim(self):
@@ -77,6 +84,8 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("workflow status badges", proof_doc)
         self.assertIn("digital-factory-workbench.md", proof_doc)
         self.assertIn("local/private evidence map", proof_doc)
+        self.assertIn("Mimesis visual route", proof_doc)
+        self.assertIn("redacted failure artifact", proof_doc)
         self.assertIn("not external validation", proof_doc)
         self.assertIn("not production readiness", proof_doc)
         self.assertIn("docs/profile-proof-surface.md", readme)
@@ -119,8 +128,12 @@ class ProfileReadmeTests(unittest.TestCase):
         )
 
         self.assertIn("visual judgment evidence and expert gates", readme)
+        self.assertIn("Mimesis Visual Failure Packet", readme)
         self.assertIn("mimesis-plugin is private", proof_doc)
         self.assertIn("visual judgment evidence and expert gates", proof_doc)
+        self.assertIn("visual quality improvement", proof_doc)
+        self.assertIn("Mimesis Visual Failure Packet", workbench)
+        self.assertIn("external blind panel", workbench)
         self.assertIn("mimesis-plugin@adc3636", workbench)
         self.assertIn("visual_lint.py", workbench)
         self.assertIn("margin_gated_panel.py", workbench)

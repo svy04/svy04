@@ -14,6 +14,7 @@ REQUIRED_LINKS = [
     "https://github.com/svy04/mimesis-engineering",
     "https://github.com/svy04/svy04",
     "https://github.com/svy04/svy04/actions/workflows/profile-readme.yml",
+    "https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/",
 ]
 
 REQUIRED_INTERNAL_LINKS = [
@@ -37,6 +38,9 @@ REQUIRED_MARKERS = [
     "not externally validated",
     "private/local research workbench",
     "visual judgment evidence and expert gates",
+    "Mimesis Visual Failure Packet",
+    "redacted failure artifact",
+    "banned-claim boundary",
     "not proof of visual quality improvement",
     "not public proof",
     "not external validation",
