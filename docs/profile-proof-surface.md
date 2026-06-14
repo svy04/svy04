@@ -19,7 +19,7 @@ checks:
 ```text
 required public repo links
 required proof packet links
-local/private evidence map link
+    private/local evidence map link
 required claim-boundary phrases
 unbounded Mimesis claims
 unbounded production-readiness claims
@@ -53,10 +53,10 @@ These are workflow status badges and claim-boundary navigation aids only. They d
 The README also links:
 
 ```text
-docs/digital-factory-workbench.md
+docs/private-mimesis-workbench.md
 ```
 
-That file is a local/private evidence map for the Digital Factory workbench. It is not a public repository link, public proof, external validation, adoption evidence, or production-readiness proof.
+That file is a private/local evidence map for the Mimesis v.next workbench. It is not a public repository link, public proof, external validation, adoption evidence, or production-readiness proof.
 
 The current private Mimesis workbench reference is bounded this way:
 
@@ -72,9 +72,9 @@ The current public-safe Mimesis visual route is:
 https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/
 ```
 
-That route is a redacted failure artifact. It supports the narrow claim that the profile carries a banned-claim boundary, weak-evidence notes, and next external-panel gate. It does not prove visual quality improvement, external validation, customer validation, production readiness, or public status for the private Digital Factory workbench.
+That route is a redacted failure artifact. It supports the narrow claim that the profile carries a banned-claim boundary, weak-evidence notes, and next external-panel gate. It does not prove visual quality improvement, external validation, customer validation, production readiness, or public status for the private Mimesis workbench.
 
-The current public-safe Digital Factory workbench route is:
+The current public-safe private workbench route is:
 
 ```text
 https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/

@@ -37,7 +37,7 @@ class ProfileReadmeTests(unittest.TestCase):
         for link in REQUIRED_LINKS:
             self.assertIn(link, readme)
         required_internal_links = getattr(profile_check, "REQUIRED_INTERNAL_LINKS", [])
-        self.assertIn("docs/digital-factory-workbench.md", required_internal_links)
+        self.assertIn("docs/private-mimesis-workbench.md", required_internal_links)
         for link in required_internal_links:
             self.assertIn(link, readme)
         for badge_url in REQUIRED_BADGE_URLS:
@@ -47,7 +47,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("not external validation", readme)
         self.assertIn("Mimesis is the hypothesis", readme)
         self.assertIn("Mimesis Visual Failure Packet", readme)
-        self.assertIn("Digital Factory Workbench Verification Snapshot", readme)
+        self.assertIn("Private Workbench Verification Snapshot", readme)
         self.assertIn("Mimesis Verification Relocation Packet", readme)
         self.assertIn("redacted failure artifact", readme)
         self.assertIn("redacted local hygiene artifact", readme)
@@ -104,10 +104,10 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("python scripts/check_profile_readme.py --check-links", workflow)
         self.assertIn("Profile README Proof Surface", proof_doc)
         self.assertIn("workflow status badges", proof_doc)
-        self.assertIn("digital-factory-workbench.md", proof_doc)
-        self.assertIn("local/private evidence map", proof_doc)
+        self.assertIn("private-mimesis-workbench.md", proof_doc)
+        self.assertIn("private/local evidence map", proof_doc)
         self.assertIn("Mimesis visual route", proof_doc)
-        self.assertIn("Digital Factory workbench route", proof_doc)
+        self.assertIn("private workbench route", proof_doc)
         self.assertIn("Mimesis verification-relocation route", proof_doc)
         self.assertIn("profile proof route", proof_doc)
         self.assertIn(
@@ -130,14 +130,14 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("not production readiness", proof_doc)
         self.assertIn("docs/profile-proof-surface.md", readme)
 
-    def test_digital_factory_workbench_surface_is_bounded(self):
+    def test_private_mimesis_workbench_surface_is_bounded(self):
         readme = Path("README.md").read_text(encoding="utf-8")
-        workbench_path = Path("docs/digital-factory-workbench.md")
+        workbench_path = Path("docs/private-mimesis-workbench.md")
 
-        self.assertIn("docs/digital-factory-workbench.md", readme)
+        self.assertIn("docs/private-mimesis-workbench.md", readme)
         self.assertTrue(workbench_path.exists())
         workbench = workbench_path.read_text(encoding="utf-8")
-        self.assertIn("Digital Factory workbench", workbench)
+        self.assertIn("Private Mimesis Workbench", workbench)
         self.assertIn("private/local research workbench", workbench)
         self.assertIn("not public proof", workbench)
         self.assertIn("not external validation", workbench)
@@ -155,7 +155,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Historical", workbench)
         self.assertIn("Public-adjacent but claim-risky", workbench)
         self.assertIn("Separate Instagram/account-pipeline planning lane", workbench)
-        self.assertIn("Digital Factory proves Mimesis Engineering.", workbench)
+        self.assertIn("The private workbench proves Mimesis Engineering.", workbench)
         self.assertIn("Mimesis suppresses hallucination/fabrication in general.", workbench)
 
     def test_visual_judgment_gate_is_profile_bounded(self):
@@ -163,7 +163,7 @@ class ProfileReadmeTests(unittest.TestCase):
         proof_doc = Path("docs/profile-proof-surface.md").read_text(
             encoding="utf-8"
         )
-        workbench = Path("docs/digital-factory-workbench.md").read_text(
+        workbench = Path("docs/private-mimesis-workbench.md").read_text(
             encoding="utf-8"
         )
 
@@ -179,17 +179,17 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("margin_gated_panel.py", workbench)
         self.assertIn("not proof of visual quality improvement", workbench)
 
-    def test_validation_catches_missing_digital_factory_evidence_link(self):
+    def test_validation_catches_missing_private_workbench_evidence_link(self):
         readme = Path("README.md").read_text(encoding="utf-8")
         readme_without_workbench = readme.replace(
-            "[docs/digital-factory-workbench.md](docs/digital-factory-workbench.md)",
-            "Digital Factory workbench evidence map",
+            "[docs/private-mimesis-workbench.md](docs/private-mimesis-workbench.md)",
+            "private workbench evidence map",
         )
 
         issues = validate_readme_text(readme_without_workbench)
 
         self.assertTrue(
-            any("docs/digital-factory-workbench.md" in issue for issue in issues)
+            any("docs/private-mimesis-workbench.md" in issue for issue in issues)
         )
 
 

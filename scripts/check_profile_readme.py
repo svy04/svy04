@@ -24,7 +24,7 @@ REQUIRED_LINKS = [
 
 REQUIRED_INTERNAL_LINKS = [
     "docs/profile-proof-surface.md",
-    "docs/digital-factory-workbench.md",
+    "docs/private-mimesis-workbench.md",
 ]
 
 REQUIRED_BADGE_URLS = [
@@ -44,7 +44,7 @@ REQUIRED_MARKERS = [
     "private/local research workbench",
     "visual judgment evidence and expert gates",
     "Mimesis Visual Failure Packet",
-    "Digital Factory Workbench Verification Snapshot",
+    "Private Workbench Verification Snapshot",
     "Mimesis Verification Relocation Packet",
     "GitHub Profile README Proof Surface",
     "CI-checked routing and claim-boundary surface",

@@ -1,12 +1,12 @@
-# Digital Factory Workbench Evidence Map
+# Private Mimesis Workbench Evidence Map
 
 Status: local/private evidence map.
 
-This document records how the `Digital Factory` workbench currently informs the public profile README. It is a bridge from local artifacts to public positioning, not a replacement for the public `mimesis-engineering` repository.
+This document records how the private/local Mimesis v.next workbench currently informs the public profile README. It is a bridge from local artifacts to public positioning, not a replacement for the public `mimesis-engineering` repository.
 
 ## Boundary
 
-The Digital Factory workbench is a private/local research workbench.
+The private Mimesis workbench is a private/local research workbench.
 
 It is not public proof.
 
@@ -107,13 +107,13 @@ These outside references inform the public-surface discipline for this snapshot:
 The profile README may say:
 
 ```text
-The Digital Factory workbench is a private/local research workbench rebuilding Mimesis Engineering from experiments, ablations, source scouting, and failure records.
+The private Mimesis workbench is a private/local research workbench rebuilding Mimesis Engineering from experiments, ablations, source scouting, and failure records.
 ```
 
 The profile README must not say:
 
 ```text
-Digital Factory proves Mimesis Engineering.
+The private workbench proves Mimesis Engineering.
 Mimesis Engineering is externally validated.
 Mimesis universally improves AI output.
 Mimesis suppresses hallucination/fabrication in general.
@@ -123,7 +123,7 @@ Mimesis suppresses hallucination/fabrication in general.
 
 The newest useful public artifact is not a bigger claim.
 
-It is the [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/): a redacted failure packet that turns one Digital Factory visual loop into a public-safe boundary with:
+It is the [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/): a redacted failure packet that turns one private visual workbench loop into a public-safe boundary with:
 
 - source set
 - weak artifact
