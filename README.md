@@ -63,12 +63,16 @@ It can show ceiling, null, or negative effects when the task is already well spe
 
 That is more interesting than hype. It means the method has to carry receipts: provenance, wrong-anchor controls, ablations, non-LLM checks, and explicit banned claims.
 
-## Public Repos
+## Current Public Proof Repos
 
 - [metaforge](https://github.com/svy04/metaforge) — governed agent operating system experiments.
 - [noiseproof-agent](https://github.com/svy04/noiseproof-agent) — evidence-first RAG/agent portfolio system.
 - [mimesis-engineering](https://github.com/svy04/mimesis-engineering) — public v0 artifact-level imitation method.
 - [svy04](https://github.com/svy04/svy04) — this profile, kept as a live claim boundary.
+
+Other public repository visible today but not used as a current proof surface:
+
+- [leaderboard-data](https://github.com/svy04/leaderboard-data) — data storage for a Rust server leaderboard; not part of the Metaforge, NoiseProof, or Mimesis proof surface.
 
 ## Profile Verification
 
