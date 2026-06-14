@@ -23,7 +23,7 @@ logs before polish
 
 - AI systems should block unsupported answers before they generate fluent ones.
 - Strong agent work needs memory, gates, logs, dissent, rollback paths, and claim boundaries.
-- Mimesis is stronger when it imitates real artifacts, codebases, standards, papers, and tests instead of asking models to roleplay experts.
+- Mimesis is the hypothesis that AI work improves when it imitates real artifacts, codebases, standards, papers, and tests instead of asking models to roleplay experts.
 - Public claims should move only when the evidence surface moves.
 
 ## Current Work
@@ -40,11 +40,11 @@ NoiseProof Agent is my most inspectable service-style portfolio artifact.
 
 It is designed to show how a small system can ingest messy documents, keep parser/retrieval/report boundaries visible, and prevent unsupported market-intelligence claims from passing as final answers.
 
-Current proof starts from the Phase 897/898 reviewer packet, not from a broad product-complete claim.
+Current proof starts from the Phase 897 current proof packet and current reviewer route, not from a broad product-complete claim.
 
 ### Mimesis Engineering v.next
 
-The Digital Factory workbench is rebuilding Mimesis Engineering from experiments, ablations, source scouting, and failure records.
+The Digital Factory workbench is a private/local research workbench rebuilding Mimesis Engineering from experiments, ablations, source scouting, and failure records. It is not public proof and not external validation.
 
 The honest current claim is narrow:
 
@@ -64,6 +64,12 @@ That is more interesting than hype. It means the method has to carry receipts: p
 - [noiseproof-agent](https://github.com/svy04/noiseproof-agent) — evidence-first RAG/agent portfolio system.
 - [mimesis-engineering](https://github.com/svy04/mimesis-engineering) — public v0 artifact-level imitation method.
 - [svy04](https://github.com/svy04/svy04) — this profile, kept as a live claim boundary.
+
+## Profile Verification
+
+This profile README has its own [proof surface](docs/profile-proof-surface.md).
+
+It checks live public links and claim-boundary phrases. It does not prove external validation, production readiness, hosted deployment, or product completeness.
 
 ## Working Loop
 
