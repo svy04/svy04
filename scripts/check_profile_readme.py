@@ -103,7 +103,8 @@ REQUIRED_MARKERS = [
     "human visual-quality proof",
     "near-Fable proof",
     "public benchmark status",
-    "no true wrong-anchor",
+    "local wrong-anchor execution/render sidecar",
+    "not route-linked board-v1 proof",
     "n=2 per cell",
     "Promotion Blockers",
     "public redacted board",
@@ -151,6 +152,7 @@ PROHIBITED_MARKERS = [
     "Mimesis Engineering v0",
     "public v0 artifact-level imitation method",
     "board v1 ready",
+    "no true wrong-anchor",
 ]
 
 ALLOWED_GITHUB_REPOS = [

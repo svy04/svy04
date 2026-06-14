@@ -145,7 +145,8 @@ The [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/p
 - n=2 per cell
 - failure cases
 - claim boundary
-- no true wrong-anchor weakness
+- local wrong-anchor execution/render sidecar
+- not route-linked board-v1 proof
 
 That route is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark status, legal clearance, or universal lift.
 
@@ -164,6 +165,6 @@ That route is source-level executable attribution. It is not downstream lift,
 not maintainer endorsement, not legal clearance, not production readiness, and
 not external validation.
 
-The [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) is now public as a public redacted board v0 / incomplete evidence board. It keeps source-use boundary, condition board, aggregate scoring, failure record, and claim boundary separate, but it remains promotion-blocked because true wrong-anchor control, public-safe per-arm screenshots or links, fuller judge protocol, full scorer transcript, and per-arm build logs are still missing.
+The [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) is now public as a public redacted board v0 / incomplete evidence board. It keeps source-use boundary, condition board, aggregate scoring, failure record, and claim boundary separate, but it remains promotion-blocked because the local wrong-anchor execution/render sidecar is not route-linked board-v1 proof, and public-safe per-arm screenshots or links, fuller judge protocol, full scorer transcript, and per-arm build logs are still missing.
 
-The latest private plugin gate adds a board v1 collection plan and `verify_minecraft_board_v1_gate.py`. This is a blocker contract, not stronger proof: it lists evidence atoms, required wrong-anchor control, scoring transcript fields, public-safe artifact requirements, and stop conditions before any board v1 claim can be made. Board v1 is not ready.
+The latest private plugin gate adds a board v1 collection plan, `verify_minecraft_board_v1_gate.py`, and one local wrong-anchor execution/render sidecar. This is a blocker contract, not stronger proof; the sidecar is only a receipt. It lists evidence atoms, required route-linked wrong-anchor scoring evidence, scoring transcript fields, public-safe artifact requirements, and stop conditions before any board v1 claim can be made. Board v1 is not ready.
