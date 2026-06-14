@@ -54,6 +54,9 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Private Workbench Verification Snapshot", readme)
         self.assertIn("Mimesis Verification Relocation Packet", readme)
         self.assertIn("Mimesis Downstream Reinjection Law", readme)
+        self.assertIn("Human-made Feeling Bench", readme)
+        self.assertIn("first-pass rubric", readme)
+        self.assertIn("not a universal design-quality benchmark", readme)
         self.assertIn("redacted failure artifact", readme)
         self.assertIn("redacted local hygiene artifact", readme)
         self.assertIn("redacted method-boundary artifact", readme)
@@ -80,6 +83,10 @@ class ProfileReadmeTests(unittest.TestCase):
         )
         self.assertIn(
             "https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/",
+            readme,
+        )
+        self.assertIn(
+            "https://svy04.github.io/human-made-feeling-bench/",
             readme,
         )
         self.assertIn(
@@ -133,6 +140,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("private workbench route", proof_doc)
         self.assertIn("Mimesis verification-relocation route", proof_doc)
         self.assertIn("Mimesis downstream reinjection route", proof_doc)
+        self.assertIn("Human-made Feeling Bench route", proof_doc)
         self.assertIn("profile proof route", proof_doc)
         self.assertIn(
             "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
@@ -150,9 +158,15 @@ class ProfileReadmeTests(unittest.TestCase):
             "https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/",
             proof_doc,
         )
+        self.assertIn(
+            "https://svy04.github.io/human-made-feeling-bench/",
+            proof_doc,
+        )
         self.assertIn("redacted failure artifact", proof_doc)
         self.assertIn("redacted local hygiene artifact", proof_doc)
         self.assertIn("redacted method-boundary artifact", proof_doc)
+        self.assertIn("first-pass rubric", proof_doc)
+        self.assertIn("not a universal design-quality benchmark", proof_doc)
         self.assertIn("validation does not transfer", proof_doc)
         self.assertIn("underdetermined task plus slop-contaminated prior", proof_doc)
         self.assertIn("not prove universal output improvement", proof_doc)
