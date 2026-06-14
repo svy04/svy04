@@ -6,6 +6,12 @@ This repository is the public GitHub profile README for `@svy04`.
 
 The profile README is a marketing surface, so it must stay proof-bounded. It should point to live public repositories and current proof packets without implying production readiness, external validation, or universal method proof.
 
+Current positioning: Metaforge-first profile framing. The profile presents
+Metaforge as the public Meta/MFH/Orchestra operating-system surface, Mimesis
+Engineering as the artifact-first improvement engine, OpenClaude as the local
+runtime substrate, and Digital Factory as a private/local workbench that informs
+the bounded Mimesis canon without becoming a public proof claim.
+
 ## What Is Verified
 
 The local script:
@@ -21,6 +27,10 @@ required public repo links
 required proof packet links
     private/local evidence map link
 required claim-boundary phrases
+Metaforge-first profile framing
+Mimesis public repo support-surface framing
+OpenClaude runtime-substrate boundary
+local path disclosure
 unbounded Mimesis claims
 unbounded production-readiness claims
 unbounded external-validation claims
@@ -64,6 +74,7 @@ The current private Mimesis workbench reference is bounded this way:
 The private prototype surface is private.
 The profile may mention visual judgment evidence and expert gates only as private/local workbench evidence.
 It must not present that work as public proof, external validation, or proof of visual quality improvement.
+The profile must not expose local filesystem paths when naming Digital Factory.
 ```
 
 The current public-safe Mimesis visual route is:

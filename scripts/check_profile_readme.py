@@ -15,6 +15,7 @@ REQUIRED_LINKS = [
     "https://github.com/svy04/mimesis-canvas",
     "https://github.com/svy04/mimesis-casebook",
     "https://github.com/svy04/svy04",
+    "https://github.com/svy04/leaderboard-data",
     "https://github.com/svy04/svy04/actions/workflows/profile-readme.yml",
     "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
     "https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/",
@@ -37,16 +38,27 @@ REQUIRED_BADGE_URLS = [
 
 REQUIRED_MARKERS = [
     "I build proof-bounded AI operating systems.",
-    "Current public operating-system surface",
+    "Metaforge",
+    "Meta for operating memory",
+    "MFH for evidence gates",
+    "Orchestra for multi-agent routing",
+    "OpenClaude is the local CLI/runtime substrate",
+    "not the main thesis",
+    "Mimesis Engineering",
+    "Give AI standards, not roles",
+    "The active Digital Factory workbench",
+    "docs/private-mimesis-workbench.md",
     "source first",
     "artifacts before personas",
+    "standards before vibes",
     "gates before claims",
-    "logs before polish",
+    "conditional lift, not universal lift",
     "Not a trading bot",
     "not product-complete",
     "not externally validated",
-    "private/local research workbench",
-    "visual judgment evidence and expert gates",
+    "private/local",
+    "prototype plugin surfaces",
+    "expert modules",
     "Evidence Card Contract",
     "source artifact",
     "baseline output",
@@ -61,38 +73,31 @@ REQUIRED_MARKERS = [
     "Mimesis Downstream Reinjection Law",
     "Mimesis Minecraft High-Integration Evidence Card",
     "Human-made Feeling Bench",
-    "GitHub Profile README Proof Surface",
-    "CI-checked routing and claim-boundary surface",
     "first-pass rubric",
     "not a universal design-quality benchmark",
     "redacted failure artifact",
     "redacted local hygiene artifact",
     "redacted method-boundary artifact",
+    "redacted local evidence card",
     "banned-claim boundary",
     "validation does not transfer",
     "underdetermined task plus slop-contaminated prior",
-    "redacted local evidence card",
     "not L5 proof",
     "human visual-quality proof",
     "near-Fable proof",
     "public benchmark status",
     "no true wrong-anchor",
     "n=2 per cell",
-    "not prove universal output improvement",
+    "GitHub Profile README Proof Surface",
+    "CI-checked routing and claim-boundary surface",
     "statistical significance",
     "hallucination suppression",
-    "extract-loss",
-    "domain-shift",
-    "wrong-anchor",
-    "framework and validator surface",
+    "universal hallucination suppression",
+    "public framework, reference packs, validators, cases, and proof boundaries",
     "worksheet surface",
     "case surface",
-    "not proof of visual quality improvement",
-    "not public proof",
+    "visual quality improvement",
     "not external validation",
-    "Mimesis is the hypothesis",
-    "Mimesis v.next Workbench",
-    "public v0 repository is a support surface",
     "It does not universally improve AI output.",
     "I do not claim Metaforge is production-ready",
     "I do not claim NoiseProof is production-ready",
@@ -101,7 +106,26 @@ REQUIRED_MARKERS = [
 
 PROHIBITED_MARKERS = [
     "Current flagship:",
+    "Mimesis v.next Workbench",
+    "Mimesis Engineering v0",
+    "public v0 artifact-level imitation method",
 ]
+
+WINDOWS_USER_PATH_PATTERN = "C:" + r"[\\/]+Users[\\/]+"
+POSIX_ADMIN_PATH_PATTERN = "/" + "Users" + "/" + "admin"
+KOREAN_PRIVATE_PATH_PATTERN = "\ub0b4 \uc21c\uc218 \uc7ac\ubbf8"
+DIGITAL_FACTORY_PATH_PATTERN = "Digital Factory" + r"[\\/]"
+
+LOCAL_PATH_PATTERN = re.compile(
+    "|".join(
+        [
+            WINDOWS_USER_PATH_PATTERN,
+            POSIX_ADMIN_PATH_PATTERN,
+            KOREAN_PRIVATE_PATH_PATTERN,
+            DIGITAL_FACTORY_PATH_PATTERN,
+        ]
+    )
+)
 
 
 def extract_markdown_links(text):
@@ -162,8 +186,8 @@ def validate_readme_text(text):
     ]
 
     for line in text.splitlines():
-        if "Mimesis Engineering v0" in line or "public v0 artifact-level imitation method" in line:
-            issues.append(f"stale Mimesis v0 primary surface: {line.strip()}")
+        if LOCAL_PATH_PATTERN.search(line):
+            issues.append(f"local path disclosure: {line.strip()}")
         for label, pattern in dangerous_patterns:
             if re.search(pattern, line, flags=re.IGNORECASE) and not _line_allows_dangerous_claim(line):
                 issues.append(f"{label}: {line.strip()}")
