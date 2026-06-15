@@ -44,7 +44,7 @@ REQUIRED_RENDER_MARKERS = [
     "give AI standards, not roles",
     "Evidence Card Contract",
     "conditional lift, not universal lift",
-    "Local checks pass, but public claims stay route-bound",
+    "Fresh verifier output is required before any stronger module-pass or promotion claim",
     "I do not claim Metaforge is production-ready",
     "I do not claim NoiseProof is production-ready",
     "I do not claim Mimesis Engineering is an industry standard",
@@ -61,6 +61,9 @@ FORBIDDEN_RENDER_MARKERS = [
     "industry standard for AI output improvement",
     "external validation from reviewers",
     "16/16 expert modules",
+    "14/14 expert modules",
+    "Current local checks pass",
+    "Local checks pass",
     "per-arm build logs remain missing",
     "per-arm build logs are still missing",
 ]
