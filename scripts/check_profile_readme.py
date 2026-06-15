@@ -34,6 +34,7 @@ REQUIRED_INTERNAL_LINKS = [
     "docs/profile-render-parity-proof-packet.md",
     "docs/private-mimesis-workbench.md",
     "docs/public-github-surface-hygiene-proof-packet.md",
+    "docs/public-feedback-hardening.md",
 ]
 
 REQUIRED_BADGE_URLS = [
@@ -147,6 +148,7 @@ REQUIRED_MARKERS = [
     "render parity proof packet",
     "public GitHub surface hygiene proof packet",
     "Public GitHub Surface Hygiene Proof Packet",
+    "Public Feedback Hardening",
     "public default branches",
     "scanner-unfriendly placeholders",
     "that public repositories contain no secrets",

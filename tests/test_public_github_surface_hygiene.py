@@ -23,6 +23,27 @@ class PublicGitHubSurfaceHygieneTests(unittest.TestCase):
         self.assertIn("openai-key-assignment", labels)
         self.assertTrue(all(finding.repo == "demo" for finding in findings))
 
+    def test_scan_repo_tree_catches_auth_state_log_disclosures(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            log_text = "\n".join(
+                [
+                    "Loaded cached " + "credentials for local provider",
+                    "Auth" + "Required: reconnect account",
+                    "error=invalid" + "_token",
+                    "Missing or invalid " + "access token",
+                ]
+            )
+            (root / "run-log.txt").write_text(log_text, encoding="utf-8")
+
+            findings = hygiene.scan_repo_tree("demo", root)
+
+        labels = {finding.label for finding in findings}
+        self.assertIn("auth-cache-disclosure", labels)
+        self.assertIn("auth-required-disclosure", labels)
+        self.assertIn("invalid-token-disclosure", labels)
+        self.assertIn("missing-access-token-disclosure", labels)
+
     def test_scan_repo_tree_ignores_binary_files_and_git_metadata(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

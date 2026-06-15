@@ -44,6 +44,7 @@ class ProfileReadmeTests(unittest.TestCase):
         required_internal_links = getattr(profile_check, "REQUIRED_INTERNAL_LINKS", [])
         self.assertIn("docs/private-mimesis-workbench.md", required_internal_links)
         self.assertIn("docs/profile-render-parity-proof-packet.md", required_internal_links)
+        self.assertIn("docs/public-feedback-hardening.md", required_internal_links)
         for link in required_internal_links:
             self.assertIn(link, readme)
         for badge_url in REQUIRED_BADGE_URLS:
@@ -57,6 +58,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("local module-count drift is kept out of the public numeric claim", readme)
         self.assertNotIn("16/16 expert modules", readme)
         self.assertIn("source-first artifacts -> gates -> claim boundaries", readme)
+        self.assertIn("Public Feedback Hardening", readme)
         self.assertIn("Support surfaces, not current canon", readme)
         self.assertIn("Metaforge", readme)
         self.assertIn("Meta for operating memory", readme)
@@ -368,6 +370,30 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("docs/profile-proof-surface.md", readme)
         self.assertIn("docs/profile-render-parity-proof-packet.md", readme)
         self.assertIn("docs/public-github-surface-hygiene-proof-packet.md", readme)
+        self.assertIn("docs/public-feedback-hardening.md", readme)
+
+    def test_public_feedback_hardening_surface_is_bounded(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+        proof_doc = Path("docs/profile-proof-surface.md").read_text(
+            encoding="utf-8"
+        )
+        hardening = Path("docs/public-feedback-hardening.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("docs/public-feedback-hardening.md", readme)
+        self.assertIn("Public Feedback Hardening", hardening)
+        self.assertIn("OpenClaude stays the local runtime substrate", hardening)
+        self.assertIn("Meta + MFH + Orchestra OS", hardening)
+        self.assertIn("Fork/origin/license boundaries", hardening)
+        self.assertIn("Korean documentation is first-class", hardening)
+        self.assertIn("behavioral smoke tests", hardening)
+        self.assertIn("edge-case checks", hardening)
+        self.assertIn("side-effect guards", hardening)
+        self.assertIn("Knip or Fallow", hardening)
+        self.assertIn("dependency-cruiser", hardening)
+        self.assertIn("jscpd or Lumin-style topology review", hardening)
+        self.assertIn("not proof that those workstreams are complete", proof_doc)
 
     def test_private_mimesis_workbench_surface_is_bounded(self):
         readme = Path("README.md").read_text(encoding="utf-8")

@@ -80,10 +80,17 @@ secret-scanning alert access, and not a security or compliance certificate.
 The README also links:
 
 ```text
+docs/public-feedback-hardening.md
 docs/private-mimesis-workbench.md
 ```
 
-That file is a private/local evidence map for the Mimesis v.next workbench. It is not a public repository link, public proof, external validation, adoption evidence, or production-readiness proof.
+The public-feedback note is an active remediation track for the public surface:
+local-path hygiene, origin/license boundaries, Korean docs, and behavioral
+tests before stronger marketing. It is not proof that those workstreams are complete.
+
+The private-workbench file is a private/local evidence map for the Mimesis
+v.next workbench. It is not a public repository link, public proof, external
+validation, adoption evidence, or production-readiness proof.
 
 The current private Mimesis workbench reference is bounded this way:
 
