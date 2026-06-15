@@ -124,6 +124,8 @@ REQUIRED_MARKERS = [
     "manifest contract/schema",
     "aggregate transcript ledger",
     "machine-checkable transcript-availability audit",
+    "raw-transcript-preflight.json",
+    "PR #27",
     "README proof-gate surface",
     "raw per-judge score rows",
     "redaction-reviewed raw rows",
