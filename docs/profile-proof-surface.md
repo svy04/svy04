@@ -157,7 +157,23 @@ Mimesis Minecraft public board v0 route:
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/
 ```
 
-That route is a public redacted board v0 / incomplete evidence board. It exposes source-use boundary, condition board, aggregate scoring, failure record, and claim boundary, but it remains promotion-blocked. Current Promotion Blockers: route-linked wrong-anchor scoring evidence, public-safe per-arm screenshots or links, fuller judge protocol, full scorer transcript, full public-safe manifest, full per-judge scorer transcript, and route-linked board gate. The latest private plugin gate adds a board v1 collection plan, `verify_minecraft_board_v1_gate.py`, and a local wrong-anchor execution/render sidecar; that is a blocker contract, not stronger proof, and the sidecar is only a receipt. board v1 is not ready. This is a visibility upgrade, not stronger proof.
+That route is a public redacted board v0 / incomplete evidence board. It
+exposes source-use boundary, condition board, aggregate scoring, failure record,
+and claim boundary, but it remains promotion-blocked. Public-safe
+screenshot sidecars exist without `redacted-screenshots/manifest.json`;
+`manifest-preflight.json` exists; an aggregate transcript ledger exists; and a
+local wrong-anchor execution/render sidecar exists as a receipt only.
+
+Current Promotion Blockers: route-linked wrong-anchor scoring evidence,
+public-safe per-arm screenshots or links, fuller judge protocol, scorer
+transcript, full scorer transcript / full per-judge scorer transcript, `READY.json`,
+`redacted-screenshots/manifest.json`, full public-safe manifest,
+route-linked board gate / route-linked board-v1 entries, comparable wrong-anchor score, and
+unpublished per-arm build-log evidence. The
+latest private plugin gate adds a board v1 collection plan and
+`verify_minecraft_board_v1_gate.py`; that is a blocker contract, not stronger proof,
+and the sidecar is only a receipt. board v1 is not ready. This is a
+visibility upgrade, not stronger proof.
 
 The current public-safe Human-made Feeling Bench route is:
 
