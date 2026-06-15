@@ -178,6 +178,20 @@ latest private plugin gate adds a board v1 collection plan,
 and the sidecar plus manifest contract/schema are only receipts/contracts. board v1 is not ready. This is a
 visibility upgrade, not stronger proof.
 
+The current public-safe Mimesis Minecraft transcript availability audit route is:
+
+Mimesis Minecraft transcript availability audit route:
+
+```text
+https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/
+```
+
+That route records the private workbench PR #25/#26 state as an inspectability
+upgrade. It exposes a machine-checkable transcript-availability audit and README proof-gate surface while keeping the blocker boundary explicit. It is not a full
+transcript, not stronger proof, not board-v1 readiness, not external validation,
+and still blocked on raw per-judge score rows, raw comments, redaction-reviewed
+raw rows, route-linked board-v1 entries, and independent/external panel evidence.
+
 The current public-safe Human-made Feeling Bench route is:
 
 ```text
@@ -218,6 +232,7 @@ https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-rep
 https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/
+https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/
 https://svy04.github.io/human-made-feeling-bench/
 ```
 

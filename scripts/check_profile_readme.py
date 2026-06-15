@@ -25,6 +25,7 @@ REQUIRED_LINKS = [
     "https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/",
+    "https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/",
     "https://svy04.github.io/human-made-feeling-bench/",
 ]
 
@@ -90,6 +91,7 @@ REQUIRED_MARKERS = [
     "Mimesis Downstream Reinjection Law",
     "Mimesis Minecraft High-Integration Evidence Card",
     "Mimesis Minecraft Public Redacted Board v0",
+    "Mimesis Minecraft Transcript Availability Audit",
     "Human-made Feeling Bench",
     "first-pass rubric",
     "not a universal design-quality benchmark",
@@ -120,6 +122,10 @@ REQUIRED_MARKERS = [
     "manifest.schema.json",
     "manifest contract/schema",
     "aggregate transcript ledger",
+    "machine-checkable transcript-availability audit",
+    "README proof-gate surface",
+    "raw per-judge score rows",
+    "redaction-reviewed raw rows",
     "READY.json",
     "redacted-screenshots/manifest.json",
     "route-linked board-v1 entries",
