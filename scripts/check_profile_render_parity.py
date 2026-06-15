@@ -55,6 +55,9 @@ FORBIDDEN_RENDER_MARKERS = [
     "Board v1 is ready",
     "industry standard for AI output improvement",
     "external validation from reviewers",
+    "16/16 expert modules",
+    "per-arm build logs remain missing",
+    "per-arm build logs are still missing",
 ]
 
 
