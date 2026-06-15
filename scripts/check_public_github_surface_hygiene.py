@@ -46,6 +46,13 @@ PATTERN_SPECS = [
         re.compile("Missing or invalid " + "access token", re.IGNORECASE),
     ),
     (
+        "bearer-token-disclosure",
+        re.compile(
+            r"Bearer\s+(?!<token>|<redacted>|\[redacted\])[A-Za-z0-9_.=-]{30,}",
+            re.IGNORECASE,
+        ),
+    ),
+    (
         "openai-key-assignment",
         re.compile(r"\bOPENAI_API_KEY\s*=\s*" + "sk-" + r"[A-Za-z0-9_\-]*"),
     ),
@@ -63,6 +70,12 @@ PATTERN_SPECS = [
     ("google-api-key", re.compile("AIza" + r"[A-Za-z0-9_\-]{20,}")),
 ]
 
+RAW_RUN_PATH_PATTERN = re.compile(r"(^|/)(bench|cases)/.*/runs/.*\.(md|txt|err)$")
+RAW_RUN_MARKER_PATTERN = re.compile(
+    r"\b(getAccessToken|refreshAccessToken|UNAUTHENTICATED|Transport channel closed|session id:|tokens used)\b",
+    re.IGNORECASE,
+)
+
 SECRET_REDACTIONS = [
     (re.compile(r"\bOPENAI_API_KEY\s*=\s*" + "sk-" + r"[A-Za-z0-9_\-]*"), "OPENAI_API_KEY=<redacted>"),
     (re.compile(r"\bANTHROPIC_API_KEY\s*=\s*" + "sk-" + r"[A-Za-z0-9_\-]*"), "ANTHROPIC_API_KEY=<redacted>"),
@@ -71,6 +84,7 @@ SECRET_REDACTIONS = [
     (re.compile("gh" + r"[pousr]_[A-Za-z0-9_]{12,}"), "gh*_ <redacted>"),
     (re.compile("sk-" + r"[A-Za-z0-9][A-Za-z0-9_\-]{4,}"), "sk-<redacted>"),
     (re.compile("AIza" + r"[A-Za-z0-9_\-]{12,}"), "AIza<redacted>"),
+    (re.compile(r"Bearer\s+(?!<token>|<redacted>|\[redacted\])[A-Za-z0-9_.=-]{12,}", re.IGNORECASE), "Bearer <redacted>"),
 ]
 
 
@@ -125,6 +139,16 @@ def scan_repo_tree(repo: str, root: Path) -> list[Finding]:
 
         relpath = path.relative_to(root).as_posix()
         for line_number, line in enumerate(text.splitlines(), start=1):
+            if RAW_RUN_PATH_PATTERN.search(relpath) and RAW_RUN_MARKER_PATTERN.search(line):
+                findings.append(
+                    Finding(
+                        repo=repo,
+                        path=relpath,
+                        line=line_number,
+                        label="raw-auth-transcript",
+                        excerpt=line.strip()[:MAX_EXCERPT_CHARS],
+                    )
+                )
             for label, pattern in PATTERN_SPECS:
                 if pattern.search(line):
                     findings.append(

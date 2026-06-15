@@ -4,8 +4,9 @@ Status: executable public-surface hygiene gate.
 
 This packet records a narrow check over the public GitHub surface for `@svy04`.
 It exists because the profile is now a marketing and proof-routing surface: the
-public repos it links should not leak local workstation paths or carry
-scanner-unfriendly secret-shaped placeholders.
+public repos it links should not leak local workstation paths, carry
+scanner-unfriendly secret-shaped placeholders, or expose raw auth/runtime
+transcript fragments as proof artifacts.
 
 ## What The Gate Runs
 
@@ -33,6 +34,8 @@ The local rule set checks for:
 - scanner-unfriendly example credentials and token-shaped placeholders
 - OpenAI/Anthropic/GitHub-style assignment lines with secret-shaped values
 - generic token-shaped values that look like GitHub, OpenAI-style, or Google API keys
+- actual-looking bearer token values while allowing neutral placeholders such as `Bearer <token>`
+- raw run transcript markers under `bench/**/runs/**` and `cases/**/runs/**`, including access-token refresh helpers, account-state markers, session ids, and token-use summaries
 
 Findings are review indicators. They are not automatic proof of a live
 credential, exploitability, compromise, or malicious exposure.
@@ -61,6 +64,7 @@ This packet can support this claim:
 ```text
 The recorded public `@svy04` default branches were scanned by the attached
 local rule set for local-path disclosure and scanner-unfriendly placeholders.
+It also checks for raw auth transcript markers in public proof surfaces.
 The scan produced static review indicators for the checked surface.
 ```
 
@@ -87,7 +91,12 @@ non-secret placeholder such as:
 ```text
 OPENAI_API_KEY=<openai-api-key>
 GITHUB_TOKEN=<github-token>
+Authorization: Bearer <token>
 ```
+
+If the gate finds raw runtime or auth transcript material, replace the public
+file with a sanitized receipt and keep the aggregate result, scorer output, or
+claim boundary as the public evidence.
 
 If the gate finds a real credential, revoke or rotate it before rewriting public
 history. Removing the string from the repo is not enough once a credential may
