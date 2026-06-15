@@ -49,7 +49,7 @@ class ProfileReadmeTests(unittest.TestCase):
         for badge_url in REQUIRED_BADGE_URLS:
             self.assertIn(badge_url, readme)
 
-        self.assertLess(len(readme), 9500)
+        self.assertLess(len(readme), 9900)
         self.assertIn("## Current Operating Stack", readme)
         self.assertIn("## Proof Board", readme)
         self.assertIn("## How To Read This Profile", readme)
@@ -100,6 +100,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Mimesis Downstream Reinjection Law", readme)
         self.assertIn("Mimesis Minecraft High-Integration Evidence Card", readme)
         self.assertIn("Mimesis Minecraft Public Redacted Board v0", readme)
+        self.assertIn("Mimesis Minecraft Transcript Availability Audit", readme)
         self.assertIn("redacted failure artifact", readme)
         self.assertIn("redacted local hygiene artifact", readme)
         self.assertIn("redacted method-boundary artifact", readme)
@@ -128,6 +129,10 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("manifest.schema.json", readme)
         self.assertIn("manifest contract/schema", readme)
         self.assertIn("aggregate transcript ledger", readme)
+        self.assertIn("machine-checkable transcript-availability audit", readme)
+        self.assertIn("README proof-gate surface", readme)
+        self.assertIn("raw per-judge score rows", readme)
+        self.assertIn("redaction-reviewed raw rows", readme)
         self.assertIn("READY.json", readme)
         self.assertIn("redacted-screenshots/manifest.json", readme)
         self.assertIn("route-linked board-v1 entries", readme)
@@ -265,6 +270,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Mimesis downstream reinjection route", proof_doc)
         self.assertIn("Mimesis Minecraft high-integration evidence-card route", proof_doc)
         self.assertIn("Mimesis Minecraft public board v0 route", proof_doc)
+        self.assertIn("Mimesis Minecraft transcript availability audit route", proof_doc)
         self.assertIn("Human-made Feeling Bench route", proof_doc)
         self.assertIn("profile proof route", proof_doc)
         self.assertIn("Metaforge-first profile framing", proof_doc)
@@ -296,6 +302,10 @@ class ProfileReadmeTests(unittest.TestCase):
         )
         self.assertIn(
             "https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/",
+            proof_doc,
+        )
+        self.assertIn(
+            "https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/",
             proof_doc,
         )
         self.assertIn(
@@ -331,6 +341,10 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("manifest.schema.json", proof_doc)
         self.assertIn("manifest contract/schema", proof_doc)
         self.assertIn("aggregate transcript ledger", proof_doc)
+        self.assertIn("machine-checkable transcript-availability audit", proof_doc)
+        self.assertIn("README proof-gate surface", proof_doc)
+        self.assertIn("raw per-judge score rows", proof_doc)
+        self.assertIn("redaction-reviewed", proof_doc)
         self.assertIn("READY.json", proof_doc)
         self.assertIn("redacted-screenshots/manifest.json", proof_doc)
         self.assertIn("route-linked board-v1 entries", proof_doc)
@@ -391,6 +405,10 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("manifest.schema.json", workbench)
         self.assertIn("manifest contract/schema", workbench)
         self.assertIn("aggregate transcript ledger", workbench)
+        self.assertIn("scorer-transcript-availability.json", workbench)
+        self.assertIn("Mimesis Minecraft Transcript Availability Audit", workbench)
+        self.assertIn("raw per-judge score rows", workbench)
+        self.assertIn("redaction-reviewed raw rows", workbench)
         self.assertIn("READY.json", workbench)
         self.assertIn("redacted-screenshots/manifest.json", workbench)
         self.assertIn("route-linked board-v1 entries", workbench)
