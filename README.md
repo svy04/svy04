@@ -22,7 +22,7 @@ source first -> artifacts before personas -> gates before claims -> verification
 | --- | --- | --- |
 | [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra operating surface for evidence-gated agent work. | Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). Current hardening includes a dependency-cruiser topology baseline. Not production-ready, topology-clean, release-ready, or externally validated. |
 | OpenClaude | OpenClaude is the runtime substrate: local CLI, tools, MCP, OAuth routes, and execution rails. | Useful substrate, not the main thesis. |
-| Digital Factory | Digital Factory is the private/local Mimesis Engineering workbench: source packets, prototype plugin surfaces, expert modules, ablations, inspection manifests, and failure records. | Local checks pass, but public claims stay route-bound through redacted proof artifacts. |
+| Digital Factory | Digital Factory is the private/local Mimesis Engineering workbench: source packets, prototype plugin surfaces, expert modules, ablations, inspection manifests, and failure records. | Public-safe proof routes summarize redacted local hygiene and blockers. Fresh verifier output is required before any stronger module-pass or promotion claim. |
 | [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Evidence-first data-agent surface for messy market-intelligence work. | See the [current proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot, not product-complete, not externally validated. |
 
 ## Mimesis Engineering
