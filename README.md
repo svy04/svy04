@@ -18,43 +18,41 @@ source first -> artifacts before personas -> gates before claims -> verification
 
 ## Current Thesis
 
-| Layer | What it does | Boundary |
+| Surface | What I am building | Boundary |
 | --- | --- | --- |
-| [Metaforge](https://github.com/svy04/metaforge) | Public operating-system surface for Meta, MFH, and Orchestra. | Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). Not production-ready or externally validated. |
+| [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra operating surface for evidence-gated agent work. | Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). Not production-ready or externally validated. |
 | OpenClaude | OpenClaude is the runtime substrate: local CLI, tools, MCP, OAuth-backed routes, and execution rails. | Useful substrate, not the main thesis. |
-| Digital Factory | Digital Factory is the private/local Mimesis Engineering workbench: source packets, prototype plugin surfaces, expert modules, ablations, inspection manifests, and failure records. | Local checks pass, but public claims stay route-bound. |
+| Digital Factory | Digital Factory is the private/local Mimesis Engineering workbench: source packets, prototype plugin surfaces, expert modules, ablations, inspection manifests, and failure records. | Local checks pass, but public claims stay route-bound through redacted proof artifacts. |
 | [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Evidence-first data-agent surface for messy market-intelligence work. | See the [current proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot, not product-complete, not externally validated. |
 
 ## Mimesis Engineering
 
 AI에게 역할이 아니라 기준을 준다. In English: give AI standards, not roles.
 
-Mimesis Engineering imports load-bearing structure from products, papers, patents, standards, and maintained open-source implementations, then tests that
-structure with wrong anchors, controls, scorers, gates, and failure records.
+Mimesis Engineering imports load-bearing structure from products, papers, patents, standards, and maintained open-source implementations, then tests that structure with wrong anchors, controls, scorers, gates, and failure records.
 
 ```text
 source -> structure -> wrong-anchor/control -> gate -> claim boundary
 ```
 
-The allowed claim is narrow: Mimesis can help in high-slop, underdetermined
-generative work when it imports load-bearing structure from verified artifacts.
-That is conditional lift, not universal lift. It does not universally improve AI output.
+The allowed claim is narrow: Mimesis can help in high-slop, underdetermined generative work when it imports load-bearing structure from verified artifacts. That is conditional lift, not universal lift. It does not universally improve AI output.
 
-The active Digital Factory workbench follows Evidence Card Contract discipline:
+The active private/local workbench follows Evidence Card Contract discipline:
 source artifact, baseline output, conditioned output, wrong-anchor or checklist control, gate/scorer, failure cases, and claim boundary stay visible before stronger copy moves. That proof-surface discipline is the point.
 
 Board v1 is not ready.
 
 ## Proof Routes
 
-| Route | Why it matters |
+| Route | Boundary |
 | --- | --- |
-| [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/) | CI-checked routing and claim-boundary surface. |
+| [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/) | CI-checked routing and claim-boundary surface; not completion, adoption, or external validation. |
 | [Public GitHub Surface Hygiene Proof Packet](docs/public-github-surface-hygiene-proof-packet.md) | Public default-branch scan for local paths, scanner-unfriendly placeholders, actual-looking bearer values, and raw auth transcript markers. |
-| [Render Parity Proof Packet](docs/profile-render-parity-proof-packet.md) | Render parity proof packet for source README, rendered profile, badge, and proof-route consistency. |
-| [Private Mimesis Workbench Map](docs/private-mimesis-workbench.md) | Private/local Digital Factory map; not public proof, production readiness, or external validation. |
+| [Render Parity Proof Packet](docs/profile-render-parity-proof-packet.md) | Render parity proof packet for source README, rendered profile, badge, and live proof-route consistency. |
+| [Digital Factory Workbench Verification Snapshot](https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/) | Redacted private/local workbench hygiene route; not public status. |
 | [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) | Public redacted board v0 / incomplete evidence board; Board v1 is not ready. |
 | [Human-made Feeling Bench](https://svy04.github.io/human-made-feeling-bench/) | First-pass rubric for judgment traces, source fidelity, interaction clarity, accessibility, failure evidence, and claim boundaries. |
+| [Private Mimesis Workbench Map](docs/private-mimesis-workbench.md) | Private/local Digital Factory map; not public proof, production readiness, or external validation. |
 
 Source/CI proof and live public rendering stay separate; live maintenance-hidden routes are not stronger proof.
 
@@ -79,10 +77,7 @@ find solved artifacts
 ```
 
 Public Feedback Hardening is tracked in [docs/public-feedback-hardening.md](docs/public-feedback-hardening.md):
-OpenClaude stays the local runtime substrate, Korean documentation is first-class,
-fork/origin/license boundaries stay visible, and marker-only checks must become
-behavioral smoke tests, edge-case checks, and side-effect guards before stronger
-marketing.
+OpenClaude stays the local runtime substrate, Korean documentation is first-class, fork/origin/license boundaries stay visible, and marker-only checks must become behavioral smoke tests, edge-case checks, and side-effect guards before stronger marketing.
 
 ## Claim Boundary
 
@@ -94,6 +89,4 @@ I do not claim Mimesis Engineering is an industry standard, statistically proven
 
 I do not claim Mimesis Engineering has statistical significance, hallucination suppression, visual quality improvement, or public benchmark status.
 
-Strong claims must point to current repository state, runtime evidence, public
-primary sources, reproducible tests, external reviewer records, or explicit
-claim-boundary notes.
+Strong claims must point to current repository state, runtime evidence, public primary sources, reproducible tests, external reviewer records, or explicit claim-boundary notes.
