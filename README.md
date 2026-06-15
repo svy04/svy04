@@ -44,10 +44,9 @@ It can show null or negative effects when the task is
 already well specified, the model is already strong on the measured axis, or
 the anchor is wrong.
 
-The active Digital Factory workbench uses an Evidence Card Contract before
-local work becomes public copy: source artifact, baseline output, conditioned
-output, wrong-anchor or checklist control, gate/scorer, failure cases, and
-claim boundary must stay visible. That is proof-surface discipline, not visual quality improvement proof.
+The active Digital Factory workbench uses Evidence Card Contract proof-surface discipline: source artifact,
+baseline output, conditioned output, wrong-anchor or checklist control,
+gate/scorer, failure cases, and claim boundary stay visible.
 
 ## Proof Board
 
@@ -63,14 +62,13 @@ claim boundary must stay visible. That is proof-surface discipline, not visual q
 | [External OSS Attribution: Two Executed Repro Cards](https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/) | P-EXT-03 and P-EXT-06 source anchor, objective oracle, defect control, and command result examples using Go `time.Parse` and Eisel-Lemire style source study. | not downstream lift, not maintainer endorsement, not legal clearance. |
 | [Mimesis Downstream Reinjection Law](https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/) | Narrow local synthetic signal in the underdetermined task plus slop-contaminated prior regime. | Universal output improvement, statistical significance, customer outcomes, or hallucination suppression / universal hallucination suppression. |
 | [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/) | redacted local evidence card: source artifact, baseline output, conditioned output, wrong-anchor or checklist control, gate/scorer, n=2 per cell, failure cases, and claim boundary. | not L5 proof, not external validation, not human visual-quality proof, not near-Fable proof, not public benchmark status, and not universal lift. |
-| [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) | public redacted board v0 / incomplete evidence board with source-use boundary, condition board, aggregate scoring, public-safe screenshots or links, `manifest-preflight.json`, `MANIFEST-CONTRACT.md`, `manifest.schema.json`, manifest contract/schema, aggregate transcript ledger, local build logs, and local wrong-anchor execution/render sidecar; not route-linked board-v1 proof. | Board v1 Promotion Blockers: promotion-blocked public-safe per-arm screenshots, judge protocol, scorer transcript, full scorer transcript / full per-judge scorer transcript, failure record, full public-safe manifest (`READY.json` + `redacted-screenshots/manifest.json`), route-linked board gate / route-linked board-v1 entries, comparable wrong-anchor score. board v1 collection plan and `verify_minecraft_board_v1_gate.py` are a blocker contract, not stronger proof; board v1 is not ready. |
-| [Mimesis Minecraft Transcript Availability Audit](https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/) | machine-checkable transcript-availability audit plus README proof-gate surface for PR #25/#26. | not full transcript, not stronger proof, not external validation; raw per-judge score rows/comments and redaction-reviewed raw rows remain missing. |
+| [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) | public redacted board v0 / incomplete evidence board with source-use boundary, condition board, aggregate scoring, public-safe screenshots or links, `manifest-preflight.json`, `MANIFEST-CONTRACT.md`, `manifest.schema.json`, manifest contract/schema, aggregate transcript ledger, `raw-transcript-preflight.json`, local build logs, and local wrong-anchor execution/render sidecar; not route-linked board-v1 proof. | Board v1 Promotion Blockers: promotion-blocked public-safe per-arm screenshots, judge protocol, scorer transcript, full scorer transcript / full per-judge scorer transcript, failure record, full public-safe manifest (`READY.json` + `redacted-screenshots/manifest.json`), route-linked board gate / route-linked board-v1 entries, comparable wrong-anchor score. board v1 collection plan + `verify_minecraft_board_v1_gate.py` are a blocker contract, not stronger proof; board v1 is not ready. |
+| [Mimesis Minecraft Transcript Availability Audit](https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/) | machine-checkable transcript-availability audit, `raw-transcript-preflight.json`, and README proof-gate surface for PR #25, PR #26, and PR #27. | not full transcript, not stronger proof, not external validation; raw per-judge score rows/comments and redaction-reviewed raw rows remain missing. |
 | [Human-made Feeling Bench](https://svy04.github.io/human-made-feeling-bench/) | first-pass rubric for trace of judgment, source fidelity, interaction clarity, accessibility, failure evidence, and claim boundaries. | It is not a universal design-quality benchmark and not external validation. |
 
 ## Support surfaces, not current canon
 
-These public repos keep older method material inspectable, but they are not the
-current private/local canon:
+These repos keep older method material inspectable, but they are not the current private/local canon:
 
 | Repo | Current role |
 | --- | --- |
