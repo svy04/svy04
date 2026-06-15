@@ -185,7 +185,7 @@ and claim boundary, but it remains promotion-blocked. Public-safe
 screenshot sidecars exist without `redacted-screenshots/manifest.json`;
 `manifest-preflight.json` exists; `MANIFEST-CONTRACT.md` and
 `manifest.schema.json` define a manifest contract/schema; an aggregate transcript ledger exists;
-`raw-transcript-preflight.json` exists as a blocker contract;
+`raw-transcript-preflight.json` and `raw-transcript-redaction-review-preflight.json` exist as blocker contracts;
 local per-arm build/render logs exist as inventory only; and a
 local wrong-anchor execution/render sidecar exists as a receipt only.
 
@@ -197,10 +197,11 @@ route-linked board gate / route-linked board-v1 entries, comparable wrong-anchor
 route-linked per-arm build/log proof. The
 latest private plugin gate adds a board v1 collection plan,
 `verify_minecraft_board_v1_gate.py`, `MANIFEST-CONTRACT.md`,
-`manifest.schema.json`, `raw-transcript-preflight.json`, and
+`manifest.schema.json`, `raw-transcript-preflight.json`,
+`raw-transcript-redaction-review-preflight.json`, and
 `public-source-packet-draft.md/.json` as a future-route source packet draft;
 that is a blocker contract, not stronger proof, and the sidecar, manifest
-contract/schema, raw transcript preflight, and source packet draft are only
+contract/schema, raw transcript preflight, redaction-review preflight, and source packet draft are only
 receipts/contracts. It is not a live route, not `READY.json`, not
 `redacted-screenshots/manifest.json`, not full transcript/scorer evidence, and
 not stronger proof. board v1 is not ready. This is a visibility upgrade, not stronger proof.
@@ -213,8 +214,8 @@ Mimesis Minecraft transcript availability audit route:
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/
 ```
 
-That route records the private workbench PR #25, PR #26, PR #27, and PR #28-style raw transcript hygiene state as an inspectability
-upgrade. It exposes a machine-checkable transcript-availability audit, `raw-transcript-preflight.json`, sanitized raw-run receipts, and README proof-gate surface while keeping the blocker boundary explicit. It is not a full
+That route records the private workbench PR #25-#31 transcript hygiene state as an inspectability
+upgrade. It exposes a machine-checkable transcript-availability audit, `raw-transcript-preflight.json`, `raw-transcript-redaction-review-preflight.json`, sanitized raw-run receipts, and README proof-gate surface while keeping the blocker boundary explicit. It is not a full
 transcript, not stronger proof, not board-v1 readiness, not external validation,
 and still blocked on raw per-judge score rows, raw comments, redaction-reviewed
 raw rows, route-linked board-v1 entries, and independent/external panel evidence.

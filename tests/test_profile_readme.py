@@ -67,6 +67,9 @@ class ProfileReadmeTests(unittest.TestCase):
             "give AI standards, not roles",
             "products, papers, patents, standards, and maintained open-source implementations",
             "Source/CI proof and live public rendering stay separate",
+            "raw-transcript-redaction-review-preflight.json",
+            "PR #25-#31 transcript hygiene gates",
+            "redaction-reviewed raw rows",
             "Board v1 is not ready",
             "It does not universally improve AI output.",
             "I do not claim Metaforge is production-ready",
@@ -83,6 +86,8 @@ class ProfileReadmeTests(unittest.TestCase):
             "Mimesis v.next Workbench",
             "16/16 expert modules",
             "OpenClaude is the main thesis",
+            "PR #27",
+            "PR #28-style raw transcript hygiene hardening",
         ]
         for marker in forbidden_markers:
             self.assertNotIn(marker, readme)
@@ -184,6 +189,10 @@ class ProfileReadmeTests(unittest.TestCase):
             "raw auth transcript markers",
             "private-mimesis-workbench.md",
             "Metaforge-first profile framing",
+            "raw-transcript-preflight.json",
+            "raw-transcript-redaction-review-preflight.json",
+            "PR #25-#31 transcript hygiene",
+            "redaction-reviewed",
             "local path disclosure",
             "non-public or non-current repo links",
         ]
@@ -218,6 +227,10 @@ class ProfileReadmeTests(unittest.TestCase):
             "not external validation",
             "Current local snapshot",
             "local-only evidence",
+            "raw-transcript-preflight.json",
+            "raw-transcript-redaction-review-preflight.json",
+            "PR #25-#31 transcript hygiene gates",
+            "redaction-reviewed raw rows",
             "Board v1 is not ready",
             "The private workbench proves Mimesis Engineering.",
             "Mimesis suppresses hallucination/fabrication in general.",
