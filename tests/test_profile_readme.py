@@ -39,7 +39,7 @@ class ProfileReadmeTests(unittest.TestCase):
         issues = validate_readme_text(readme)
 
         self.assertEqual(issues, [])
-        self.assertLess(len(readme), 10000)
+        self.assertLess(len(readme), 7000)
         for link in REQUIRED_LINKS:
             self.assertIn(link, readme)
         for link in profile_check.REQUIRED_INTERNAL_LINKS:
@@ -48,9 +48,9 @@ class ProfileReadmeTests(unittest.TestCase):
             self.assertIn(badge_url, readme)
 
         required_sections = [
-            "## Current Operating Stack",
+            "## Current Thesis",
             "## Mimesis Engineering",
-            "## Proof Board",
+            "## Proof Routes",
             "## Public Repos",
             "## Working Loop",
             "## Claim Boundary",
@@ -64,14 +64,11 @@ class ProfileReadmeTests(unittest.TestCase):
             "not the main thesis",
             "Digital Factory is the private/local Mimesis Engineering workbench",
             "Local checks pass, but public claims stay route-bound",
+            "AI에게 역할이 아니라 기준을 준다.",
             "give AI standards, not roles",
             "products, papers, patents, standards, and maintained open-source implementations",
-            "Source/CI proof and live public rendering stay separate",
             "inspection manifests",
-            "board-v1-inspection-manifest.json",
-            "raw-transcript-redaction-review-preflight.json",
-            "PR #25-#32 blocker and hygiene gates",
-            "redaction-reviewed raw rows",
+            "Public redacted board v0 / incomplete evidence board",
             "Board v1 is not ready",
             "It does not universally improve AI output.",
             "I do not claim Metaforge is production-ready",
