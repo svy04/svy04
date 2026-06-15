@@ -194,9 +194,13 @@ route-linked board gate / route-linked board-v1 entries, comparable wrong-anchor
 route-linked per-arm build/log proof. The
 latest private plugin gate adds a board v1 collection plan,
 `verify_minecraft_board_v1_gate.py`, `MANIFEST-CONTRACT.md`,
-`manifest.schema.json`, and `raw-transcript-preflight.json`; that is a blocker contract, not stronger proof,
-and the sidecar plus manifest contract/schema and raw transcript preflight are only receipts/contracts. board v1 is not ready. This is a
-visibility upgrade, not stronger proof.
+`manifest.schema.json`, `raw-transcript-preflight.json`, and
+`public-source-packet-draft.md/.json` as a future-route source packet draft;
+that is a blocker contract, not stronger proof, and the sidecar, manifest
+contract/schema, raw transcript preflight, and source packet draft are only
+receipts/contracts. It is not a live route, not `READY.json`, not
+`redacted-screenshots/manifest.json`, not full transcript/scorer evidence, and
+not stronger proof. board v1 is not ready. This is a visibility upgrade, not stronger proof.
 
 The current public-safe Mimesis Minecraft transcript availability audit route is:
 

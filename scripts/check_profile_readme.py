@@ -125,6 +125,9 @@ REQUIRED_MARKERS = [
     "aggregate transcript ledger",
     "machine-checkable transcript-availability audit",
     "raw-transcript-preflight.json",
+    "public-source-packet-draft.md/.json",
+    "future-route source packet draft",
+    "not a live route",
     "PR #27",
     "PR #28-style raw transcript hygiene hardening",
     "sanitized raw-run receipts",
@@ -252,6 +255,7 @@ def _line_allows_dangerous_claim(line):
         "not an industry standard",
         "board v1 is not ready",
         "not stronger proof",
+        "not a live route",
     ]
     return any(phrase in lowered for phrase in safe_phrases)
 
