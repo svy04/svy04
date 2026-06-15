@@ -84,6 +84,17 @@ docs/public-feedback-hardening.md
 docs/private-mimesis-workbench.md
 ```
 
+Current route boundary:
+
+```text
+source/CI proof and live public rendering stay separate
+```
+
+The public blog can be live maintenance-hidden while source proof packets and
+profile CI stay current. A `200` route under maintenance mode proves reachability
+and the maintenance/noindex boundary, not that proof-route markers are currently
+rendered to public readers.
+
 The public-feedback note is an active remediation track for the public surface:
 local-path hygiene, origin/license boundaries, Korean docs, and behavioral
 tests before stronger marketing. It is not proof that those workstreams are complete.
