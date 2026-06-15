@@ -5,74 +5,76 @@
 
 I build proof-bounded AI operating systems.
 
-The current work is not "another AI wrapper." It is a stack for making agents
-earn stronger claims:
+Not another wrapper. The public thesis is **Metaforge = Meta + MFH + Orchestra OS**:
+memory that survives context drift, gates that block unsupported claims, and
+multi-agent routing that keeps work inspectable.
 
 ```text
-source first
-artifacts before personas
-standards before vibes
-gates before claims
-logs before polish
-verification is the marketing
+source first -> artifacts before personas -> gates before claims -> verification is the marketing
 ```
 
 ## Current Operating Stack
 
-| Layer | Current role | Public proof boundary |
+| System | What it is | Public boundary |
 | --- | --- | --- |
-| [Metaforge](https://github.com/svy04/metaforge) | Meta for operating memory, MFH for evidence gates, Orchestra for multi-agent routing. | Public active repo. Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). Not production-ready or externally validated. |
-| OpenClaude | OpenClaude is the local CLI/runtime substrate for Claude, Codex, OAuth-backed routes, tools, MCP, and local execution. | Useful substrate, not the main thesis. |
-| Digital Factory | Digital Factory is the current Mimesis v.next workbench: private/local source packets, prototype plugin surfaces, ablations, expert modules, and failure records. | The current local module-count drift is kept out of the public numeric claim until the private default branch and public proof route expose the same evidence. |
+| [Metaforge](https://github.com/svy04/metaforge) | Meta for operating memory, MFH for evidence gates, and Orchestra for multi-agent routing. | Public active repo. Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). Not production-ready or externally validated. |
+| OpenClaude | OpenClaude is the runtime substrate: local CLI, tools, MCP, OAuth-backed routes, and execution rails. | Useful substrate, not the main thesis. |
+| Digital Factory | Digital Factory is the private/local Mimesis Engineering workbench: source packets, prototype plugin surfaces, ablations, expert modules, and failure records. | Local checks pass, but public claims stay route-bound until the public proof surface carries the same evidence. |
 | [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Evidence-first data-agent portfolio for messy market-intelligence work. | Start with the [current proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot, not product-complete, not externally validated. |
 
-## How To Read This Profile
+## Mimesis Engineering
 
-This is a routing surface, not a victory lap. It keeps [Public Feedback Hardening](docs/public-feedback-hardening.md),
-source/CI proof and live public rendering stay separate: links can be live maintenance-hidden; not stronger proof.
+Mimesis Engineering is the method lane inside this stack.
 
-The short version:
+The rule is simple: give AI standards, not roles. Import load-bearing structure
+from products, papers, patents, standards, and maintained open-source implementations;
+then test the structure with controls, wrong anchors, scorers, failure records,
+and public claim boundaries.
+
+The allowed claim is narrow:
 
 ```text
-source-first artifacts -> gates -> claim boundaries
+Mimesis can help in high-slop, underdetermined generative work when it imports
+load-bearing structure from verified artifacts.
 ```
 
-Mimesis Engineering is the method lane: Give AI standards, not roles. The
-bounded claim is conditional lift, not universal lift. It does not universally improve AI output.
+That is conditional lift, not universal lift.
 
-The active Digital Factory workbench uses Evidence Card Contract proof-surface discipline: source artifact,
-baseline output, conditioned output, wrong-anchor or checklist control,
-gate/scorer, failure cases, and claim boundary stay visible.
+It does not universally improve AI output.
+
+The active Digital Factory workbench uses Evidence Card Contract proof-surface discipline:
+source artifact, baseline output, conditioned output, wrong-anchor or checklist control,
+gate/scorer, failure cases, and claim boundary stay visible before any marketing claim moves.
 
 ## Proof Board
 
-| Surface | What it proves | What it does not prove |
-| --- | --- | --- |
-| [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/) | CI-checked routing and claim-boundary surface for this README. | Not product completion, not adoption, not hosted deployment, and not external validation. |
-| [Public GitHub Surface Hygiene Proof Packet](docs/public-github-surface-hygiene-proof-packet.md) | public GitHub surface hygiene proof packet for public default branches, scanner-unfriendly placeholders, actual-looking bearer values, raw auth transcript markers, and checks that public repositories contain no secrets. | Not a guarantee that every future push is clean. |
-| [Render Parity Proof Packet](docs/profile-render-parity-proof-packet.md) | render parity proof packet for profile-to-site routing consistency. | Not visual quality improvement or adoption. |
-| [Private Mimesis Workbench Map](docs/private-mimesis-workbench.md) | private/local evidence map for current Digital Factory work. | Not public proof, not production readiness, and not external validation. |
-| [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/) | redacted failure artifact with a banned-claim boundary. | Not human visual-quality proof or a universal design-quality benchmark. |
-| [Private Workbench Verification Snapshot](https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/) | redacted local hygiene artifact for the private/local workbench. | Not public status, not adoption, not production readiness, and not external validation. |
-| [Mimesis Verification Relocation Packet](https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/) | redacted method-boundary artifact: validation does not transfer from source to downstream output. | Downstream lift, customer outcomes, or legal clearance. |
-| [External OSS Attribution: Two Executed Repro Cards](https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/) | P-EXT-03 and P-EXT-06 source anchor, objective oracle, defect control, and command result using Go `time.Parse` and Eisel-Lemire style source study. | not downstream lift, not maintainer endorsement, not legal clearance. |
-| [Mimesis Downstream Reinjection Law](https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/) | Narrow local synthetic signal in the underdetermined task plus slop-contaminated prior regime. | Universal output improvement, statistical significance, customer outcomes, or hallucination suppression / universal hallucination suppression. |
-| [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/) | redacted local evidence card: source artifact, baseline output, conditioned, wrong-anchor/checklist control, gate/scorer, n=2 per cell, failure cases, claim boundary. | not L5 proof, not external validation, not human visual-quality proof, not near-Fable proof, not public benchmark status, and not universal lift. |
-| [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) | public redacted board v0 / incomplete evidence board: source-use boundary, condition board, aggregate scoring, `manifest-preflight.json`, `MANIFEST-CONTRACT.md`, `manifest.schema.json`, manifest contract/schema, aggregate transcript ledger, `raw-transcript-preflight.json`, local wrong-anchor execution/render sidecar, `public-source-packet-draft.md/.json` future-route source packet draft; not route-linked board-v1 proof; not a live route. | Promotion Blockers: promotion-blocked; public-safe screenshots or links, public-safe per-arm screenshots, judge protocol, scorer transcript, full scorer transcript/full per-judge scorer transcript, failure record, full public-safe manifest: `READY.json`, `redacted-screenshots/manifest.json`, route-linked board gate / route-linked board-v1 entries, wrong-anchor score. board v1 collection plan + `verify_minecraft_board_v1_gate.py` are a blocker contract, not stronger proof; board v1 is not ready. |
-| [Mimesis Minecraft Transcript Availability Audit](https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/) | machine-checkable transcript-availability audit, `raw-transcript-preflight.json`, sanitized raw-run receipts, README proof-gate surface, PR #25, PR #26, PR #27, PR #28-style raw transcript hygiene hardening. | not full transcript, not stronger proof, not external validation; raw per-judge score rows/comments and redaction-reviewed raw rows remain missing. |
-| [Human-made Feeling Bench](https://svy04.github.io/human-made-feeling-bench/) | first-pass rubric for trace of judgment, source fidelity, interaction clarity, accessibility, failure evidence, and claim boundaries. | It is not a universal design-quality benchmark and not external validation. |
+This is a routing surface, not a victory lap. Source/CI proof and live public rendering stay separate: links can be live maintenance-hidden; that is not stronger proof.
 
-## Support surfaces, not current canon
-
-These repos keep older method material inspectable, but they are not the current private/local canon:
-
-| Repo | Current role |
+| Route | Signal and boundary |
 | --- | --- |
-| [mimesis-engineering](https://github.com/svy04/mimesis-engineering) | public framework, reference packs, validators, cases, and proof boundaries. |
-| [mimesis-canvas](https://github.com/svy04/mimesis-canvas) | worksheet surface. |
-| [mimesis-casebook](https://github.com/svy04/mimesis-casebook) | case surface. |
-| [leaderboard-data](https://github.com/svy04/leaderboard-data) | separate Rust server leaderboard data; visible public repo, not part of the Metaforge / NoiseProof / Mimesis proof surface. |
-| [svy04](https://github.com/svy04/svy04) | this profile README and its claim checks. |
+| [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/) | CI-checked routing and claim-boundary surface; not product completion, hosted deployment, adoption, or external validation. |
+| [Public GitHub Surface Hygiene Proof Packet](docs/public-github-surface-hygiene-proof-packet.md) | Public default-branch scan for local paths, scanner-unfriendly placeholders, actual-looking bearer values, and raw auth transcript markers; not a future-clean guarantee. |
+| [Render Parity Proof Packet](docs/profile-render-parity-proof-packet.md) | Render parity proof packet for source README, rendered profile, badge, and proof-route consistency; not visual quality improvement or adoption. |
+| [Private Mimesis Workbench Map](docs/private-mimesis-workbench.md) | Private/local evidence map for Digital Factory; not public proof, production readiness, or external validation. |
+| [Private Workbench Verification Snapshot](https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/) | Redacted local hygiene artifact; not public status, adoption, production readiness, or external validation. |
+| [Mimesis Visual Failure Packet](https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/) | Redacted failure artifact with a banned-claim boundary; not human visual-quality proof or a universal design-quality benchmark. |
+| [Mimesis Verification Relocation Packet](https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/) | Redacted method-boundary artifact: validation does not transfer; not downstream lift, customer outcomes, or legal clearance. |
+| [External OSS Attribution: Two Executed Repro Cards](https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/) | P-EXT-03 and P-EXT-06 source anchor, objective oracle, defect control, wrong-anchor control, and command result using Go `time.Parse` and Eisel-Lemire source study; not downstream lift, maintainer endorsement, legal clearance, or production readiness. |
+| [Mimesis Downstream Reinjection Law](https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/) | Narrow local synthetic signal in the underdetermined task plus slop-contaminated prior regime; not universal output improvement, statistical significance, customer outcomes, or hallucination suppression. |
+| [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/) | Redacted local evidence card: source artifact, baseline output, conditioned output, wrong-anchor/checklist control, gate/scorer, n=2 per cell, failure cases, claim boundary; not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark status, or universal lift. |
+| [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) | Public redacted board v0 / incomplete evidence board: source-use boundary, condition board, aggregate scoring, manifest contract/schema, aggregate transcript ledger, and raw transcript preflight. Promotion-blocked; Board v1 is not ready; missing route-linked board gate, full public-safe manifest, public-safe per-arm screenshots, judge protocol, scorer transcript, full scorer transcript, full per-judge scorer transcript, comparable wrong-anchor score, and `READY.json`. |
+| [Mimesis Minecraft Transcript Availability Audit](https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/) | Machine-checkable transcript-availability audit with `raw-transcript-preflight.json`, sanitized raw-run receipts, README proof-gate surface, PR #27, and PR #28-style raw transcript hygiene hardening; not a full transcript, stronger proof, board-v1 readiness, or external validation. |
+| [Human-made Feeling Bench](https://svy04.github.io/human-made-feeling-bench/) | First-pass rubric for trace of judgment, source fidelity, interaction clarity, accessibility, failure evidence, and claim boundaries; not a universal design-quality benchmark or external validation. |
+
+## Public Repos
+
+[metaforge](https://github.com/svy04/metaforge) is the public operating-system surface.
+[noiseproof-agent](https://github.com/svy04/noiseproof-agent) is the data-agent surface.
+[mimesis-engineering](https://github.com/svy04/mimesis-engineering) is the public framework, reference packs, validators, cases, and proof boundaries.
+[mimesis-canvas](https://github.com/svy04/mimesis-canvas) is the worksheet surface.
+[mimesis-casebook](https://github.com/svy04/mimesis-casebook) is the case surface.
+[leaderboard-data](https://github.com/svy04/leaderboard-data) is a separate Rust server leaderboard-data repo, not part of the current proof surface.
+[svy04](https://github.com/svy04/svy04) is this profile README and its claim checks.
 
 ## Working Loop
 
@@ -80,17 +82,15 @@ These repos keep older method material inspectable, but they are not the current
 find solved artifacts
 -> read primary sources and maintained implementations
 -> extract load-bearing structure
--> test the structure against wrong anchors or controls
--> run gates, scorers, or reviewers
+-> test with wrong anchors, controls, scorers, and reviewers
 -> publish only the claim the evidence can carry
 ```
 
-## What I Am Trying To Prove
-
-- AI systems should block unsupported answers before they generate fluent ones.
-- Strong agent work needs memory, gates, logs, dissent, rollback paths, human promotion, and claim boundaries.
-- Mimesis Engineering is stronger when it imitates artifacts and standards, not roles or vibes.
-- Verification is the marketing: public claims should move only when the evidence surface moves.
+Public Feedback Hardening is tracked in [docs/public-feedback-hardening.md](docs/public-feedback-hardening.md):
+OpenClaude stays the local runtime substrate, Korean documentation is first-class,
+fork/origin/license boundaries stay visible, and marker-only checks must become
+behavioral smoke tests, edge-case checks, and side-effect guards before stronger
+marketing.
 
 ## Claim Boundary
 
@@ -98,7 +98,7 @@ I do not claim Metaforge is production-ready, compliance-ready, SLSA-ready, or e
 
 I do not claim NoiseProof is production-ready, hosted, externally validated, accepted by any company, or safe for financial advice.
 
-I do not claim Mimesis Engineering is an industry standard, statistically proven method, universal AI-output improvement method, or replacement for engineering judgment.
+I do not claim Mimesis Engineering is an industry standard, statistically proven method, universal AI-output improvement method, hallucination-suppression system, or replacement for engineering judgment.
 
 Strong claims must point to current repository state, runtime evidence, public
 primary sources, reproducible tests, external reviewer records, or explicit
