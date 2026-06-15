@@ -38,6 +38,13 @@ PATTERN_SPECS = [
     ("generic-sk-placeholder", re.compile("sk-" + "your-key-here", re.IGNORECASE)),
     ("github-placeholder", re.compile("ghp_" + "your-token-here", re.IGNORECASE)),
     ("master-key-placeholder", re.compile("sk-" + "my-master-key", re.IGNORECASE)),
+    ("auth-cache-disclosure", re.compile("Loaded cached " + "credentials", re.IGNORECASE)),
+    ("auth-required-disclosure", re.compile("Auth" + "Required", re.IGNORECASE)),
+    ("invalid-token-disclosure", re.compile(r"\berror=invalid" + "_token" + r"\b", re.IGNORECASE)),
+    (
+        "missing-access-token-disclosure",
+        re.compile("Missing or invalid " + "access token", re.IGNORECASE),
+    ),
     (
         "openai-key-assignment",
         re.compile(r"\bOPENAI_API_KEY\s*=\s*" + "sk-" + r"[A-Za-z0-9_\-]*"),

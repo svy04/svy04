@@ -23,13 +23,14 @@ verification is the marketing
 | --- | --- | --- |
 | [Metaforge](https://github.com/svy04/metaforge) | Meta for operating memory, MFH for evidence gates, Orchestra for multi-agent routing. | Public active repo. Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). Not production-ready or externally validated. |
 | OpenClaude | OpenClaude is the local CLI/runtime substrate for Claude, Codex, OAuth-backed routes, tools, MCP, and local execution. | Useful substrate, not the main thesis. |
-| Digital Factory | Digital Factory is the current Mimesis v.next workbench: private/local source packets, prototype plugin surfaces, ablations, holdouts, source scouting, expert modules, and failure records. | Current local checks pass in the private workbench, but local module-count drift is kept out of the public numeric claim until the private default branch and public proof route expose the same evidence. |
+| Digital Factory | Digital Factory is the current Mimesis v.next workbench: private/local source packets, prototype plugin surfaces, ablations, expert modules, and failure records. | The current local module-count drift is kept out of the public numeric claim until the private default branch and public proof route expose the same evidence. |
 | [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Evidence-first data-agent portfolio for messy market-intelligence work. | Start with the [current proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot, not product-complete, not externally validated. |
 
 ## How To Read This Profile
 
 This profile is a routing surface, not a victory lap. It points to current
-repos and proof packets, then keeps the limits attached.
+proof packets and the [Public Feedback Hardening](docs/public-feedback-hardening.md)
+lane, then keeps the limits attached.
 
 The short version:
 
