@@ -178,6 +178,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("python scripts/check_profile_readme.py --check-links", workflow)
         self.assertIn("github.ref == 'refs/heads/main'", workflow)
         self.assertIn("python scripts/check_public_github_surface_hygiene.py", workflow)
+        self.assertIn("GITHUB_TOKEN: ${{ github.token }}", workflow)
 
         proof_markers = [
             "Profile README Proof Surface",
