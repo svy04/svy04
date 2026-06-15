@@ -46,7 +46,8 @@ scripts/check_public_github_surface_hygiene.py
 
 supports the Public GitHub Surface Hygiene Proof Packet. It lists public
 `@svy04` repositories through the GitHub REST API, shallow-clones public default branches,
-and scans text files for local path disclosure plus scanner-unfriendly placeholders.
+and scans text files for local path disclosure, scanner-unfriendly placeholders,
+actual-looking bearer values, and raw auth transcript markers.
 
 The GitHub Actions workflow:
 
@@ -205,8 +206,8 @@ Mimesis Minecraft transcript availability audit route:
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/
 ```
 
-That route records the private workbench PR #25, PR #26, and PR #27 state as an inspectability
-upgrade. It exposes a machine-checkable transcript-availability audit, `raw-transcript-preflight.json`, and README proof-gate surface while keeping the blocker boundary explicit. It is not a full
+That route records the private workbench PR #25, PR #26, PR #27, and PR #28-style raw transcript hygiene state as an inspectability
+upgrade. It exposes a machine-checkable transcript-availability audit, `raw-transcript-preflight.json`, sanitized raw-run receipts, and README proof-gate surface while keeping the blocker boundary explicit. It is not a full
 transcript, not stronger proof, not board-v1 readiness, not external validation,
 and still blocked on raw per-judge score rows, raw comments, redaction-reviewed
 raw rows, route-linked board-v1 entries, and independent/external panel evidence.

@@ -44,6 +44,51 @@ class PublicGitHubSurfaceHygieneTests(unittest.TestCase):
         self.assertIn("invalid-token-disclosure", labels)
         self.assertIn("missing-access-token-disclosure", labels)
 
+    def test_scan_repo_tree_catches_raw_auth_transcript_markers(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "bench" / "task" / "runs").mkdir(parents=True)
+            (root / "bench" / "task" / "runs" / "client.md").write_text(
+                "\n".join(
+                    [
+                        "async function refreshAccessToken() {}",
+                        "return { status: 'UNAUTHENTICATED' };",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            findings = hygiene.scan_repo_tree("demo", root)
+
+        labels = {finding.label for finding in findings}
+        self.assertIn("raw-auth-transcript", labels)
+
+    def test_scan_repo_tree_blocks_actual_looking_bearer_values_but_not_placeholders(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "Authorization: Bearer <token>\n",
+                encoding="utf-8",
+            )
+            (root / "raw.txt").write_text(
+                "Authorization: Bearer "
+                + "abcdefghijklmnopqrstuvwxyz1234567890"
+                + "\n",
+                encoding="utf-8",
+            )
+
+            findings = hygiene.scan_repo_tree("demo", root)
+
+        labels = {finding.label for finding in findings}
+        self.assertIn("bearer-token-disclosure", labels)
+        self.assertFalse(
+            any(
+                finding.label == "bearer-token-disclosure"
+                and finding.path == "README.md"
+                for finding in findings
+            )
+        )
+
     def test_scan_repo_tree_ignores_binary_files_and_git_metadata(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
