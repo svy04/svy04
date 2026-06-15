@@ -63,6 +63,7 @@ REQUIRED_MARKERS = [
     "private/local",
     "prototype plugin surfaces",
     "expert modules",
+    "local module-count drift is kept out of the public numeric claim",
     "Evidence Card Contract",
     "source artifact",
     "baseline output",
@@ -119,7 +120,9 @@ REQUIRED_MARKERS = [
     "scorer transcript",
     "full scorer transcript",
     "failure record",
-    "per-arm build logs remain missing",
+    "full public-safe manifest",
+    "full per-judge scorer transcript",
+    "route-linked board gate",
     "board v1 collection plan",
     "verify_minecraft_board_v1_gate.py",
     "blocker contract, not stronger proof",
@@ -153,6 +156,9 @@ PROHIBITED_MARKERS = [
     "public v0 artifact-level imitation method",
     "board v1 ready",
     "no true wrong-anchor",
+    "16/16 expert modules",
+    "per-arm build logs remain missing",
+    "per-arm build logs are still missing",
 ]
 
 ALLOWED_GITHUB_REPOS = [
