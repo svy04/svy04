@@ -20,7 +20,8 @@ response is to make the public surface easier to trust.
 - Marker and string checks are routing gates only. Stronger promotion needs
   behavioral smoke tests, edge-case checks, and side-effect guards.
 - Duplicate helper clusters, dead exports, and circular dependencies belong in
-  a cleanup lane, not in the launch claim.
+  a cleanup lane, not in the launch claim; dependency-cruiser topology baseline
+  evidence is a ratchet, not a topology-clean claim.
 
 ## Tooling Backlog
 
