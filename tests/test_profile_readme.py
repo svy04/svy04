@@ -54,6 +54,8 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("## Current Operating Stack", readme)
         self.assertIn("## Proof Board", readme)
         self.assertIn("## How To Read This Profile", readme)
+        self.assertIn("live maintenance-hidden", readme)
+        self.assertIn("source/CI proof and live public rendering stay separate", readme)
         self.assertIn("Digital Factory is the current Mimesis v.next workbench", readme)
         self.assertIn("local module-count drift is kept out of the public numeric claim", readme)
         self.assertNotIn("16/16 expert modules", readme)
@@ -259,6 +261,8 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("github.ref == 'refs/heads/main'", workflow)
         self.assertIn("python scripts/check_public_github_surface_hygiene.py", workflow)
         self.assertIn("Profile README Proof Surface", proof_doc)
+        self.assertIn("source/CI proof and live public rendering stay separate", proof_doc)
+        self.assertIn("live maintenance-hidden", proof_doc)
         self.assertIn("workflow status badges", proof_doc)
         self.assertIn("Public GitHub Surface Hygiene Proof Packet", proof_doc)
         self.assertIn("scripts/check_public_github_surface_hygiene.py", proof_doc)
@@ -516,6 +520,20 @@ class ProfileReadmeTests(unittest.TestCase):
             self.assertIn(url, fetched_urls)
         for url in ROUTE_URLS:
             self.assertIn(url, fetched_urls)
+
+    def test_render_parity_validator_checks_maintenance_hidden_routes(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+
+        def fake_fetcher(url):
+            if url in {surface_url for _, surface_url in PUBLIC_SURFACES}:
+                return 200, readme
+            if url in ROUTE_URLS:
+                return 200, "<body data-maintenance-page>공사중입니다</body>"
+            return 404, ""
+
+        issues = validate_render_parity("README.md", fake_fetcher)
+
+        self.assertTrue(any("maintenance route missing noindex" in issue for issue in issues))
 
     def test_render_parity_validator_catches_stale_rendered_surface(self):
         readme = Path("README.md").read_text(encoding="utf-8")

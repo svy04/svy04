@@ -1,4 +1,5 @@
 import argparse
+import re
 import sys
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -92,6 +93,13 @@ def validate_status_url(label, url, fetcher=fetch_url):
         return [f"{label}: {url} -> {body}"]
     if not 200 <= status < 400:
         return [f"{label}: {url} -> HTTP {status}"]
+    if "data-maintenance-page" in body:
+        issues = []
+        if not re.search(r'<meta\s+name="?robots"?\s+content="?noindex,\s*nofollow"?', body):
+            issues.append(f"{label}: {url} maintenance route missing noindex,nofollow")
+        if "공사중입니다" not in body or "아직 완성 전이라 공개하지 않습니다" not in body:
+            issues.append(f"{label}: {url} maintenance route missing public disclosure")
+        return issues
     return []
 
 

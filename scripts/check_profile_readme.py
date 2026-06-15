@@ -151,6 +151,8 @@ REQUIRED_MARKERS = [
     "public GitHub surface hygiene proof packet",
     "Public GitHub Surface Hygiene Proof Packet",
     "Public Feedback Hardening",
+    "live maintenance-hidden",
+    "source/CI proof and live public rendering stay separate",
     "public default branches",
     "scanner-unfriendly placeholders",
     "that public repositories contain no secrets",
