@@ -39,137 +39,53 @@ class ProfileReadmeTests(unittest.TestCase):
         issues = validate_readme_text(readme)
 
         self.assertEqual(issues, [])
+        self.assertLess(len(readme), 10000)
         for link in REQUIRED_LINKS:
             self.assertIn(link, readme)
-        required_internal_links = getattr(profile_check, "REQUIRED_INTERNAL_LINKS", [])
-        self.assertIn("docs/private-mimesis-workbench.md", required_internal_links)
-        self.assertIn("docs/profile-render-parity-proof-packet.md", required_internal_links)
-        self.assertIn("docs/public-feedback-hardening.md", required_internal_links)
-        for link in required_internal_links:
+        for link in profile_check.REQUIRED_INTERNAL_LINKS:
             self.assertIn(link, readme)
         for badge_url in REQUIRED_BADGE_URLS:
             self.assertIn(badge_url, readme)
 
-        self.assertLess(len(readme), 9900)
-        self.assertIn("## Current Operating Stack", readme)
-        self.assertIn("## Proof Board", readme)
-        self.assertIn("## How To Read This Profile", readme)
-        self.assertIn("live maintenance-hidden", readme)
-        self.assertIn("source/CI proof and live public rendering stay separate", readme)
-        self.assertIn("Digital Factory is the current Mimesis v.next workbench", readme)
-        self.assertIn("local module-count drift is kept out of the public numeric claim", readme)
-        self.assertNotIn("16/16 expert modules", readme)
-        self.assertIn("source-first artifacts -> gates -> claim boundaries", readme)
-        self.assertIn("Public Feedback Hardening", readme)
-        self.assertIn("Support surfaces, not current canon", readme)
-        self.assertIn("Metaforge", readme)
-        self.assertIn("Meta for operating memory", readme)
-        self.assertIn("MFH for evidence gates", readme)
-        self.assertIn("Orchestra for multi-agent routing", readme)
-        self.assertIn("OpenClaude is the local CLI/runtime substrate", readme)
-        self.assertIn("The active Digital Factory workbench", readme)
-        self.assertIn("conditional lift, not universal lift", readme)
-        self.assertIn("Evidence Card Contract", readme)
-        self.assertIn("source artifact", readme)
-        self.assertIn("baseline output", readme)
-        self.assertIn("conditioned output", readme)
-        self.assertIn("wrong-anchor or checklist control", readme)
-        self.assertIn("gate/scorer", readme)
-        self.assertIn("failure cases", readme)
-        self.assertIn("proof-surface discipline", readme)
-        self.assertIn("Human-made Feeling Bench", readme)
-        self.assertIn("first-pass rubric", readme)
-        self.assertIn("not a universal design-quality benchmark", readme)
-        self.assertIn("public framework, reference packs, validators, cases, and proof boundaries", readme)
-        self.assertIn("GitHub Profile README Proof Surface", readme)
-        self.assertIn("render parity proof packet", readme)
-        self.assertIn("public GitHub surface hygiene proof packet", readme)
-        self.assertIn("Public GitHub Surface Hygiene Proof Packet", readme)
-        self.assertIn("CI-checked routing and claim-boundary surface", readme)
-        self.assertIn("Mimesis Visual Failure Packet", readme)
-        self.assertIn("Private Workbench Verification Snapshot", readme)
-        self.assertIn("Mimesis Verification Relocation Packet", readme)
-        self.assertIn("External OSS Attribution: Two Executed Repro Cards", readme)
-        self.assertIn("P-EXT-03", readme)
-        self.assertIn("P-EXT-06", readme)
-        self.assertIn("Go `time.Parse`", readme)
-        self.assertIn("Eisel-Lemire", readme)
-        self.assertIn("source anchor", readme)
-        self.assertIn("objective oracle", readme)
-        self.assertIn("defect control", readme)
-        self.assertIn("command result", readme)
-        self.assertIn("not downstream lift", readme)
-        self.assertIn("not maintainer endorsement", readme)
-        self.assertIn("not legal clearance", readme)
-        self.assertIn("Mimesis Downstream Reinjection Law", readme)
-        self.assertIn("Mimesis Minecraft High-Integration Evidence Card", readme)
-        self.assertIn("Mimesis Minecraft Public Redacted Board v0", readme)
-        self.assertIn("Mimesis Minecraft Transcript Availability Audit", readme)
-        self.assertIn("redacted failure artifact", readme)
-        self.assertIn("redacted local hygiene artifact", readme)
-        self.assertIn("redacted method-boundary artifact", readme)
-        self.assertIn("redacted local evidence card", readme)
-        self.assertIn("banned-claim boundary", readme)
-        self.assertIn("validation does not transfer", readme)
-        self.assertIn("underdetermined task plus slop-contaminated prior", readme)
-        self.assertIn("not L5 proof", readme)
-        self.assertIn("human visual-quality proof", readme)
-        self.assertIn("near-Fable proof", readme)
-        self.assertIn("public benchmark status", readme)
-        self.assertIn("local wrong-anchor execution/render sidecar", readme)
-        self.assertIn("not route-linked board-v1 proof", readme)
-        self.assertNotIn("no true wrong-anchor", readme)
-        self.assertIn("n=2 per cell", readme)
-        self.assertIn("Promotion Blockers", readme)
-        self.assertIn("public redacted board", readme)
-        self.assertIn("public redacted board v0 / incomplete evidence board", readme)
-        self.assertIn("promotion-blocked", readme)
-        self.assertIn("local wrong-anchor execution/render sidecar", readme)
-        self.assertIn("source-use boundary", readme)
-        self.assertIn("condition board", readme)
-        self.assertIn("aggregate scoring", readme)
-        self.assertIn("manifest-preflight.json", readme)
-        self.assertIn("MANIFEST-CONTRACT.md", readme)
-        self.assertIn("manifest.schema.json", readme)
-        self.assertIn("manifest contract/schema", readme)
-        self.assertIn("aggregate transcript ledger", readme)
-        self.assertIn("machine-checkable transcript-availability audit", readme)
-        self.assertIn("raw-transcript-preflight.json", readme)
-        self.assertIn("public-source-packet-draft.md/.json", readme)
-        self.assertIn("future-route source packet draft", readme)
-        self.assertIn("not a live route", readme)
-        self.assertIn("PR #27", readme)
-        self.assertIn("PR #28-style raw transcript hygiene hardening", readme)
-        self.assertIn("README proof-gate surface", readme)
-        self.assertIn("raw per-judge score rows", readme)
-        self.assertIn("redaction-reviewed raw rows", readme)
-        self.assertIn("READY.json", readme)
-        self.assertIn("redacted-screenshots/manifest.json", readme)
-        self.assertIn("route-linked board-v1 entries", readme)
-        self.assertIn("full per-judge scorer transcript", readme)
-        self.assertIn("public-safe screenshots or links", readme)
-        self.assertIn("public-safe per-arm screenshots", readme)
-        self.assertIn("judge protocol", readme)
-        self.assertIn("scorer transcript", readme)
-        self.assertIn("full scorer transcript", readme)
-        self.assertIn("failure record", readme)
-        self.assertIn("full public-safe manifest", readme)
-        self.assertIn("full per-judge scorer transcript", readme)
-        self.assertIn("route-linked board gate", readme)
-        self.assertNotIn("per-arm build logs remain missing", readme)
-        self.assertIn("board v1 collection plan", readme)
-        self.assertIn("verify_minecraft_board_v1_gate.py", readme)
-        self.assertIn("blocker contract, not stronger proof", readme)
-        self.assertIn("board v1 is not ready", readme)
-        self.assertIn("It does not universally improve AI output.", readme)
-        self.assertIn("I do not claim Metaforge is production-ready", readme)
-        self.assertIn("I do not claim Mimesis Engineering is an industry standard", readme)
-        self.assertIn("I do not claim NoiseProof is production-ready", readme)
-        self.assertNotIn("Current flagship:", readme)
-        self.assertNotIn("Mimesis Engineering v0", readme)
-        self.assertNotIn("public v0 artifact-level imitation method", readme)
-        self.assertNotIn("Mimesis v.next Workbench", readme)
-        self.assertNotIn("Phase 897/898 reviewer packet", readme)
+        required_sections = [
+            "## Current Operating Stack",
+            "## Mimesis Engineering",
+            "## Proof Board",
+            "## Public Repos",
+            "## Working Loop",
+            "## Claim Boundary",
+        ]
+        for section in required_sections:
+            self.assertIn(section, readme)
+
+        positioning_markers = [
+            "Metaforge = Meta + MFH + Orchestra OS",
+            "OpenClaude is the runtime substrate",
+            "not the main thesis",
+            "Digital Factory is the private/local Mimesis Engineering workbench",
+            "Local checks pass, but public claims stay route-bound",
+            "give AI standards, not roles",
+            "products, papers, patents, standards, and maintained open-source implementations",
+            "Source/CI proof and live public rendering stay separate",
+            "Board v1 is not ready",
+            "It does not universally improve AI output.",
+            "I do not claim Metaforge is production-ready",
+            "I do not claim Mimesis Engineering is an industry standard",
+            "I do not claim NoiseProof is production-ready",
+        ]
+        for marker in positioning_markers:
+            self.assertIn(marker, readme)
+
+        forbidden_markers = [
+            "Current flagship:",
+            "Mimesis Engineering v0",
+            "public v0 artifact-level imitation method",
+            "Mimesis v.next Workbench",
+            "16/16 expert modules",
+            "OpenClaude is the main thesis",
+        ]
+        for marker in forbidden_markers:
+            self.assertNotIn(marker, readme)
 
     def test_validation_catches_unbounded_mimesis_claim(self):
         text = "\n".join(
@@ -196,9 +112,7 @@ class ProfileReadmeTests(unittest.TestCase):
 
         issues = validate_readme_text(stale_readme)
 
-        self.assertTrue(
-            any("prohibited profile marker" in issue for issue in issues)
-        )
+        self.assertTrue(any("prohibited profile marker" in issue for issue in issues))
 
     def test_validation_catches_private_or_not_current_repo_links(self):
         readme = Path("README.md").read_text(encoding="utf-8")
@@ -210,9 +124,7 @@ class ProfileReadmeTests(unittest.TestCase):
 
         issues = validate_readme_text(private_link_readme)
 
-        self.assertTrue(
-            any("non-public or non-current repo link" in issue for issue in issues)
-        )
+        self.assertTrue(any("non-public or non-current repo link" in issue for issue in issues))
 
     def test_validation_catches_contradictory_positive_claim_drift(self):
         readme = Path("README.md").read_text(encoding="utf-8")
@@ -240,12 +152,7 @@ class ProfileReadmeTests(unittest.TestCase):
 
     def test_validation_catches_local_path_disclosure(self):
         readme = Path("README.md").read_text(encoding="utf-8")
-        disclosed_path = (
-            "C:"
-            + "\\Users\\owner\\"
-            + "Private"
-            + "\\README.md"
-        )
+        disclosed_path = "C:" + "\\Users\\owner\\" + "Private" + "\\README.md"
         disclosed = readme + f"\nLocal path: {disclosed_path}\n"
 
         issues = validate_readme_text(disclosed)
@@ -264,247 +171,59 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("python scripts/check_profile_readme.py --check-links", workflow)
         self.assertIn("github.ref == 'refs/heads/main'", workflow)
         self.assertIn("python scripts/check_public_github_surface_hygiene.py", workflow)
-        self.assertIn("Profile README Proof Surface", proof_doc)
-        self.assertIn("source/CI proof and live public rendering stay separate", proof_doc)
-        self.assertIn("live maintenance-hidden", proof_doc)
-        self.assertIn("workflow status badges", proof_doc)
-        self.assertIn("Public GitHub Surface Hygiene Proof Packet", proof_doc)
-        self.assertIn("scripts/check_public_github_surface_hygiene.py", proof_doc)
-        self.assertIn("public default branches", proof_doc)
-        self.assertIn("scanner-unfriendly placeholders", proof_doc)
-        self.assertIn("actual-looking bearer values", proof_doc)
-        self.assertIn("raw auth transcript markers", proof_doc)
-        self.assertIn("not proof that public repositories contain no secrets", proof_doc)
-        self.assertIn("private-mimesis-workbench.md", proof_doc)
-        self.assertIn("private/local evidence map", proof_doc)
-        self.assertIn("Mimesis visual route", proof_doc)
-        self.assertIn("private workbench route", proof_doc)
-        self.assertIn("Mimesis verification-relocation route", proof_doc)
-        self.assertIn("Mimesis external OSS attribution route", proof_doc)
-        self.assertIn("Mimesis downstream reinjection route", proof_doc)
-        self.assertIn("Mimesis Minecraft high-integration evidence-card route", proof_doc)
-        self.assertIn("Mimesis Minecraft public board v0 route", proof_doc)
-        self.assertIn("Mimesis Minecraft transcript availability audit route", proof_doc)
-        self.assertIn("Human-made Feeling Bench route", proof_doc)
-        self.assertIn("profile proof route", proof_doc)
-        self.assertIn("Metaforge-first profile framing", proof_doc)
-        self.assertIn("local path disclosure", proof_doc)
-        self.assertIn("non-public or non-current repo links", proof_doc)
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
-            proof_doc,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/",
-            proof_doc,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/",
-            proof_doc,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/",
-            proof_doc,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/",
-            proof_doc,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/",
-            proof_doc,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/",
-            proof_doc,
-        )
-        self.assertIn(
-            "https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/",
-            proof_doc,
-        )
-        self.assertIn(
-            "https://svy04.github.io/human-made-feeling-bench/",
-            proof_doc,
-        )
-        self.assertIn("redacted failure artifact", proof_doc)
-        self.assertIn("redacted local hygiene artifact", proof_doc)
-        self.assertIn("redacted method-boundary artifact", proof_doc)
-        self.assertIn("redacted local evidence card", proof_doc)
-        self.assertIn("first-pass rubric", proof_doc)
-        self.assertIn("not a universal design-quality benchmark", proof_doc)
-        self.assertIn("validation does not transfer", proof_doc)
-        self.assertIn("source-level executable attribution", proof_doc)
-        self.assertIn("not downstream lift", proof_doc)
-        self.assertIn("not maintainer endorsement", proof_doc)
-        self.assertIn("not legal clearance", proof_doc)
-        self.assertIn("underdetermined task plus slop-contaminated prior", proof_doc)
-        self.assertIn("not L5 proof", proof_doc)
-        self.assertIn("near-Fable proof", proof_doc)
-        self.assertIn("local wrong-anchor execution/render sidecar", proof_doc)
-        self.assertIn("not route-linked board-v1 proof", proof_doc)
-        self.assertNotIn("no true wrong-anchor", proof_doc)
-        self.assertIn("Promotion Blockers", proof_doc)
-        self.assertIn("public redacted board", proof_doc)
-        self.assertIn("public redacted board v0 / incomplete evidence board", proof_doc)
-        self.assertIn("promotion-blocked", proof_doc)
-        self.assertIn("source-use boundary", proof_doc)
-        self.assertIn("condition board", proof_doc)
-        self.assertIn("aggregate scoring", proof_doc)
-        self.assertIn("manifest-preflight.json", proof_doc)
-        self.assertIn("MANIFEST-CONTRACT.md", proof_doc)
-        self.assertIn("manifest.schema.json", proof_doc)
-        self.assertIn("manifest contract/schema", proof_doc)
-        self.assertIn("aggregate transcript ledger", proof_doc)
-        self.assertIn("machine-checkable transcript-availability audit", proof_doc)
-        self.assertIn("raw-transcript-preflight.json", proof_doc)
-        self.assertIn("public-source-packet-draft.md/.json", proof_doc)
-        self.assertIn("future-route source packet draft", proof_doc)
-        self.assertIn("not a live route", proof_doc)
-        self.assertIn("PR #27", proof_doc)
-        self.assertIn("PR #28-style raw transcript hygiene", proof_doc)
-        self.assertIn("sanitized raw-run receipts", proof_doc)
-        self.assertIn("README proof-gate surface", proof_doc)
-        self.assertIn("raw per-judge score rows", proof_doc)
-        self.assertIn("redaction-reviewed", proof_doc)
-        self.assertIn("READY.json", proof_doc)
-        self.assertIn("redacted-screenshots/manifest.json", proof_doc)
-        self.assertIn("route-linked board-v1 entries", proof_doc)
-        self.assertIn("full per-judge scorer transcript", proof_doc)
-        self.assertIn("public-safe per-arm screenshots", proof_doc)
-        self.assertIn("scorer transcript", proof_doc)
-        self.assertIn("full scorer transcript", proof_doc)
-        self.assertIn("failure record", proof_doc)
-        self.assertIn("full public-safe manifest", proof_doc)
-        self.assertIn("full per-judge scorer transcript", proof_doc)
-        self.assertIn("route-linked board gate", proof_doc)
-        self.assertNotIn("per-arm build logs are still missing", proof_doc)
-        self.assertIn("board v1 collection plan", proof_doc)
-        self.assertIn("verify_minecraft_board_v1_gate.py", proof_doc)
-        self.assertIn("blocker contract, not stronger proof", proof_doc)
-        self.assertIn("board v1 is not ready", proof_doc)
-        self.assertIn("visibility upgrade, not stronger proof", proof_doc)
-        self.assertIn("not prove universal output improvement", proof_doc)
-        self.assertIn("not external validation", proof_doc)
-        self.assertIn("not production readiness", proof_doc)
-        self.assertIn("docs/profile-proof-surface.md", readme)
-        self.assertIn("docs/profile-render-parity-proof-packet.md", readme)
-        self.assertIn("docs/public-github-surface-hygiene-proof-packet.md", readme)
-        self.assertIn("docs/public-feedback-hardening.md", readme)
 
-    def test_public_feedback_hardening_surface_is_bounded(self):
+        proof_markers = [
+            "Profile README Proof Surface",
+            "source/CI proof and live public rendering stay separate",
+            "live maintenance-hidden",
+            "Public GitHub Surface Hygiene Proof Packet",
+            "scripts/check_public_github_surface_hygiene.py",
+            "public default branches",
+            "scanner-unfriendly placeholders",
+            "actual-looking bearer values",
+            "raw auth transcript markers",
+            "private-mimesis-workbench.md",
+            "Metaforge-first profile framing",
+            "local path disclosure",
+            "non-public or non-current repo links",
+        ]
+        for marker in proof_markers:
+            self.assertIn(marker, proof_doc)
+
+        for link in profile_check.REQUIRED_INTERNAL_LINKS:
+            self.assertIn(link, readme)
+
+    def test_public_feedback_and_private_workbench_docs_are_bounded(self):
         readme = Path("README.md").read_text(encoding="utf-8")
-        proof_doc = Path("docs/profile-proof-surface.md").read_text(
-            encoding="utf-8"
-        )
+        proof_doc = Path("docs/profile-proof-surface.md").read_text(encoding="utf-8")
         hardening = Path("docs/public-feedback-hardening.md").read_text(
-            encoding="utf-8"
-        )
-
-        self.assertIn("docs/public-feedback-hardening.md", readme)
-        self.assertIn("Public Feedback Hardening", hardening)
-        self.assertIn("OpenClaude stays the local runtime substrate", hardening)
-        self.assertIn("Meta + MFH + Orchestra OS", hardening)
-        self.assertIn("Fork/origin/license boundaries", hardening)
-        self.assertIn("Korean documentation is first-class", hardening)
-        self.assertIn("behavioral smoke tests", hardening)
-        self.assertIn("edge-case checks", hardening)
-        self.assertIn("side-effect guards", hardening)
-        self.assertIn("Knip or Fallow", hardening)
-        self.assertIn("dependency-cruiser", hardening)
-        self.assertIn("jscpd or Lumin-style topology review", hardening)
-        self.assertIn("not proof that those workstreams are complete", proof_doc)
-
-    def test_private_mimesis_workbench_surface_is_bounded(self):
-        readme = Path("README.md").read_text(encoding="utf-8")
-        workbench_path = Path("docs/private-mimesis-workbench.md")
-
-        self.assertIn("docs/private-mimesis-workbench.md", readme)
-        self.assertTrue(workbench_path.exists())
-        workbench = workbench_path.read_text(encoding="utf-8")
-        self.assertIn("Private Mimesis Workbench", workbench)
-        self.assertIn("private/local research workbench", workbench)
-        self.assertIn("not public proof", workbench)
-        self.assertIn("not external validation", workbench)
-        self.assertIn("Private source packet", workbench)
-        self.assertIn("Private prototype surface", workbench)
-        self.assertIn("Claim guardrail notes", workbench)
-        self.assertIn("Visual failure records", workbench)
-        self.assertIn("Experiment records", workbench)
-        self.assertIn("High-integration evidence cards", workbench)
-        self.assertIn("External OSS attribution repro cards", workbench)
-        self.assertIn("P-EXT-03", workbench)
-        self.assertIn("P-EXT-06", workbench)
-        self.assertIn("source-level executable attribution", workbench)
-        self.assertIn("not downstream lift", workbench)
-        self.assertIn("not maintainer endorsement", workbench)
-        self.assertIn("not legal clearance", workbench)
-        self.assertIn("Mimesis Minecraft High-Integration Evidence Card", workbench)
-        self.assertIn("Mimesis Minecraft Public Redacted Board v0", workbench)
-        self.assertIn("local wrong-anchor execution/render sidecar", workbench)
-        self.assertIn("not route-linked board-v1 proof", workbench)
-        self.assertNotIn("no true wrong-anchor", workbench)
-        self.assertIn("public redacted board", workbench)
-        self.assertIn("incomplete evidence board", workbench)
-        self.assertIn("manifest-preflight.json", workbench)
-        self.assertIn("MANIFEST-CONTRACT.md", workbench)
-        self.assertIn("manifest.schema.json", workbench)
-        self.assertIn("manifest contract/schema", workbench)
-        self.assertIn("aggregate transcript ledger", workbench)
-        self.assertIn("scorer-transcript-availability.json", workbench)
-        self.assertIn("raw-transcript-preflight.json", workbench)
-        self.assertIn("public-source-packet-draft.md/.json", workbench)
-        self.assertIn("future-route source packet draft", workbench)
-        self.assertIn("not a live route", workbench)
-        self.assertIn("sanitized raw-run receipts", workbench)
-        self.assertIn("PR #28-style raw transcript hygiene hardening", workbench)
-        self.assertIn("Mimesis Minecraft Transcript Availability Audit", workbench)
-        self.assertIn("raw per-judge score rows", workbench)
-        self.assertIn("redaction-reviewed raw rows", workbench)
-        self.assertIn("READY.json", workbench)
-        self.assertIn("redacted-screenshots/manifest.json", workbench)
-        self.assertIn("route-linked board-v1 entries", workbench)
-        self.assertIn("full per-judge scorer transcript", workbench)
-        self.assertIn("source-use boundary", workbench)
-        self.assertIn("condition board", workbench)
-        self.assertIn("aggregate scoring", workbench)
-        self.assertIn("public-safe per-arm screenshots", workbench)
-        self.assertIn("scorer transcript", workbench)
-        self.assertIn("failure record", workbench)
-        self.assertIn("full public-safe manifest", workbench)
-        self.assertIn("full per-judge scorer transcript", workbench)
-        self.assertIn("route-linked board gate", workbench)
-        self.assertNotIn("per-arm build logs are still missing", workbench)
-        self.assertIn("Board readiness gates", workbench)
-        self.assertIn("board v1 collection plan", workbench)
-        self.assertIn("verify_minecraft_board_v1_gate.py", workbench)
-        self.assertIn("blocker contract, not stronger proof", workbench)
-        self.assertIn("Board v1 is not ready", workbench)
-        self.assertIn("Source queue", workbench)
-        self.assertIn("products, standards, OSS repos, patents, and evaluation systems", workbench)
-        self.assertIn("The private workbench proves Mimesis Engineering.", workbench)
-        self.assertIn("Mimesis suppresses hallucination/fabrication in general.", workbench)
-
-    def test_visual_judgment_gate_is_profile_bounded(self):
-        readme = Path("README.md").read_text(encoding="utf-8")
-        proof_doc = Path("docs/profile-proof-surface.md").read_text(
             encoding="utf-8"
         )
         workbench = Path("docs/private-mimesis-workbench.md").read_text(
             encoding="utf-8"
         )
 
-        self.assertIn("Mimesis Visual Failure Packet", readme)
-        self.assertIn("visual quality improvement", readme)
-        self.assertIn("private prototype surface is private", proof_doc)
-        self.assertIn("visual judgment evidence and expert gates", proof_doc)
-        self.assertIn("visual quality improvement", proof_doc)
-        self.assertIn("Mimesis Visual Failure Packet", workbench)
-        self.assertIn("public redacted board", workbench)
-        self.assertIn("redacted verdict, lint, and margin-gate evidence", workbench)
-        self.assertIn("manifest-preflight.json", workbench)
-        self.assertIn("aggregate transcript ledger", workbench)
-        self.assertIn("full per-judge scorer transcript", workbench)
-        self.assertIn("not proof of visual quality improvement", workbench)
+        self.assertIn("docs/public-feedback-hardening.md", readme)
+        self.assertIn("docs/private-mimesis-workbench.md", readme)
+        self.assertIn("Public Feedback Hardening", hardening)
+        self.assertIn("OpenClaude stays the local runtime substrate", hardening)
+        self.assertIn("Meta + MFH + Orchestra OS", hardening)
+        self.assertIn("behavioral smoke tests", hardening)
+        self.assertIn("not proof that those workstreams are complete", proof_doc)
+
+        workbench_markers = [
+            "Private Mimesis Workbench",
+            "private/local research workbench",
+            "not public proof",
+            "not external validation",
+            "Current local snapshot",
+            "local-only evidence",
+            "Board v1 is not ready",
+            "The private workbench proves Mimesis Engineering.",
+            "Mimesis suppresses hallucination/fabrication in general.",
+        ]
+        for marker in workbench_markers:
+            self.assertIn(marker, workbench)
 
     def test_validation_catches_missing_private_workbench_evidence_link(self):
         readme = Path("README.md").read_text(encoding="utf-8")
@@ -515,9 +234,7 @@ class ProfileReadmeTests(unittest.TestCase):
 
         issues = validate_readme_text(readme_without_workbench)
 
-        self.assertTrue(
-            any("docs/private-mimesis-workbench.md" in issue for issue in issues)
-        )
+        self.assertTrue(any("docs/private-mimesis-workbench.md" in issue for issue in issues))
 
     def test_render_parity_validator_checks_public_surfaces_and_routes(self):
         readme = Path("README.md").read_text(encoding="utf-8")

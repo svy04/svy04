@@ -2,7 +2,9 @@
 
 Status: public profile hygiene check.
 
-This packet records the bounded check that the source profile README, rendered GitHub profile surfaces, workflow route, badge route, and linked proof routes agree on the current Metaforge-first profile framing.
+This packet records the bounded check that the source profile README, rendered
+GitHub profile surfaces, workflow route, badge route, and linked proof routes
+agree on the current compact Metaforge-first profile framing.
 
 ## What The Gate Checks
 
@@ -28,11 +30,12 @@ It fails if the rendered surfaces lose the Metaforge-first anchors, lose claim-b
 The rendered public profile must keep these claims visible:
 
 - `I build proof-bounded AI operating systems.`
-- Metaforge is the center.
+- Metaforge is `Meta + MFH + Orchestra OS`.
 - Meta is for operating memory.
 - MFH is for evidence gates.
 - Orchestra is for multi-agent routing.
-- OpenClaude is the local CLI/runtime substrate, not the main thesis.
+- OpenClaude is the runtime substrate, not the main thesis.
+- Digital Factory is the private/local Mimesis Engineering workbench, not public proof.
 - Mimesis Engineering imports standards, source artifacts, gates, and failure records.
 - Public claims remain bounded by evidence.
 

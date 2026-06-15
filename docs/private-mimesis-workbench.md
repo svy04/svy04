@@ -38,6 +38,22 @@ It can show ceiling, null, or negative effects when the task is already well spe
 
 That is the claim the profile README is allowed to carry.
 
+## Current local snapshot
+
+Snapshot checked on 2026-06-15 KST from the private/local Digital Factory
+workbench:
+
+```text
+verify_workbench_surface.py -> passed
+tools/validate_module.py --all -> passed
+verify_minecraft_board_v1_gate.py -> passed by confirming a draft skeleton exists and board v1 is not ready
+```
+
+This is local-only evidence. It can guide the public profile's direction, but
+the profile should not turn the private module count, dirty worktree state, or
+local board receipts into a public numeric proof claim until the public proof
+route exposes the same evidence with redaction and route checks.
+
 ## Local Artifact Families
 
 These are the local artifact families currently shaping the public position:
