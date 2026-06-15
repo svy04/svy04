@@ -49,6 +49,13 @@ class ProfileReadmeTests(unittest.TestCase):
         for badge_url in REQUIRED_BADGE_URLS:
             self.assertIn(badge_url, readme)
 
+        self.assertLess(len(readme), 9500)
+        self.assertIn("## Current Operating Stack", readme)
+        self.assertIn("## Proof Board", readme)
+        self.assertIn("## How To Read This Profile", readme)
+        self.assertIn("Digital Factory is the current Mimesis v.next workbench", readme)
+        self.assertIn("source-first artifacts -> gates -> claim boundaries", readme)
+        self.assertIn("Support surfaces, not current canon", readme)
         self.assertIn("Metaforge", readme)
         self.assertIn("Meta for operating memory", readme)
         self.assertIn("MFH for evidence gates", readme)
