@@ -102,7 +102,7 @@ REQUIRED_MARKERS = [
     "CI-checked routing and claim-boundary surface",
     "statistical significance",
     "hallucination suppression",
-    "public framework, reference packs, validators, cases, and proof boundaries",
+    "public v0/support surface for reference packs, validators, cases, and proof boundaries",
     "worksheet surface",
     "case surface",
     "visual quality improvement",
