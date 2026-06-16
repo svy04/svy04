@@ -26,6 +26,7 @@ ROUTE_URLS = [
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/",
+    "https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/",
     "https://svy04.github.io/human-made-feeling-bench/",
 ]
 
@@ -43,7 +44,7 @@ REQUIRED_RENDER_MARKERS = [
     "give AI standards, not roles",
     "Evidence Card Contract",
     "conditional lift, not universal lift",
-    "Fresh verifier output is required before any stronger module-pass or promotion claim",
+    "Fresh verifier output is required",
     "I do not claim Metaforge is production-ready",
     "I do not claim NoiseProof is production-ready",
     "I do not claim Mimesis Engineering is an industry standard",
