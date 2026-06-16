@@ -60,7 +60,8 @@ class ProfileReadmeTests(unittest.TestCase):
 
         positioning_markers = [
             "Metaforge = Meta + MFH + Orchestra OS",
-            "dependency-cruiser topology, jscpd duplication, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type candidate reductions, public artifact hygiene, and provider-id redaction gates",
+            "dependency-cruiser topology, jscpd script-duplication ratchets, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type/helper-clone reductions, public artifact hygiene, and provider-id redaction gates",
+            "Metaforge PR #53 ratchet: `check` 76->72, `readText` 39->35, jscpd clones 30->26, duplicated lines 857->774",
             "OpenClaude is the runtime substrate",
             "not the main thesis",
             "Digital Factory is the private/local Mimesis Engineering workbench",
