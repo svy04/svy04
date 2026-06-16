@@ -21,7 +21,7 @@ It fetches:
 - `https://github.com/svy04`
 - `https://github.com/svy04/svy04`
 - the profile README workflow route and badge route
-- linked public proof routes for profile, Mimesis visual failure, private workbench verification, verification relocation, external OSS attribution, downstream reinjection, Minecraft high-integration evidence, and Human-made Feeling Bench
+- linked public proof routes for profile, Mimesis visual failure, verification relocation, external OSS attribution, downstream reinjection, Minecraft high-integration evidence, and Human-made Feeling Bench
 
 It fails if the rendered surfaces lose the Metaforge-first anchors, lose claim-boundary language, reintroduce stale Mimesis-first profile framing, or break a required proof route.
 
@@ -35,7 +35,7 @@ The rendered public profile must keep these claims visible:
 - MFH is for evidence gates.
 - Orchestra is for multi-agent routing.
 - OpenClaude is the runtime substrate, not the main thesis.
-- Digital Factory is the private/local Mimesis Engineering workbench, not public proof.
+- The private/local Mimesis Engineering workbench is not public proof.
 - Mimesis Engineering imports standards, source artifacts, gates, and failure records.
 - Public claims remain bounded by evidence.
 

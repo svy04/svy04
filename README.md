@@ -21,7 +21,7 @@ source first -> artifacts before personas -> gates before claims -> verification
 | --- | --- | --- |
 | [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra surface for evidence-gated agent work. | Start with the [proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). Current hardening includes dependency-cruiser topology, jscpd script-duplication ratchets, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type/helper-clone reductions, public artifact hygiene, and provider-id redaction gates. Metaforge PR #53 ratchet: `check` 76->72, `readText` 39->35, jscpd clones 30->26, duplicated lines 857->774. Not production-ready, topology-clean, dead-export-clean, duplicate-clean, release-ready, or externally validated. |
 | OpenClaude | OpenClaude is the runtime substrate: local CLI, tools, MCP, OAuth routes, and execution rails. | Useful substrate, not the main thesis. |
-| Digital Factory | Digital Factory is the private/local Mimesis Engineering workbench: source packets, prototype plugin surfaces, expert modules, ablations, inspection manifests, and failure records. | Public-safe proof routes summarize redacted local hygiene and blockers. Fresh verifier output is required before any stronger module-pass or promotion claim. |
+| Private Mimesis Workbench | Private/local Mimesis Engineering workbench: source packets, prototype plugin surfaces, expert modules, ablations, inspection manifests, and failure records. | Public-safe proof routes summarize redacted local hygiene and blockers. Fresh verifier output is required before any stronger module-pass or promotion claim. |
 | [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Evidence-first data-agent surface for messy market-intelligence work. | See the [current proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot, not product-complete, not externally validated. |
 
 ## Mimesis Engineering
@@ -48,10 +48,9 @@ Board v1 is not ready.
 | [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/) | CI-checked routing and claim-boundary surface; not completion, adoption, or external validation. |
 | [Public GitHub Surface Hygiene Proof Packet](docs/public-github-surface-hygiene-proof-packet.md) | Public default-branch scan for local paths, scanner-unfriendly placeholders, actual-looking bearer values, and raw auth transcript markers. |
 | [Render Parity Proof Packet](docs/profile-render-parity-proof-packet.md) | Render parity proof packet for source README, rendered profile, badge, and live proof-route consistency. |
-| [Digital Factory Workbench Verification Snapshot](https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/) | Redacted private/local workbench hygiene; not public status. |
 | [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/) | Public redacted board v0 / incomplete evidence board; Board v1 is not ready. |
 | [Human-made Feeling Bench](https://svy04.github.io/human-made-feeling-bench/) | First-pass rubric for judgment traces, source fidelity, interaction clarity, accessibility, failure evidence, and claim boundaries. |
-| [Private Mimesis Workbench Map](docs/private-mimesis-workbench.md) | Private/local Digital Factory map; not public proof, production readiness, or external validation. |
+| [Private Mimesis Workbench Map](docs/private-mimesis-workbench.md) | Private/local Mimesis workbench map; not public proof, production readiness, or external validation. |
 
 Source/CI proof and live public rendering stay separate; live maintenance-hidden routes are not proof upgrades.
 

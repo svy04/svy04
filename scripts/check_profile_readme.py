@@ -48,7 +48,7 @@ REQUIRED_MARKERS = [
     "Metaforge PR #53 ratchet: `check` 76->72, `readText` 39->35, jscpd clones 30->26, duplicated lines 857->774",
     "OpenClaude is the runtime substrate",
     "not the main thesis",
-    "Digital Factory is the private/local Mimesis Engineering workbench",
+    "Private/local Mimesis Engineering workbench",
     "Public-safe proof routes summarize redacted local hygiene and blockers",
     "Fresh verifier output is required before any stronger module-pass or promotion claim",
     "Mimesis Engineering",
@@ -139,7 +139,11 @@ ALLOWED_GITHUB_REPOS = [
 WINDOWS_USER_PATH_PATTERN = "C:" + r"[\\/]+Users[\\/]+"
 POSIX_ADMIN_PATH_PATTERN = "/" + "Users" + "/" + "admin"
 KOREAN_PRIVATE_PATH_PATTERN = "\ub0b4 \uc21c\uc218 \uc7ac\ubbf8"
-DIGITAL_FACTORY_PATH_PATTERN = "Digital Factory" + r"[\\/]"
+PRIVATE_WORKBENCH_PATH_PATTERN = "Digital" + r"\s+" + "Factory" + r"[\\/]"
+PRIVATE_WORKBENCH_NAME_PATTERN = re.compile(
+    r"\b" + "Digital" + r"\s+" + "Factory" + r"\b",
+    flags=re.IGNORECASE,
+)
 
 LOCAL_PATH_PATTERN = re.compile(
     "|".join(
@@ -147,7 +151,7 @@ LOCAL_PATH_PATTERN = re.compile(
             WINDOWS_USER_PATH_PATTERN,
             POSIX_ADMIN_PATH_PATTERN,
             KOREAN_PRIVATE_PATH_PATTERN,
-            DIGITAL_FACTORY_PATH_PATTERN,
+            PRIVATE_WORKBENCH_PATH_PATTERN,
         ]
     )
 )
@@ -250,6 +254,8 @@ def validate_readme_text(text):
     ]
 
     for line in text.splitlines():
+        if PRIVATE_WORKBENCH_NAME_PATTERN.search(line):
+            issues.append(f"private workbench name disclosure: {line.strip()}")
         if LOCAL_PATH_PATTERN.search(line):
             issues.append(f"local path disclosure: {line.strip()}")
         for label, pattern in dangerous_patterns:

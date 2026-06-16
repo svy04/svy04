@@ -40,8 +40,7 @@ That is the claim the profile README is allowed to carry.
 
 ## Current local snapshot
 
-Snapshot checked on 2026-06-15 KST from the private/local Digital Factory
-workbench:
+Snapshot checked on 2026-06-15 KST from the private/local Mimesis workbench:
 
 ```text
 verify_workbench_surface.py -> passed
