@@ -21,9 +21,29 @@ It fetches:
 - `https://github.com/svy04`
 - `https://github.com/svy04/svy04`
 - the profile README workflow route and badge route
-- linked public proof routes for profile, Mimesis visual failure, verification relocation, external OSS attribution, downstream reinjection, Minecraft high-integration evidence, and Human-made Feeling Bench
+- linked public proof routes for profile, Mimesis visual failure, verification relocation, external OSS attribution, downstream reinjection, Minecraft high-integration evidence, Minecraft public redacted board v0, Minecraft transcript availability audit, and Human-made Feeling Bench
 
 It fails if the rendered surfaces lose the Metaforge-first anchors, lose claim-boundary language, reintroduce stale Mimesis-first profile framing, or break a required proof route.
+
+## Checked Route URLs
+
+This inventory mirrors `scripts/check_profile_render_parity.py`. Route
+reachability does not upgrade any claim; it only proves the public surface still
+points at the expected bounded artifacts.
+
+```text
+https://github.com/svy04/svy04/actions/workflows/profile-readme.yml
+https://github.com/svy04/svy04/actions/workflows/profile-readme.yml/badge.svg?branch=main
+https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/
+https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/
+https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/
+https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/
+https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/
+https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/
+https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/
+https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/
+https://svy04.github.io/human-made-feeling-bench/
+```
 
 ## Required Positioning
 

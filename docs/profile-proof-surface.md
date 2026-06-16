@@ -247,7 +247,9 @@ https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-
 https://github.com/svy04/mimesis-engineering
 https://github.com/svy04/mimesis-canvas
 https://github.com/svy04/mimesis-casebook
+https://github.com/svy04/leaderboard-data
 https://github.com/svy04/svy04
+https://github.com/svy04/svy04/actions/workflows/profile-readme.yml
 https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/
 https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/
@@ -263,6 +265,10 @@ The `mimesis-canvas` and `mimesis-casebook` links are supporting public
 Mimesis surfaces. They make worksheets and case grammar inspectable. They do
 not prove external adoption, benchmarked productivity, visual quality
 improvement, customer outcomes, or production readiness.
+
+The `leaderboard-data` link is separate infrastructure, not part of the
+Metaforge or Mimesis proof thesis. It is listed only because the current profile
+README links it as a public repository surface.
 
 ## Boundary
 

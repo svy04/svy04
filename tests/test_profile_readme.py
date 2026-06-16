@@ -217,8 +217,21 @@ class ProfileReadmeTests(unittest.TestCase):
         for marker in proof_markers:
             self.assertIn(marker, proof_doc)
 
+        for link in REQUIRED_LINKS:
+            self.assertIn(link, proof_doc)
+
         for link in profile_check.REQUIRED_INTERNAL_LINKS:
             self.assertIn(link, readme)
+
+    def test_render_parity_packet_documents_checked_routes(self):
+        parity_doc = Path("docs/profile-render-parity-proof-packet.md").read_text(
+            encoding="utf-8"
+        )
+
+        for url in ROUTE_URLS:
+            self.assertIn(url, parity_doc)
+        for _, url in PUBLIC_SURFACES:
+            self.assertIn(url, parity_doc)
 
     def test_public_feedback_and_private_workbench_docs_are_bounded(self):
         readme = Path("README.md").read_text(encoding="utf-8")
