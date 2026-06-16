@@ -86,6 +86,7 @@ The README also links:
 ```text
 docs/public-feedback-hardening.md
 docs/private-mimesis-workbench.md
+https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
 ```
 
 Current route boundary:
@@ -216,6 +217,19 @@ transcript, not stronger proof, not board-v1 readiness, not external validation,
 and still blocked on raw per-judge score rows, raw comments, redaction-reviewed
 raw rows, route-linked board-v1 entries, and independent/external panel evidence.
 
+The current public-safe private workbench verification snapshot route is:
+
+Private Workbench Verification Snapshot:
+
+```text
+https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
+```
+
+That route is a redacted private/local workbench hygiene artifact. It can show
+that a public-safe snapshot exists for local workbench verification boundaries,
+but it is not public status, adoption evidence, production readiness, external
+validation, or proof that private workbench modules are complete.
+
 The current public-safe Human-made Feeling Bench route is:
 
 ```text
@@ -258,6 +272,7 @@ https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/
+https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
 https://svy04.github.io/human-made-feeling-bench/
 ```
 

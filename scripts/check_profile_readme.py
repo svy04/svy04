@@ -19,6 +19,7 @@ REQUIRED_LINKS = [
     "https://github.com/svy04/svy04/actions/workflows/profile-readme.yml",
     "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/",
+    "https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/",
     "https://svy04.github.io/human-made-feeling-bench/",
 ]
 
@@ -44,14 +45,13 @@ REQUIRED_MARKERS = [
     "Meta for operating memory",
     "MFH for evidence gates",
     "Orchestra for multi-agent routing",
-    "dependency-cruiser topology, jscpd script-duplication ratchets, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type/helper-clone reductions, public artifact hygiene, and provider-id redaction gates",
-    "Metaforge PR #53 ratchet: `check` 76->72, `readText` 39->35, jscpd clones 30->26, duplicated lines 857->774",
-    "PR #63 adds canonical extension hygiene coverage and wires non-writing public-claim-boundary checks into `verify:privacy`",
+    "dependency-cruiser topology, jscpd script-duplication ratchets, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type/helper-clone reductions, public artifact hygiene, provider-id redaction gates, and IDE evidence ordering",
+    "Metaforge PR #70 adds GitHub remote-surface helper reuse, IDE evidence ordering, real VS Code host/workbench success classification, and claim-blocked protected-action packet handling",
     "OpenClaude is the runtime substrate",
     "not the main thesis",
     "Private/local Mimesis Engineering workbench",
     "Public-safe proof routes summarize redacted local hygiene and blockers",
-    "Fresh verifier output is required before any stronger module-pass or promotion claim",
+    "Fresh verifier output is required before stronger module-pass or promotion claims",
     "Mimesis Engineering",
     "AI에게 역할이 아니라 기준을 준다.",
     "give AI standards, not roles",
@@ -83,6 +83,7 @@ REQUIRED_MARKERS = [
     "edge-case checks",
     "side-effect guards",
     "Mimesis Minecraft Public Redacted Board v0",
+    "Private Workbench Verification Snapshot",
     "Human-made Feeling Bench",
     "First-pass rubric",
     "Public redacted board",
@@ -125,6 +126,7 @@ PROHIBITED_MARKERS = [
     "Local checks pass",
     "per-arm build logs remain missing",
     "per-arm build logs are still missing",
+    "PR #63 adds canonical extension hygiene coverage",
 ]
 
 ALLOWED_GITHUB_REPOS = [

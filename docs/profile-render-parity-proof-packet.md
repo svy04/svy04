@@ -21,7 +21,7 @@ It fetches:
 - `https://github.com/svy04`
 - `https://github.com/svy04/svy04`
 - the profile README workflow route and badge route
-- linked public proof routes for profile, Mimesis visual failure, verification relocation, external OSS attribution, downstream reinjection, Minecraft high-integration evidence, Minecraft public redacted board v0, Minecraft transcript availability audit, and Human-made Feeling Bench
+- linked public proof routes for profile, Mimesis visual failure, verification relocation, external OSS attribution, downstream reinjection, Minecraft high-integration evidence, Minecraft public redacted board v0, Minecraft transcript availability audit, Private Workbench Verification Snapshot, and Human-made Feeling Bench
 
 It fails if the rendered surfaces lose the Metaforge-first anchors, lose
 claim-boundary language, reintroduce stale Mimesis-first profile framing, break
@@ -46,6 +46,7 @@ https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/
+https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
 https://svy04.github.io/human-made-feeling-bench/
 ```
 

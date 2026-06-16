@@ -63,19 +63,19 @@ class ProfileReadmeTests(unittest.TestCase):
 
         positioning_markers = [
             "Metaforge = Meta + MFH + Orchestra OS",
-            "dependency-cruiser topology, jscpd script-duplication ratchets, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type/helper-clone reductions, public artifact hygiene, and provider-id redaction gates",
-            "Metaforge PR #53 ratchet: `check` 76->72, `readText` 39->35, jscpd clones 30->26, duplicated lines 857->774",
-            "PR #63 adds canonical extension hygiene coverage and wires non-writing public-claim-boundary checks into `verify:privacy`",
+            "dependency-cruiser topology, jscpd script-duplication ratchets, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type/helper-clone reductions, public artifact hygiene, provider-id redaction gates, and IDE evidence ordering",
+            "Metaforge PR #70 adds GitHub remote-surface helper reuse, IDE evidence ordering, real VS Code host/workbench success classification, and claim-blocked protected-action packet handling",
             "OpenClaude is the runtime substrate",
             "not the main thesis",
             "Private/local Mimesis Engineering workbench",
             "Public-safe proof routes summarize redacted local hygiene and blockers",
-            "Fresh verifier output is required before any stronger module-pass or promotion claim",
+            "Fresh verifier output is required before stronger module-pass or promotion claims",
             "AI에게 역할이 아니라 기준을 준다.",
             "give AI standards, not roles",
             "products, papers, patents, standards, and maintained open-source implementations",
             "inspection manifests",
             "Public redacted board v0 / incomplete evidence board",
+            "Private Workbench Verification Snapshot",
             "Board v1 is not ready",
             "It does not universally improve AI output.",
             "I do not claim Metaforge is production-ready",
@@ -97,6 +97,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "OpenClaude is the main thesis",
             "PR #27",
             "PR #28-style raw transcript hygiene hardening",
+            "PR #63 adds canonical extension hygiene coverage",
         ]
         for marker in forbidden_markers:
             self.assertNotIn(marker, readme)
