@@ -62,9 +62,10 @@ class ProfileReadmeTests(unittest.TestCase):
             self.assertIn(section, readme)
 
         positioning_markers = [
+            "Mimesis Engineering is the operating layer I am building now.",
+            "artifact-first expert-thinking OS",
             "Metaforge = Meta + MFH + Orchestra OS",
-            "dependency-cruiser topology, jscpd script-duplication ratchets, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type/helper-clone reductions, public artifact hygiene, provider-id redaction gates, and IDE evidence ordering",
-            "Metaforge PRs #70-#77 add remote-surface privacy hardening, workspace-path hygiene, hosted-trust checks, dependency-topology refresh, and IDE/VS Code evidence ordering",
+            "Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, and IDE evidence ordering",
             "OpenClaude is the runtime substrate",
             "not the main thesis",
             "Private/local Mimesis Engineering workbench",
@@ -74,8 +75,9 @@ class ProfileReadmeTests(unittest.TestCase):
             "give AI standards, not roles",
             "products, papers, patents, standards, and maintained open-source implementations",
             "inspection manifests",
+            "Mimesis Minecraft High-Integration Evidence Card",
             "Public redacted board v0 / incomplete evidence board",
-            "Private Workbench Verification Snapshot",
+            "Local Mimesis Research Map",
             "Board v1 is not ready",
             "It does not universally improve AI output.",
             "I do not claim Metaforge is production-ready",
@@ -95,12 +97,18 @@ class ProfileReadmeTests(unittest.TestCase):
             "Current local checks pass",
             "Local checks pass",
             "OpenClaude is the main thesis",
+            "Metaforge PRs #70-#77",
+            "digital-factory-workbench-verification",
             "PR #27",
             "PR #28-style raw transcript hygiene hardening",
             "PR #63 adds canonical extension hygiene coverage",
         ]
         for marker in forbidden_markers:
             self.assertNotIn(marker, readme)
+        self.assertNotIn(
+            "https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/",
+            profile_check.REQUIRED_LINKS,
+        )
 
     def test_validation_catches_unbounded_mimesis_claim(self):
         text = "\n".join(
@@ -211,6 +219,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "raw auth transcript markers",
             "private-mimesis-workbench.md",
             "Metaforge-first profile framing",
+            "Mimesis-first current-build framing",
             "raw-transcript-preflight.json",
             "raw-transcript-redaction-review-preflight.json",
             "PR #25-#32 blocker and hygiene",
@@ -254,7 +263,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Meta + MFH + Orchestra OS", hardening)
         self.assertIn("behavioral smoke tests", hardening)
         self.assertIn(
-            "dependency-cruiser topology, jscpd duplicate-shape, Knip dead-export triage ledger, removed-candidate ratchets, and incremental candidate reductions, public artifact hygiene, and provider-id redaction gates",
+            "dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, and IDE evidence ordering",
             hardening,
         )
         self.assertIn("not proof that those workstreams are complete", proof_doc)

@@ -26,12 +26,13 @@ ROUTE_URLS = [
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/",
-    "https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/",
     "https://svy04.github.io/human-made-feeling-bench/",
 ]
 
 REQUIRED_RENDER_MARKERS = [
     "I build proof-bounded AI operating systems.",
+    "Mimesis Engineering is the operating layer I am building now.",
+    "artifact-first expert-thinking OS",
     "Metaforge = Meta + MFH + Orchestra OS",
     "Metaforge",
     "Meta for operating memory",
@@ -57,6 +58,10 @@ FORBIDDEN_RENDER_MARKERS = [
     "public v0 artifact-level imitation method",
     "OpenClaude is the main thesis",
     "flagship product",
+    "Metaforge PRs #",
+    "PR #70-#77",
+    "Private Workbench Verification Snapshot",
+    "digital-factory-workbench-verification",
     "Board v1 is ready",
     "industry standard for AI output improvement",
     "external validation from reviewers",

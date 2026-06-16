@@ -21,9 +21,9 @@ response is to make the public surface easier to trust.
   behavioral smoke tests, edge-case checks, and side-effect guards.
 - Duplicate helper clusters, dead exports, circular dependencies, raw artifact
   leaks, and provider trace identifiers belong in cleanup and guardrail lanes,
-  not in the launch claim; dependency-cruiser topology, jscpd duplicate-shape, Knip dead-export triage ledger, removed-candidate ratchets, and incremental candidate reductions, public artifact hygiene, and provider-id redaction gates are ratchets, not cleanup-complete claims.
-- Metaforge PRs #70-#77 added remote-surface helper reuse, IDE evidence
-  ordering, real VS Code host/workbench success classification,
+  not in the launch claim; dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, and IDE evidence ordering are ratchets, not cleanup-complete claims.
+- Recent Metaforge public hardening added remote-surface helper reuse, IDE
+  evidence ordering, real VS Code host/workbench success classification,
   claim-blocked protected-action packet handling, hosted-trust check mode,
   AVF/VS Code hygiene tightening, self-contained blocked-claim findings,
   dependency-topology refresh, workspace-path hygiene, and remote-surface
