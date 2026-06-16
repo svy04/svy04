@@ -30,7 +30,7 @@ The local rule set checks for:
 - Windows admin-user path fragments
 - macOS/Linux admin-path fragments
 - the Korean private-workspace phrase
-- Digital Factory path fragments when they look like filesystem paths
+- private workbench path fragments when they look like filesystem paths
 - scanner-unfriendly example credentials and token-shaped placeholders
 - OpenAI/Anthropic/GitHub-style assignment lines with secret-shaped values
 - generic token-shaped values that look like GitHub, OpenAI-style, or Google API keys

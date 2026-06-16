@@ -33,7 +33,7 @@ PATTERN_SPECS = [
     ("windows-user-path", re.compile("C:" + r"[\\/]+Users[\\/]+" + "ad" + "min", re.IGNORECASE)),
     ("posix-admin-path", re.compile("/" + "Users" + "/" + "ad" + "min", re.IGNORECASE)),
     ("korean-private-workspace", re.compile("\ub0b4 \uc21c\uc218 \uc7ac\ubbf8")),
-    ("digital-factory-path", re.compile("Digital Factory" + r"[\\/]", re.IGNORECASE)),
+    ("private-workbench-path", re.compile("Digital" + r"\s+" + "Factory" + r"[\\/]", re.IGNORECASE)),
     ("anthropic-placeholder", re.compile("sk-ant-" + "your-key-here", re.IGNORECASE)),
     ("generic-sk-placeholder", re.compile("sk-" + "your-key-here", re.IGNORECASE)),
     ("github-placeholder", re.compile("ghp_" + "your-token-here", re.IGNORECASE)),

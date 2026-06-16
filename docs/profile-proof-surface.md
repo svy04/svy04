@@ -9,8 +9,8 @@ The profile README is a marketing surface, so it must stay proof-bounded. It sho
 Current positioning: compact Metaforge-first profile framing. The profile
 presents Metaforge as `Meta + MFH + Orchestra OS`, keeps OpenClaude as the
 runtime substrate rather than the thesis, presents Mimesis Engineering as the
-artifact-first improvement method, and keeps Digital Factory as a private/local
-workbench that informs the bounded Mimesis canon without becoming a public proof
+artifact-first improvement method, and keeps the private/local Mimesis workbench
+as a bounded canon input without becoming a public proof
 claim.
 
 ## What Is Verified
@@ -31,7 +31,7 @@ required claim-boundary phrases
 Metaforge-first profile framing
 Mimesis public repo support-surface framing
 OpenClaude runtime-substrate boundary
-Digital Factory private/local workbench boundary
+private/local Mimesis workbench boundary
 source/CI proof and live public rendering boundary
 local path disclosure
 non-public or non-current repo links
@@ -113,7 +113,7 @@ The current private Mimesis workbench reference is bounded this way:
 The private prototype surface is private.
 The profile may mention visual judgment evidence and expert gates only as private/local workbench evidence.
 It must not present that work as public proof, external validation, or proof of visual quality improvement.
-The profile must not expose local filesystem paths when naming Digital Factory.
+The profile must not expose local filesystem paths or local workbench names.
 ```
 
 The current public-safe Mimesis visual route is:
@@ -123,14 +123,6 @@ https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15
 ```
 
 That route is a redacted failure artifact. It supports the narrow claim that the profile carries a banned-claim boundary, weak-evidence notes, and next external-panel gate. It does not prove visual quality improvement, external validation, customer validation, production readiness, or public status for the private Mimesis workbench.
-
-The current public-safe private workbench route is:
-
-```text
-https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
-```
-
-That route is a redacted local hygiene artifact for the private/local workbench. It records the README, canon, verifier, and root npm boundary. It does not prove public status, adoption, production readiness, external validation, universal lift, or visual quality improvement.
 
 The current public-safe Mimesis verification-relocation route is:
 
@@ -258,7 +250,6 @@ https://github.com/svy04/mimesis-casebook
 https://github.com/svy04/svy04
 https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/
 https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/
-https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-verification-relocation-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-external-oss-attribution-two-repro-cards-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-06-15/

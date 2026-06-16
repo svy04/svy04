@@ -64,7 +64,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "Metaforge PR #53 ratchet: `check` 76->72, `readText` 39->35, jscpd clones 30->26, duplicated lines 857->774",
             "OpenClaude is the runtime substrate",
             "not the main thesis",
-            "Digital Factory is the private/local Mimesis Engineering workbench",
+            "Private/local Mimesis Engineering workbench",
             "Public-safe proof routes summarize redacted local hygiene and blockers",
             "Fresh verifier output is required before any stronger module-pass or promotion claim",
             "AI에게 역할이 아니라 기준을 준다.",
@@ -168,6 +168,17 @@ class ProfileReadmeTests(unittest.TestCase):
         issues = validate_readme_text(disclosed)
 
         self.assertTrue(any("local path disclosure" in issue for issue in issues))
+
+    def test_validation_catches_private_workbench_name_disclosure(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+        private_workbench_name = "Digital" + " Factory"
+        disclosed = readme + f"\n{private_workbench_name} is the active workbench.\n"
+
+        issues = validate_readme_text(disclosed)
+
+        self.assertTrue(
+            any("private workbench name disclosure" in issue for issue in issues)
+        )
 
     def test_profile_verification_gate_is_documented_and_ci_wired(self):
         workflow = Path(".github/workflows/profile-readme.yml").read_text(
