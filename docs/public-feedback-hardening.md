@@ -21,7 +21,7 @@ response is to make the public surface easier to trust.
   behavioral smoke tests, edge-case checks, and side-effect guards.
 - Duplicate helper clusters, dead exports, circular dependencies, raw artifact
   leaks, and provider trace identifiers belong in cleanup and guardrail lanes,
-  not in the launch claim; dependency-cruiser topology, jscpd duplicate-shape, Knip dead-export triage ledger and first candidate reductions, public artifact hygiene, and provider-id redaction gates are ratchets, not cleanup-complete claims.
+  not in the launch claim; dependency-cruiser topology, jscpd duplicate-shape, Knip dead-export triage ledger, removed-candidate ratchets, and incremental candidate reductions, public artifact hygiene, and provider-id redaction gates are ratchets, not cleanup-complete claims.
 
 ## Tooling Backlog
 
