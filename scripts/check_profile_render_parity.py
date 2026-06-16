@@ -67,6 +67,22 @@ FORBIDDEN_RENDER_MARKERS = [
     "per-arm build logs are still missing",
 ]
 
+PROOF_ROUTE_HOST = "https://svy04.github.io/"
+
+PROOF_ROUTE_BOUNDARY_MARKERS = [
+    "claim boundary",
+    "does not prove",
+    "not proof",
+    "not public proof",
+    "not external validation",
+    "not production readiness",
+    "not production-ready",
+    "not stronger proof",
+    "not universal",
+    "not a universal",
+    "board v1 is not ready",
+]
+
 
 def fetch_url(url, timeout=20):
     request = Request(url, headers={"User-Agent": "svy04-profile-render-parity/1.0"})
@@ -105,6 +121,10 @@ def validate_status_url(label, url, fetcher=fetch_url):
         if "공사중입니다" not in body or "아직 완성 전이라 공개하지 않습니다" not in body:
             issues.append(f"{label}: {url} maintenance route missing public disclosure")
         return issues
+    if url.startswith(PROOF_ROUTE_HOST):
+        normalized_body = body.lower()
+        if not any(marker in normalized_body for marker in PROOF_ROUTE_BOUNDARY_MARKERS):
+            return [f"{label}: {url} missing proof-boundary marker"]
     return []
 
 

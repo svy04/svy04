@@ -5,6 +5,7 @@ from scripts import check_profile_readme as profile_check
 from scripts.check_profile_render_parity import (
     PUBLIC_SURFACES,
     ROUTE_URLS,
+    PROOF_ROUTE_HOST,
     validate_render_parity,
 )
 from scripts.check_profile_readme import (
@@ -16,6 +17,8 @@ from scripts.check_profile_readme import (
 
 
 class ProfileReadmeTests(unittest.TestCase):
+    LIVE_PROOF_ROUTE_BODY = "Claim Boundary: this route does not prove production readiness."
+
     def test_extracts_markdown_links(self):
         text = (
             "[Metaforge](https://github.com/svy04/metaforge) and "
@@ -294,7 +297,7 @@ class ProfileReadmeTests(unittest.TestCase):
             if url in {surface_url for _, surface_url in PUBLIC_SURFACES}:
                 return 200, readme
             if url in ROUTE_URLS:
-                return 200, "ok"
+                return 200, self.LIVE_PROOF_ROUTE_BODY
             return 404, ""
 
         self.assertEqual(validate_render_parity("README.md", fake_fetcher), [])
@@ -317,6 +320,22 @@ class ProfileReadmeTests(unittest.TestCase):
 
         self.assertTrue(any("maintenance route missing noindex" in issue for issue in issues))
 
+    def test_render_parity_validator_catches_live_proof_route_without_boundary(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+
+        def fake_fetcher(url):
+            if url in {surface_url for _, surface_url in PUBLIC_SURFACES}:
+                return 200, readme
+            if url.startswith(PROOF_ROUTE_HOST):
+                return 200, "reachable route with product-looking copy"
+            if url in ROUTE_URLS:
+                return 200, self.LIVE_PROOF_ROUTE_BODY
+            return 404, ""
+
+        issues = validate_render_parity("README.md", fake_fetcher)
+
+        self.assertTrue(any("missing proof-boundary marker" in issue for issue in issues))
+
     def test_render_parity_validator_catches_stale_rendered_surface(self):
         readme = Path("README.md").read_text(encoding="utf-8")
 
@@ -326,7 +345,7 @@ class ProfileReadmeTests(unittest.TestCase):
             if url in {surface_url for _, surface_url in PUBLIC_SURFACES}:
                 return 200, readme
             if url in ROUTE_URLS:
-                return 200, "ok"
+                return 200, self.LIVE_PROOF_ROUTE_BODY
             return 404, ""
 
         issues = validate_render_parity("README.md", fake_fetcher)
@@ -342,7 +361,7 @@ class ProfileReadmeTests(unittest.TestCase):
             if url in {surface_url for _, surface_url in PUBLIC_SURFACES}:
                 return 200, readme
             if url in ROUTE_URLS:
-                return 200, "ok"
+                return 200, self.LIVE_PROOF_ROUTE_BODY
             return 404, ""
 
         issues = validate_render_parity("README.md", fake_fetcher)
