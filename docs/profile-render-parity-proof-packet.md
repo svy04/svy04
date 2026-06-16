@@ -23,7 +23,11 @@ It fetches:
 - the profile README workflow route and badge route
 - linked public proof routes for profile, Mimesis visual failure, verification relocation, external OSS attribution, downstream reinjection, Minecraft high-integration evidence, Minecraft public redacted board v0, Minecraft transcript availability audit, and Human-made Feeling Bench
 
-It fails if the rendered surfaces lose the Metaforge-first anchors, lose claim-boundary language, reintroduce stale Mimesis-first profile framing, or break a required proof route.
+It fails if the rendered surfaces lose the Metaforge-first anchors, lose
+claim-boundary language, reintroduce stale Mimesis-first profile framing, break
+a required proof route, or let a live `svy04.github.io` proof route render
+without explicit proof-boundary language. A public `200` alone is reachability,
+not proof hygiene.
 
 ## Checked Route URLs
 
