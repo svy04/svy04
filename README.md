@@ -20,7 +20,7 @@ source first -> artifacts before personas -> gates before claims -> verification
 
 | Surface | What I am building | Boundary |
 | --- | --- | --- |
-| [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra operating surface for evidence-gated agent work. | Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). Current hardening includes dependency-cruiser topology, jscpd duplication, Knip dead-export candidate, public artifact hygiene, and provider-id redaction gates. Not production-ready, topology-clean, dead-export-clean, release-ready, or externally validated. |
+| [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra operating surface for evidence-gated agent work. | Start with the [public proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). Current hardening includes dependency-cruiser topology, jscpd duplication, Knip dead-export triage ledger, first export/type candidate reductions, public artifact hygiene, and provider-id redaction gates. Not production-ready, topology-clean, dead-export-clean, release-ready, or externally validated. |
 | OpenClaude | OpenClaude is the runtime substrate: local CLI, tools, MCP, OAuth routes, and execution rails. | Useful substrate, not the main thesis. |
 | Digital Factory | Digital Factory is the private/local Mimesis Engineering workbench: source packets, prototype plugin surfaces, expert modules, ablations, inspection manifests, and failure records. | Public-safe proof routes summarize redacted local hygiene and blockers. Fresh verifier output is required before any stronger module-pass or promotion claim. |
 | [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Evidence-first data-agent surface for messy market-intelligence work. | See the [current proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot, not product-complete, not externally validated. |
@@ -38,7 +38,8 @@ source -> structure -> wrong-anchor/control -> gate -> claim boundary
 The allowed claim is narrow: Mimesis can help in high-slop, underdetermined generative work when it imports load-bearing structure from verified artifacts. That is conditional lift, not universal lift. It does not universally improve AI output.
 
 The active private/local workbench follows Evidence Card Contract discipline:
-source artifact, baseline output, conditioned output, wrong-anchor or checklist control, gate/scorer, failure cases, and claim boundary stay visible before stronger copy moves. That proof-surface discipline is the point.
+source artifact, baseline output, conditioned output, wrong-anchor or checklist control, gate/scorer, failure cases, and claim boundary stay visible before stronger copy moves.
+proof-surface discipline stays explicit.
 
 Board v1 is not ready.
 
@@ -58,12 +59,12 @@ Source/CI proof and live public rendering stay separate; live maintenance-hidden
 
 ## Public Repos
 
-[metaforge](https://github.com/svy04/metaforge) is the public operating-system surface.
+[metaforge](https://github.com/svy04/metaforge) is the public OS surface.
 [noiseproof-agent](https://github.com/svy04/noiseproof-agent) is the data-agent surface.
 [mimesis-engineering](https://github.com/svy04/mimesis-engineering) is the public framework, reference packs, validators, cases, and proof boundaries.
 [mimesis-canvas](https://github.com/svy04/mimesis-canvas) is the worksheet surface.
 [mimesis-casebook](https://github.com/svy04/mimesis-casebook) is the case surface.
-[leaderboard-data](https://github.com/svy04/leaderboard-data) is separate infrastructure, not part of the current proof surface.
+[leaderboard-data](https://github.com/svy04/leaderboard-data) is separate infrastructure.
 [svy04](https://github.com/svy04/svy04) is this profile README and its claim checks.
 
 ## Working Loop
