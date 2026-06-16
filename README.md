@@ -19,7 +19,7 @@ source first -> artifacts before personas -> gates before claims -> verification
 
 | Surface | What I am building | Boundary |
 | --- | --- | --- |
-| [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra surface for evidence-gated agent work. | Start with the [proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). Current hardening includes dependency-cruiser topology, jscpd script-duplication ratchets, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type/helper-clone reductions, public artifact hygiene, and provider-id redaction gates. Metaforge PR #53 ratchet: `check` 76->72, `readText` 39->35, jscpd clones 30->26, duplicated lines 857->774. Not production-ready, topology-clean, dead-export-clean, duplicate-clean, release-ready, or externally validated. |
+| [Metaforge](https://github.com/svy04/metaforge) | Meta/MFH/Orchestra surface for evidence-gated agent work. | Start with the [proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md). Current hardening includes dependency-cruiser topology, jscpd script-duplication ratchets, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type/helper-clone reductions, public artifact hygiene, and provider-id redaction gates. Metaforge PR #53 ratchet: `check` 76->72, `readText` 39->35, jscpd clones 30->26, duplicated lines 857->774. PR #63 adds canonical extension hygiene coverage and wires non-writing public-claim-boundary checks into `verify:privacy`. Not production-ready, topology-clean, dead-export-clean, duplicate-clean, release-ready, or externally validated. |
 | OpenClaude | OpenClaude is the runtime substrate: local CLI, tools, MCP, OAuth routes, and execution rails. | Useful substrate, not the main thesis. |
 | Private Mimesis Workbench | Private/local Mimesis Engineering workbench: source packets, prototype plugin surfaces, expert modules, ablations, inspection manifests, and failure records. | Public-safe proof routes summarize redacted local hygiene and blockers. Fresh verifier output is required before any stronger module-pass or promotion claim. |
 | [NoiseProof Agent](https://github.com/svy04/noiseproof-agent) | Evidence-first data-agent surface for messy market-intelligence work. | See the [current proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot, not product-complete, not externally validated. |
@@ -56,13 +56,7 @@ Source/CI proof and live public rendering stay separate; live maintenance-hidden
 
 ## Public Repos
 
-[metaforge](https://github.com/svy04/metaforge): public OS surface.
-[noiseproof-agent](https://github.com/svy04/noiseproof-agent): data-agent surface.
-[mimesis-engineering](https://github.com/svy04/mimesis-engineering): public framework, reference packs, validators, cases, and proof boundaries.
-[mimesis-canvas](https://github.com/svy04/mimesis-canvas): worksheet surface.
-[mimesis-casebook](https://github.com/svy04/mimesis-casebook): case surface.
-[leaderboard-data](https://github.com/svy04/leaderboard-data): separate infrastructure.
-[svy04](https://github.com/svy04/svy04): this profile README and claim checks.
+Current public map: [metaforge](https://github.com/svy04/metaforge) public OS surface; [noiseproof-agent](https://github.com/svy04/noiseproof-agent) data-agent surface; [mimesis-engineering](https://github.com/svy04/mimesis-engineering) public framework, reference packs, validators, cases, and proof boundaries; [mimesis-canvas](https://github.com/svy04/mimesis-canvas) worksheet surface; [mimesis-casebook](https://github.com/svy04/mimesis-casebook) case surface; [leaderboard-data](https://github.com/svy04/leaderboard-data) separate infrastructure; [svy04](https://github.com/svy04/svy04) profile README and claim checks.
 
 ## Working Loop
 

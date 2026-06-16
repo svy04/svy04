@@ -62,6 +62,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "Metaforge = Meta + MFH + Orchestra OS",
             "dependency-cruiser topology, jscpd script-duplication ratchets, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type/helper-clone reductions, public artifact hygiene, and provider-id redaction gates",
             "Metaforge PR #53 ratchet: `check` 76->72, `readText` 39->35, jscpd clones 30->26, duplicated lines 857->774",
+            "PR #63 adds canonical extension hygiene coverage and wires non-writing public-claim-boundary checks into `verify:privacy`",
             "OpenClaude is the runtime substrate",
             "not the main thesis",
             "Private/local Mimesis Engineering workbench",
