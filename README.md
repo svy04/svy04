@@ -57,7 +57,7 @@ Source/CI proof and live public rendering stay separate; live maintenance-hidden
 
 ## Public Repos
 
-Public map: [metaforge](https://github.com/svy04/metaforge) OS; [noiseproof-agent](https://github.com/svy04/noiseproof-agent) data-agent surface; [mimesis-engineering](https://github.com/svy04/mimesis-engineering) public framework, reference packs, validators, cases, and proof boundaries; [mimesis-canvas](https://github.com/svy04/mimesis-canvas) worksheet surface; [mimesis-casebook](https://github.com/svy04/mimesis-casebook) case surface; [leaderboard-data](https://github.com/svy04/leaderboard-data) separate infra; [svy04](https://github.com/svy04/svy04) profile checks.
+Public map: [metaforge](https://github.com/svy04/metaforge) OS; [noiseproof-agent](https://github.com/svy04/noiseproof-agent) data-agent surface; [mimesis-engineering](https://github.com/svy04/mimesis-engineering) public v0/support surface for reference packs, validators, cases, and proof boundaries; [mimesis-canvas](https://github.com/svy04/mimesis-canvas) worksheet surface; [mimesis-casebook](https://github.com/svy04/mimesis-casebook) case surface; [leaderboard-data](https://github.com/svy04/leaderboard-data) separate infra; [svy04](https://github.com/svy04/svy04) profile checks.
 
 ## Working Loop
 
