@@ -64,7 +64,7 @@ class ProfileReadmeTests(unittest.TestCase):
         positioning_markers = [
             "Metaforge = Meta + MFH + Orchestra OS",
             "dependency-cruiser topology, jscpd script-duplication ratchets, Knip dead-export triage ledger, removed-candidate ratchets, incremental export/type/helper-clone reductions, public artifact hygiene, provider-id redaction gates, and IDE evidence ordering",
-            "Metaforge PR #70 adds GitHub remote-surface helper reuse, IDE evidence ordering, real VS Code host/workbench success classification, and claim-blocked protected-action packet handling",
+            "Metaforge PRs #70-#77 add remote-surface privacy hardening, workspace-path hygiene, hosted-trust checks, dependency-topology refresh, and IDE/VS Code evidence ordering",
             "OpenClaude is the runtime substrate",
             "not the main thesis",
             "Private/local Mimesis Engineering workbench",
