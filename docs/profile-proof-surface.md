@@ -6,12 +6,12 @@ This repository is the public GitHub profile README for `@svy04`.
 
 The profile README is a marketing surface, so it must stay proof-bounded. It should point to live public repositories and current proof packets without implying production readiness, external validation, or universal method proof.
 
-Current positioning: compact Metaforge-first profile framing. The profile
-presents Metaforge as `Meta + MFH + Orchestra OS`, keeps OpenClaude as the
-runtime substrate rather than the thesis, presents Mimesis Engineering as the
-artifact-first improvement method, and keeps the private/local Mimesis workbench
-as a bounded canon input without becoming a public proof
-claim.
+Current positioning: compact Mimesis-first current-build framing plus
+Metaforge-first profile framing. The profile presents Mimesis Engineering as
+the operating layer being built now, presents Metaforge as
+`Meta + MFH + Orchestra OS`, keeps OpenClaude as the runtime substrate rather
+than the thesis, and keeps private/local Mimesis workbench evidence as bounded
+canon input without becoming a public proof claim.
 
 ## What Is Verified
 
@@ -28,6 +28,7 @@ required public repo links
 required proof packet links
     private/local evidence map link
 required claim-boundary phrases
+Mimesis-first current-build framing
 Metaforge-first profile framing
 Mimesis public repo support-surface framing
 OpenClaude runtime-substrate boundary
@@ -86,7 +87,6 @@ The README also links:
 ```text
 docs/public-feedback-hardening.md
 docs/private-mimesis-workbench.md
-https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
 ```
 
 Current route boundary:
@@ -217,19 +217,6 @@ transcript, not stronger proof, not board-v1 readiness, not external validation,
 and still blocked on raw per-judge score rows, raw comments, redaction-reviewed
 raw rows, route-linked board-v1 entries, and independent/external panel evidence.
 
-The current public-safe private workbench verification snapshot route is:
-
-Private Workbench Verification Snapshot:
-
-```text
-https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
-```
-
-That route is a redacted private/local workbench hygiene artifact. It can show
-that a public-safe snapshot exists for local workbench verification boundaries,
-but it is not public status, adoption evidence, production readiness, external
-validation, or proof that private workbench modules are complete.
-
 The current public-safe Human-made Feeling Bench route is:
 
 ```text
@@ -272,7 +259,6 @@ https://svy04.github.io/proof-artifacts/mimesis-downstream-reinjection-law-2026-
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/
-https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/
 https://svy04.github.io/human-made-feeling-bench/
 ```
 
