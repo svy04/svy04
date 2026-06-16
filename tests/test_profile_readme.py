@@ -60,7 +60,7 @@ class ProfileReadmeTests(unittest.TestCase):
 
         positioning_markers = [
             "Metaforge = Meta + MFH + Orchestra OS",
-            "dependency-cruiser topology baseline",
+            "dependency-cruiser topology, jscpd duplication, Knip dead-export candidate, public artifact hygiene, and provider-id redaction gates",
             "OpenClaude is the runtime substrate",
             "not the main thesis",
             "Digital Factory is the private/local Mimesis Engineering workbench",
@@ -223,7 +223,10 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("OpenClaude stays the local runtime substrate", hardening)
         self.assertIn("Meta + MFH + Orchestra OS", hardening)
         self.assertIn("behavioral smoke tests", hardening)
-        self.assertIn("dependency-cruiser topology baseline", hardening)
+        self.assertIn(
+            "dependency-cruiser topology, jscpd duplicate-shape, Knip dead-export candidate, public artifact hygiene, and provider-id redaction gates",
+            hardening,
+        )
         self.assertIn("not proof that those workstreams are complete", proof_doc)
 
         workbench_markers = [

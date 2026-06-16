@@ -19,9 +19,9 @@ response is to make the public surface easier to trust.
   rule dumps.
 - Marker and string checks are routing gates only. Stronger promotion needs
   behavioral smoke tests, edge-case checks, and side-effect guards.
-- Duplicate helper clusters, dead exports, and circular dependencies belong in
-  a cleanup lane, not in the launch claim; dependency-cruiser topology baseline
-  evidence is a ratchet, not a topology-clean claim.
+- Duplicate helper clusters, dead exports, circular dependencies, raw artifact
+  leaks, and provider trace identifiers belong in cleanup and guardrail lanes,
+  not in the launch claim; dependency-cruiser topology, jscpd duplicate-shape, Knip dead-export candidate, public artifact hygiene, and provider-id redaction gates are ratchets, not cleanup-complete claims.
 
 ## Tooling Backlog
 

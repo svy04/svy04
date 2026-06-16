@@ -44,7 +44,7 @@ REQUIRED_MARKERS = [
     "Meta for operating memory",
     "MFH for evidence gates",
     "Orchestra for multi-agent routing",
-    "dependency-cruiser topology baseline",
+    "dependency-cruiser topology, jscpd duplication, Knip dead-export candidate, public artifact hygiene, and provider-id redaction gates",
     "OpenClaude is the runtime substrate",
     "not the main thesis",
     "Digital Factory is the private/local Mimesis Engineering workbench",
