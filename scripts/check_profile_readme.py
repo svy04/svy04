@@ -52,7 +52,7 @@ REQUIRED_MARKERS = [
     "not the main thesis",
     "Private/local Mimesis Engineering workbench",
     "Public-safe proof routes summarize redacted local hygiene and blockers",
-    "Fresh verifier output is required before stronger module-pass or promotion claims",
+    "Fresh verifier output is required before any stronger module-pass or promotion claim",
     "Mimesis Engineering",
     "AI에게 역할이 아니라 기준을 준다.",
     "give AI standards, not roles",
