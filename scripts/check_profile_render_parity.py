@@ -45,7 +45,7 @@ REQUIRED_RENDER_MARKERS = [
     "give AI standards, not roles",
     "Evidence Card Contract",
     "conditional lift, not universal lift",
-    "Fresh verifier output is required",
+    "Fresh verifier output is required before any stronger module-pass or promotion claim",
     "I do not claim Metaforge is production-ready",
     "I do not claim NoiseProof is production-ready",
     "I do not claim Mimesis Engineering is an industry standard",
