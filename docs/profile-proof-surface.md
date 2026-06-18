@@ -49,9 +49,16 @@ scripts/check_public_github_surface_hygiene.py
 ```
 
 supports the Public GitHub Surface Hygiene Proof Packet. It lists public
-`@svy04` repositories through the GitHub REST API, shallow-clones public default branches,
-and scans text files for local path disclosure, scanner-unfriendly placeholders,
-actual-looking bearer values, and raw auth transcript markers.
+`@svy04` repositories through the GitHub REST API, shallow-clones public default
+branches, and scans text files for local path disclosure, private workbench name
+disclosure, scanner-unfriendly placeholders, actual-looking bearer values, and
+raw auth transcript markers. The workflow also runs the same script with
+`--repo svy04 --include-non-default-branches` so stale profile branches cannot
+keep old private-workbench copy reachable.
+
+In short: public default branches stay checked for the full public repo map,
+and selected profile branch heads stay checked for stale profile-copy leaks.
+The scanner treats private workbench name disclosure as a public-surface hygiene finding.
 
 The GitHub Actions workflow:
 
@@ -100,6 +107,20 @@ and AVF Influence Factory to evidence paths, allowed claims, explicit non-claims
 and unresolved gaps. It is local no-provider evidence mapping only, not external
 validation, production readiness, release readiness, or autonomous reliability
 proof.
+
+The README also links the latest Metaforge feedback and MFH trace evidence:
+
+```text
+https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-19.md
+https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md
+https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json
+```
+
+These links support only the narrow claim that the profile now routes readers to
+the 2026-06-19 public feedback packet and the MFH goal-trace validation report.
+The trace evidence is local no-provider behavioral governance evidence for Goal
+Kernel closure. It is not production readiness, external validation, benchmark
+superiority, autonomous reliability, or proof that marker-only checks are enough.
 
 Current route boundary:
 
@@ -259,6 +280,9 @@ private repository links.
 https://github.com/svy04/metaforge
 https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-18.md
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map
+https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-19.md
+https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md
+https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json
 https://github.com/svy04/noiseproof-agent
 https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md
 https://github.com/svy04/mimesis-engineering
