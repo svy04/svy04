@@ -68,7 +68,9 @@ class ProfileReadmeTests(unittest.TestCase):
             "cognitive apprenticeship",
             "worked examples",
             "Metaforge = Meta + MFH + Orchestra OS",
-            "Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, and IDE evidence ordering",
+            "Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and public wiring evidence",
+            "Metaforge wiring evidence map",
+            "runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane",
             "OpenClaude is the runtime substrate",
             "not the main thesis",
             "Private/local Mimesis Engineering workbench",
@@ -87,6 +89,11 @@ class ProfileReadmeTests(unittest.TestCase):
             "I do not claim Metaforge is production-ready",
             "I do not claim Mimesis Engineering is an industry standard",
             "I do not claim NoiseProof is production-ready",
+            "Support surface, not current private canon",
+            "Public repo map, not adoption proof",
+            "Public support surface for reference packs, validators, cases, and proof boundaries",
+            "Worksheet surface",
+            "Case surface",
         ]
         for marker in positioning_markers:
             self.assertIn(marker, readme)
@@ -227,6 +234,8 @@ class ProfileReadmeTests(unittest.TestCase):
             "raw-transcript-preflight.json",
             "raw-transcript-redaction-review-preflight.json",
             "PR #25-#32 blocker and hygiene",
+            "PR #25-#33 blocker and hygiene",
+            "manifest-promotion-blockers.json",
             "redaction-reviewed",
             "local path disclosure",
             "non-public or non-current repo links",
@@ -267,9 +276,10 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Meta + MFH + Orchestra OS", hardening)
         self.assertIn("behavioral smoke tests", hardening)
         self.assertIn(
-            "dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, and IDE evidence ordering",
+            "dependency topology, duplicate-shape ratchets",
             hardening,
         )
+        self.assertIn("public wiring evidence are ratchets", hardening)
         self.assertIn("not proof that those workstreams are complete", proof_doc)
 
         workbench_markers = [
@@ -278,11 +288,14 @@ class ProfileReadmeTests(unittest.TestCase):
             "not public proof",
             "not external validation",
             "Current local snapshot",
+            "Snapshot checked on 2026-06-18 KST",
+            "verify_public_hygiene.py",
             "local-only evidence",
             "board-v1-inspection-manifest.json",
+            "manifest-promotion-blockers.json",
             "raw-transcript-preflight.json",
             "raw-transcript-redaction-review-preflight.json",
-            "PR #25-#32 blocker and hygiene gates",
+            "PR #25-#33 blocker and hygiene gates",
             "redaction-reviewed raw rows",
             "Board v1 is not ready",
             "The private workbench proves Mimesis Engineering.",

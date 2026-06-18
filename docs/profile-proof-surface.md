@@ -211,8 +211,9 @@ Mimesis Minecraft transcript availability audit route:
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/
 ```
 
-That route records the private workbench PR #25-#32 blocker and hygiene state as an inspectability
-upgrade. It exposes a machine-checkable transcript-availability audit, `board-v1-inspection-manifest.json`, `raw-transcript-preflight.json`, `raw-transcript-redaction-review-preflight.json`, sanitized raw-run receipts, and README proof-gate surface while keeping the blocker boundary explicit. It is not a full
+That route records the private workbench PR #25-#32 blocker and hygiene state,
+plus the PR #25-#33 blocker and hygiene extension, as an inspectability
+upgrade. It exposes a machine-checkable transcript-availability audit, `board-v1-inspection-manifest.json`, `manifest-promotion-blockers.json`, `raw-transcript-preflight.json`, `raw-transcript-redaction-review-preflight.json`, sanitized raw-run receipts, and README proof-gate surface while keeping the blocker boundary explicit. It is not a full
 transcript, not stronger proof, not board-v1 readiness, not external validation,
 and still blocked on raw per-judge score rows, raw comments, redaction-reviewed
 raw rows, route-linked board-v1 entries, and independent/external panel evidence.
