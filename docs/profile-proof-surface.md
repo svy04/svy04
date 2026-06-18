@@ -6,12 +6,11 @@ This repository is the public GitHub profile README for `@svy04`.
 
 The profile README is a marketing surface, so it must stay proof-bounded. It should point to live public repositories and current proof packets without implying production readiness, external validation, or universal method proof.
 
-Current positioning: compact Mimesis-first current-build framing plus
-Metaforge-first profile framing. The profile presents Mimesis Engineering as
-the operating layer being built now, presents Metaforge as
-`Meta + MFH + Orchestra OS`, keeps OpenClaude as the runtime substrate rather
-than the thesis, and keeps private/local Mimesis workbench evidence as bounded
-canon input without becoming a public proof claim.
+Current positioning: compact current proof ledger plus Metaforge-first profile
+framing. The profile presents Metaforge as `Meta + MFH + Orchestra OS`, presents
+Mimesis Engineering as the method layer, keeps OpenClaude as runtime substrate
+rather than the thesis, and keeps private/local Mimesis workbench evidence as a
+bounded research map rather than a public proof claim.
 
 ## What Is Verified
 
@@ -29,7 +28,7 @@ required proof packet links
 Metaforge public claim evidence map link
     private/local evidence map link
 required claim-boundary phrases
-Mimesis-first current-build framing
+current proof ledger
 Metaforge-first profile framing
 Mimesis public repo support-surface framing
 OpenClaude runtime-substrate boundary

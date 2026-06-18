@@ -16,6 +16,8 @@ GITHUB_API_ROOT = "https://api.github.com"
 MAX_FILE_BYTES = 1_000_000
 MAX_EXCERPT_CHARS = 220
 
+SENSITIVE_LOCAL_USER = "".join(("ad", "min"))
+
 SKIPPED_DIRS = {
     ".git",
     ".hg",
@@ -30,8 +32,14 @@ SKIPPED_DIRS = {
 }
 
 PATTERN_SPECS = [
-    ("windows-user-path", re.compile("C:" + r"[\\/]+Users[\\/]+" + "ad" + "min", re.IGNORECASE)),
-    ("posix-admin-path", re.compile("/" + "Users" + "/" + "ad" + "min", re.IGNORECASE)),
+    (
+        "windows-user-path",
+        re.compile("C:" + r"[\\/]+Users[\\/]+" + re.escape(SENSITIVE_LOCAL_USER), re.IGNORECASE),
+    ),
+    (
+        "posix-user-path",
+        re.compile("/" + "Users" + "/" + re.escape(SENSITIVE_LOCAL_USER), re.IGNORECASE),
+    ),
     ("korean-private-workspace", re.compile("\ub0b4 \uc21c\uc218 \uc7ac\ubbf8")),
     ("private-workbench-path", re.compile("Digital" + r"\s+" + "Factory" + r"[\\/]", re.IGNORECASE)),
     ("anthropic-placeholder", re.compile("sk-ant-" + "your-key-here", re.IGNORECASE)),

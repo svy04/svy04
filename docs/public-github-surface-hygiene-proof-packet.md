@@ -27,8 +27,8 @@ The script:
 
 The local rule set checks for:
 
-- Windows admin-user path fragments
-- macOS/Linux admin-path fragments
+- sensitive local Windows user path fragments
+- sensitive local macOS/Linux user-path fragments
 - the Korean private-workspace phrase
 - private workbench path fragments when they look like filesystem paths
 - scanner-unfriendly example credentials and token-shaped placeholders
