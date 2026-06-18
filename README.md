@@ -7,7 +7,7 @@ I build proof-bounded AI operating systems.
 
 검증이 곧 마케팅. Not another wrapper.
 
-Mimesis Engineering is the operating layer I am building now. It is an artifact-first expert-thinking OS built to make expert process visible through cognitive apprenticeship, worked examples, gates, and failures.
+Mimesis Engineering is the operating layer I am building now. It is an artifact-first expert-thinking OS to make expert process visible through cognitive apprenticeship, worked examples, gates, and failures.
 
 Public thesis: **Metaforge = Meta + MFH + Orchestra OS**. Meta for operating memory, MFH for evidence gates, Orchestra for multi-agent routing.
 
@@ -19,8 +19,8 @@ source first -> artifacts before personas -> gates before claims -> verification
 
 ## Current Thesis
 
-- [Mimesis Engineering](https://github.com/svy04/mimesis-engineering): artifact-first expert-thinking OS. Private/local Mimesis Engineering workbench evidence includes prototype plugin surfaces, expert modules, ablations, inspection manifests, and failure records. Public-safe proof routes summarize redacted local hygiene and blockers. Fresh verifier output is required before any stronger module-pass or promotion claim.
-- [Metaforge](https://github.com/svy04/metaforge): Meta/MFH/Orchestra OS for evidence-gated agent work. Start with the [Proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md) and [Public claim evidence map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map), which binds symbols to allowed claims, explicit non-claims, and unresolved gaps. Metaforge wiring evidence map separates runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane. Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and public wiring evidence. Not production-ready.
+- [Mimesis Engineering](https://github.com/svy04/mimesis-engineering): Private/local Mimesis Engineering workbench evidence includes prototype plugin surfaces, expert modules, ablations, inspection manifests, and failure records. Public-safe proof routes summarize redacted local hygiene and blockers. Fresh verifier output is required before any stronger module-pass or promotion claim.
+- [Metaforge](https://github.com/svy04/metaforge): Meta/MFH/Orchestra OS for evidence-gated agent work. The [Proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md) and [Public claim evidence map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map) bind symbols to allowed claims, explicit non-claims, and unresolved gaps. Metaforge wiring evidence map separates runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane. Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and public wiring evidence. Not production-ready.
 - OpenClaude: runtime substrate for CLI, tools, MCP, OAuth routes, and execution rails. Useful substrate, not the main thesis.
 - [NoiseProof Agent](https://github.com/svy04/noiseproof-agent): evidence-first data-agent surface for messy market intelligence. See the [proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot, not product-complete, not externally validated.
 
@@ -28,13 +28,13 @@ source first -> artifacts before personas -> gates before claims -> verification
 
 AI에게 역할이 아니라 기준을 준다. give AI standards, not roles.
 
-Mimesis Engineering imports load-bearing structure from products, papers, patents, standards, and maintained open-source implementations, turns it into worked examples, then tests each worked example with wrong anchors, controls, scorers, gates, and failure records.
+Mimesis Engineering imports load-bearing structure from products, papers, patents, standards, and maintained open-source implementations into worked examples, then tests them with wrong anchors, controls, scorers, gates, and failure records.
 
 ```text
 source artifact -> worked example -> wrong-anchor/control -> gate/scorer -> claim boundary
 ```
 
-Allowed claim: conditional lift, not universal lift. It does not universally improve AI output.
+Allowed claim: conditional lift, not universal lift. It decides when artifact conditioning should be on or off, and which proof boundary stays attached. It does not universally improve AI output.
 
 private/local workbench Evidence Card Contract: source artifact, baseline output, conditioned output, wrong-anchor or checklist control, gate/scorer, failure cases, claim boundary, and proof-surface discipline.
 
@@ -61,7 +61,7 @@ Public repo map, not adoption proof: [metaforge](https://github.com/svy04/metafo
 
 find solved artifacts -> read primary sources and maintained implementations -> extract load-bearing structure -> test with wrong anchors, controls, scorers -> publish only the claim the evidence can carry
 
-Public Feedback Hardening is tracked in [docs/public-feedback-hardening.md](docs/public-feedback-hardening.md): OpenClaude stays the local runtime substrate; marker-only checks must become behavioral smoke tests, edge-case checks, and side-effect guards before stronger marketing.
+Public Feedback Hardening is tracked in [docs/public-feedback-hardening.md](docs/public-feedback-hardening.md): OpenClaude stays the local runtime substrate; marker-only checks must become behavioral smoke tests, edge-case checks, and side-effect guards.
 
 ## Claim Boundary
 

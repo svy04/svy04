@@ -117,8 +117,8 @@ The public-feedback note is an active remediation track for the public surface:
 local-path hygiene, origin/license boundaries, Korean docs, and behavioral
 tests before stronger marketing. It is not proof that those workstreams are complete.
 
-The private-workbench file is a private/local evidence map for the Mimesis
-v.next workbench. It is not a public repository link, public proof, external
+The private-workbench file is a private/local evidence map for the current
+Mimesis research workbench. It is not a public repository link, public proof, external
 validation, adoption evidence, or production-readiness proof.
 
 The current private Mimesis workbench reference is bounded this way:
@@ -128,6 +128,8 @@ The private prototype surface is private.
 The profile may mention visual judgment evidence and expert gates only as private/local workbench evidence.
 It must not present that work as public proof, external validation, or proof of visual quality improvement.
 The profile must not expose local filesystem paths or local workbench names.
+The public-safe product claim is conditional lift, not universal lift.
+The useful product is a workflow that decides when artifact conditioning should be on or off.
 ```
 
 The current public-safe Mimesis visual route is:
