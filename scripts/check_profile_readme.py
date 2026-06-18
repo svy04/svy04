@@ -1,6 +1,7 @@
 import argparse
 import re
 import sys
+import time
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -36,6 +37,8 @@ REQUIRED_BADGE_URLS = [
     "https://github.com/svy04/svy04/actions/workflows/profile-readme.yml/badge.svg?branch=main",
     "https://img.shields.io/badge/claim%20boundary-documented-555",
 ]
+
+TRANSIENT_HTTP_STATUSES = {408, 429, 500, 502, 503, 504}
 
 REQUIRED_MARKERS = [
     "I build proof-bounded AI operating systems: evidence before pitch.",
@@ -294,19 +297,34 @@ def validate_readme_text(text):
     return issues
 
 
-def check_url(url, timeout=15):
-    request = Request(url, headers={"User-Agent": "svy04-profile-readme-check/1.0"})
-    try:
-        with urlopen(request, timeout=timeout) as response:
-            status = getattr(response, "status", 200)
-    except HTTPError as exc:
-        status = exc.code
-    except URLError as exc:
-        return f"{url} -> {exc.reason}"
+def check_url(url, timeout=15, retries=2, opener=urlopen, sleeper=time.sleep):
+    attempts = retries + 1
 
-    if 200 <= status < 400:
-        return None
-    return f"{url} -> HTTP {status}"
+    for attempt in range(attempts):
+        request = Request(url, headers={"User-Agent": "svy04-profile-readme-check/1.0"})
+        try:
+            with opener(request, timeout=timeout) as response:
+                status = getattr(response, "status", 200)
+        except HTTPError as exc:
+            status = exc.code
+            exc.close()
+        except URLError as exc:
+            issue = f"{url} -> {exc.reason}"
+            if attempt < attempts - 1:
+                sleeper(0.5 * (attempt + 1))
+                continue
+            return issue
+
+        if 200 <= status < 400:
+            return None
+
+        issue = f"{url} -> HTTP {status}"
+        if status in TRANSIENT_HTTP_STATUSES and attempt < attempts - 1:
+            sleeper(0.5 * (attempt + 1))
+            continue
+        return issue
+
+    return f"{url} -> unknown link check failure"
 
 
 def main(argv=None):

@@ -36,6 +36,68 @@ class ProfileReadmeTests(unittest.TestCase):
             ],
         )
 
+    def test_live_link_checker_retries_transient_5xx(self):
+        class Response:
+            status = 200
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, exc_type, exc, traceback):
+                return False
+
+        calls = []
+
+        def fake_urlopen(request, timeout):
+            calls.append((request.full_url, timeout))
+            if len(calls) == 1:
+                raise profile_check.HTTPError(
+                    request.full_url,
+                    503,
+                    "Service Unavailable",
+                    hdrs=None,
+                    fp=None,
+                )
+            return Response()
+
+        issue = profile_check.check_url(
+            "https://svy04.github.io/proof-artifacts/example/",
+            timeout=1,
+            retries=1,
+            opener=fake_urlopen,
+            sleeper=lambda _seconds: None,
+        )
+
+        self.assertIsNone(issue)
+        self.assertEqual(len(calls), 2)
+
+    def test_live_link_checker_does_not_retry_non_transient_4xx(self):
+        calls = []
+
+        def fake_urlopen(request, timeout):
+            calls.append((request.full_url, timeout))
+            raise profile_check.HTTPError(
+                request.full_url,
+                404,
+                "Not Found",
+                hdrs=None,
+                fp=None,
+            )
+
+        issue = profile_check.check_url(
+            "https://svy04.github.io/proof-artifacts/missing/",
+            timeout=1,
+            retries=2,
+            opener=fake_urlopen,
+            sleeper=lambda _seconds: None,
+        )
+
+        self.assertEqual(
+            issue,
+            "https://svy04.github.io/proof-artifacts/missing/ -> HTTP 404",
+        )
+        self.assertEqual(len(calls), 1)
+
     def test_current_readme_has_required_links_and_claim_boundaries(self):
         readme = Path("README.md").read_text(encoding="utf-8")
 
