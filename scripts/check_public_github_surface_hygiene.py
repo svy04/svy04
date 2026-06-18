@@ -42,6 +42,7 @@ PATTERN_SPECS = [
     ),
     ("korean-private-workspace", re.compile("\ub0b4 \uc21c\uc218 \uc7ac\ubbf8")),
     ("private-workbench-path", re.compile("Digital" + r"\s+" + "Factory" + r"[\\/]", re.IGNORECASE)),
+    ("private-workbench-name", re.compile(r"\b" + "Digital" + r"\s+" + "Factory" + r"\b", re.IGNORECASE)),
     ("anthropic-placeholder", re.compile("sk-ant-" + "your-key-here", re.IGNORECASE)),
     ("generic-sk-placeholder", re.compile("sk-" + "your-key-here", re.IGNORECASE)),
     ("github-placeholder", re.compile("ghp_" + "your-token-here", re.IGNORECASE)),
@@ -106,8 +107,23 @@ class Finding:
 
 
 @dataclass(frozen=True)
+class ScanTarget:
+    repo: str
+    branch: str
+    clone_url: str
+    is_default_branch: bool
+
+    @property
+    def label(self) -> str:
+        if self.is_default_branch:
+            return self.repo
+        return f"{self.repo}@{self.branch}"
+
+
+@dataclass(frozen=True)
 class ScanSummary:
     repos: int
+    refs: int
     files: int
     findings: list[Finding]
 
@@ -223,9 +239,65 @@ def list_public_repositories(owner: str, token: str | None = None) -> list[dict]
     return repos
 
 
-def clone_repository(repo: dict, destination: Path, timeout_seconds: int) -> Path:
-    name = repo["name"]
-    repo_dir = destination / name
+def list_repository_branches(owner: str, repo_name: str, token: str | None = None) -> list[dict]:
+    branches = []
+    page = 1
+    while True:
+        url = (
+            f"{GITHUB_API_ROOT}/repos/{owner}/{repo_name}/branches"
+            f"?per_page=100&page={page}"
+        )
+        page_branches = github_api_get_json(url, token=token)
+        if not page_branches:
+            break
+        branches.extend(page_branches)
+        page += 1
+    return branches
+
+
+def build_scan_targets(
+    owner: str,
+    selected_repos: set[str] | None = None,
+    token: str | None = None,
+    include_non_default_branches: bool = False,
+) -> tuple[list[dict], list[ScanTarget]]:
+    repos = list_public_repositories(owner, token=token)
+    if selected_repos is not None:
+        repos = [repo for repo in repos if repo["name"] in selected_repos]
+
+    targets = []
+    for repo in repos:
+        default_branch = repo["default_branch"]
+        branch_names = [default_branch]
+        if include_non_default_branches:
+            discovered = {
+                branch["name"]
+                for branch in list_repository_branches(owner, repo["name"], token=token)
+                if branch.get("name")
+            }
+            discovered.add(default_branch)
+            branch_names = [default_branch] + sorted(discovered - {default_branch})
+
+        targets.extend(
+            ScanTarget(
+                repo=repo["name"],
+                branch=branch_name,
+                clone_url=repo["clone_url"],
+                is_default_branch=branch_name == default_branch,
+            )
+            for branch_name in branch_names
+        )
+
+    return repos, targets
+
+
+def sanitize_ref_for_path(value: str) -> str:
+    sanitized = re.sub(r"[^A-Za-z0-9_.-]+", "__", value).strip("._-")
+    return sanitized or "ref"
+
+
+def clone_scan_target(target: ScanTarget, destination: Path, timeout_seconds: int) -> Path:
+    repo_dir = destination / f"{sanitize_ref_for_path(target.repo)}__{sanitize_ref_for_path(target.branch)}"
     command = [
         "git",
         "-c",
@@ -236,8 +308,8 @@ def clone_repository(repo: dict, destination: Path, timeout_seconds: int) -> Pat
         "1",
         "--single-branch",
         "--branch",
-        repo["default_branch"],
-        repo["clone_url"],
+        target.branch,
+        target.clone_url,
         str(repo_dir),
     ]
     subprocess.run(command, check=True, timeout=timeout_seconds)
@@ -249,30 +321,43 @@ def scan_public_default_branches(
     selected_repos: set[str] | None = None,
     token: str | None = None,
     timeout_seconds: int = 120,
+    include_non_default_branches: bool = False,
 ) -> ScanSummary:
-    repos = list_public_repositories(owner, token=token)
-    if selected_repos is not None:
-        repos = [repo for repo in repos if repo["name"] in selected_repos]
+    repos, targets = build_scan_targets(
+        owner=owner,
+        selected_repos=selected_repos,
+        token=token,
+        include_non_default_branches=include_non_default_branches,
+    )
 
     findings = []
     file_count = 0
     with tempfile.TemporaryDirectory(prefix="public-surface-hygiene-") as tmpdir:
         root = Path(tmpdir)
-        for repo in repos:
-            repo_root = clone_repository(repo, root, timeout_seconds=timeout_seconds)
-            repo_findings = scan_repo_tree(repo["name"], repo_root)
+        for target in targets:
+            try:
+                repo_root = clone_scan_target(target, root, timeout_seconds=timeout_seconds)
+            except subprocess.CalledProcessError as exc:
+                if not target.is_default_branch:
+                    print(
+                        f"WARN: skipped unavailable public branch head {target.label}: {exc}",
+                        file=sys.stderr,
+                    )
+                    continue
+                raise
+            repo_findings = scan_repo_tree(target.label, repo_root)
             findings.extend(repo_findings)
             file_count += sum(
                 1
                 for path in repo_root.rglob("*")
                 if path.is_file() and not should_skip_path(path.relative_to(repo_root))
             )
-    return ScanSummary(repos=len(repos), files=file_count, findings=findings)
+    return ScanSummary(repos=len(repos), refs=len(targets), files=file_count, findings=findings)
 
 
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(
-        description="Scan public GitHub default branches for local path leaks and secret-shaped placeholders."
+        description="Scan public GitHub branch heads for local path leaks and secret-shaped placeholders."
     )
     parser.add_argument("--owner", default=DEFAULT_OWNER)
     parser.add_argument(
@@ -286,6 +371,11 @@ def parse_args(argv=None):
         type=int,
         default=120,
         help="Timeout for each shallow clone.",
+    )
+    parser.add_argument(
+        "--include-non-default-branches",
+        action="store_true",
+        help="Also scan public non-default branch heads, not only default branches.",
     )
     return parser.parse_args(argv)
 
@@ -301,6 +391,7 @@ def main(argv=None) -> int:
             selected_repos=selected_repos,
             token=token,
             timeout_seconds=args.clone_timeout_seconds,
+            include_non_default_branches=args.include_non_default_branches,
         )
     except (RuntimeError, subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
         print(f"ERROR: public GitHub surface hygiene scan failed: {exc}", file=sys.stderr)
@@ -313,7 +404,7 @@ def main(argv=None) -> int:
 
     print(
         "Public GitHub surface hygiene checks passed. "
-        f"scanned_repos={summary.repos} scanned_files={summary.files}"
+        f"scanned_repos={summary.repos} scanned_refs={summary.refs} scanned_files={summary.files}"
     )
     return 0
 

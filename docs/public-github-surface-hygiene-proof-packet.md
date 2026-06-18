@@ -4,9 +4,11 @@ Status: executable public-surface hygiene gate.
 
 This packet records a narrow check over the public GitHub surface for `@svy04`.
 It exists because the profile is now a marketing and proof-routing surface: the
-public repos it links should not leak local workstation paths, carry
-scanner-unfriendly secret-shaped placeholders, or expose raw auth/runtime
-transcript fragments as proof artifacts.
+public repos it links should not leak local workstation paths, private workbench
+names, scanner-unfriendly secret-shaped placeholders, or raw auth/runtime
+transcript fragments as proof artifacts. The profile repo also checks public
+non-default branch heads because stale profile branches can keep old marketing
+copy reachable.
 
 ## What The Gate Runs
 
@@ -17,9 +19,13 @@ python scripts/check_public_github_surface_hygiene.py
 The script:
 
 - lists public repositories owned by `@svy04` with the GitHub REST API
+- lists public branch refs for selected repositories when the workflow uses
+  `--include-non-default-branches`; the current CI scope applies this to
+  `svy04/svy04`
 - skips archived and disabled repositories
-- shallow-clones each public default branch into a temporary directory
-- scans text files under the public default branches
+- shallow-clones each checked public default branch and selected non-default branch head
+  into a temporary directory
+- scans text files under the checked public branch refs
 - ignores Git metadata, dependency folders, build folders, binary-looking files, and files over the local size cap
 - reports findings with repository, path, line, rule label, and a redacted excerpt
 
@@ -31,6 +37,7 @@ The local rule set checks for:
 - sensitive local macOS/Linux user-path fragments
 - the Korean private-workspace phrase
 - private workbench path fragments when they look like filesystem paths
+- private workbench names in public profile/proof surfaces
 - scanner-unfriendly example credentials and token-shaped placeholders
 - OpenAI/Anthropic/GitHub-style assignment lines with secret-shaped values
 - generic token-shaped values that look like GitHub, OpenAI-style, or Google API keys
@@ -62,9 +69,10 @@ The packet borrows its structure from primary/public sources:
 This packet can support this claim:
 
 ```text
-The recorded public `@svy04` default branches were scanned by the attached
-local rule set for local-path disclosure and scanner-unfriendly placeholders.
-It also checks for raw auth transcript markers in public proof surfaces.
+The recorded public `@svy04` default branches and the selected `svy04/svy04`
+public branch heads were scanned by the attached local rule set for local-path
+disclosure and scanner-unfriendly placeholders. It also checks for private
+workbench names and raw auth transcript markers in public proof surfaces.
 The scan produced static review indicators for the checked surface.
 ```
 
@@ -75,7 +83,7 @@ This packet does not prove:
 - public repositories contain no secrets
 - historical Git refs are clean
 - private repositories are clean
-- open pull requests, forks, issues, discussions, gists, releases, packages, or wikis are clean
+- deleted branches, open pull requests, forks, issues, discussions, gists, releases, packages, or wikis are clean
 - GitHub secret-scanning alerts are absent or resolved
 - detected token-shaped text is a live credential
 - the repositories are secure, compliant, production-ready, SLSA-ready, or externally validated

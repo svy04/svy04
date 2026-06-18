@@ -104,13 +104,21 @@ class ProfileReadmeTests(unittest.TestCase):
         issues = validate_readme_text(readme)
 
         self.assertEqual(issues, [])
-        self.assertLess(len(readme), 7000)
+        self.assertLess(len(readme), 8200)
         for link in REQUIRED_LINKS:
             self.assertIn(link, readme)
         for link in profile_check.REQUIRED_INTERNAL_LINKS:
             self.assertIn(link, readme)
         for badge_url in REQUIRED_BADGE_URLS:
             self.assertIn(badge_url, readme)
+
+        current_metaforge_links = [
+            "https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-19.md",
+            "https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md",
+            "https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json",
+        ]
+        for link in current_metaforge_links:
+            self.assertIn(link, readme)
 
         required_sections = [
             "## Current Build",
@@ -127,6 +135,8 @@ class ProfileReadmeTests(unittest.TestCase):
             "Mimesis Engineering is the method layer",
             "I build proof-bounded AI operating systems: evidence before pitch.",
             "Build the proof surface before the pitch",
+            "Metaforge is the headline",
+            "OpenClaude is not the headline",
             "artifact-first expert-thinking OS",
             "make expert process visible",
             "cognitive apprenticeship",
@@ -142,6 +152,11 @@ class ProfileReadmeTests(unittest.TestCase):
             "Metaforge wiring evidence map",
             "runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane",
             "not the main thesis",
+            "2026-06-19 public feedback packet",
+            "provenance is a trust surface",
+            "MFH goal-trace validation report",
+            "local no-provider behavioral governance evidence",
+            "Goal Kernel closure",
             "private/local Mimesis Engineering workbench",
             "Public-safe proof routes summarize redacted local hygiene and blockers",
             "Fresh verifier output is required before any stronger module-pass or promotion claim",
@@ -165,6 +180,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "Worksheet surface",
             "Case surface",
             "private workbench evidence is not a public release claim",
+            "happy path -> edge case -> side-effect guard -> claim boundary",
         ]
         for marker in positioning_markers:
             self.assertIn(marker, readme)
@@ -292,6 +308,10 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("python scripts/check_profile_readme.py --check-links", workflow)
         self.assertIn("github.ref == 'refs/heads/main'", workflow)
         self.assertIn("python scripts/check_public_github_surface_hygiene.py", workflow)
+        self.assertIn(
+            "python scripts/check_public_github_surface_hygiene.py --repo svy04 --include-non-default-branches",
+            workflow,
+        )
         self.assertIn("GITHUB_TOKEN: ${{ github.token }}", workflow)
 
         proof_markers = [
@@ -301,6 +321,8 @@ class ProfileReadmeTests(unittest.TestCase):
             "Public GitHub Surface Hygiene Proof Packet",
             "scripts/check_public_github_surface_hygiene.py",
             "public default branches",
+            "stale profile branches",
+            "private workbench name disclosure",
             "scanner-unfriendly placeholders",
             "actual-looking bearer values",
             "raw auth transcript markers",

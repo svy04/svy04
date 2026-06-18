@@ -45,6 +45,20 @@ class PublicGitHubSurfaceHygieneTests(unittest.TestCase):
         self.assertIn("invalid-token-disclosure", labels)
         self.assertIn("missing-access-token-disclosure", labels)
 
+    def test_scan_repo_tree_catches_private_workbench_name_disclosure(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            private_workbench_name = "Digital" + " Factory"
+            (root / "README.md").write_text(
+                f"{private_workbench_name} is the current private workbench.\n",
+                encoding="utf-8",
+            )
+
+            findings = hygiene.scan_repo_tree("demo@stale-branch", root)
+
+        labels = {finding.label for finding in findings}
+        self.assertIn("private-workbench-name", labels)
+
     def test_scan_repo_tree_catches_raw_auth_transcript_markers(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
