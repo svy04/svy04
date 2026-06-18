@@ -9,7 +9,8 @@ class PublicGitHubSurfaceHygieneTests(unittest.TestCase):
     def test_scan_repo_tree_catches_local_paths_and_secret_shaped_placeholders(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
-            bad_path = "C:" + "\\Users\\admin\\Desktop\\private\\README.md"
+            sensitive_user = "".join(("ad", "min"))
+            bad_path = "C:" + "\\Users\\" + sensitive_user + "\\Desktop\\private\\README.md"
             placeholder = "OPENAI_API_KEY=" + "sk-" + "example-placeholder"
             (root / "README.md").write_text(
                 f"Bad path: {bad_path}\n{placeholder}\n",
@@ -92,9 +93,10 @@ class PublicGitHubSurfaceHygieneTests(unittest.TestCase):
     def test_scan_repo_tree_ignores_binary_files_and_git_metadata(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
+            sensitive_user = "".join(("ad", "min"))
             (root / ".git").mkdir()
             (root / ".git" / "config").write_text(
-                "C:" + "\\Users\\admin\\Desktop\\hidden\n",
+                "C:" + "\\Users\\" + sensitive_user + "\\Desktop\\hidden\n",
                 encoding="utf-8",
             )
             (root / "image.png").write_bytes(b"\x89PNG\r\n\x1a\n")
@@ -108,7 +110,14 @@ class PublicGitHubSurfaceHygieneTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
             (root / "windows-paths.md").write_text(
-                "Example: C:" + "\\Users\\example\\workspace\\file.txt\n",
+                "\n".join(
+                    [
+                        "Example: C:" + "\\Users\\example\\workspace\\file.txt",
+                        "Parser fixture: C:" + "\\Users\\me\\workspace\\file.txt",
+                        "POSIX parser fixture: /Users/foo/workspace/file.txt",
+                    ]
+                )
+                + "\n",
                 encoding="utf-8",
             )
 

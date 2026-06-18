@@ -4,8 +4,7 @@ Status: public profile hygiene check.
 
 This packet records the bounded check that the source profile README, rendered
 GitHub profile surfaces, workflow route, badge route, and linked proof routes
-agree on the current compact Mimesis-first current-build framing and
-Metaforge-first public thesis.
+agree on the current proof-ledger framing and Metaforge-first public thesis.
 
 ## What The Gate Checks
 
@@ -25,7 +24,7 @@ It fetches:
 - linked public proof routes for profile, Mimesis visual failure, verification relocation, external OSS attribution, downstream reinjection, Minecraft high-integration evidence, Minecraft public redacted board v0, Minecraft transcript availability audit, and Human-made Feeling Bench
 
 It fails if the rendered surfaces lose the Metaforge-first anchors, lose
-claim-boundary language, reintroduce stale Mimesis-first profile framing, break
+claim-boundary language, reintroduce stale profile framing, break
 a required proof route, or let a live `svy04.github.io` proof route render
 without explicit proof-boundary language. A public `200` alone is reachability,
 not proof hygiene.
@@ -55,7 +54,7 @@ https://svy04.github.io/human-made-feeling-bench/
 The rendered public profile must keep these claims visible:
 
 - `I build proof-bounded AI operating systems.`
-- Mimesis Engineering is the current operating layer.
+- Mimesis Engineering is the method layer.
 - It is an artifact-first expert-thinking OS.
 - Metaforge is `Meta + MFH + Orchestra OS`.
 - Meta is for operating memory.
