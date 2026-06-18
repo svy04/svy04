@@ -55,7 +55,8 @@ The rendered public profile must keep these claims visible:
 
 - `I build proof-bounded AI operating systems.`
 - Mimesis Engineering is the method layer.
-- It is an artifact-first expert-thinking OS.
+- It is a Markdown-first, artifact-first AI-native work framework.
+- Its public Status, Proof Boundary, and Public Claim Pack define allowed claims and gaps.
 - Metaforge is `Meta + MFH + Orchestra OS`.
 - Meta is for operating memory.
 - MFH is for evidence gates.

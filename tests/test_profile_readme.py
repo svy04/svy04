@@ -104,7 +104,7 @@ class ProfileReadmeTests(unittest.TestCase):
         issues = validate_readme_text(readme)
 
         self.assertEqual(issues, [])
-        self.assertLess(len(readme), 8200)
+        self.assertLess(len(readme), 8300)
         for link in REQUIRED_LINKS:
             self.assertIn(link, readme)
         for link in profile_check.REQUIRED_INTERNAL_LINKS:
@@ -137,12 +137,19 @@ class ProfileReadmeTests(unittest.TestCase):
             "Build the proof surface before the pitch",
             "Metaforge is the headline",
             "OpenClaude is not the headline",
-            "artifact-first expert-thinking OS",
-            "make expert process visible",
+            "Markdown-first, artifact-first AI-native work framework",
+            "makes expert process visible",
             "cognitive apprenticeship",
             "worked examples",
-            "Public repo evidence, not non-public research proof",
-            "public Mimesis repos are support surfaces",
+            "source-first references",
+            "local validators",
+            "reference packs",
+            "proof-boundary packets",
+            "Public Status",
+            "Proof Boundary",
+            "Public Claim Pack",
+            "adoption, benchmark, module-pass, or promotion claim",
+            "public repo evidence, not non-public research proof",
             "Metaforge = Meta + MFH + Orchestra OS",
             "Metaforge is the public operating-system repo",
             "OpenClaude is runtime substrate",
@@ -158,8 +165,8 @@ class ProfileReadmeTests(unittest.TestCase):
             "local no-provider behavioral governance evidence",
             "Goal Kernel closure",
             "non-public Mimesis research boundary",
-            "Public-safe proof routes summarize redacted local hygiene and blockers",
-            "Fresh verifier output is required before any stronger module-pass or promotion claim",
+            "define allowed claims and gaps",
+            "fresh verifier output is required before any adoption, benchmark, module-pass, or promotion claim",
             "AI에게 역할이 아니라 기준을 준다.",
             "give AI standards, not roles",
             "products, papers, patents, standards, and maintained open-source implementations",
