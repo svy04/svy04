@@ -2,7 +2,7 @@
 
 Status: local/private evidence map.
 
-This document records how the private/local Mimesis v.next workbench currently informs the public profile README. It is a bridge from local artifacts to public positioning, not a replacement for the public `mimesis-engineering` repository.
+This document records how the private/local Mimesis research workbench currently informs the public profile README. It is a bridge from local artifacts to public positioning, not a replacement for the public `mimesis-engineering` repository.
 
 ## Boundary
 
@@ -38,6 +38,20 @@ It can show ceiling, null, or negative effects when the task is already well spe
 
 That is the claim the profile README is allowed to carry.
 
+The current private canon adds one product-shaping constraint:
+
+```text
+The useful product is not "Mimesis always wins."
+
+The useful product is a workflow that can decide when artifact conditioning
+should be on, when it should be off, which non-LLM or human gate is needed,
+and which claim boundary must remain attached.
+```
+
+The public profile may describe that operating law. It must not expose private
+workbench paths, private branch names, raw transcript snippets, or local-only
+module counts as proof.
+
 ## Current local snapshot
 
 Snapshot checked on 2026-06-18 KST from the private/local Mimesis workbench:
@@ -58,10 +72,10 @@ the profile should not turn the private module count, dirty worktree state, or
 local board receipts into a public numeric proof claim until the public proof
 route exposes the same evidence with redaction and route checks.
 
-The private plugin checkout inspected for this snapshot was dirty and behind
-its remote branch. That state is a boundary: the local verifier pass is useful
-for direction, but it is not publishable proof, not a public repo state claim,
-and not evidence that an npm `verify:all` script is available locally.
+The private plugin checkout inspected for this snapshot was not a public release
+artifact. That state is a boundary: the local verifier pass is useful for
+direction, but it is not publishable proof, not a public repo state claim, and
+not evidence that an npm `verify:all` script is available locally.
 
 ## Local Artifact Families
 
@@ -70,12 +84,12 @@ These are the local artifact families currently shaping the public position:
 | Local artifact family | What it contributes | Public boundary |
 | --- | --- | --- |
 | Private source packet | Definition, pipeline, validation framing, roadmap, and asset triage. | Local canon input only; not public proof by itself. |
-| Private prototype surface | Plugin shape, expert modules, cases, visual loops, and provenance-oriented validation tools. | Private/local prototype evidence only; not published adoption proof. |
+| Private prototype surface | Plugin shape, expert modules, cases, behavioral gates, visual loops, and provenance-oriented validation tools. | Private/local prototype evidence only; not published adoption proof. |
 | Claim guardrail notes | Public-claim guardrails for stronger method language. | Treat as a safety boundary before reusing stronger local copy. |
 | Visual failure records | Owner condition-blind visual judgment, obvious-slop checks, and margin-gated comparison notes. | Local failure evidence only; not external validation and not proof of visual quality improvement. |
-| Operating map | What should be redacted, converted into proof routes, or kept private next. | Planning surface, not proof that the work is shipped or adopted. |
+| Operating map | When artifact conditioning should be on, when it should be off, and which gate or boundary is required. | Planning surface, not proof that the work is shipped or adopted. |
 | Method notes | Design-level method extracted from shell failures, load-bearing middle decisions, and non-LLM ship gates. | Thought-method layer, not full method proof. |
-| Experiment records | Ceiling/null/negative regimes, wrong-anchor downside, comparison, replication, holdout, and negative-control evidence. | Local workbench evidence; publish only after redaction and case shaping. |
+| Experiment records | Ceiling/null/negative regimes, competence prechecks, wrong-anchor downside, comparison, replication, holdout, and negative-control evidence. | Local workbench evidence; publish only after redaction and case shaping. |
 | External OSS attribution repro cards | Source-level executable attribution for `P-EXT-03` Go `time.Parse` and `P-EXT-06` Eisel-Lemire / float parsing, including source anchor, objective oracle, defect control, wrong-anchor control, and command result. | Redacted summary only; not downstream lift, not maintainer endorsement, not legal clearance, not production readiness, and not external validation. |
 | High-integration evidence cards | Source artifact, baseline output, conditioned output, checklist control, gate/scorer, small local blind judging, failure cases, and claim boundary. | Redacted summary only; not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark status, legal clearance, or universal lift. |
 | Board readiness gates | Board v1 collection plan, required evidence atoms, stop conditions, `verify_minecraft_board_v1_gate.py` promotion guard, `manifest-preflight.json`, `MANIFEST-CONTRACT.md`, `manifest.schema.json`, `manifest-promotion-blockers.json`, manifest contract/schema, `board-v1-inspection-manifest.json` inspection-only index, aggregate transcript ledger, `scorer-transcript-availability.json`, `raw-transcript-preflight.json`, `raw-transcript-redaction-review-preflight.json`, `public-source-packet-draft.md/.json` future-route source packet draft, local per-arm build/render logs, and a local wrong-anchor execution/render sidecar receipt. | Blocker contract only; board v1 is not ready. `READY.json`, `redacted-screenshots/manifest.json`, full public-safe manifest, public-safe screenshot manifest, route-linked board-v1 entries, comparable wrong-anchor score, raw per-judge score rows, raw comments, redaction-reviewed raw rows, full per-judge scorer transcript, and a live route are still missing, so this does not add external validation or stronger proof. |
@@ -90,8 +104,9 @@ Current:
 
 - artifact-level imitation over persona prompting
 - source-first extraction from products, papers, standards, open-source repos, patents, and acceptance criteria
-- non-LLM checks where possible
+- non-LLM checks where possible, especially behavioral gates over form-counting gates
 - ablations, wrong-anchor controls, holdouts, and failure records
+- competence prechecks that measure the naked baseline before deciding whether to inject artifact structure
 - proof-bound public copy
 
 Outdated or demoted:
@@ -131,7 +146,9 @@ These outside references inform the public-surface discipline for this snapshot:
 The profile README may say:
 
 ```text
-The private Mimesis workbench is a private/local research workbench rebuilding Mimesis Engineering from experiments, ablations, source scouting, and failure records.
+The private Mimesis workbench is a private/local research workbench rebuilding
+Mimesis Engineering from experiments, ablations, source scouting, behavioral
+gates, competence prechecks, and failure records.
 ```
 
 The profile README must not say:
