@@ -72,8 +72,14 @@ runs:
 python -m unittest discover -s tests -v
 python scripts/check_profile_readme.py
 python scripts/check_profile_readme.py --check-links
+python scripts/check_profile_render_parity.py
 python scripts/check_public_github_surface_hygiene.py
+python scripts/check_public_github_surface_hygiene.py --repo svy04 --include-non-default-branches
 ```
+
+Render parity runs on main, scheduled, and manual workflow runs. Branch PRs keep
+the source checks and GitHub surface hygiene checks wired, while live rendered
+surface parity remains a current-main/scheduled/manual evidence boundary.
 
 The README also shows workflow status badges for:
 
