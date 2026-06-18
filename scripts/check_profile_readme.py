@@ -31,7 +31,7 @@ REQUIRED_LINKS = [
 REQUIRED_INTERNAL_LINKS = [
     "docs/profile-proof-surface.md",
     "docs/profile-render-parity-proof-packet.md",
-    "docs/private-mimesis-workbench.md",
+    "docs/non-public-mimesis-research-boundary.md",
     "docs/public-github-surface-hygiene-proof-packet.md",
     "docs/public-feedback-hardening.md",
 ]
@@ -56,7 +56,7 @@ REQUIRED_MARKERS = [
     "make expert process visible",
     "cognitive apprenticeship",
     "worked examples",
-    "Public repo evidence, not private-workbench proof",
+    "Public repo evidence, not non-public research proof",
     "public Mimesis repos are support surfaces",
     "Metaforge = Meta + MFH + Orchestra OS",
     "Metaforge is the public operating-system repo",
@@ -68,7 +68,7 @@ REQUIRED_MARKERS = [
     "allowed claims, explicit non-claims, and unresolved gaps",
     "Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and public wiring evidence",
     "Metaforge wiring evidence map",
-    "runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane",
+    "runtime import, governance/docs/gates, non-public research boundary, and manual artifact lane",
     "public wiring evidence",
     "OpenClaude is runtime substrate",
     "not the main thesis",
@@ -77,14 +77,14 @@ REQUIRED_MARKERS = [
     "MFH goal-trace validation report",
     "local no-provider behavioral governance evidence",
     "Goal Kernel closure",
-    "private/local Mimesis Engineering workbench",
+    "non-public Mimesis research boundary",
     "Public-safe proof routes summarize redacted local hygiene and blockers",
     "Fresh verifier output is required before any stronger module-pass or promotion claim",
     "Mimesis Engineering",
     "AI에게 역할이 아니라 기준을 준다.",
     "give AI standards, not roles",
     "products, papers, patents, standards, and maintained open-source implementations",
-    "docs/private-mimesis-workbench.md",
+    "docs/non-public-mimesis-research-boundary.md",
     "source first",
     "artifacts before personas",
     "gates before claims",
@@ -94,9 +94,9 @@ REQUIRED_MARKERS = [
     "Not a trading bot",
     "not product-complete",
     "not externally validated",
-    "private/local",
-    "prototype plugin surfaces",
-    "expert modules",
+    "non-public",
+    "prototype surfaces",
+    "expert-module notes",
     "inspection manifests",
     "redacted local hygiene and blockers",
     "Evidence Card Contract",
@@ -114,7 +114,7 @@ REQUIRED_MARKERS = [
     "side-effect guards",
     "happy path -> edge case -> side-effect guard -> claim boundary",
     "Mimesis Minecraft Public Redacted Board v0",
-    "Local Mimesis Research Map",
+    "Non-Public Mimesis Research Boundary",
     "Human-made Feeling Bench",
     "First-pass rubric",
     "Mimesis Minecraft High-Integration Evidence Card",
@@ -135,7 +135,7 @@ REQUIRED_MARKERS = [
     "statistical significance",
     "hallucination suppression",
     "Public repo map, not adoption proof",
-    "Support surface, not current private canon",
+    "Support surface, not a hidden canon claim",
     "Public support surface for reference packs, validators, cases, and proof boundaries",
     "Worksheet surface",
     "Case surface",
@@ -145,7 +145,7 @@ REQUIRED_MARKERS = [
     "I do not claim Metaforge is production-ready",
     "I do not claim NoiseProof is production-ready",
     "I do not claim Mimesis Engineering is an industry standard",
-    "private workbench evidence is not a public release claim",
+    "Non-public research notes are not a public release claim",
 ]
 
 PROHIBITED_MARKERS = [
@@ -153,11 +153,11 @@ PROHIBITED_MARKERS = [
     "## Current Thesis",
     "## Public Repos",
     "Mimesis Engineering is the front door",
-    "private/local workbench is the current canon input",
+    "private/local " + "workbench is the current " + "canon input",
     "Mimesis Engineering is the operating layer I am building now.",
-    "Mimesis v.next Workbench",
-    "Mimesis Engineering v0",
-    "public v0 artifact-level imitation method",
+    "Mimesis v.next " + "Workbench",
+    "Mimesis Engineering " + "v0",
+    "public v0 artifact-level " + "imitation method",
     "board v1 ready",
     "no true wrong-anchor",
     "16/16 expert modules",
@@ -303,7 +303,7 @@ def validate_readme_text(text):
 
     for line in text.splitlines():
         if PRIVATE_WORKBENCH_NAME_PATTERN.search(line):
-            issues.append(f"private workbench name disclosure: {line.strip()}")
+            issues.append(f"non-public research name disclosure: {line.strip()}")
         if LOCAL_PATH_PATTERN.search(line):
             issues.append(f"local path disclosure: {line.strip()}")
         for label, pattern in dangerous_patterns:

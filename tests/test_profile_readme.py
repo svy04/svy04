@@ -141,7 +141,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "make expert process visible",
             "cognitive apprenticeship",
             "worked examples",
-            "Public repo evidence, not private-workbench proof",
+            "Public repo evidence, not non-public research proof",
             "public Mimesis repos are support surfaces",
             "Metaforge = Meta + MFH + Orchestra OS",
             "Metaforge is the public operating-system repo",
@@ -150,14 +150,14 @@ class ProfileReadmeTests(unittest.TestCase):
             "allowed claims, explicit non-claims, and unresolved gaps",
             "Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and public wiring evidence",
             "Metaforge wiring evidence map",
-            "runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane",
+            "runtime import, governance/docs/gates, non-public research boundary, and manual artifact lane",
             "not the main thesis",
             "2026-06-19 public feedback packet",
             "provenance is a trust surface",
             "MFH goal-trace validation report",
             "local no-provider behavioral governance evidence",
             "Goal Kernel closure",
-            "private/local Mimesis Engineering workbench",
+            "non-public Mimesis research boundary",
             "Public-safe proof routes summarize redacted local hygiene and blockers",
             "Fresh verifier output is required before any stronger module-pass or promotion claim",
             "AI에게 역할이 아니라 기준을 준다.",
@@ -168,18 +168,18 @@ class ProfileReadmeTests(unittest.TestCase):
             "Proof ledger",
             "Mimesis Minecraft High-Integration Evidence Card",
             "Public redacted board v0 / incomplete evidence board",
-            "Local Mimesis Research Map",
+            "Non-Public Mimesis Research Boundary",
             "Board v1 is not ready",
             "It does not universally improve AI output.",
             "I do not claim Metaforge is production-ready",
             "I do not claim Mimesis Engineering is an industry standard",
             "I do not claim NoiseProof is production-ready",
-            "Support surface, not current private canon",
+            "Support surface, not a hidden canon claim",
             "Public repo map, not adoption proof",
             "Public support surface for reference packs, validators, cases, and proof boundaries",
             "Worksheet surface",
             "Case surface",
-            "private workbench evidence is not a public release claim",
+            "Non-public research notes are not a public release claim",
             "happy path -> edge case -> side-effect guard -> claim boundary",
         ]
         for marker in positioning_markers:
@@ -188,10 +188,10 @@ class ProfileReadmeTests(unittest.TestCase):
         forbidden_markers = [
             "Current flagship:",
             "Mimesis Engineering is the front door",
-            "private/local workbench is the current canon input",
-            "Mimesis Engineering v0",
-            "public v0 artifact-level imitation method",
-            "Mimesis v.next Workbench",
+            "private/local " + "workbench is the current " + "canon input",
+            "Mimesis Engineering " + "v0",
+            "public v0 artifact-level " + "imitation method",
+            "Mimesis v.next " + "Workbench",
             "16/16 expert modules",
             "14/14 expert modules",
             "Current local checks pass",
@@ -213,6 +213,35 @@ class ProfileReadmeTests(unittest.TestCase):
             profile_check.REQUIRED_LINKS,
         )
 
+    def test_public_surfaces_use_neutral_non_public_research_boundary_language(self):
+        stale_surface_markers = [
+            "private-" + "workbench",
+            "private " + "workbench",
+            "private/local " + "workbench",
+            "private/local Mimesis Engineering " + "workbench",
+            "private Mimesis " + "workbench",
+            "private " + "workbench evidence",
+            "private " + "plugin gate",
+            "current private " + "canon",
+            "current " + "canon",
+            "Mimesis v.next " + "Workbench",
+            "Mimesis Engineering " + "v0",
+            "public v0 artifact-level " + "imitation method",
+        ]
+        scanned_paths = [
+            "README.md",
+            "docs/profile-proof-surface.md",
+            "docs/profile-render-parity-proof-packet.md",
+            "docs/non-public-mimesis-research-boundary.md",
+            "scripts/check_profile_readme.py",
+            "scripts/check_profile_render_parity.py",
+        ]
+
+        for path in scanned_paths:
+            text = Path(path).read_text(encoding="utf-8")
+            for marker in stale_surface_markers:
+                self.assertNotIn(marker, text, path)
+
     def test_validation_catches_unbounded_mimesis_claim(self):
         text = "\n".join(
             [
@@ -232,8 +261,11 @@ class ProfileReadmeTests(unittest.TestCase):
         readme = Path("README.md").read_text(encoding="utf-8")
         stale_readme = (
             readme
-            + "\n| [Mimesis Engineering v0](https://github.com/svy04/mimesis-engineering) | public v0 artifact-level imitation method |\n"
-            + "\n## Mimesis v.next Workbench\n"
+            + "\n| [Mimesis Engineering "
+            + "v0](https://github.com/svy04/mimesis-engineering) | public v0 artifact-level "
+            + "imitation method |\n"
+            + "\n## Mimesis v.next "
+            + "Workbench\n"
         )
 
         issues = validate_readme_text(stale_readme)
@@ -293,7 +325,7 @@ class ProfileReadmeTests(unittest.TestCase):
         issues = validate_readme_text(disclosed)
 
         self.assertTrue(
-            any("private workbench name disclosure" in issue for issue in issues)
+            any("non-public research name disclosure" in issue for issue in issues)
         )
 
     def test_profile_verification_gate_is_documented_and_ci_wired(self):
@@ -322,16 +354,16 @@ class ProfileReadmeTests(unittest.TestCase):
             "scripts/check_public_github_surface_hygiene.py",
             "public default branches",
             "stale profile branches",
-            "private workbench name disclosure",
+            "non-public research name disclosure",
             "scanner-unfriendly placeholders",
             "actual-looking bearer values",
             "raw auth transcript markers",
-            "private-mimesis-workbench.md",
+            "non-public-mimesis-research-boundary.md",
             "Metaforge-first profile framing",
             "current proof ledger",
             "raw-transcript-preflight.json",
             "raw-transcript-redaction-review-preflight.json",
-            "PR #25-#32 blocker and hygiene",
+            "non-public research blocker and hygiene",
             "PR #25-#33 blocker and hygiene",
             "manifest-promotion-blockers.json",
             "redaction-reviewed",
@@ -357,18 +389,18 @@ class ProfileReadmeTests(unittest.TestCase):
         for _, url in PUBLIC_SURFACES:
             self.assertIn(url, parity_doc)
 
-    def test_public_feedback_and_private_workbench_docs_are_bounded(self):
+    def test_public_feedback_and_non_public_research_docs_are_bounded(self):
         readme = Path("README.md").read_text(encoding="utf-8")
         proof_doc = Path("docs/profile-proof-surface.md").read_text(encoding="utf-8")
         hardening = Path("docs/public-feedback-hardening.md").read_text(
             encoding="utf-8"
         )
-        workbench = Path("docs/private-mimesis-workbench.md").read_text(
+        research_boundary = Path("docs/non-public-mimesis-research-boundary.md").read_text(
             encoding="utf-8"
         )
 
         self.assertIn("docs/public-feedback-hardening.md", readme)
-        self.assertIn("docs/private-mimesis-workbench.md", readme)
+        self.assertIn("docs/non-public-mimesis-research-boundary.md", readme)
         self.assertIn("Public Feedback Hardening", hardening)
         self.assertIn("OpenClaude stays the local runtime substrate", hardening)
         self.assertIn("Meta + MFH + Orchestra OS", hardening)
@@ -380,9 +412,9 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("public wiring evidence are ratchets", hardening)
         self.assertIn("not proof that those workstreams are complete", proof_doc)
 
-        workbench_markers = [
-            "Private Mimesis Workbench",
-            "private/local research workbench",
+        research_boundary_markers = [
+            "Non-Public Mimesis Research Boundary",
+            "non-public Mimesis research source",
             "not public proof",
             "not external validation",
             "Current local snapshot",
@@ -396,22 +428,22 @@ class ProfileReadmeTests(unittest.TestCase):
             "PR #25-#33 blocker and hygiene gates",
             "redaction-reviewed raw rows",
             "Board v1 is not ready",
-            "The private workbench proves Mimesis Engineering.",
+            "The non-public research source proves Mimesis Engineering.",
             "Mimesis suppresses hallucination/fabrication in general.",
         ]
-        for marker in workbench_markers:
-            self.assertIn(marker, workbench)
+        for marker in research_boundary_markers:
+            self.assertIn(marker, research_boundary)
 
-    def test_validation_catches_missing_private_workbench_evidence_link(self):
+    def test_validation_catches_missing_non_public_research_boundary_link(self):
         readme = Path("README.md").read_text(encoding="utf-8")
-        readme_without_workbench = readme.replace(
-            "docs/private-mimesis-workbench.md",
-            "docs/missing-private-mimesis-workbench.md",
+        readme_without_boundary = readme.replace(
+            "docs/non-public-mimesis-research-boundary.md",
+            "docs/missing-non-public-mimesis-research-boundary.md",
         )
 
-        issues = validate_readme_text(readme_without_workbench)
+        issues = validate_readme_text(readme_without_boundary)
 
-        self.assertTrue(any("docs/private-mimesis-workbench.md" in issue for issue in issues))
+        self.assertTrue(any("docs/non-public-mimesis-research-boundary.md" in issue for issue in issues))
 
     def test_render_parity_validator_checks_public_surfaces_and_routes(self):
         readme = Path("README.md").read_text(encoding="utf-8")
@@ -466,7 +498,7 @@ class ProfileReadmeTests(unittest.TestCase):
 
         def fake_fetcher(url):
             if url == "https://github.com/svy04":
-                return 200, "Mimesis v.next Workbench"
+                return 200, "Mimesis v.next " + "Workbench"
             if url in {surface_url for _, surface_url in PUBLIC_SURFACES}:
                 return 200, readme
             if url in ROUTE_URLS:

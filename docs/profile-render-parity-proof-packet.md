@@ -61,18 +61,18 @@ The rendered public profile must keep these claims visible:
 - MFH is for evidence gates.
 - Orchestra is for multi-agent routing.
 - OpenClaude is the runtime substrate, not the main thesis.
-- The private/local Mimesis Engineering workbench is not public proof.
+- Non-public Mimesis research notes are not public proof.
 - Mimesis Engineering imports standards, source artifacts, gates, and failure records.
 - Public claims remain bounded by evidence.
 
 ## Forbidden Drift
 
-The rendered public profile must not restore:
+The rendered public profile must not restore these stale framing classes:
 
 - `Current flagship:`
-- `Mimesis v.next Workbench`
-- `Mimesis Engineering v0`
-- `public v0 artifact-level imitation method`
+- old Mimesis-as-front-door copy
+- non-public research notes as canon
+- obsolete version-label marketing
 
 ## Claim Boundary
 
