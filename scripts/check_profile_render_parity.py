@@ -27,6 +27,9 @@ ROUTE_URLS = [
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/",
     "https://svy04.github.io/human-made-feeling-bench/",
+    "https://github.com/svy04/mimesis-engineering/blob/main/STATUS.md",
+    "https://github.com/svy04/mimesis-engineering/blob/main/PROOF-BOUNDARY.md",
+    "https://github.com/svy04/mimesis-engineering/blob/main/docs/PUBLIC-CLAIM-PACK.md",
 ]
 
 REQUIRED_RENDER_MARKERS = [

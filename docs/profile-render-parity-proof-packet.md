@@ -22,6 +22,7 @@ It fetches:
 - `https://github.com/svy04/svy04`
 - the profile README workflow route and badge route
 - linked public proof routes for profile, Mimesis visual failure, verification relocation, external OSS attribution, downstream reinjection, Minecraft high-integration evidence, Minecraft public redacted board v0, Minecraft transcript availability audit, and Human-made Feeling Bench
+- linked public Mimesis Engineering Status, Proof Boundary, and Public Claim Pack documents
 
 It fails if the rendered surfaces lose the Metaforge-first anchors, lose
 claim-boundary language, reintroduce stale profile framing, break
@@ -47,6 +48,9 @@ https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evide
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/
 https://svy04.github.io/human-made-feeling-bench/
+https://github.com/svy04/mimesis-engineering/blob/main/STATUS.md
+https://github.com/svy04/mimesis-engineering/blob/main/PROOF-BOUNDARY.md
+https://github.com/svy04/mimesis-engineering/blob/main/docs/PUBLIC-CLAIM-PACK.md
 ```
 
 ## Required Positioning
