@@ -12,6 +12,14 @@ Mimesis Engineering as the method layer, keeps OpenClaude as runtime substrate
 rather than the thesis, and keeps non-public Mimesis research notes as a
 bounded research boundary rather than a public proof claim.
 
+The public Mimesis repository route must expose the public repo as a supportable
+method surface, not as hidden non-public proof. The README points readers to the
+public Mimesis [Status](https://github.com/svy04/mimesis-engineering/blob/main/STATUS.md),
+[Proof Boundary](https://github.com/svy04/mimesis-engineering/blob/main/PROOF-BOUNDARY.md),
+and [Public Claim Pack](https://github.com/svy04/mimesis-engineering/blob/main/docs/PUBLIC-CLAIM-PACK.md)
+for allowed claims and gaps. Fresh verifier output is required before any
+adoption, benchmark, module-pass, or promotion claim.
+
 ## What Is Verified
 
 The local script:
@@ -292,6 +300,9 @@ https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kerne
 https://github.com/svy04/noiseproof-agent
 https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md
 https://github.com/svy04/mimesis-engineering
+https://github.com/svy04/mimesis-engineering/blob/main/STATUS.md
+https://github.com/svy04/mimesis-engineering/blob/main/PROOF-BOUNDARY.md
+https://github.com/svy04/mimesis-engineering/blob/main/docs/PUBLIC-CLAIM-PACK.md
 https://github.com/svy04/mimesis-canvas
 https://github.com/svy04/mimesis-casebook
 https://github.com/svy04/leaderboard-data
