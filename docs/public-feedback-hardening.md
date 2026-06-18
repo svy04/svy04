@@ -30,8 +30,9 @@ response is to make the public surface easier to trust.
   claim-blocked protected-action packet handling, hosted-trust check mode,
   AVF/VS Code hygiene tightening, self-contained blocked-claim findings,
   dependency-topology refresh, workspace-path hygiene, and remote-surface
-  privacy pattern hardening; this is privacy and claim-surface hardening,
-  not release readiness.
+  privacy pattern hardening, plus a public claim evidence map for Meta, MFH,
+  Orchestra, OpenClaude runtime, Mimesis Engineering, and AVF Influence Factory;
+  this is privacy and claim-surface hardening, not release readiness.
 
 ## Tooling Backlog
 

@@ -9,6 +9,7 @@ from urllib.request import Request, urlopen
 REQUIRED_LINKS = [
     "https://github.com/svy04/metaforge",
     "https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md",
+    "https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map",
     "https://github.com/svy04/noiseproof-agent",
     "https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md",
     "https://github.com/svy04/mimesis-engineering",
@@ -50,6 +51,8 @@ REQUIRED_MARKERS = [
     "Meta for operating memory",
     "MFH for evidence gates",
     "Orchestra for multi-agent routing",
+    "Public claim evidence map",
+    "allowed claims, explicit non-claims, and unresolved gaps",
     "Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and public wiring evidence",
     "Metaforge wiring evidence map",
     "runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane",
