@@ -26,6 +26,7 @@ checks:
 ```text
 required public repo links
 required proof packet links
+Metaforge public claim evidence map link
     private/local evidence map link
 required claim-boundary phrases
 Mimesis-first current-build framing
@@ -88,6 +89,18 @@ The README also links:
 docs/public-feedback-hardening.md
 docs/private-mimesis-workbench.md
 ```
+
+The README also links the Metaforge public claim evidence map:
+
+```text
+https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map
+```
+
+That map binds Meta, MFH, Orchestra, OpenClaude runtime, Mimesis Engineering,
+and AVF Influence Factory to evidence paths, allowed claims, explicit non-claims,
+and unresolved gaps. It is local no-provider evidence mapping only, not external
+validation, production readiness, release readiness, or autonomous reliability
+proof.
 
 Current route boundary:
 
@@ -244,6 +257,7 @@ private repository links.
 ```text
 https://github.com/svy04/metaforge
 https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-14.md
+https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map
 https://github.com/svy04/noiseproof-agent
 https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md
 https://github.com/svy04/mimesis-engineering

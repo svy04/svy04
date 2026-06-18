@@ -68,6 +68,8 @@ class ProfileReadmeTests(unittest.TestCase):
             "cognitive apprenticeship",
             "worked examples",
             "Metaforge = Meta + MFH + Orchestra OS",
+            "Public claim evidence map",
+            "allowed claims, explicit non-claims, and unresolved gaps",
             "Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and public wiring evidence",
             "Metaforge wiring evidence map",
             "runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane",
