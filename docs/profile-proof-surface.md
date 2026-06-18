@@ -9,8 +9,8 @@ The profile README is a marketing surface, so it must stay proof-bounded. It sho
 Current positioning: compact current proof ledger plus Metaforge-first profile
 framing. The profile presents Metaforge as `Meta + MFH + Orchestra OS`, presents
 Mimesis Engineering as the method layer, keeps OpenClaude as runtime substrate
-rather than the thesis, and keeps private/local Mimesis workbench evidence as a
-bounded research map rather than a public proof claim.
+rather than the thesis, and keeps non-public Mimesis research notes as a
+bounded research boundary rather than a public proof claim.
 
 ## What Is Verified
 
@@ -26,13 +26,13 @@ checks:
 required public repo links
 required proof packet links
 Metaforge public claim evidence map link
-    private/local evidence map link
+    non-public research boundary link
 required claim-boundary phrases
 current proof ledger
 Metaforge-first profile framing
 Mimesis public repo support-surface framing
 OpenClaude runtime-substrate boundary
-private/local Mimesis workbench boundary
+non-public Mimesis research boundary
 source/CI proof and live public rendering boundary
 local path disclosure
 non-public or non-current repo links
@@ -50,15 +50,15 @@ scripts/check_public_github_surface_hygiene.py
 
 supports the Public GitHub Surface Hygiene Proof Packet. It lists public
 `@svy04` repositories through the GitHub REST API, shallow-clones public default
-branches, and scans text files for local path disclosure, private workbench name
+branches, and scans text files for local path disclosure, non-public research name
 disclosure, scanner-unfriendly placeholders, actual-looking bearer values, and
 raw auth transcript markers. The workflow also runs the same script with
 `--repo svy04 --include-non-default-branches` so stale profile branches cannot
-keep old private-workbench copy reachable.
+keep old non-public-research copy reachable.
 
 In short: public default branches stay checked for the full public repo map,
 and selected profile branch heads stay checked for stale profile-copy leaks.
-The scanner treats private workbench name disclosure as a public-surface hygiene finding.
+The scanner treats non-public research name disclosure as a public-surface hygiene finding.
 
 The GitHub Actions workflow:
 
@@ -93,7 +93,7 @@ The README also links:
 
 ```text
 docs/public-feedback-hardening.md
-docs/private-mimesis-workbench.md
+docs/non-public-mimesis-research-boundary.md
 ```
 
 The README also links the Metaforge public claim evidence map:
@@ -137,17 +137,17 @@ The public-feedback note is an active remediation track for the public surface:
 local-path hygiene, origin/license boundaries, Korean docs, and behavioral
 tests before stronger marketing. It is not proof that those workstreams are complete.
 
-The private-workbench file is a private/local evidence map for the current
-Mimesis research workbench. It is not a public repository link, public proof, external
+The non-public research boundary file is a bounded evidence map for current
+Mimesis research notes. It is not a public repository link, public proof, external
 validation, adoption evidence, or production-readiness proof.
 
-The current private Mimesis workbench reference is bounded this way:
+The current non-public Mimesis research reference is bounded this way:
 
 ```text
-The private prototype surface is private.
-The profile may mention visual judgment evidence and expert gates only as private/local workbench evidence.
+The prototype surface is non-public.
+The profile may mention visual judgment evidence and expert gates only as non-public research notes.
 It must not present that work as public proof, external validation, or proof of visual quality improvement.
-The profile must not expose local filesystem paths or local workbench names.
+The profile must not expose local filesystem paths or local research names.
 The public-safe product claim is conditional lift, not universal lift.
 The useful product is a workflow that decides when artifact conditioning should be on or off.
 ```
@@ -158,7 +158,7 @@ The current public-safe Mimesis visual route is:
 https://svy04.github.io/proof-artifacts/mimesis-visual-failure-packet-2026-06-15/
 ```
 
-That route is a redacted failure artifact. It supports the narrow claim that the profile carries a banned-claim boundary, weak-evidence notes, and next external-panel gate. It does not prove visual quality improvement, external validation, customer validation, production readiness, or public status for the private Mimesis workbench.
+That route is a redacted failure artifact. It supports the narrow claim that the profile carries a banned-claim boundary, weak-evidence notes, and next external-panel gate. It does not prove visual quality improvement, external validation, customer validation, production readiness, or public status for non-public Mimesis research work.
 
 The current public-safe Mimesis verification-relocation route is:
 
@@ -197,7 +197,7 @@ The current public-safe Mimesis Minecraft high-integration evidence-card route i
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/
 ```
 
-That route is a redacted local evidence card for one private/local Minecraft visual task. It records source artifact, baseline output, conditioned output, checklist control, gate/scorer, blind 3-judge panel, n=2 per cell, failure cases, and claim boundary. It is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark proof, legal clearance, or universal Mimesis lift. It also keeps the local wrong-anchor execution/render sidecar boundary visible as not route-linked board-v1 proof.
+That route is a redacted local evidence card for one non-public Minecraft visual task. It records source artifact, baseline output, conditioned output, checklist control, gate/scorer, blind 3-judge panel, n=2 per cell, failure cases, and claim boundary. It is not L5 proof, external validation, human visual-quality proof, near-Fable proof, public benchmark proof, legal clearance, or universal Mimesis lift. It also keeps the local wrong-anchor execution/render sidecar boundary visible as not route-linked board-v1 proof.
 
 The current public-safe Mimesis Minecraft public board v0 route is:
 
@@ -225,7 +225,7 @@ transcript, full scorer transcript / full per-judge scorer transcript, `READY.js
 public-safe screenshot manifest,
 route-linked board gate / route-linked board-v1 entries, comparable wrong-anchor score, and
 route-linked per-arm build/log proof. The
-latest private plugin gate adds a board v1 collection plan,
+latest non-public research gate adds a board v1 collection plan,
 `verify_minecraft_board_v1_gate.py`, `MANIFEST-CONTRACT.md`,
 `manifest.schema.json`, `raw-transcript-preflight.json`,
 `raw-transcript-redaction-review-preflight.json`, and
@@ -246,7 +246,7 @@ Mimesis Minecraft transcript availability audit route:
 https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/
 ```
 
-That route records the private workbench PR #25-#32 blocker and hygiene state,
+That route records the non-public research blocker and hygiene state,
 plus the PR #25-#33 blocker and hygiene extension, as an inspectability
 upgrade. It exposes a machine-checkable transcript-availability audit, `board-v1-inspection-manifest.json`, `manifest-promotion-blockers.json`, `raw-transcript-preflight.json`, `raw-transcript-redaction-review-preflight.json`, sanitized raw-run receipts, and README proof-gate surface while keeping the blocker boundary explicit. It is not a full
 transcript, not stronger proof, not board-v1 readiness, not external validation,
@@ -267,12 +267,12 @@ The current public-safe profile proof route is:
 https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/
 ```
 
-That route is a CI-checked routing and claim-boundary artifact for this GitHub profile. It does not prove product completion, external validation, adoption, or public status for private workbench repos.
+That route is a CI-checked routing and claim-boundary artifact for this GitHub profile. It does not prove product completion, external validation, adoption, or public status for non-public research repositories.
 
 The profile README validator also blocks non-public or non-current repo links
-from becoming marketing routes. Private/local workbench code should be routed
+from becoming marketing routes. Non-public research code should be routed
 through public proof artifacts and explicit claim boundaries instead of direct
-private repository links.
+non-public repository links.
 
 ## Current Required Public Links
 

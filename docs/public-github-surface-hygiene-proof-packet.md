@@ -4,7 +4,7 @@ Status: executable public-surface hygiene gate.
 
 This packet records a narrow check over the public GitHub surface for `@svy04`.
 It exists because the profile is now a marketing and proof-routing surface: the
-public repos it links should not leak local workstation paths, private workbench
+public repos it links should not leak local workstation paths, non-public research
 names, scanner-unfriendly secret-shaped placeholders, or raw auth/runtime
 transcript fragments as proof artifacts. The profile repo also checks public
 non-default branch heads because stale profile branches can keep old marketing
@@ -36,8 +36,8 @@ The local rule set checks for:
 - sensitive local Windows user path fragments
 - sensitive local macOS/Linux user-path fragments
 - the Korean private-workspace phrase
-- private workbench path fragments when they look like filesystem paths
-- private workbench names in public profile/proof surfaces
+- non-public research path fragments when they look like filesystem paths
+- non-public research names in public profile/proof surfaces
 - scanner-unfriendly example credentials and token-shaped placeholders
 - OpenAI/Anthropic/GitHub-style assignment lines with secret-shaped values
 - generic token-shaped values that look like GitHub, OpenAI-style, or Google API keys
