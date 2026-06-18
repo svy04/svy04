@@ -38,7 +38,7 @@ Public repo map, not adoption proof:
 
 ## Proof Routes
 
-Current proof ledger: Proof ledger routes:
+Current proof ledger - Proof ledger routes:
 
 - [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/): CI-checked routing and claim-boundary surface.
 - [Public GitHub Surface Hygiene Proof Packet](docs/public-github-surface-hygiene-proof-packet.md): Public default-branch and non-default branch-head scan for local paths, non-public research names, scanner-unfriendly placeholders, actual-looking bearer values, and raw auth transcript markers.
