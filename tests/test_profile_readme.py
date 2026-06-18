@@ -64,6 +64,9 @@ class ProfileReadmeTests(unittest.TestCase):
         positioning_markers = [
             "Mimesis Engineering is the operating layer I am building now.",
             "artifact-first expert-thinking OS",
+            "make expert process visible",
+            "cognitive apprenticeship",
+            "worked examples",
             "Metaforge = Meta + MFH + Orchestra OS",
             "Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, and IDE evidence ordering",
             "OpenClaude is the runtime substrate",
@@ -75,6 +78,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "give AI standards, not roles",
             "products, papers, patents, standards, and maintained open-source implementations",
             "inspection manifests",
+            "worked example",
             "Mimesis Minecraft High-Integration Evidence Card",
             "Public redacted board v0 / incomplete evidence board",
             "Local Mimesis Research Map",
