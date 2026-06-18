@@ -38,14 +38,17 @@ REQUIRED_BADGE_URLS = [
 ]
 
 REQUIRED_MARKERS = [
-    "I build proof-bounded AI operating systems.",
+    "I build proof-bounded AI operating systems: evidence before pitch.",
     "검증이 곧 마케팅",
     "Not another wrapper.",
-    "Mimesis Engineering is the operating layer I am building now.",
+    "Build the proof surface before the pitch",
+    "Mimesis Engineering is the front door",
     "artifact-first expert-thinking OS",
     "make expert process visible",
     "cognitive apprenticeship",
     "worked examples",
+    "private/local workbench is the current canon input",
+    "public Mimesis repos are support surfaces",
     "Metaforge = Meta + MFH + Orchestra OS",
     "Metaforge",
     "Meta for operating memory",
@@ -57,7 +60,7 @@ REQUIRED_MARKERS = [
     "Metaforge wiring evidence map",
     "runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane",
     "public wiring evidence",
-    "OpenClaude is the runtime substrate",
+    "OpenClaude remains the substrate",
     "not the main thesis",
     "Private/local Mimesis Engineering workbench",
     "Public-safe proof routes summarize redacted local hygiene and blockers",
@@ -125,10 +128,14 @@ REQUIRED_MARKERS = [
     "I do not claim Metaforge is production-ready",
     "I do not claim NoiseProof is production-ready",
     "I do not claim Mimesis Engineering is an industry standard",
+    "private workbench evidence is not a public release claim",
 ]
 
 PROHIBITED_MARKERS = [
     "Current flagship:",
+    "## Current Thesis",
+    "## Public Repos",
+    "Mimesis Engineering is the operating layer I am building now.",
     "Mimesis v.next Workbench",
     "Mimesis Engineering v0",
     "public v0 artifact-level imitation method",

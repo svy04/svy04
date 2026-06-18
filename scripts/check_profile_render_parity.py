@@ -30,15 +30,16 @@ ROUTE_URLS = [
 ]
 
 REQUIRED_RENDER_MARKERS = [
-    "I build proof-bounded AI operating systems.",
-    "Mimesis Engineering is the operating layer I am building now.",
+    "I build proof-bounded AI operating systems: evidence before pitch.",
+    "Mimesis Engineering is the front door",
+    "Build the proof surface before the pitch",
     "artifact-first expert-thinking OS",
     "Metaforge = Meta + MFH + Orchestra OS",
     "Metaforge",
     "Meta for operating memory",
     "MFH for evidence gates",
     "Orchestra for multi-agent routing",
-    "OpenClaude is the runtime substrate",
+    "OpenClaude remains the substrate",
     "not the main thesis",
     "Private/local Mimesis Engineering workbench",
     "Mimesis Engineering",
@@ -53,6 +54,7 @@ REQUIRED_RENDER_MARKERS = [
 
 FORBIDDEN_RENDER_MARKERS = [
     "Current flagship:",
+    "Mimesis Engineering is the operating layer I am building now.",
     "Mimesis v.next Workbench",
     "Mimesis Engineering v0",
     "public v0 artifact-level imitation method",
