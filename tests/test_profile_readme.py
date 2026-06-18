@@ -51,29 +51,32 @@ class ProfileReadmeTests(unittest.TestCase):
             self.assertIn(badge_url, readme)
 
         required_sections = [
-            "## Current Thesis",
-            "## Mimesis Engineering",
+            "## Current Build",
+            "## Public Systems",
             "## Proof Routes",
-            "## Public Repos",
-            "## Working Loop",
+            "## Operating Law",
             "## Claim Boundary",
         ]
         for section in required_sections:
             self.assertIn(section, readme)
 
         positioning_markers = [
-            "Mimesis Engineering is the operating layer I am building now.",
+            "Mimesis Engineering is the front door",
+            "I build proof-bounded AI operating systems: evidence before pitch.",
+            "Build the proof surface before the pitch",
             "artifact-first expert-thinking OS",
             "make expert process visible",
             "cognitive apprenticeship",
             "worked examples",
+            "private/local workbench is the current canon input",
+            "public Mimesis repos are support surfaces",
             "Metaforge = Meta + MFH + Orchestra OS",
+            "OpenClaude remains the substrate",
             "Public claim evidence map",
             "allowed claims, explicit non-claims, and unresolved gaps",
             "Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and public wiring evidence",
             "Metaforge wiring evidence map",
             "runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane",
-            "OpenClaude is the runtime substrate",
             "not the main thesis",
             "Private/local Mimesis Engineering workbench",
             "Public-safe proof routes summarize redacted local hygiene and blockers",
@@ -96,6 +99,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "Public support surface for reference packs, validators, cases, and proof boundaries",
             "Worksheet surface",
             "Case surface",
+            "private workbench evidence is not a public release claim",
         ]
         for marker in positioning_markers:
             self.assertIn(marker, readme)
@@ -115,6 +119,9 @@ class ProfileReadmeTests(unittest.TestCase):
             "PR #27",
             "PR #28-style raw transcript hygiene hardening",
             "PR #63 adds canonical extension hygiene coverage",
+            "## Current Thesis",
+            "## Public Repos",
+            "Mimesis Engineering is the operating layer I am building now.",
         ]
         for marker in forbidden_markers:
             self.assertNotIn(marker, readme)

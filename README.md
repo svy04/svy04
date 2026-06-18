@@ -3,30 +3,48 @@
 [![Profile README](https://github.com/svy04/svy04/actions/workflows/profile-readme.yml/badge.svg?branch=main)](https://github.com/svy04/svy04/actions/workflows/profile-readme.yml)
 [![Claim boundary](https://img.shields.io/badge/claim%20boundary-documented-555)](docs/profile-proof-surface.md)
 
-I build proof-bounded AI operating systems.
+I build proof-bounded AI operating systems: evidence before pitch.
 
 검증이 곧 마케팅. Not another wrapper.
 
-Mimesis Engineering is the operating layer I am building now. It is an artifact-first expert-thinking OS to make expert process visible through cognitive apprenticeship and worked examples.
+Build the proof surface before the pitch.
+
+Mimesis Engineering is the front door: an artifact-first expert-thinking OS to make expert process visible through cognitive apprenticeship and worked examples.
 
 Public thesis: **Metaforge = Meta + MFH + Orchestra OS**. Meta for operating memory, MFH for evidence gates, Orchestra for multi-agent routing.
 
-OpenClaude is the runtime substrate, not the main thesis.
+OpenClaude remains the substrate, not the main thesis.
 
 ```text
 source first -> artifacts before personas -> gates before claims -> verification is the marketing
 ```
 
-## Current Thesis
+## Current Build
 
-- [Mimesis Engineering](https://github.com/svy04/mimesis-engineering): Private/local Mimesis Engineering workbench evidence includes prototype plugin surfaces, expert modules, ablations, inspection manifests, and failure records. Public-safe proof routes summarize redacted local hygiene and blockers. Fresh verifier output is required before any stronger module-pass or promotion claim.
-- [Metaforge](https://github.com/svy04/metaforge): public Meta/MFH/Orchestra OS. The [Proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-18.md) and [Public claim evidence map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map) bind symbols to allowed claims, explicit non-claims, and unresolved gaps. Metaforge wiring evidence map separates runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane.
-- OpenClaude: runtime substrate for CLI, tools, MCP, OAuth routes, and rails. Useful substrate, not the main thesis.
+- [Mimesis Engineering](https://github.com/svy04/mimesis-engineering): the private/local workbench is the current canon input; public Mimesis repos are support surfaces. Private/local Mimesis Engineering workbench evidence includes prototype plugin surfaces, expert modules, ablations, inspection manifests, wrong-anchor controls, scorer gates, and blockers. Public-safe proof routes summarize redacted local hygiene and blockers. Fresh verifier output is required before any stronger module-pass or promotion claim.
+- [Metaforge](https://github.com/svy04/metaforge): the public Meta/MFH/Orchestra OS. The [Proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-18.md) and [Public claim evidence map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map) bind symbols to allowed claims, explicit non-claims, and unresolved gaps. Metaforge wiring evidence map separates runtime import, governance/docs/gates, private/local proof boundary, and manual artifact lane.
 - [NoiseProof Agent](https://github.com/svy04/noiseproof-agent): evidence-first data-agent surface. See the [proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot, not product-complete, not externally validated.
 
 Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and public wiring evidence. Public hardening is not production readiness.
 
-## Mimesis Engineering
+## Public Systems
+
+Public repo map, not adoption proof: [metaforge](https://github.com/svy04/metaforge) is Meta/MFH/Orchestra OS; [noiseproof-agent](https://github.com/svy04/noiseproof-agent) is the data-agent surface; [mimesis-engineering](https://github.com/svy04/mimesis-engineering) is a Public support surface for reference packs, validators, cases, and proof boundaries. Support surface, not current private canon. [mimesis-canvas](https://github.com/svy04/mimesis-canvas) is the Worksheet surface; [mimesis-casebook](https://github.com/svy04/mimesis-casebook) is the Case surface; [leaderboard-data](https://github.com/svy04/leaderboard-data) is separate infra; [svy04](https://github.com/svy04/svy04) is this repo.
+
+## Proof Routes
+
+- [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/): CI-checked routing and claim-boundary surface.
+- [Public GitHub Surface Hygiene Proof Packet](docs/public-github-surface-hygiene-proof-packet.md): Public default-branch scan for local paths, scanner-unfriendly placeholders, actual-looking bearer values, and raw auth transcript markers.
+- [Render parity proof packet](docs/profile-render-parity-proof-packet.md): source/render/badge route consistency.
+- [Metaforge Public Claim Evidence Map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map): local no-provider map; not external validation.
+- [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/): source artifact, baseline output, conditioned output, gate/scorer, failure cases, and claim boundary.
+- [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/): Public redacted board v0 / incomplete evidence board; Board v1 is not ready.
+- [Human-made Feeling Bench](https://svy04.github.io/human-made-feeling-bench/): First-pass rubric for judgment traces, accessibility, failure evidence, and claim boundaries.
+- [Local Mimesis Research Map](docs/private-mimesis-workbench.md): private/local map; not public proof, production readiness, or external validation.
+
+Source/CI proof and live public rendering stay separate; live maintenance-hidden routes are not proof upgrades.
+
+## Operating Law
 
 AI에게 역할이 아니라 기준을 준다. give AI standards, not roles.
 
@@ -40,28 +58,7 @@ Allowed claim: conditional lift, not universal lift. The useful product decides 
 
 private/local workbench Evidence Card Contract: source artifact, baseline output, conditioned output, wrong-anchor or checklist control, gate/scorer, failure cases, claim boundary, and proof-surface discipline.
 
-Board v1 is not ready.
-
-## Proof Routes
-
-- [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/): CI-checked routing and claim-boundary surface.
-- [Public GitHub Surface Hygiene Proof Packet](docs/public-github-surface-hygiene-proof-packet.md): Public default-branch scan for local paths, scanner-unfriendly placeholders, actual-looking bearer values, and raw auth transcript markers.
-- [Render parity proof packet](docs/profile-render-parity-proof-packet.md): source README, rendered profile, badge, and route consistency.
-- [Metaforge Public Claim Evidence Map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map): local no-provider map; not external validation.
-- [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/): source artifact, baseline output, conditioned output, gate/scorer, failure cases, and claim boundary.
-- [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/): Public redacted board v0 / incomplete evidence board; Board v1 is not ready.
-- [Human-made Feeling Bench](https://svy04.github.io/human-made-feeling-bench/): First-pass rubric for judgment traces, accessibility, failure evidence, and claim boundaries.
-- [Local Mimesis Research Map](docs/private-mimesis-workbench.md): private/local map; not public proof, production readiness, or external validation.
-
-Source/CI proof and live public rendering stay separate; live maintenance-hidden routes are not proof upgrades.
-
-## Public Repos
-
-Public repo map, not adoption proof: [metaforge](https://github.com/svy04/metaforge) is Meta/MFH/Orchestra OS; [noiseproof-agent](https://github.com/svy04/noiseproof-agent) is the data-agent surface; [mimesis-engineering](https://github.com/svy04/mimesis-engineering) is a Public support surface for reference packs, validators, cases, and proof boundaries. Support surface, not current private canon. [mimesis-canvas](https://github.com/svy04/mimesis-canvas) is the Worksheet surface; [mimesis-casebook](https://github.com/svy04/mimesis-casebook) is the Case surface; [leaderboard-data](https://github.com/svy04/leaderboard-data) is separate infra; [svy04](https://github.com/svy04/svy04) is this repo.
-
-## Working Loop
-
-find solved artifacts -> read primary sources and maintained implementations -> extract load-bearing structure -> test with wrong anchors, controls, scorers -> publish only the claim the evidence can carry
+Board v1 is not ready. private workbench evidence is not a public release claim.
 
 Public Feedback Hardening is tracked in [docs/public-feedback-hardening.md](docs/public-feedback-hardening.md): OpenClaude stays the local runtime substrate; marker-only checks must become behavioral smoke tests, edge-case checks, and side-effect guards. Public default-branch scans watch scanner-unfriendly placeholders, actual-looking bearer values, and raw auth transcript markers.
 
