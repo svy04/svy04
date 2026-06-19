@@ -347,6 +347,33 @@ class ProfileReadmeTests(unittest.TestCase):
             any("non-public research name disclosure" in issue for issue in issues)
         )
 
+    def test_validation_catches_stale_metaforge_feedback_link(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+        stale_feedback_link = "public-feedback-snapshot-2026-06-" + "19.md"
+        stale_readme = readme.replace(
+            "public-feedback-snapshot-2026-06-20.md",
+            stale_feedback_link,
+        )
+
+        issues = validate_readme_text(stale_readme)
+
+        self.assertTrue(
+            any("stale Metaforge public feedback link" in issue for issue in issues)
+        )
+
+    def test_profile_feedback_links_stay_on_latest_packet(self):
+        scanned_paths = [
+            "README.md",
+            "docs/profile-proof-surface.md",
+            "scripts/check_profile_readme.py",
+            "tests/test_profile_readme.py",
+        ]
+
+        for path in scanned_paths:
+            text = Path(path).read_text(encoding="utf-8")
+            self.assertIn("2026-06-20", text, path)
+            self.assertNotIn("public-feedback-snapshot-2026-06-" + "19.md", text, path)
+
     def test_profile_verification_gate_is_documented_and_ci_wired(self):
         workflow = Path(".github/workflows/profile-readme.yml").read_text(
             encoding="utf-8"
