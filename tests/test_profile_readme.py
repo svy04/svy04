@@ -167,6 +167,9 @@ class ProfileReadmeTests(unittest.TestCase):
             "non-public Mimesis research boundary",
             "define allowed claims and gaps",
             "fresh verifier output is required before any adoption, benchmark, module-pass, or promotion claim",
+            "null/negative controls and failure records",
+            "Artifact conditioning is useful only when the baseline has headroom",
+            "stays off when objective tests show a ceiling",
             "AI에게 역할이 아니라 기준을 준다.",
             "give AI standards, not roles",
             "products, papers, patents, standards, and maintained open-source implementations",
@@ -178,6 +181,9 @@ class ProfileReadmeTests(unittest.TestCase):
             "Non-Public Mimesis Research Boundary",
             "Board v1 is not ready",
             "It does not universally improve AI output.",
+            "standard deterministic/code tasks and short agentic decision-aid tasks mostly showed ceiling/null behavior",
+            "high-slop, underdetermined, high-integration, visual/gestalt work",
+            "I publish the null boundary beside the wins",
             "I do not claim Metaforge is production-ready",
             "I do not claim Mimesis Engineering is an industry standard",
             "I do not claim NoiseProof is production-ready",
@@ -188,6 +194,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "Case surface",
             "Non-public research notes are not a public release claim",
             "happy path -> edge case -> side-effect guard -> claim boundary",
+            "publish wins, nulls, and failure boundaries",
         ]
         for marker in positioning_markers:
             self.assertIn(marker, readme)
