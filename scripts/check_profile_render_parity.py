@@ -57,6 +57,7 @@ REQUIRED_RENDER_MARKERS = [
     "Evidence Card Contract",
     "conditional lift, not universal lift",
     "fresh verifier output is required before any adoption, benchmark, module-pass, or promotion claim",
+    "I publish the null boundary beside the wins",
     "I do not claim Metaforge is production-ready",
     "I do not claim NoiseProof is production-ready",
     "I do not claim Mimesis Engineering is an industry standard",
