@@ -20,6 +20,12 @@ and [Public Claim Pack](https://github.com/svy04/mimesis-engineering/blob/main/d
 for allowed claims and gaps. Fresh verifier output is required before any
 adoption, benchmark, module-pass, or promotion claim.
 
+The current profile wording may say the non-public Mimesis boundary tracks
+claim hygiene, evidence-reference checks, module validation, null/negative
+controls, failure records, and explicit non-readiness gates. It must keep that
+as research-direction and gate-discipline language, not as public proof,
+external validation, module-pass certification, benchmark evidence, or readiness.
+
 ## What Is Verified
 
 The local script:
