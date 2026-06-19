@@ -45,6 +45,11 @@ REQUIRED_BADGE_URLS = [
     "https://img.shields.io/badge/claim%20boundary-documented-555",
 ]
 
+CURRENT_METAFORGE_FEEDBACK_DATE = "2026-06-20"
+STALE_METAFORGE_FEEDBACK_LINK_PATTERN = re.compile(
+    r"public-feedback-snapshot-(\d{4}-\d{2}-\d{2})\.md"
+)
+
 TRANSIENT_HTTP_STATUSES = {408, 429, 500, 502, 503, 504}
 
 REQUIRED_MARKERS = [
@@ -314,6 +319,11 @@ def validate_readme_text(text):
     for badge_url in REQUIRED_BADGE_URLS:
         if badge_url not in text:
             issues.append(f"missing required badge URL: {badge_url}")
+
+    for match in STALE_METAFORGE_FEEDBACK_LINK_PATTERN.finditer(text):
+        date = match.group(1)
+        if date != CURRENT_METAFORGE_FEEDBACK_DATE:
+            issues.append(f"stale Metaforge public feedback link: {match.group(0)}")
 
     dangerous_patterns = [
         ("unbounded Mimesis claim", r"\bMimesis(?: Engineering)?\b.*\b(proven|universally improves|industry standard|statistically proven)\b"),
