@@ -79,6 +79,14 @@ module validation -> passed on the current local module set
 board v1 gate -> passed by confirming the draft skeleton exists and board v1 is not ready
 ```
 
+The same 2026-06-19 read-only audit also found that the current non-public
+Mimesis work has public-hygiene checks, evidence-reference checks, claim-pack
+checks, README claim checks, leaderboard claim checks, module validation, and a
+board-v1 gate that keeps the not-ready boundary explicit. The profile may reuse
+that only as gate-discipline language. It is not public proof, not external
+validation, not a module-pass marketing claim, not a public benchmark, and not
+readiness.
+
 This is local-only evidence. It can guide the public profile's direction, but
 the profile should not turn non-public module counts, dirty worktree state, or
 local-only board receipts into a public numeric proof claim until the public proof
