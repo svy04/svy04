@@ -120,9 +120,8 @@ class ProfileReadmeTests(unittest.TestCase):
             self.assertIn(link, readme)
 
         required_sections = [
-            "## Current Build",
-            "## Public Systems",
-            "## Proof Routes",
+            "## System Stack",
+            "## Evidence Ledger",
             "## Operating Law",
             "## Claim Boundary",
         ]
@@ -192,14 +191,14 @@ class ProfileReadmeTests(unittest.TestCase):
             "I do not claim Metaforge is production-ready",
             "I do not claim Mimesis Engineering is an industry standard",
             "I do not claim NoiseProof is production-ready",
-            "Support surface, not a hidden canon claim",
             "Public repo map, not adoption proof",
-            "Public support surface for reference packs, validators, cases, and proof boundaries",
-            "Worksheet surface",
-            "Case surface",
+            "the public support surface for reference packs, validators, cases, and proof boundaries",
+            "not a hidden canon claim",
+            "the worksheet surface",
+            "the case surface",
             "Non-public research notes are not a public release claim",
             "happy path -> edge case -> side-effect guard -> claim boundary",
-            "publish wins, nulls, and failure boundaries",
+            "Publish wins, nulls, and failure boundaries",
         ]
         for marker in positioning_markers:
             self.assertIn(marker, readme)
@@ -231,6 +230,33 @@ class ProfileReadmeTests(unittest.TestCase):
             "https://svy04.github.io/proof-artifacts/digital-factory-workbench-verification-2026-06-15/",
             profile_check.REQUIRED_LINKS,
         )
+
+    def test_current_readme_uses_current_public_mimesis_stack_copy(self):
+        readme = Path("README.md").read_text(encoding="utf-8")
+
+        required_current_stack_markers = [
+            "## System Stack",
+            "## Evidence Ledger",
+            "## Operating Law",
+            "Mimesis public v0.1 surface",
+            "first-loop demo",
+            "framework manifest",
+            "source-first reference pack index",
+            "Visual Failure Packet is the current public failure-boundary route",
+            "non-public research informs direction; public claims come from public repos and proof routes",
+            "GitHub profile as an evidence router",
+        ]
+        for marker in required_current_stack_markers:
+            self.assertIn(marker, readme)
+
+        obsolete_copy_markers = [
+            "## Current Build",
+            "## Public Systems",
+            "Recent local evidence:",
+            "The non-public research boundary records prototype surfaces",
+        ]
+        for marker in obsolete_copy_markers:
+            self.assertNotIn(marker, readme)
 
     def test_public_surfaces_use_neutral_non_public_research_boundary_language(self):
         stale_surface_markers = [
@@ -419,6 +445,11 @@ class ProfileReadmeTests(unittest.TestCase):
             "redaction-reviewed",
             "local path disclosure",
             "non-public or non-current repo links",
+            "System Stack plus Evidence Ledger",
+            "GitHub profile an evidence router",
+            "first-loop demo",
+            "framework manifest",
+            "source-first reference",
         ]
         for marker in proof_markers:
             self.assertIn(marker, proof_doc)
