@@ -60,7 +60,7 @@ REQUIRED_RENDER_MARKERS = [
     "Evidence Card Contract",
     "conditional lift, not universal lift",
     "fresh verifier output is required before any adoption, benchmark, module-pass, or promotion claim",
-    "claim hygiene, evidence-reference checks, module validation, null/negative controls, failure records, and explicit non-readiness gates",
+    "claim hygiene, evidence-reference checks, module validation, null/negative controls, source-import preflight, failure records, and explicit non-readiness gates",
     "I publish the null boundary beside the wins",
     "I do not claim Metaforge is production-ready",
     "I do not claim NoiseProof is production-ready",

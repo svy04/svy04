@@ -22,7 +22,7 @@ adoption, benchmark, module-pass, or promotion claim.
 
 The current profile wording may say the non-public Mimesis boundary tracks
 claim hygiene, evidence-reference checks, module validation, null/negative
-controls, failure records, and explicit non-readiness gates. It must keep that
+controls, source-import preflight, failure records, and explicit non-readiness gates. It must keep that
 as research-direction and gate-discipline language, not as public proof,
 external validation, module-pass certification, benchmark evidence, or readiness.
 
@@ -242,7 +242,8 @@ screenshot sidecars exist without `redacted-screenshots/manifest.json`;
 `manifest-preflight.json` exists; `MANIFEST-CONTRACT.md` and
 `manifest.schema.json` define a manifest contract/schema; `board-v1-inspection-manifest.json`
 exists as an inspection-only blocker index; an aggregate transcript ledger exists;
-`raw-transcript-preflight.json` and `raw-transcript-redaction-review-preflight.json` exist as blocker contracts;
+`raw-transcript-preflight.json`, `raw-transcript-source-import-preflight.json`,
+and `raw-transcript-redaction-review-preflight.json` exist as blocker contracts;
 local per-arm build/render logs exist as inventory only; and a
 local wrong-anchor execution/render sidecar exists as a receipt only.
 
@@ -256,6 +257,7 @@ route-linked per-arm build/log proof. The
 latest non-public research gate adds a board v1 collection plan,
 `verify_minecraft_board_v1_gate.py`, `MANIFEST-CONTRACT.md`,
 `manifest.schema.json`, `raw-transcript-preflight.json`,
+`raw-transcript-source-import-preflight.json`,
 `raw-transcript-redaction-review-preflight.json`, and
 `public-source-packet-draft.md/.json` as a future-route source packet draft,
 plus `board-v1-inspection-manifest.json` as an inspection-only index of
@@ -264,7 +266,7 @@ that is a blocker contract, not stronger proof, and the sidecar, manifest
 contract/schema, inspection manifest, raw transcript preflight, redaction-review preflight, and source packet draft are only
 receipts/contracts/indexes. It is not a live route, not `READY.json`, not
 `redacted-screenshots/manifest.json`, not full transcript/scorer evidence, and
-not stronger proof. board v1 is not ready. This is a visibility upgrade, not stronger proof.
+not stronger proof. source raw transcript import is still missing. board v1 is not ready. This is a visibility upgrade, not stronger proof.
 
 The current public-safe Mimesis Minecraft transcript availability audit route is:
 
@@ -275,10 +277,10 @@ https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availabilit
 ```
 
 That route records the non-public research blocker and hygiene state,
-plus the PR #25-#33 blocker and hygiene extension, as an inspectability
-upgrade. It exposes a machine-checkable transcript-availability audit, `board-v1-inspection-manifest.json`, `manifest-promotion-blockers.json`, `raw-transcript-preflight.json`, `raw-transcript-redaction-review-preflight.json`, sanitized raw-run receipts, and README proof-gate surface while keeping the blocker boundary explicit. It is not a full
+plus the PR #25-#34 blocker and hygiene extension, as an inspectability
+upgrade. It exposes a machine-checkable transcript-availability audit, `board-v1-inspection-manifest.json`, `manifest-promotion-blockers.json`, `raw-transcript-preflight.json`, `raw-transcript-source-import-preflight.json`, `raw-transcript-redaction-review-preflight.json`, sanitized raw-run receipts, and README proof-gate surface while keeping the blocker boundary explicit. It is not a full
 transcript, not stronger proof, not board-v1 readiness, not external validation,
-and still blocked on raw per-judge score rows, raw comments, redaction-reviewed
+and still blocked on source raw transcript import, raw per-judge score rows, raw comments, redaction-reviewed
 raw rows, route-linked board-v1 entries, and independent/external panel evidence.
 
 The current public-safe Human-made Feeling Bench route is:
