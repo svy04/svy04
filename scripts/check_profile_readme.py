@@ -79,6 +79,7 @@ REQUIRED_MARKERS = [
     "Public claim evidence map",
     "bind provenance and gaps",
     "Metaforge hardening is a ratchet, not a release claim",
+    "Current model-ID locks and latest-alias hygiene are claim-surface hygiene, not release readiness",
     "Wiring evidence map",
     "runtime import, governance/docs/gates, non-public research boundary, and manual artifact lane",
     "public wiring evidence",

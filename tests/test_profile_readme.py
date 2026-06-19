@@ -159,6 +159,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "Orchestra routes agents",
             "bind provenance and gaps",
             "Metaforge hardening is a ratchet, not a release claim",
+            "Current model-ID locks and latest-alias hygiene are claim-surface hygiene, not release readiness",
             "Wiring evidence map",
             "runtime import, governance/docs/gates, non-public research boundary, and manual artifact lane",
             "not the main thesis",
