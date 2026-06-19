@@ -283,6 +283,14 @@ https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026
 
 That route is a CI-checked routing and claim-boundary artifact for this GitHub profile. It does not prove product completion, external validation, adoption, or public status for non-public research repositories.
 
+Current observed profile evidence:
+
+- Profile README PR #68: https://github.com/svy04/svy04/pull/68
+- Merge commit: `fefedf7a836ebb051672e5bf1754729fa586b68b`
+- Profile README workflow run: https://github.com/svy04/svy04/actions/runs/27804144455
+- Workflow result inspected: `Profile README / verify` completed successfully.
+- Boundary: this proves profile README and proof-surface maintenance only. It does not prove production readiness, adoption, external validation, benchmark superiority, deterministic-code lift, universal Mimesis lift, or autonomous reliability.
+
 The profile README validator also blocks non-public or non-current repo links
 from becoming marketing routes. Non-public research code should be routed
 through public proof artifacts and explicit claim boundaries instead of direct
