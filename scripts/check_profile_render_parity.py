@@ -35,7 +35,11 @@ ROUTE_URLS = [
 REQUIRED_RENDER_MARKERS = [
     "I build proof-bounded AI operating systems: evidence before pitch.",
     "Current proof ledger",
-    "the method layer. It is a Markdown-first",
+    "Mimesis public v0.1 surface",
+    "first-loop demo",
+    "framework manifest",
+    "source-first reference pack index",
+    "GitHub profile as an evidence router",
     "Build the proof surface before the pitch",
     "Markdown-first, artifact-first AI-native work framework",
     "makes expert process visible",
