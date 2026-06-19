@@ -118,6 +118,8 @@ class ProfileReadmeTests(unittest.TestCase):
             "https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json",
             "https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-missing-evidence-rejected.trace.json",
             "https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-protected-action-blocked.trace.json",
+            "https://github.com/svy04/metaforge/blob/main/docs/goals/CG-002-static-analysis-ratchet.md",
+            "https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-002-static-analysis-ratchet.trace.json",
         ]
         for link in current_metaforge_links:
             self.assertIn(link, readme)
@@ -169,8 +171,10 @@ class ProfileReadmeTests(unittest.TestCase):
             "MFH goal-trace validation report",
             "local no-provider behavioral governance evidence",
             "Goal Kernel closure",
-            "Goal Kernel closure representative trace pack",
-            "validated=1, rejected=1, blocked=1",
+            "representative cross-goal trace pack",
+            "validated static-analysis ratchet",
+            "validated=2, rejected=1, blocked=1",
+            "goal_ids=CG-001,CG-002",
             "non-public Mimesis research boundary",
             "define allowed claims and gaps",
             "fresh verifier output is required before any adoption, benchmark, module-pass, or promotion claim",
