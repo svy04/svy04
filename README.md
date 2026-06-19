@@ -11,13 +11,13 @@ I build systems that remember, route, critique, and close work with evidence att
 
 Build the proof surface before the pitch.
 
-source first -> artifacts before personas -> gates before claims -> verification is the marketing
+source first; artifacts before personas; gates before claims; verification is the marketing
 
 Metaforge is the headline. OpenClaude is not the headline; it is runtime substrate. Claude and Codex routes belong under the OS, not above it.
 
 ## Current Build
 
-- [Metaforge](https://github.com/svy04/metaforge): **Metaforge = Meta + MFH + Orchestra OS**. Meta stores operating memory, MFH gates closure, Orchestra routes agents, and OpenClaude is runtime substrate, not the main thesis. [Public claim evidence map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map), [Proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-18.md), and the [2026-06-19 public feedback packet](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-19.md) bind provenance and gaps. [MFH goal-trace validation report](https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md) now records a Goal Kernel closure representative trace pack: [validated](https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json), [rejected](https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-missing-evidence-rejected.trace.json), [blocked](https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-protected-action-blocked.trace.json). Local no-provider evidence only.
+- [Metaforge](https://github.com/svy04/metaforge): **Metaforge = Meta + MFH + Orchestra OS**. Meta stores operating memory, MFH gates closure, Orchestra routes agents, and OpenClaude is runtime substrate, not the main thesis. [Public claim evidence map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map), [Proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-18.md), [2026-06-19 public feedback packet](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-19.md), and [MFH goal-trace validation report](https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md) bind provenance and gaps. Local no-provider evidence only.
 - [Mimesis Engineering](https://github.com/svy04/mimesis-engineering): Mimesis Engineering is the method layer: Markdown-first, artifact-first AI-native work framework that makes expert process visible through source-first references, cognitive apprenticeship, worked examples, local validators, reference packs, proof-boundary packets. [Public Status](https://github.com/svy04/mimesis-engineering/blob/main/STATUS.md), [Proof Boundary](https://github.com/svy04/mimesis-engineering/blob/main/PROOF-BOUNDARY.md), and [Public Claim Pack](https://github.com/svy04/mimesis-engineering/blob/main/docs/PUBLIC-CLAIM-PACK.md) define allowed claims and gaps. This is public repo evidence, not non-public research proof; fresh verifier output is required before any adoption, benchmark, module-pass, or promotion claim. Non-public boundary tracks null/negative controls and failure records. Artifact conditioning is useful only when the baseline has headroom and stays off when objective tests show a ceiling.
 - [NoiseProof Agent](https://github.com/svy04/noiseproof-agent): [Proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot; not product-complete; not externally validated.
 
@@ -25,22 +25,22 @@ Metaforge hardening tracks dependency topology, duplicate-shape ratchets, dead-e
 
 ## Public Systems
 
-Public repo map, not adoption proof: [metaforge](https://github.com/svy04/metaforge) is Meta/MFH/Orchestra OS; [mimesis-engineering](https://github.com/svy04/mimesis-engineering) is a Public support surface for reference packs, validators, cases, and proof boundaries, Support surface, not a hidden canon claim; [noiseproof-agent](https://github.com/svy04/noiseproof-agent) is data-agent work; [mimesis-canvas](https://github.com/svy04/mimesis-canvas) is Worksheet surface; [mimesis-casebook](https://github.com/svy04/mimesis-casebook) is Case surface; [leaderboard-data](https://github.com/svy04/leaderboard-data) is infra.
+Public repo map, not adoption proof: [metaforge](https://github.com/svy04/metaforge) is Meta/MFH/Orchestra OS; [mimesis-engineering](https://github.com/svy04/mimesis-engineering): Public support surface for reference packs, validators, cases, and proof boundaries. Support surface, not a hidden canon claim. [noiseproof-agent](https://github.com/svy04/noiseproof-agent) is data-agent work; [mimesis-canvas](https://github.com/svy04/mimesis-canvas) is Worksheet surface; [mimesis-casebook](https://github.com/svy04/mimesis-casebook) is Case surface; [leaderboard-data](https://github.com/svy04/leaderboard-data) infra.
 
 ## Proof Routes
 
 Current proof ledger / Proof ledger:
 
 - [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/): CI-checked routing and claim-boundary surface.
-- [Public GitHub Surface Hygiene Proof Packet](docs/public-github-surface-hygiene-proof-packet.md): Public default-branch scan for local paths, scanner-unfriendly placeholders, actual-looking bearer values, and raw auth transcript markers.
-- [Render parity proof packet](docs/profile-render-parity-proof-packet.md): source/render/badge route consistency.
-- [Metaforge Public Claim Evidence Map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map): local no-provider map; not external validation.
-- [Metaforge MFH Goal Trace Validation](https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md): Goal Kernel closure representative trace pack; validated=1, rejected=1, blocked=1; local no-provider behavioral governance evidence.
-- [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/): source artifact, baseline output, conditioned output, gate/scorer, failure cases, claim boundary.
+- [Public GitHub Surface Hygiene Proof Packet](docs/public-github-surface-hygiene-proof-packet.md): Public default-branch scan: local paths, scanner-unfriendly placeholders, actual-looking bearer values, and raw auth transcript markers.
+- [Render parity proof packet](docs/profile-render-parity-proof-packet.md): source/render/badge consistency.
+- [Metaforge Public Claim Evidence Map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map): local no-provider; not external validation.
+- [Metaforge MFH Goal Trace Validation](https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md): representative cross-goal trace pack: [Goal Kernel closure](https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json), [rejected](https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-missing-evidence-rejected.trace.json), [blocked](https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-protected-action-blocked.trace.json), [validated static-analysis ratchet](https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-002-static-analysis-ratchet.trace.json) via [CG-002](https://github.com/svy04/metaforge/blob/main/docs/goals/CG-002-static-analysis-ratchet.md); validated=2, rejected=1, blocked=1; goal_ids=CG-001,CG-002; local no-provider behavioral governance evidence.
+- [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/): source artifact, baseline/conditioned output, gate/scorer, failure cases, claim boundary.
 - [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/): Public redacted board v0 / incomplete evidence board; Board v1 is not ready.
 - [Mimesis Minecraft Transcript Availability Audit](https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/): blocker visibility for transcript and manifest gaps; not board-v1 readiness.
-- [Human-made Feeling Bench](https://svy04.github.io/human-made-feeling-bench/): First-pass rubric for judgment traces, accessibility, failure evidence, and claim boundaries.
-- [Non-Public Mimesis Research Boundary](docs/non-public-mimesis-research-boundary.md): non-public Mimesis research boundary; not public proof, production readiness, or external validation.
+- [Human-made Feeling Bench](https://svy04.github.io/human-made-feeling-bench/): First-pass rubric.
+- [Non-Public Mimesis Research Boundary](docs/non-public-mimesis-research-boundary.md): non-public Mimesis research boundary; not public proof or readiness.
 
 Source/CI proof and live public rendering stay separate; live maintenance-hidden routes are not proof upgrades.
 
@@ -48,16 +48,15 @@ Source/CI proof and live public rendering stay separate; live maintenance-hidden
 
 AI에게 역할이 아니라 기준을 준다. give AI standards, not roles.
 
-Mimesis Engineering imports load-bearing structure from products, papers, patents, standards, and maintained open-source implementations, then tests wrong anchors, controls, gates, and failure records.
+Mimesis Engineering imports load-bearing structure from products, papers, patents, standards, and maintained open-source implementations; tests wrong anchors, controls, gates, and failure records.
 
-source artifact -> worked example -> wrong-anchor/control -> gate/scorer -> claim boundary
 happy path -> edge case -> side-effect guard -> claim boundary
 
-Evidence Card Contract: source artifact, baseline output, conditioned output, wrong-anchor or checklist control, gate/scorer, failure cases, claim boundary, proof-surface discipline.
+Evidence Card Contract: source artifact, worked example, baseline output, conditioned output, wrong-anchor or checklist control, gate/scorer, failure cases, claim boundary, proof-surface discipline.
 
-Allowed claim: conditional lift, not universal lift. The useful product decides when artifact conditioning should be on or off. It does not universally improve AI output.
+Allowed claim: conditional lift, not universal lift; decide when artifact conditioning should be on/off. It does not universally improve AI output.
 
-Recent local evidence: standard deterministic/code tasks and short agentic decision-aid tasks mostly showed ceiling/null behavior; live hypothesis: high-slop, underdetermined, high-integration, visual/gestalt work. I publish the null boundary beside the wins.
+Recent local evidence: standard deterministic/code tasks and short agentic decision-aid tasks mostly showed ceiling/null behavior; hypothesis: high-slop, underdetermined, high-integration, visual/gestalt work. I publish the null boundary beside the wins.
 
 The non-public research boundary records prototype surfaces, expert-module notes, inspection manifests, and future gates. Non-public research notes are not a public release claim.
 

@@ -130,15 +130,19 @@ https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-val
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-missing-evidence-rejected.trace.json
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-protected-action-blocked.trace.json
+https://github.com/svy04/metaforge/blob/main/docs/goals/CG-002-static-analysis-ratchet.md
+https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-002-static-analysis-ratchet.trace.json
 ```
 
 These links support only the narrow claim that the profile now routes readers to
 the 2026-06-19 public feedback packet and the MFH goal-trace validation report.
-The trace evidence is a local no-provider representative pack for Goal Kernel
-closure: one validated path, one missing-evidence rejected path, and one
-protected-action blocked path. It is not production readiness, external
-validation, benchmark superiority, autonomous reliability, or proof that
-marker-only checks are enough.
+The trace evidence is a local no-provider representative cross-goal pack:
+validated=2, rejected=1, blocked=1, with goal_ids=CG-001,CG-002. It covers one
+Goal Kernel validated path, one missing-evidence rejected path, one
+protected-action blocked path, and one validated static-analysis ratchet trace.
+It is not cleanup completion, topology cleanliness, production readiness,
+external validation, benchmark superiority, autonomous reliability, or proof
+that marker-only checks are enough.
 
 Current route boundary:
 
@@ -287,12 +291,12 @@ https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026
 
 That route is a CI-checked routing and claim-boundary artifact for this GitHub profile. It does not prove product completion, external validation, adoption, or public status for non-public research repositories.
 
-Current observed profile evidence:
+Prior observed profile evidence before this CG-002 refresh:
 
 - Profile README PR #70: https://github.com/svy04/svy04/pull/70
 - Merge commit: `1b30fa513e4725b59fc0d947e51308d43d36d8e7`
 - Profile README workflow run: https://github.com/svy04/svy04/actions/runs/27820100998
-- Workflow result inspected: `Profile README / verify` completed successfully.
+- Workflow result inspected for PR #70: `Profile README / verify` completed successfully.
 - Boundary: this proves profile README and proof-surface maintenance only. It does not prove production readiness, adoption, external validation, benchmark superiority, deterministic-code lift, universal Mimesis lift, or autonomous reliability.
 
 The profile README validator also blocks non-public or non-current repo links

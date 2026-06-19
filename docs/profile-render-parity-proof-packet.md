@@ -65,6 +65,8 @@ The rendered public profile must keep these claims visible:
 - Meta is for operating memory.
 - MFH is for evidence gates.
 - Orchestra is for multi-agent routing.
+- The MFH profile route points to a representative cross-goal trace pack with
+  validated=2, rejected=1, blocked=1, and goal_ids=CG-001,CG-002.
 - OpenClaude is the runtime substrate, not the main thesis.
 - Non-public Mimesis research notes are not public proof.
 - Mimesis Engineering imports standards, source artifacts, gates, and failure records.
