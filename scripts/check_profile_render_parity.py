@@ -49,6 +49,7 @@ REQUIRED_RENDER_MARKERS = [
     "MFH for evidence gates",
     "Orchestra for multi-agent routing",
     "OpenClaude is runtime substrate",
+    "Claude and Codex routes belong under the OS, not above it",
     "not the main thesis",
     "public repo evidence, not non-public research proof",
     "non-public Mimesis research boundary",
