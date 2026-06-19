@@ -113,7 +113,7 @@ class ProfileReadmeTests(unittest.TestCase):
             self.assertIn(badge_url, readme)
 
         current_metaforge_links = [
-            "https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-19.md",
+            "https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-20.md",
             "https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md",
         ]
         for link in current_metaforge_links:
@@ -163,7 +163,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "Wiring evidence map",
             "runtime import, governance/docs/gates, non-public research boundary, and manual artifact lane",
             "not the main thesis",
-            "2026-06-19 public feedback packet",
+            "2026-06-20 public feedback packet",
             "MFH goal-trace validation report",
             "local no-provider behavioral governance evidence",
             "representative cross-goal trace pack",
