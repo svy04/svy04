@@ -128,13 +128,17 @@ The README also links the latest Metaforge feedback and MFH trace evidence:
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-19.md
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json
+https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-missing-evidence-rejected.trace.json
+https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-protected-action-blocked.trace.json
 ```
 
 These links support only the narrow claim that the profile now routes readers to
 the 2026-06-19 public feedback packet and the MFH goal-trace validation report.
-The trace evidence is local no-provider behavioral governance evidence for Goal
-Kernel closure. It is not production readiness, external validation, benchmark
-superiority, autonomous reliability, or proof that marker-only checks are enough.
+The trace evidence is a local no-provider representative pack for Goal Kernel
+closure: one validated path, one missing-evidence rejected path, and one
+protected-action blocked path. It is not production readiness, external
+validation, benchmark superiority, autonomous reliability, or proof that
+marker-only checks are enough.
 
 Current route boundary:
 
@@ -305,6 +309,8 @@ https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-b
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-19.md
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json
+https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-missing-evidence-rejected.trace.json
+https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-protected-action-blocked.trace.json
 https://github.com/svy04/noiseproof-agent
 https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md
 https://github.com/svy04/mimesis-engineering
