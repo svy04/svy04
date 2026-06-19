@@ -38,6 +38,7 @@ Current proof ledger / Proof ledger:
 - [Metaforge MFH Goal Trace Validation](https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md): Goal Kernel closure trace; local no-provider behavioral governance evidence.
 - [Mimesis Minecraft High-Integration Evidence Card](https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/): source artifact, baseline output, conditioned output, gate/scorer, failure cases, claim boundary.
 - [Mimesis Minecraft Public Redacted Board v0](https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/): Public redacted board v0 / incomplete evidence board; Board v1 is not ready.
+- [Mimesis Minecraft Transcript Availability Audit](https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/): blocker visibility for transcript and manifest gaps; not board-v1 readiness.
 - [Human-made Feeling Bench](https://svy04.github.io/human-made-feeling-bench/): First-pass rubric for judgment traces, accessibility, failure evidence, and claim boundaries.
 - [Non-Public Mimesis Research Boundary](docs/non-public-mimesis-research-boundary.md): non-public Mimesis research boundary; not public proof, production readiness, or external validation.
 

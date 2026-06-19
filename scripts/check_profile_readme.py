@@ -28,6 +28,7 @@ REQUIRED_LINKS = [
     "https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/",
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-high-integration-evidence-card-2026-06-15/",
     "https://svy04.github.io/proof-artifacts/mimesis-minecraft-public-redacted-board-v0-2026-06-15/",
+    "https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/",
     "https://svy04.github.io/human-made-feeling-bench/",
 ]
 
@@ -136,6 +137,8 @@ REQUIRED_MARKERS = [
     "Human-made Feeling Bench",
     "First-pass rubric",
     "Mimesis Minecraft High-Integration Evidence Card",
+    "Mimesis Minecraft Transcript Availability Audit",
+    "blocker visibility for transcript and manifest gaps",
     "Public redacted board",
     "Public redacted board v0 / incomplete evidence board",
     "Board v1 is not ready",

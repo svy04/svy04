@@ -179,6 +179,8 @@ class ProfileReadmeTests(unittest.TestCase):
             "worked example",
             "Proof ledger",
             "Mimesis Minecraft High-Integration Evidence Card",
+            "Mimesis Minecraft Transcript Availability Audit",
+            "blocker visibility for transcript and manifest gaps",
             "Public redacted board v0 / incomplete evidence board",
             "Non-Public Mimesis Research Boundary",
             "Board v1 is not ready",
