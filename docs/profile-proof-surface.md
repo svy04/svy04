@@ -285,9 +285,9 @@ That route is a CI-checked routing and claim-boundary artifact for this GitHub p
 
 Current observed profile evidence:
 
-- Profile README PR #68: https://github.com/svy04/svy04/pull/68
-- Merge commit: `fefedf7a836ebb051672e5bf1754729fa586b68b`
-- Profile README workflow run: https://github.com/svy04/svy04/actions/runs/27804144455
+- Profile README PR #70: https://github.com/svy04/svy04/pull/70
+- Merge commit: `1b30fa513e4725b59fc0d947e51308d43d36d8e7`
+- Profile README workflow run: https://github.com/svy04/svy04/actions/runs/27820100998
 - Workflow result inspected: `Profile README / verify` completed successfully.
 - Boundary: this proves profile README and proof-surface maintenance only. It does not prove production readiness, adoption, external validation, benchmark superiority, deterministic-code lift, universal Mimesis lift, or autonomous reliability.
 
