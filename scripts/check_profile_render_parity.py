@@ -35,7 +35,7 @@ ROUTE_URLS = [
 REQUIRED_RENDER_MARKERS = [
     "I build proof-bounded AI operating systems: evidence before pitch.",
     "Current proof ledger",
-    "Mimesis Engineering](https://github.com/svy04/mimesis-engineering): the method layer",
+    "the method layer. It is a Markdown-first",
     "Build the proof surface before the pitch",
     "Markdown-first, artifact-first AI-native work framework",
     "makes expert process visible",
