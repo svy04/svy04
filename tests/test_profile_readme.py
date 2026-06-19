@@ -104,7 +104,7 @@ class ProfileReadmeTests(unittest.TestCase):
         issues = validate_readme_text(readme)
 
         self.assertEqual(issues, [])
-        self.assertLess(len(readme), 8300)
+        self.assertLess(len(readme), 8600)
         for link in REQUIRED_LINKS:
             self.assertIn(link, readme)
         for link in profile_check.REQUIRED_INTERNAL_LINKS:
@@ -137,6 +137,8 @@ class ProfileReadmeTests(unittest.TestCase):
             "Build the proof surface before the pitch",
             "Metaforge is the headline",
             "OpenClaude is not the headline",
+            "Claude and Codex routes belong under the OS, not above it",
+            "I build systems that remember, route, critique, and close work with evidence attached.",
             "Markdown-first, artifact-first AI-native work framework",
             "makes expert process visible",
             "cognitive apprenticeship",
@@ -155,7 +157,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "OpenClaude is runtime substrate",
             "Public claim evidence map",
             "allowed claims, explicit non-claims, and unresolved gaps",
-            "Metaforge public hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and public wiring evidence",
+            "Metaforge hardening tracks dependency topology, duplicate-shape ratchets, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and public wiring evidence",
             "Metaforge wiring evidence map",
             "runtime import, governance/docs/gates, non-public research boundary, and manual artifact lane",
             "not the main thesis",
