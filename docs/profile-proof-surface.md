@@ -6,7 +6,7 @@ This repository is the public GitHub profile README for `@svy04`.
 
 The profile README is a marketing surface, so it must stay proof-bounded. It should point to live public repositories and current proof packets without implying production readiness, external validation, or universal method proof.
 
-Current positioning: compact System Stack plus Evidence Ledger. The profile
+Current positioning: animated `assets/profile-banner.svg`, compact System Stack plus Evidence Ledger. The profile
 presents Metaforge as `Meta + MFH + Orchestra OS`, presents Mimesis Engineering
 as the method layer, keeps OpenClaude as runtime substrate rather than the
 thesis, and keeps non-public Mimesis research notes as a bounded research
@@ -51,6 +51,7 @@ Metaforge public claim evidence map link
 Metaforge static-analysis remediation queue link
     non-public research boundary link
 required claim-boundary phrases
+required local profile banner asset
 System Stack
 Evidence Ledger
 current proof ledger
