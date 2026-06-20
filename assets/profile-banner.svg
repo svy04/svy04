@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Metaforge, Mimesis Engineering, and proof-bounded AI operating systems</title>
+  <desc id="desc">Animated profile banner for svy04: Meta, MFH, Orchestra, Mimesis Engineering, and evidence before pitch.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#09111f"/>
+      <stop offset="0.46" stop-color="#112033"/>
+      <stop offset="1" stop-color="#1d1626"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#49d6b8"/>
+      <stop offset="0.5" stop-color="#f5c451"/>
+      <stop offset="1" stop-color="#ef6f6c"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .label { fill: #dce7f5; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; font-weight: 700; letter-spacing: 0; }
+      .small { fill: #96a8bd; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; font-size: 24px; letter-spacing: 0; }
+      .node { fill: #101a28; stroke-width: 2.5; }
+      .nodeText { fill: #edf6ff; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; font-size: 30px; font-weight: 800; letter-spacing: 0; }
+      .micro { fill: #a9b9c9; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; font-size: 16px; letter-spacing: 0; }
+      @media (prefers-reduced-motion: reduce) {
+        animate, animateTransform { display: none; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" rx="0" fill="url(#bg)"/>
+  <path d="M70 238 C210 118 347 294 489 176 S756 68 936 168 1095 226 1146 132" fill="none" stroke="url(#rail)" stroke-width="7" stroke-linecap="round" opacity="0.9" filter="url(#softGlow)">
+    <animate attributeName="stroke-dasharray" values="24 32;68 20;24 32" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-dashoffset" values="0;-220;0" dur="7s" repeatCount="indefinite"/>
+  </path>
+  <path d="M92 284 H1108" stroke="#24364d" stroke-width="1.4" opacity="0.85"/>
+  <path d="M92 294 H828" stroke="url(#rail)" stroke-width="3.2" stroke-linecap="round" opacity="0.9">
+    <animate attributeName="x2" values="280;1040;780;1040" dur="8s" repeatCount="indefinite"/>
+  </path>
+
+  <g transform="translate(80 58)">
+    <text class="label" font-size="58">EVIDENCE BEFORE PITCH</text>
+    <text class="small" y="48">Meta + MFH + Orchestra OS / Mimesis Engineering / claim-boundary first</text>
+  </g>
+
+  <g transform="translate(88 154)">
+    <g>
+      <rect class="node" width="180" height="74" rx="8" stroke="#49d6b8"/>
+      <text class="nodeText" x="34" y="45">META</text>
+      <text class="micro" x="32" y="64">memory / state</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="5.6s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(226 0)">
+      <rect class="node" width="180" height="74" rx="8" stroke="#f5c451"/>
+      <text class="nodeText" x="48" y="45">MFH</text>
+      <text class="micro" x="28" y="64">evidence gates</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="5.6s" begin="0.6s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(452 0)">
+      <rect class="node" width="230" height="74" rx="8" stroke="#7eb6ff"/>
+      <text class="nodeText" x="28" y="45">ORCHESTRA</text>
+      <text class="micro" x="30" y="64">route / critique / close</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="5.6s" begin="1.2s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(728 0)">
+      <rect class="node" width="278" height="74" rx="8" stroke="#ef6f6c"/>
+      <text class="nodeText" x="23" y="45">MIMESIS</text>
+      <text class="micro" x="25" y="64">source artifacts -> standards</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="5.6s" begin="1.8s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <g transform="translate(80 324)">
+    <circle cx="0" cy="-7" r="5" fill="#49d6b8"/>
+    <text class="micro" x="16" y="-2">source first</text>
+    <circle cx="145" cy="-7" r="5" fill="#f5c451"/>
+    <text class="micro" x="161" y="-2">artifacts before personas</text>
+    <circle cx="388" cy="-7" r="5" fill="#7eb6ff"/>
+    <text class="micro" x="404" y="-2">gates before claims</text>
+    <circle cx="600" cy="-7" r="5" fill="#ef6f6c"/>
+    <text class="micro" x="616" y="-2">verification is the marketing</text>
+  </g>
+</svg>

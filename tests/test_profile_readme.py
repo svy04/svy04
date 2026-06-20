@@ -9,6 +9,7 @@ from scripts.check_profile_render_parity import (
     validate_render_parity,
 )
 from scripts.check_profile_readme import (
+    REQUIRED_ASSET_PATHS,
     REQUIRED_BADGE_URLS,
     REQUIRED_LINKS,
     extract_markdown_links,
@@ -111,6 +112,9 @@ class ProfileReadmeTests(unittest.TestCase):
             self.assertIn(link, readme)
         for badge_url in REQUIRED_BADGE_URLS:
             self.assertIn(badge_url, readme)
+        for asset_path in REQUIRED_ASSET_PATHS:
+            self.assertIn(asset_path, readme)
+            self.assertTrue(Path(asset_path).is_file(), asset_path)
 
         current_metaforge_links = [
             "https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-20.md",
@@ -131,6 +135,7 @@ class ProfileReadmeTests(unittest.TestCase):
 
         positioning_markers = [
             "Current proof ledger",
+            "assets/profile-banner.svg",
             "Mimesis Engineering](https://github.com/svy04/mimesis-engineering): the method layer",
             "I build proof-bounded AI operating systems: evidence before pitch.",
             "Build the proof surface before the pitch",

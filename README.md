@@ -1,25 +1,23 @@
+![Metaforge / Mimesis profile banner](assets/profile-banner.svg)
+
 # 오영웅 · @svy04
 
 [![Profile README](https://github.com/svy04/svy04/actions/workflows/profile-readme.yml/badge.svg?branch=main)](https://github.com/svy04/svy04/actions/workflows/profile-readme.yml)
 [![Claim boundary](https://img.shields.io/badge/claim%20boundary-documented-555)](docs/profile-proof-surface.md)
 
-I build proof-bounded AI operating systems: evidence before pitch.
+I build proof-bounded AI operating systems: evidence before pitch. 검증이 곧 마케팅. Not another wrapper.
 
-검증이 곧 마케팅. Not another wrapper.
+I build systems that remember, route, critique, and close work with evidence attached. Build the proof surface before the pitch.
 
-I build systems that remember, route, critique, and close work with evidence attached.
-
-Build the proof surface before the pitch.
-
-source first; artifacts before personas; gates before claims; verification is the marketing
+source first; artifacts before personas; gates before claims; verification is the marketing.
 
 Metaforge is the headline; OpenClaude is not the headline. Claude and Codex routes belong under the OS, not above it.
 
 ## System Stack
 
-- [Metaforge](https://github.com/svy04/metaforge): **Metaforge = Meta + MFH + Orchestra OS**. Meta stores operating memory, MFH gates closure, Orchestra routes agents, and OpenClaude is runtime substrate, not the main thesis. [Public claim evidence map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map), [Proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-18.md), [2026-06-20 public feedback packet](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-20.md), [MFH goal-trace validation report](https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md), and [static-analysis remediation queue](https://github.com/svy04/metaforge/blob/main/docs/product-quality/static-analysis-remediation-queue-report.md) bind provenance and gaps. Metaforge hardening is a ratchet, not a release claim: dependency topology, duplicate-shape checks, dead-export triage, public artifact hygiene, provider-id redaction, remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, public wiring evidence, and session runner export boundary stay bounded. Current model-ID locks and latest-alias hygiene are claim-surface hygiene, not release readiness.
+- [Metaforge](https://github.com/svy04/metaforge): **Metaforge = Meta + MFH + Orchestra OS**. Meta stores operating memory, MFH gates closure, Orchestra routes agents, and OpenClaude is runtime substrate, not the main thesis. [Public claim evidence map](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map), [Proof pack](https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-proof-pack-2026-06-18.md), [2026-06-20 public feedback packet](https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-20.md), [MFH goal-trace validation report](https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md), and [static-analysis remediation queue](https://github.com/svy04/metaforge/blob/main/docs/product-quality/static-analysis-remediation-queue-report.md) bind provenance and gaps. Metaforge hardening is a ratchet, not a release claim: dependency topology, duplicate-shape checks, dead-export triage, public artifact hygiene, public wiring evidence, and session runner export boundary stay bounded. Current model-ID locks and latest-alias hygiene are claim-surface hygiene, not release readiness.
 - [Mimesis Engineering](https://github.com/svy04/mimesis-engineering): the method layer. Mimesis public v0.1 surface is a Markdown-first, artifact-first AI-native work framework that makes expert process visible through source-first references, cognitive apprenticeship, worked examples, local validators, reference packs, proof-boundary packets, a first-loop demo, a framework manifest, and a source-first reference pack index. [Public Status](https://github.com/svy04/mimesis-engineering/blob/main/STATUS.md), [Proof Boundary](https://github.com/svy04/mimesis-engineering/blob/main/PROOF-BOUNDARY.md), and [Public Claim Pack](https://github.com/svy04/mimesis-engineering/blob/main/docs/PUBLIC-CLAIM-PACK.md) define allowed claims and gaps; public repo evidence, not non-public research proof. fresh verifier output is required before any adoption, benchmark, module-pass, or promotion claim.
-- [NoiseProof Agent](https://github.com/svy04/noiseproof-agent): [Proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot; not product-complete; not externally validated.
+- [NoiseProof Agent](https://github.com/svy04/noiseproof-agent): data-agent work with a [Proof packet](https://github.com/svy04/noiseproof-agent/blob/main/docs/review/external-reader-phase-897-current-proof-packet-refresh.md). Not a trading bot; not product-complete; not externally validated.
 
 Public repo map, not adoption proof: [metaforge](https://github.com/svy04/metaforge) = Meta/MFH/Orchestra OS; [mimesis-engineering](https://github.com/svy04/mimesis-engineering) is the public support surface for reference packs, validators, cases, and proof boundaries, not a hidden canon claim; [noiseproof-agent](https://github.com/svy04/noiseproof-agent) = data-agent work; [mimesis-canvas](https://github.com/svy04/mimesis-canvas) is the worksheet surface; [mimesis-casebook](https://github.com/svy04/mimesis-casebook) is the case surface; [leaderboard-data](https://github.com/svy04/leaderboard-data) = infrastructure.
 
@@ -27,7 +25,7 @@ Wiring evidence map: runtime import, governance/docs/gates, non-public research 
 
 ## Evidence Ledger
 
-Current proof ledger: GitHub profile as an evidence router.
+Current proof ledger: GitHub profile as an evidence router. Source/CI proof and live public rendering stay separate; live maintenance-hidden is not a proof upgrade.
 
 - [GitHub Profile README Proof Surface](https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/): CI-checked routing and claim-boundary surface.
 - [Public GitHub Surface Hygiene Proof Packet](docs/public-github-surface-hygiene-proof-packet.md): Public default-branch scan for scanner-unfriendly placeholders, actual-looking bearer values, and raw auth transcript markers.
@@ -40,8 +38,6 @@ Current proof ledger: GitHub profile as an evidence router.
 - [Mimesis Minecraft Transcript Availability Audit](https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availability-audit-2026-06-15/): blocker visibility for transcript, manifest, and source-import gaps; not board-v1 readiness.
 - [Human-made Feeling Bench](https://svy04.github.io/human-made-feeling-bench/): First-pass rubric.
 - [Non-Public Mimesis Research Boundary](docs/non-public-mimesis-research-boundary.md): non-public Mimesis research boundary; not public proof or readiness.
-
-Source/CI proof and live public rendering stay separate; live maintenance-hidden is not a proof upgrade.
 
 ## Operating Law
 

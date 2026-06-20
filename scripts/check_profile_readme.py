@@ -46,6 +46,10 @@ REQUIRED_BADGE_URLS = [
     "https://img.shields.io/badge/claim%20boundary-documented-555",
 ]
 
+REQUIRED_ASSET_PATHS = [
+    "assets/profile-banner.svg",
+]
+
 CURRENT_METAFORGE_FEEDBACK_DATE = "2026-06-20"
 STALE_METAFORGE_FEEDBACK_LINK_PATTERN = re.compile(
     r"public-feedback-snapshot-(\d{4}-\d{2}-\d{2})\.md"
@@ -55,6 +59,7 @@ TRANSIENT_HTTP_STATUSES = {408, 429, 500, 502, 503, 504}
 
 REQUIRED_MARKERS = [
     "I build proof-bounded AI operating systems: evidence before pitch.",
+    "assets/profile-banner.svg",
     "검증이 곧 마케팅",
     "Not another wrapper.",
     "Build the proof surface before the pitch",
@@ -322,6 +327,12 @@ def validate_readme_text(text):
     for badge_url in REQUIRED_BADGE_URLS:
         if badge_url not in text:
             issues.append(f"missing required badge URL: {badge_url}")
+
+    for asset_path in REQUIRED_ASSET_PATHS:
+        if asset_path not in text:
+            issues.append(f"missing required asset path: {asset_path}")
+        if not Path(asset_path).is_file():
+            issues.append(f"missing required profile asset: {asset_path}")
 
     for match in STALE_METAFORGE_FEEDBACK_LINK_PATTERN.finditer(text):
         date = match.group(1)
