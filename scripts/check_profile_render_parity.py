@@ -52,6 +52,8 @@ REQUIRED_RENDER_MARKERS = [
     "MFH gates closure",
     "Orchestra routes agents",
     "representative cross-goal trace pack",
+    "static-analysis remediation queue",
+    "session runner export boundary",
     "validated=2, rejected=1, blocked=1",
     "goal_ids=CG-001,CG-002",
     "OpenClaude is runtime substrate",
