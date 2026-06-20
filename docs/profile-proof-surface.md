@@ -344,9 +344,6 @@ https://github.com/svy04/mimesis-engineering
 https://github.com/svy04/mimesis-engineering/blob/main/STATUS.md
 https://github.com/svy04/mimesis-engineering/blob/main/PROOF-BOUNDARY.md
 https://github.com/svy04/mimesis-engineering/blob/main/docs/PUBLIC-CLAIM-PACK.md
-https://github.com/svy04/mimesis-canvas
-https://github.com/svy04/mimesis-casebook
-https://github.com/svy04/leaderboard-data
 https://github.com/svy04/svy04
 https://github.com/svy04/svy04/actions/workflows/profile-readme.yml
 https://svy04.github.io/proof-artifacts/github-profile-readme-proof-surface-2026-06-14/
@@ -360,14 +357,14 @@ https://svy04.github.io/proof-artifacts/mimesis-minecraft-transcript-availabilit
 https://svy04.github.io/human-made-feeling-bench/
 ```
 
-The `mimesis-canvas` and `mimesis-casebook` links are supporting public
-Mimesis surfaces. They make worksheets and case grammar inspectable. They do
-not prove external adoption, benchmarked productivity, visual quality
-improvement, customer outcomes, or production readiness.
+Older worksheet, case, and infrastructure repositories are no longer required
+profile-front links. They can remain source-controlled support material elsewhere,
+but the profile README now keeps the current public thesis centered on
+Metaforge, Mimesis Engineering, NoiseProof, and proof routes.
 
-The `leaderboard-data` link is separate infrastructure, not part of the
-Metaforge or Mimesis proof thesis. It is listed only because the current profile
-README links it as a public repository surface.
+The current profile must not link private or non-current Mimesis research
+repositories as public proof. Non-public Mimesis work routes through public
+proof artifacts and explicit claim boundaries.
 
 ## Boundary
 
