@@ -22,7 +22,8 @@ response is to make the public surface easier to trust.
 - Duplicate helper clusters, dead exports, circular dependencies, raw artifact
   leaks, and provider trace identifiers belong in cleanup and guardrail lanes,
   not in the launch claim; dependency topology, duplicate-shape ratchets,
-  dead-export triage, public artifact hygiene, provider-id redaction,
+  dead-export triage, static-analysis remediation queue, session runner export
+  boundary, public artifact hygiene, provider-id redaction,
   remote-surface privacy, hosted-trust boundaries, IDE evidence ordering, and
   public wiring evidence are ratchets, not cleanup-complete claims.
 - Recent Metaforge public hardening added remote-surface helper reuse, IDE

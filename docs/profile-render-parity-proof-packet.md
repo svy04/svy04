@@ -67,6 +67,8 @@ The rendered public profile must keep these claims visible:
 - Orchestra is for multi-agent routing.
 - The MFH profile route points to a representative cross-goal trace pack with
   validated=2, rejected=1, blocked=1, and goal_ids=CG-001,CG-002.
+- The static-analysis remediation queue and session runner export boundary are
+  ratchet evidence, not cleanup-completion or release-readiness claims.
 - OpenClaude is the runtime substrate, not the main thesis.
 - Non-public Mimesis research notes are not public proof.
 - Mimesis Engineering imports standards, source artifacts, gates, and failure records.

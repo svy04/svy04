@@ -48,6 +48,7 @@ checks:
 required public repo links
 required proof packet links
 Metaforge public claim evidence map link
+Metaforge static-analysis remediation queue link
     non-public research boundary link
 required claim-boundary phrases
 System Stack
@@ -138,11 +139,12 @@ and unresolved gaps. It is local no-provider evidence mapping only, not external
 validation, production readiness, release readiness, or autonomous reliability
 proof.
 
-The README also links the latest Metaforge feedback and MFH trace evidence:
+The README also links the latest Metaforge feedback, MFH trace, and static-analysis remediation evidence:
 
 ```text
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-20.md
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md
+https://github.com/svy04/metaforge/blob/main/docs/product-quality/static-analysis-remediation-queue-report.md
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-missing-evidence-rejected.trace.json
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-protected-action-blocked.trace.json
@@ -151,12 +153,14 @@ https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-002-static-ana
 ```
 
 These links support only the narrow claim that the profile now routes readers to
-the 2026-06-20 public feedback packet and the MFH goal-trace validation report.
+the 2026-06-20 public feedback packet, the MFH goal-trace validation report, and
+the current static-analysis remediation queue.
 The trace evidence is a local no-provider representative cross-goal pack:
 validated=2, rejected=1, blocked=1, with goal_ids=CG-001,CG-002. It covers one
 Goal Kernel validated path, one missing-evidence rejected path, one
 protected-action blocked path, and one validated static-analysis ratchet trace.
-It is not cleanup completion, topology cleanliness, production readiness,
+The queue records guarded Knip candidates and the session runner export boundary
+as ratchet evidence only. It is not cleanup completion, topology cleanliness, production readiness,
 external validation, benchmark superiority, autonomous reliability, or proof
 that marker-only checks are enough.
 
