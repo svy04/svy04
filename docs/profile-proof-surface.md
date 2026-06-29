@@ -260,7 +260,8 @@ That route is a public redacted board v0 / incomplete evidence board. It
 exposes source-use boundary, condition board, aggregate scoring, failure record,
 and claim boundary, but it remains promotion-blocked. Public-safe
 screenshot sidecars exist without `redacted-screenshots/manifest.json`;
-`manifest-preflight.json` exists; `MANIFEST-CONTRACT.md` and
+`manifest-preflight.json` exists; `manifest-promotion-blockers.json` records why
+manifest promotion is still blocked; `MANIFEST-CONTRACT.md` and
 `manifest.schema.json` define a manifest contract/schema; `board-v1-inspection-manifest.json`
 exists as an inspection-only blocker index; an aggregate transcript ledger exists;
 `raw-transcript-preflight.json`, `raw-transcript-source-import-preflight.json`,
@@ -277,14 +278,14 @@ route-linked board gate / route-linked board-v1 entries, comparable wrong-anchor
 route-linked per-arm build/log proof. The
 latest non-public research gate adds a board v1 collection plan,
 `verify_minecraft_board_v1_gate.py`, `MANIFEST-CONTRACT.md`,
-`manifest.schema.json`, `raw-transcript-preflight.json`,
+`manifest.schema.json`, `manifest-promotion-blockers.json`, `raw-transcript-preflight.json`,
 `raw-transcript-source-import-preflight.json`,
 `raw-transcript-redaction-review-preflight.json`, and
 `public-source-packet-draft.md/.json` as a future-route source packet draft,
 plus `board-v1-inspection-manifest.json` as an inspection-only index of
 blocker/preflight records;
 that is a blocker contract, not stronger proof, and the sidecar, manifest
-contract/schema, inspection manifest, raw transcript preflight, redaction-review preflight, and source packet draft are only
+contract/schema, manifest promotion blocker index, inspection manifest, raw transcript preflight, redaction-review preflight, and source packet draft are only
 receipts/contracts/indexes. It is not a live route, not `READY.json`, not
 `redacted-screenshots/manifest.json`, not full transcript/scorer evidence, and
 not stronger proof. source raw transcript import is still missing. board v1 is not ready. This is a visibility upgrade, not stronger proof.
