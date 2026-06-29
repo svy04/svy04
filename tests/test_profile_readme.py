@@ -105,7 +105,7 @@ class ProfileReadmeTests(unittest.TestCase):
         issues = validate_readme_text(readme)
 
         self.assertEqual(issues, [])
-        self.assertLess(len(readme), 8600)
+        self.assertLess(len(readme), 9000)
         for link in REQUIRED_LINKS:
             self.assertIn(link, readme)
         for link in profile_check.REQUIRED_INTERNAL_LINKS:
@@ -119,6 +119,7 @@ class ProfileReadmeTests(unittest.TestCase):
         current_metaforge_links = [
             "https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-20.md",
             "https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md",
+            "https://github.com/svy04/metaforge/blob/main/docs/product-quality/secret-scanner-evidence-report.md",
             "https://github.com/svy04/metaforge/blob/main/docs/product-quality/static-analysis-remediation-queue-report.md",
         ]
         for link in current_metaforge_links:
@@ -164,13 +165,16 @@ class ProfileReadmeTests(unittest.TestCase):
             "Orchestra routes agents",
             "bind provenance and gaps",
             "Metaforge hardening is a ratchet, not a release claim",
-            "Current model-ID locks and latest-alias hygiene are claim-surface hygiene, not release readiness",
             "Wiring evidence map",
             "runtime import, governance/docs/gates, non-public research boundary, and manual artifact lane",
             "not the main thesis",
             "2026-06-20 public feedback packet",
             "MFH goal-trace validation report",
             "static-analysis remediation queue",
+            "secret-scanner evidence",
+            "Secret-scanner evidence keeps secret-clean and readiness claims blocked",
+            "not full-history clean proof",
+            "security readiness",
             "session runner export boundary",
             "local no-provider behavioral governance evidence",
             "representative cross-goal trace pack",
@@ -197,6 +201,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "high-slop, underdetermined, high-integration, visual/gestalt work",
             "I publish the null boundary beside the wins",
             "I do not claim Metaforge is production-ready",
+            "security-ready, or secret-clean",
             "I do not claim Mimesis Engineering is an industry standard",
             "I do not claim NoiseProof is production-ready",
             "Current public map, not adoption proof",

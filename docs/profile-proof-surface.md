@@ -48,6 +48,7 @@ checks:
 required public repo links
 required proof packet links
 Metaforge public claim evidence map link
+Metaforge secret-scanner evidence link
 Metaforge static-analysis remediation queue link
     non-public research boundary link
 required claim-boundary phrases
@@ -145,6 +146,7 @@ The README also links the latest Metaforge feedback, MFH trace, and static-analy
 ```text
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-20.md
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md
+https://github.com/svy04/metaforge/blob/main/docs/product-quality/secret-scanner-evidence-report.md
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/static-analysis-remediation-queue-report.md
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-missing-evidence-rejected.trace.json
@@ -154,8 +156,8 @@ https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-002-static-ana
 ```
 
 These links support only the narrow claim that the profile now routes readers to
-the 2026-06-20 public feedback packet, the MFH goal-trace validation report, and
-the current static-analysis remediation queue.
+the 2026-06-20 public feedback packet, the MFH goal-trace validation report, the
+current secret-scanner evidence report, and the current static-analysis remediation queue.
 The trace evidence is a local no-provider representative cross-goal pack:
 validated=2, rejected=1, blocked=1, with goal_ids=CG-001,CG-002. It covers one
 Goal Kernel validated path, one missing-evidence rejected path, one
@@ -164,6 +166,10 @@ The queue records guarded Knip candidates and the session runner export boundary
 as ratchet evidence only. It is not cleanup completion, topology cleanliness, production readiness,
 external validation, benchmark superiority, autonomous reliability, or proof
 that marker-only checks are enough.
+The secret-scanner evidence records hosted secret scanning and push-protection
+status plus local external-scanner availability. It is not full-history
+secret-clean proof, hosted alert cleanliness proof, security readiness, release
+readiness, production readiness, or external validation.
 
 Current route boundary:
 
@@ -335,6 +341,7 @@ https://github.com/svy04/metaforge/blob/main/docs/marketing/metaforge-public-pro
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-claim-boundary-report.md#public-claim-evidence-map
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/public-feedback-snapshot-2026-06-20.md
 https://github.com/svy04/metaforge/blob/main/docs/product-quality/goal-trace-validation-report.md
+https://github.com/svy04/metaforge/blob/main/docs/product-quality/secret-scanner-evidence-report.md
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-goal-kernel-mvp.trace.json
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-missing-evidence-rejected.trace.json
 https://github.com/svy04/metaforge/blob/main/docs/goals/traces/CG-001-protected-action-blocked.trace.json
