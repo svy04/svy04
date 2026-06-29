@@ -152,6 +152,8 @@ REQUIRED_MARKERS = [
     "Mimesis Visual Failure Packet",
     "Mimesis Minecraft Transcript Availability Audit",
     "blocker visibility for transcript, manifest, and source-import gaps",
+    "manifest promotion blockers are explicit",
+    "manifest-promotion-blockers.json",
     "Public redacted board",
     "Public redacted board v0 / incomplete evidence board",
     "Board v1 is not ready",

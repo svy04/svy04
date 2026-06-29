@@ -215,6 +215,8 @@ class ProfileReadmeTests(unittest.TestCase):
             "Mimesis Minecraft High-Integration Evidence Card",
             "Mimesis Minecraft Transcript Availability Audit",
             "blocker visibility for transcript, manifest, and source-import gaps",
+            "manifest promotion blockers are explicit",
+            "manifest-promotion-blockers.json",
             "Public redacted board v0 / incomplete evidence board",
             "Non-Public Mimesis Research Boundary",
             "Board v1 is not ready",
