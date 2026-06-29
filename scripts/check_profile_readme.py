@@ -374,6 +374,13 @@ def check_url(url, timeout=15, retries=2, opener=urlopen, sleeper=time.sleep):
                 sleeper(0.5 * (attempt + 1))
                 continue
             return issue
+        except TimeoutError as exc:
+            reason = str(exc) or "timed out"
+            issue = f"{url} -> {reason}"
+            if attempt < attempts - 1:
+                sleeper(0.5 * (attempt + 1))
+                continue
+            return issue
 
         if 200 <= status < 400:
             return None

@@ -72,6 +72,28 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIsNone(issue)
         self.assertEqual(len(calls), 2)
 
+    def test_live_link_checker_retries_timeout_errors_and_reports_url(self):
+        calls = []
+        url = "https://svy04.github.io/proof-artifacts/slow/"
+
+        def fake_urlopen(request, timeout):
+            calls.append((request.full_url, timeout))
+            raise TimeoutError("timed out")
+
+        try:
+            issue = profile_check.check_url(
+                url,
+                timeout=1,
+                retries=1,
+                opener=fake_urlopen,
+                sleeper=lambda _seconds: None,
+            )
+        except TimeoutError as exc:
+            self.fail(f"TimeoutError escaped from check_url: {exc}")
+
+        self.assertEqual(issue, f"{url} -> timed out")
+        self.assertEqual(len(calls), 2)
+
     def test_live_link_checker_does_not_retry_non_transient_4xx(self):
         calls = []
 
